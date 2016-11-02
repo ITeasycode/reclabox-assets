@@ -1,0 +1,96 @@
+/**
+ * @author Luca
+ */
+
+function stripHTML(oldString) {
+  var newString = oldString.replace(/<\S[^>]*>/g, "");
+  return newString;
+}
+
+function setCorrect(element_id) {
+  var element = document.getElementById(element_id);
+  if (element.style.color == "rgb(0, 0, 0)" || element.style.color == "#000000" || element.style.color == "#000") {
+    element.style.backgroundImage = "url(<%= asset_path('tick.png') %>)";
+    element.style.backgroundRepeat = "no-repeat";
+    element.style.backgroundPosition = "top right";
+  }
+}
+
+function setIncorrect(element_id) {
+  var element = document.getElementById(element_id);
+  if (element.style.color == "rgb(0, 0, 0)" || element.style.color == "#000000" || element.style.color == "#000") {
+    element.style.backgroundImage = "url(<%= asset_path('cross.png') %>)";
+    element.style.backgroundRepeat = "no-repeat";
+    element.style.backgroundPosition = "top right";
+  }
+}
+
+function setIndifferent(element_id) {
+  var element = document.getElementById(element_id);
+  element.style.backgroundColor = "#fff";
+  element.style.backgroundImage = "none";
+  element.style.backgroundRepeat = "no-repeat";
+  element.style.backgroundPosition = "top right";
+}
+
+function validateTextArea() {
+  var element = document.getElementById("btf");
+  var y = tinyMCE.get('beschwerdetext').getContent({format: 'text'});
+  y = stripHTML(y);
+  if ((y.length < 140) || (y.length > 50000)) {
+    element.style.backgroundImage = "url(<%= asset_path('cross.png') %>)";
+    element.style.backgroundRepeat = "no-repeat";
+    element.style.backgroundPosition = "5px 260px";
+  } else {
+    element.style.backgroundImage = "url(<%= asset_path('tick.png') %>)";
+    element.style.backgroundRepeat = "no-repeat";
+    element.style.backgroundPosition = "5px 260px";
+  }
+}
+
+function validate(element_id) {
+  var value = document.getElementById(element_id).value;
+  var regexp;
+
+  switch (element_id) {
+    case "claim":
+    case "on_firm":
+      regexp = new RegExp("\\S");
+      setCorrectIfMatch(regexp, value, element_id);
+      break;
+    case "email":
+      regexp = new RegExp("^[^@\\s]+@([-a-z0-9]+\\.)+[-a-z0-9]{2,}", "i");
+      setCorrectIfMatch(regexp, value, element_id);
+      break;
+    case "on_firm_email":
+      regexp = new RegExp("^[^@\\s]+@([-a-z0-9]+\\.)+[-a-z0-9]{2,}", "i");
+      setCorrectIfMatchBlankOK(regexp, value, element_id);
+      break;
+    case "title":
+      regexp = new RegExp("[a-z]{3,}");
+      if (regexp.test(value) && value.length >= 10 && value.length <= 65) {
+        setCorrect(element_id);
+      } else {
+        setIncorrect(element_id);
+      }
+      break;
+  }
+}
+
+function setCorrectIfMatch(regexp, value, element_id) {
+  if (regexp.test(value)) {
+    setCorrect(element_id);
+  } else {
+    setIncorrect(element_id);
+  }
+}
+
+function setCorrectIfMatchBlankOK(regexp, value, element_id) {
+  if (value == "") {
+    setIndifferent(element_id);
+  } else if (regexp.test(value)) {
+    setCorrect(element_id);
+  } else {
+    setIncorrect(element_id);
+  }
+}

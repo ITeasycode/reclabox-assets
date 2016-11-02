@@ -1,0 +1,48 @@
+.active-scaffold textarea {
+  height: auto;
+  width: 592px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  padding: 1px;
+  border: solid 1px #1F7F00;
+}
+
+.active-scaffold tr.record.blacklisted {
+  background-color: #f0f;
+}
+
+.active-scaffold tr.record.evil {
+  background-color: #3cf;
+}
+
+.active-scaffold tr.record.unfinished {
+  background-color: #cf3;
+}
+
+.active-scaffold tr.record.deleted {
+  background-color: #ff0;
+}
+
+.active-scaffold tr.record.erased {
+  background-color: #f44;
+}
+
+.title-input {
+  width: 592px;
+}
+
+.selected {
+  background-color: #ff0;
+}
+
+.solved {
+  background-color: #0f6;
+}
+
+.with-defence {
+  border: dotted 5px #f66;
+}
+
+#sortable_tags {
+  list-style-type: none;
+}

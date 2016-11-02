@@ -1,0 +1,114 @@
+/*
+ *= require active_scaffold
+ *= require active_scaffold_overrides
+ *= require highlighting
+ *= require jquery.highlighttextarea
+*/
+
+#bnav {
+  width: 100%;
+  height: auto;
+  background-color: #777;
+  font-weight: bold;
+  text-align: left;
+  color: #fff;
+  font-size: 10px;
+  font-family: Verdana;
+}
+
+#bnav > div {
+  margin: 3px;
+  padding: 5px;
+}
+
+#bnav > div > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.errcol {
+  color: #f00;
+}
+
+#bnav > div > .navlink-hi {
+  color: #ff0;
+}
+
+.linkblock-a {
+  background-color: #aaa;
+  text-align: center;
+}
+
+.linkblock-b {
+  background-color: #aaa;
+}
+
+.navcat {
+  color: #000;
+}
+
+.wlink {
+  color: green;
+  font-size: 8pt;
+}
+
+.bcat {
+  background-color: #afa;
+}
+
+.active-scaffold .actions > ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.active-scaffold .records a img {
+  border-width: 0;
+}
+
+.active-scaffold .comment-body, .active-scaffold .defence-body,
+.active-scaffold p.u-message, .active-scaffold .complaint-body {
+  border: solid green 1px;
+  width: 250px;
+  height: 100px;
+  overflow: scroll;
+}
+
+.active-scaffold .complaint-teaser {
+  width: 200px;
+  height: 100px;
+  overflow: scroll;
+}
+
+.active-scaffold .orig-text-body {
+  width: 700px;
+  height: 200px;
+  overflow: scroll;
+}
+
+.active-scaffold .orig-text {
+  border: solid green 1px;
+  color: #000;
+}
+
+#flash_notice {
+  text-decoration: none; font-size: 16px; font-weight: bold;
+  color: #900;
+  margin: 2em;
+  text-align: center;
+}
+
+.tar {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.bb {
+  font-weight: bold;
+}
+
+.colog {
+  color: #080;
+}

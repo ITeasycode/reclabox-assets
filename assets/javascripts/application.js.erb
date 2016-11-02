@@ -1,0 +1,723 @@
+Reclabox = function() {};
+Reclabox.LiveContentUpdater = function() {
+  var api = {};
+
+  /*
+    Update page content
+  */
+  var update_content = function(results) {
+    // update live trackings
+    if (results.live_trackings) {
+      for (var i = 0; i < results["live_trackings"]["count"]; i++) {
+        jQuery('#liveContent').prepend(results["live_trackings"]["elements"][i]["html"]);
+        var elemId = '#liveTracking' + results["live_trackings"]["elements"][i]["id"];
+        jQuery(elemId).toggleClass('liveline-off', false, 600);
+      }
+      setTimeout(function() {
+        // remove rows which are now out of view to prevent bloating of the document
+        var del_trackings = jQuery('#liveContent > .trackline');
+        del_trackings = del_trackings.slice(<%= ARTICLES_PER_BOX %>, del_trackings.length);
+        for (var i = 0; i < del_trackings.length; i++) {
+          del_trackings[i].remove();
+        }
+      }, 2000);
+    }
+    // update reclamations
+    if (results.reclamations) {
+      for (var i = 0; i < results["reclamations"]["count"]; i++) {
+        jQuery('#articles').prepend(results["reclamations"]["elements"][i]["html"]);
+        var elemId = '#article' + results["reclamations"]["elements"][i]["id"];
+        jQuery(elemId).css({opacity: 0});
+        jQuery(elemId).animate({opacity: 1}, 1000);
+      }
+      setTimeout(function() {
+        // remove as many rows as we've inserted to prevent bloating of the document
+        var del_reclamations = jQuery('#articles > .beschwerde');
+        del_reclamations = del_reclamations.slice(<%= ARTICLES_PER_PAGE %>, del_reclamations.length);
+        for (var i = 0; i < del_reclamations.length; i++) {
+          del_reclamations[i].remove();
+        }
+      }, 2000);
+    }
+    // update comments
+    if (results.comments) {
+      for (var i = 0; i < results["comments"]["count"]; i++) {
+        jQuery('#newestComments').prepend(results["comments"]["elements"][i]["html"]);
+        var elemId = '#comment' + results["comments"]["elements"][i]["id"];
+        jQuery(elemId).toggleClass('liveline-off', false, 600);
+      }
+      setTimeout(function() {
+        // remove as many rows as we've inserted to prevent bloating of the document
+        var del_comments = jQuery('#newestComments > .elemkb');
+        del_comments = del_comments.slice(<%= ARTICLES_PER_BOX %>, del_comments.length);
+        for (var i = 0; i < del_comments.length; i++) {
+          del_comments[i].remove();
+        }
+      }, 2000);
+    }
+  }
+
+  /*
+    Watch results and update content
+  */
+  var use_results = function(results) {
+    update_content(results);
+    if (results.reclamations) {
+      data = {
+        reclamations: {last_id: results["reclamations"]["last_id"]},
+        comments: {last_comment_or_vote_id: results["comments"]["last_comment_or_vote_id"]},
+        live_trackings: {last_id: results["live_trackings"]["last_id"]}
+      };
+    } else {
+      data = {
+        comments: {last_comment_or_vote_id: results["comments"]["last_comment_or_vote_id"]},
+        live_trackings: {last_id: results["live_trackings"]["last_id"]}
+      };
+    }
+    setTimeout(function() {api.update(data);}, 6000);
+  };
+
+  /*
+    Public LiveContentUpdater interface
+  */
+  api.update = function(data) {
+    jQuery.getJSON('/articles/live_content', {authenticity_token: authenticity_token, data: JSON.stringify(data)},
+      function(data, status, jqxhr) {
+        use_results(data);
+      }
+    );
+  };
+
+  return api;
+}();
+
+function ToggleWriteForm() {
+  jQuery('.toggleable').toggle();
+  SwapIDsNamesAndCopyValue(document.getElementById('on_firm_city'), document.getElementById('not_used_on_firm_city'));
+  SwapIDsNamesAndCopyValue(document.getElementById('on_firm'), document.getElementById('not_used_on_firm'));
+
+  var toggle_button = document.getElementById('togglebutt');
+  if (toggle_button.className == 'wenan') {
+    toggle_button.className = 'weian';
+  } else {
+    toggle_button.className = 'wenan';
+  }
+
+};
+
+function SwapIDsNamesAndCopyValue(old_element, new_element) {
+  new_element.value = old_element.value;
+  SwapAttrValue(old_element, new_element, 'id', true);
+  SwapAttrValue(old_element, new_element, 'name', true);
+  SwapAttrValue(old_element.style, new_element.style, 'color', false);
+  validate(new_element.id);
+};
+
+function SwapAttrValue(element_p, element_q, attr, use_temp_value) {
+  // avoid having two same attr values at the same time (e.g. for 'id' attribute) - use temporary value if 'use_temp_value'
+  var p_value = element_p[attr];
+  var q_value = element_q[attr];
+  if (use_temp_value) {
+    element_p[attr] = 'tmp_' + p_value;
+  }
+  element_q[attr] = p_value;
+  element_p[attr] = q_value;
+};
+
+function aprichiudi(elemId)
+{
+	if (document.getElementById(elemId).style.display == 'none') {
+		document.getElementById(elemId).style.display = 'block';
+		document.getElementById(elemId+'Button').innerHTML = '<img src="' + "<%= asset_path('up2.gif') %>" + '" alt="Minimieren" title="Minimieren">';
+	}
+	else {
+		document.getElementById(elemId).style.display = 'none';
+		document.getElementById(elemId+'Button').innerHTML = '<img src="' + "<%= asset_path('down2.gif') %>" + '" alt="Maximieren" title="Maximieren">';
+	}
+};
+
+function addOnLoad(func) {
+  if (window.onload) {
+    var temp = window.onload;
+    window.onload = function () {
+      temp();
+      func();
+    }
+  } else {
+    window.onload = func;
+  }
+};
+
+function live_track_comment_read() {
+  var address = window.location;
+  /*
+    The address format is "/beschwerde/123-some-thing" or "beschwerde/123-some-thing#comment1234" and
+    we check that there are no other slashes in and after the "123-some-thing" part; the "-some-thing" part is optional:
+  */
+  if (address.pathname.match(/^\/beschwerde\/\d+(-[^\/]*)?$/)) {
+    var article_id = address.pathname.match(/^\/beschwerde\/(\d+)/)[1];
+    if (address.hash.match(/^#comment\d+$/)) {
+      var comment_id = address.hash.match(/^#comment(\d+)$/)[1];
+      var url = "/beschwerde/" + article_id + "/track_comment_read/" + comment_id;
+    } else if (address.hash.match(/^#def\d+$/)) {
+      var def_id = address.hash.match(/^#def(\d+)$/)[1];
+      var url = "/beschwerde/" + article_id + "/track_defence_read/" + def_id;
+    } else if (address.hash == '' || address.hash.match(/^#comments$/) || address.hash.match(/^#gallery$/)) {
+      var url = "/beschwerde/" + article_id + "/track_read";
+    }
+    jQuery.post(url, {authenticity_token: authenticity_token});
+  }
+};
+addOnLoad(live_track_comment_read);
+
+function count_link_click(link_id) {
+  jQuery.post("/complaint_links/increment_clicks",
+    {authenticity_token: authenticity_token, link_id: link_id});
+}
+
+function show_firmownrequestbox() {
+  var select = jQuery('#associated_firm');
+  var options = select.options;
+  var selected_value = select.value;
+  if (selected_value == '0') {
+    return true;
+  } else {
+    var firm_name = '';
+    for (var i = 0; i < options.length; i++) {
+      if (options[i].value == selected_value) {
+        firm_name = options[i].text;
+        break;
+      }
+    }
+    jQuery('#forftitle').textContent = firm_name;
+    ShowWin('firmownrequestbox', 450);
+    return false;
+  }
+}
+
+function show_empfbox_if_requested() {
+  var address = window.location;
+  if (address.pathname == '/') {
+    if (address.hash.match(/^#empfehlen$/)) {
+      ShowWin('empfbox', 650);
+    }
+  }
+};
+addOnLoad(show_empfbox_if_requested);
+
+function show_weiterleiten_if_requested() {
+  var address = window.location;
+  /*
+    The address format is "beschwerde/123-some-thing#weiterleiten" and
+    we check that there are no other slashes in and after the "123-some-thing" part; the "-some-thing" part is optional:
+  */
+  if (address.pathname.match(/^\/beschwerde\/\d+(-[^\/]*)?$/)) {
+    if (address.hash.match(/^#weiterleiten$/)) {
+      ShowWin('weiterbox', 650);
+    }
+  }
+};
+addOnLoad(show_weiterleiten_if_requested);
+
+function show_gallery_if_requested() {
+  var address = window.location;
+  /*
+    The address format is "beschwerde/123-some-thing#gallery" and
+    we check that there are no other slashes in and after the "123-some-thing" part; the "-some-thing" part is optional:
+  */
+  if (address.pathname.match(/^\/beschwerde\/\d+(-[^\/]*)?$/)) {
+    if (address.hash.match(/^#gallery$/)) {
+      jQuery.get(address.pathname + '/image-gallery', {for_complaint: 1});
+    }
+  }
+};
+addOnLoad(show_gallery_if_requested);
+
+function show_commentbox_if_requested() {
+  var address = window.location;
+  /*
+    The address format is "beschwerde/123-some-thing#write_comment" and
+    we check that there are no other slashes in and after the "123-some-thing" part; the "-some-thing" part is optional:
+  */
+  if (address.pathname.match(/^\/beschwerde\/\d+(-[^\/]*)?$/)) {
+    if (address.hash.match(/^#write_comment$/)) {
+      ShowWin('kommentbox', 650);
+    }
+  }
+};
+addOnLoad(show_commentbox_if_requested);
+
+function show_nocommentbox_if_requested() {
+  var address = window.location;
+  /*
+    The address format is "beschwerde/123-some-thing#write_nocomment" and
+    we check that there are no other slashes in and after the "123-some-thing" part; the "-some-thing" part is optional:
+  */
+  if (address.pathname.match(/^\/beschwerde\/\d+(-[^\/]*)?$/)) {
+    if (address.hash.match(/^#write_nocomment$/)) {
+      ShowWin('nocommentbox', 450);
+    }
+  }
+};
+addOnLoad(show_nocommentbox_if_requested);
+
+function show_regelbox_if_requested() {
+  var address = window.location;
+  /*
+    The address format is "beschwerde/123-some-thing#regel" and
+    we check that there are no other slashes in and after the "123-some-thing" part; the "-some-thing" part is optional:
+  */
+  var match;
+  match = address.pathname.match(/^\/beschwerde\/(\d+)(-[^\/]*)?$/);
+  if (match) {
+    var complaint_id = match[1];
+    if (address.hash.match(/^#regel$/)) {
+      show_regelbox(complaint_id, 'complaint');
+    }
+  }
+};
+addOnLoad(show_regelbox_if_requested);
+
+function show_regelbox(article_id, article_type) {
+  document.getElementById('regelbox_article_id').value = article_id;
+  document.getElementById('regelbox_article_type').value = article_type;
+  ShowWin('regelbox', 650);
+};
+
+function reset_form(form_name) {
+  document[form_name].reset();
+};
+
+function close_and_reset_commentbox() {
+  HideWin('kommentbox');
+  if (! typeof(already_uploaded_attachment_num) == 'undefined') {
+    already_uploaded_attachment_num = 1;
+  }
+  if (! typeof(already_uploaded_video_attachment_num) == 'undefined') {
+    already_uploaded_video_attachment_num = 1;
+  }
+  reset_input_rows();
+
+  jQuery('#comment_body').empty();
+  jQuery('#error_messages_comment').empty();
+  jQuery('#uploaded_images_report').empty();
+
+  document.getElementById('edit_comment_id').value = '';
+  document.getElementById('comment_body').value = '';
+  document.getElementById('error_messages_comment').value = '';
+  document.getElementById('uploaded_images_report').value = '';
+  document.getElementById('commentform_agb_confirmed').checked = false;
+
+  jQuery.post('/beschwerde/reset_comment_write_session', {authenticity_token: authenticity_token});
+};
+
+function close_and_reset_box(box_id, form_id, error_messages_id) {
+  HideWin(box_id);
+  reset_form(form_id);
+  jQuery('#' + error_messages_id).empty();
+};
+
+function conditionally_add_attachment_input_row() {
+  if (can_add_attachment_input_row()) {
+    add_attachment_input_row();  
+  }
+}
+
+function can_add_attachment_input_row() {
+  var can_add = true;
+  jQuery('#image_attachment_table input').each(function(i, input_element) {
+    if (input_element.value.match(/^\s*$/)) {
+      can_add = false;
+    }
+  });
+  if (can_add && ((max_attachment_num - already_uploaded_attachment_num) > 0)) {
+    already_uploaded_attachment_num += 1;
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function conditionally_add_video_attachment_input_row() {
+  if (can_add_video_attachment_input_row()) {
+    add_video_attachment_input_row();  
+  }
+}
+
+function can_add_video_attachment_input_row() {
+  var can_add = true;
+  jQuery('#video_attachment_table input').each(function(i, input_element) {
+    if (input_element.value.match(/^\s*$/)) {
+      can_add = false;
+    }
+  });
+  if (can_add && ((max_video_attachment_num - already_uploaded_video_attachment_num) > 0)) {
+    already_uploaded_video_attachment_num += 1;
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function reset_upload_file_fields() {
+  var tr_array = jQuery('#image_attachment_table').childElements()[0].childElements(); // there is a [tbody] betweent table and tr
+  if (tr_array.size() > 1) {
+    /* Remove (but first) input fields */
+    tr_array.each(function(index, tr) {
+      if (index != 0) {
+        tr_array[index].remove();
+      }
+    })
+  }
+  /* Reset the value in the first input field */
+  tr_array[0].childElements()[1].childElements()[0].value = ''; // tr has [td, td, td], the second td includes [input] which we need to reset
+}
+
+function swap_classname_focused_image(new_focused_id) {
+  SwapAttrValue(document.getElementById('thumbnail_' + focused_image_id),
+    document.getElementById('thumbnail_' + new_focused_id), 'className', false);
+  focused_image_id = new_focused_id;
+}
+
+function swap_classname_focused_video(new_focused_id) {
+  SwapAttrValue(document.getElementById('comment_video_thumbnail_' + comments_focused_video_id),
+    document.getElementById('comment_video_thumbnail_' + new_focused_id), 'className', false);
+  comments_focused_video_id = new_focused_id;
+}
+
+function reset_input_rows_for(element_id, max, current, add_row_fnc) {
+  var arr = jQuery('#' + element_id + ' tr');
+  var start;
+  if (current >= max) {
+    /* remove all the rows */
+    start = 0;
+  } else {
+    start = 1;
+    var arr_inputs = jQuery('#' + element_id + ' input');
+    if (arr_inputs.length > 0) {
+      /* reset the inputs */
+      arr_inputs.val('');
+    } else {
+      /* there is no input now so add it */
+      add_row_fnc();
+    }
+  }
+  arr.slice(start, arr.length).each(function(i, tr_element) {
+    tr_element.remove();
+  });
+}
+
+function reset_input_rows() {
+  if (! (typeof(already_uploaded_attachment_num) == 'undefined') && ! (typeof(max_attachment_num) == 'undefined')) {
+    reset_input_rows_for('image_attachment_table', max_attachment_num, already_uploaded_attachment_num - 1, add_attachment_input_row);
+  }
+  if (! (typeof(already_uploaded_video_attachment_num) == 'undefined') && ! (typeof(max_video_attachment_num) == 'undefined')) {
+    reset_input_rows_for('video_attachment_table', max_video_attachment_num, already_uploaded_video_attachment_num - 1, add_video_attachment_input_row);
+  }
+}
+
+function launch_edit_comment_countdown(element_id, wrap_element_id, seconds_left) {
+  if (comments_edit_countdowns[element_id]) {
+    /*
+      don't add another countdown, if there is one already present
+    */
+  } else {
+    comments_edit_countdowns[element_id] = true;
+    edit_comment_countdown(element_id, wrap_element_id, seconds_left);
+  }
+}
+
+function edit_comment_countdown(element_id, wrap_element_id, seconds_left) {
+  if (seconds_left > 1) {
+    seconds_left = seconds_left - 1;
+    jQuery('#' + element_id).html('Kommentar noch ' + seconds_left + ' Sekunden editierbar');
+    setTimeout('edit_comment_countdown("' + element_id + '","' + wrap_element_id + '",' + seconds_left + ')', 1000);
+  } else {
+    jQuery('#' + wrap_element_id).remove();
+  }
+}
+
+
+// creates a global object "svg_zoomer" and uses it for onclick events handling
+// container_ids is an array of 2-element arrays [over_svg_container_id, svg_container_id]
+function SvgZoomer(container_ids, over_target_area_id, target_area_id) {
+  svg_zoomer = this;  // variable in global scope
+  this.over_svg_container = null;
+  this.svg_container = null;
+  this.container_ids = container_ids;
+  this.over_target_area = document.getElementById(over_target_area_id);
+  this.target_area = document.getElementById(target_area_id);
+  this.showing = false;
+
+  // clicking on target area will switch it off
+  this.over_target_area.onclick = function(e) {
+    svg_zoomer.zoom_svg_out();
+  };
+
+  // add onclick handlers for zoom_svg_in to all over_svg_containers
+  var over_container;
+  for (var i = 0; i < this.container_ids.length; i++) {
+    over_container = document.getElementById(this.container_ids[i][0]);
+    over_container.onclick = function(e) {
+      svg_zoomer.zoom_svg_in(this.id);  // here the "this" is the clicked-on element
+    };
+  }
+
+  // zoom in method
+  this.zoom_svg_in = function(over_svg_container_id) {
+    // restore original onclick handler on the svg container if we are showing and another svg was clicked on
+    if (this.showing && this.over_svg_container.id != over_svg_container_id) {
+      this.over_svg_container.onclick = function(e) {
+        svg_zoomer.zoom_svg_in(this.id);  // here the "this" is the clicked-on element
+      };
+    }
+
+    // set new this.over_svg_container and this.svg_container
+    this.over_svg_container = document.getElementById(over_svg_container_id);
+    // search for suitable svg_container_id among container_ids // XXX O(n)
+    var svg_container_id;
+    for (var i = 0; i < this.container_ids.length; i++) {
+      if (this.container_ids[i][0] == over_svg_container_id) {
+        svg_container_id = this.container_ids[i][1];
+      }
+    }
+    this.svg_container = document.getElementById(svg_container_id);
+
+    // prepare new node with the appropriate content
+    var new_node = this.svg_container.cloneNode(true);
+    // avoid colision of ids
+    new_node.id = svg_container_id + '_zoomed';
+
+    // prepare handler: clicking again on the same graph will switch the zoomed graph off
+    this.over_svg_container.onclick = function(e) {
+      svg_zoomer.zoom_svg_out();
+    };
+
+    // put the new content into target area
+    jQuery(this.target_area).html(new_node);
+
+    // display the target area
+    this.over_target_area.style.display = 'block';
+    this.target_area.style.display = 'block';
+    this.showing = true;
+  }
+
+  // zoom out
+  this.zoom_svg_out = function() {
+    // switch the target elements off
+    jQuery(this.target_area).hide();
+    jQuery(this.over_target_area).hide();
+
+    // restore original onclick handler on the svg container
+    if (this.over_svg_container) {
+      this.over_svg_container.onclick = function(e) {
+        svg_zoomer.zoom_svg_in(this.id);
+      };
+    }
+    this.showing = false;
+  }
+}
+
+function Prototype17Browser() {
+  var ua = navigator.userAgent;
+  var isOpera = Object.prototype.toString.call(window.opera) == '[object Opera]';
+  return {
+    IE:             !!window.attachEvent && !isOpera,
+    Opera:          isOpera,
+    WebKit:         ua.indexOf('AppleWebKit/') > -1,
+    Gecko:          ua.indexOf('Gecko') > -1 && ua.indexOf('KHTML') === -1,
+    MobileSafari:   /Apple.*Mobile/.test(ua)
+  }
+}
+
+function addToBookmarks(element) {
+  var url = document.location.href;
+  var title = document.title;
+  var perform_click = false;
+
+  var browser = Prototype17Browser();
+  try {
+    if (browser.Gecko) {
+      jQuery.get('/articles/bookmark_firefox');
+    } else if (browser.Opera) {
+      element.setAttribute('rel', 'sidebar');
+      element.setAttribute('href', url);
+      element.setAttribute('title', title);
+      perform_click = true;
+    } else if (browser.IE) {
+      window.external.AddFavorite(url, title);
+    } else {
+      alert("Sorry, your browser doesn't allow scripts to add bookmarks. Please use your browser's keyboard shortcut (most commonly CTRL+D) to add a bookmark.");
+    }
+  } catch(e) {
+    alert("Sorry, your browser doesn't allow scripts to add bookmarks. Please use your browser's keyboard shortcut (most commonly CTRL+D) to add a bookmark.");
+  }
+  jQuery.post('/articles/bookmark_reclabox', {authenticity_token: authenticity_token});
+  return perform_click;
+}
+
+/* handle link-popus */
+jQuery(document).on("click", "a[data-rb-popup]", function(event) {
+  var element = event.target;
+  if (event.stopped) return;
+  var target_name = jQuery(element).readAttribute('data-rb-popup-target');
+  var popup_options = jQuery(element).readAttribute('data-rb-popup-options');
+  if (target_name && popup_options) {
+    window.open(jQuery(element).href, target_name, popup_options);
+  } else {
+    window.open(jQuery(element).href);
+  }
+  event.stop();
+});
+
+function change_reclarank_seal_images(firm_id) {
+  ReclaRankSeal['chosen'] = firm_id;
+  <% ReclarankSeal::TYPES.each do |t| %>
+    <%= "jQuery('#rr_seal_#{t}').prop('src', ReclaRankSeal[firm_id][#{t}]);" %>
+  <% end %>
+}
+
+function generate_reclarank_seal_code() {
+  var chosen_type_element = jQuery('input[name="type"]:checked').first();
+  var code_element = jQuery('#code');
+  var user_url = jQuery.trim(jQuery('#url').val());
+  var user_host;
+  var img_url_element;
+  var slash_pos = user_url.indexOf('/');
+  var chosen_firm_id = ReclaRankSeal['chosen'];
+
+  if (chosen_type_element.length == 0) {
+    return;
+  }
+  if (slash_pos < 0) {
+    user_host = user_url;
+  } else {
+    user_host = user_url.substring(0, slash_pos)
+  }
+  if (user_host.length < 1) {
+    return;
+  }
+
+  /*
+   * The JavaScript in following is minified (by Uglifier) version of this:
+   * (function() {
+   *   var a = window.location.host;
+   *   var b = "user-host";
+   *   var e = a.substring(0, b.length);
+   *   if (b == e) {
+   *     document.getElementById("reclarank-seal").innerHTML = '<a href="http://link-to-firm-website-on-reclabox"><img alt="ReclaRank Seal" src="image-link" /></a>';
+   *   }
+   * })();
+   *
+   * It's purpose is to not show the image if the website, on which the image is placed, is not the one chosen by the user.
+   */
+  code_element.val('<span id="reclarank-seal"></span><script type="text/javascript">/* <![CDATA[ */' +
+    '(function(){var a=window.location.host,b="' + user_host + '",c=a.substring(0,' + user_host.length + ');b==c&&(document.getElementById("reclarank-seal").innerHTML=\'<a href="' +
+    ReclaRankSeal[chosen_firm_id]['target'] +'"><img alt="ReclaRank Seal" src="' + ReclaRankSeal[chosen_firm_id][chosen_type_element.val()] + '" /></a>\')})();' + '/* ]]> */</script>');
+}
+
+/*
+  === styling of file upload input ===
+
+  Go through all the file intput elements with parents of css class
+  "file_upload_container" and assign the class "orig_input" to them. Add
+  new input elements to their parent elements and a function, which copies
+  the content of original (transparent) inputs to the new (visible) ones on
+  "onchange" event.
+
+  Use the following css to put the original file upload on top of the new
+  input and make the original input opaque.
+
+  .file_upload_container {
+    position: relative;
+  }
+
+  .file_upload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .orig_input {
+    position: relative;
+    text-align: right;
+
+    /* ie 8, must be placed before the "filter:" property * /
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    /* ie 5-7 * /
+    filter: alpha(opacity=0);
+    /* old versions of webkit and mozilla * /
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    /* all others, css3 * /
+    opacity: 0;
+
+    z-index: 2;
+  }
+*/
+function init_js_file_upload(config) {
+  if (! (document.createElement && document.getElementsByTagName)) {
+    return;
+  }
+  var inputs = jQuery('.' + config['file_upload_container_class'] + ' input');
+  var file_upload = document.createElement('div');
+  var new_input = document.createElement('input');
+  var button = document.createElement('button');
+
+  new_input.className = config['new_input_class'];
+  button.type = 'button';
+  file_upload.className = config['file_upload_class'];
+  file_upload.appendChild(new_input);
+  file_upload.appendChild(button);
+
+  for (var i = 0; i < inputs.length; i++) {
+    var input_element = inputs[i];
+    if ((input_element.type != 'file') || (input_element.className.indexOf(config['orig_input_class']) > -1)) {
+      continue;
+    }
+    /* deep-copy the "file_upload" element */
+    var clone = file_upload.cloneNode(true);
+
+    input_element.className = config['orig_input_class'];
+    input_element.new_input_element = clone.childNodes[0];
+    input_element.new_button_element = clone.childNodes[1];
+    input_element.new_input_element.value = input_element.value;
+    input_element.parentNode.appendChild(clone);
+    input_element.onchange = function() {
+      /* copy the content of original (opaque) input element to the new (visible) one */
+      if (/^c:\\/i.test(this.value)) {
+        /* some browsers put "C:\fakepath\" before the last path component, copy only the last path component */
+        this.new_input_element.value = this.value.split('\\').pop();
+      } else {
+        this.new_input_element.value = this.value;
+      }
+      if (typeof(config['on_change_call']) == 'function') {
+        config['on_change_call']();
+      }
+    };
+    input_element.onmouseover = function() {
+      this.new_button_element.className = config['button_hover_class'];
+    };
+    input_element.onmouseout = function() {
+      this.new_button_element.className = '';
+    };
+  }
+}
+
+function ChangeBox() {
+  var oldtitle = document.getElementById('rahmtitle').innerHTML;
+  var oldlink = document.getElementById('rahmlink').innerHTML;
+  if (oldtitle == "BILDER") {
+    document.getElementById('rahmbild').style.display = "none";
+    document.getElementById('rahmvideo').style.display = "block";
+    document.getElementById('rahmtitle').innerHTML = oldlink;
+    document.getElementById('rahmlink').innerHTML = oldtitle;
+  } else {
+    document.getElementById('rahmbild').style.display = "block";
+    document.getElementById('rahmvideo').style.display = "none";
+    document.getElementById('rahmtitle').innerHTML = oldlink;
+    document.getElementById('rahmlink').innerHTML = oldtitle;
+  }
+  return false;
+}
