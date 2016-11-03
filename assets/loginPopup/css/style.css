@@ -1,0 +1,105 @@
+body {
+  padding: 30px 0 0 0;
+}
+body .minilink {
+  margin: 30px;
+}
+@font-face {
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/roboto/Roboto-Regular.eot');
+  src: url('../fonts/roboto/Roboto-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto/Roboto-Regular.woff') format('woff'), url('../fonts/roboto/Roboto-Regular.ttf') format('truetype'), url('../fonts/roboto/Roboto-Regular.svg#icon') format('svg');
+}
+#usersLogin {
+  max-width: 370px;
+  background: #fff;
+}
+#usersLogin .modal-content {
+  background: url("../img/userLoginBg.png") center 43px no-repeat #fafafa;
+  padding: 175px 0 0 0;
+}
+#usersLogin .modal-content form {
+  padding: 13px -webkit-calc( (100% - 230px) / 2 ) 0 -webkit-calc( (100% - 230px) / 2 );
+  padding: 13px calc( (100% - 230px) / 2 ) 0 calc( (100% - 230px) / 2 );
+  font: 14px/14px "Roboto";
+  background: #fff;
+}
+#usersLogin .modal-content form .input-field {
+  padding: 0;
+}
+#usersLogin .modal-content form .input-field input {
+  padding: 0;
+  margin: 0 0 5px 0;
+  height: 2.2rem;
+  color: #000000;
+}
+#usersLogin .modal-content form .input-field label {
+  left: 0;
+}
+#usersLogin .modal-content form input[type="checkbox"] + label {
+  padding-left: 26px;
+  line-height: 14px;
+  color: #607d8b;
+  margin: 0 0 11px 0;
+}
+#usersLogin .modal-content form input[type="checkbox"].filled-in:not(:checked) + label:after {
+  width: 16px;
+  height: 16px;
+  top: -2px;
+  border: 2px solid #607d8b;
+}
+#usersLogin .modal-content form input[type="checkbox"].filled-in:checked + label:after {
+  width: 16px;
+  height: 16px;
+  top: -2px;
+  border: 2px solid #607d8b;
+  background: #607d8b;
+  line-height: 16px;
+}
+#usersLogin .modal-content form input[type="checkbox"].filled-in:checked + label:before {
+  left: 0;
+  top: -4px;
+}
+#usersLogin .modal-content form input:focus:not([readonly]) + label {
+  color: #7f7f7f;
+}
+#usersLogin .modal-content form input:not([type]):focus:not([readonly]),
+#usersLogin .modal-content form input[type=text]:focus:not([readonly]),
+#usersLogin .modal-content form input[type=password]:focus:not([readonly]),
+#usersLogin .modal-content form input[type=email]:focus:not([readonly]),
+#usersLogin .modal-content form input[type=url]:focus:not([readonly]),
+#usersLogin .modal-content form input[type=time]:focus:not([readonly]),
+#usersLogin .modal-content form input[type=date]:focus:not([readonly]),
+#usersLogin .modal-content form input[type=datetime]:focus:not([readonly]),
+#usersLogin .modal-content form input[type=datetime-local]:focus:not([readonly]),
+#usersLogin .modal-content form input[type=tel]:focus:not([readonly]),
+#usersLogin .modal-content form input[type=number]:focus:not([readonly]),
+#usersLogin .modal-content form input[type=search]:focus:not([readonly]),
+#usersLogin .modal-content form textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #607d8b;
+  -webkit-box-shadow: 0 1px 0 0 #607d8b;
+          box-shadow: 0 1px 0 0 #607d8b;
+}
+#usersLogin .modal-content form button.einloggen {
+  width: 100%;
+  background: #607d8b;
+}
+#usersLogin .modal-content form button.einloggen:hover {
+  background: #78909c;
+}
+#usersLogin .modal-content .questions {
+  text-align: center;
+  font: 12px/24px "Roboto";
+  background: #fff;
+  padding: 16px 0 0 0;
+  margin: 0;
+}
+#usersLogin .modal-content .questions li a {
+  color: #607d8b;
+}
+@media screen and (min-height: 477px) {
+  #usersLogin {
+    min-height: 475px;
+  }
+}
