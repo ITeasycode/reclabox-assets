@@ -1,0 +1,99 @@
+@function margin-calculation($scale-number) {
+  @return -($emoji-size - $emoji-size * $scale-number) / 2
+}
+
+$emoji-size: 100px;
+$emoji-shadow-size: 84px;
+
+$scale-default: 0.58;
+$scale-large: 1;
+$scale-small: 0.42;
+
+/* Emoji core */
+.emoji {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  width: $emoji-size;
+  height: $emoji-size;
+  border-radius: 100%;
+  opacity: 1;
+  // opacity: .6;
+  transition: opacity .3s;
+  transform: scale($scale-default);
+  margin: margin-calculation($scale-default);
+
+  &:before,
+  &:after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 100%;
+  }
+  
+  &:before {
+    background: transparent url('http://imagizer.imageshack.us/a/img924/5740/LoLhMY.png') 0 0 no-repeat;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+  
+  &:after {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    background: #eceff1;
+    transition: .4s;
+  }
+
+  &.emoji-active,
+  &:hover {
+    opacity: 1;
+    
+    &:after {
+      $emoji-shadow-indent: -($emoji-shadow-size / 2);
+      width: $emoji-shadow-size;
+      height: $emoji-shadow-size;
+      margin: $emoji-shadow-indent 0 0 $emoji-shadow-indent;
+    }
+  }
+}
+
+/* Emoji sizing */
+@each $size-name, $scale in ('large', $scale-large), ('small', $scale-small) {
+  .emoji-#{$size-name} {
+    transform: scale($scale);
+    margin: margin-calculation($scale);
+  }
+}
+
+/* Emojis list animation */
+$emojis-list: ('amused', 42), ('no-matter', 67), ('frightened', 51), ('informed', 74), ('boring', 42), ('shocked', 90), ('sad', 60), ('angry', 60);
+
+@each $name, $step in $emojis-list {
+  $i: index($emojis-list, ($name, $step)) - 1;
+  $pos-y: -($i * $emoji-size);
+
+  .emoji-#{$name} {
+    &:before {
+      background-position: 0 $pos-y;
+    }
+
+    &.emoji-animated,
+    &:hover {
+      &:before {
+        animation: play-#{$name} 1.2s steps($step) infinite;
+      } 
+    }
+  }  
+  
+  @keyframes play-#{$name} {
+    from { background-position: 0 $pos-y; }
+    to   { background-position: -($step * $emoji-size) $pos-y; }
+  }
+}

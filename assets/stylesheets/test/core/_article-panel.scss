@@ -1,0 +1,256 @@
+.left-panel {
+  display: inline-block;
+  width: 510px;
+  margin-right: 20px;
+
+  .panel { margin-bottom: 20px; }
+}
+
+.article-info {
+  margin-bottom: 20px;
+
+  .author { 
+    float: left;
+    font-weight: $medium;
+  }
+
+  .article-data { 
+    float: right;
+    color: $gray;
+    font-weight: $medium;
+  }
+}
+
+.article-panel {
+  padding: 18px 24px;
+
+
+  .article-text {
+    line-height: $line-height-large;
+    font-weight: $regular;
+  }
+
+  .article-text:first-letter {
+    line-height: .6;
+    display: inline-block;
+    float: left;
+    padding: 12px;
+    border-radius: 4px;
+    margin-right: 8px;
+    font-size: 18px;
+    background-color: $pink;
+    color: $white;
+  }
+}
+
+.gray-quote {
+  background-color: #eceff1;
+  margin: 25px 0;
+  padding: 23px 30px 30px;
+
+  p { line-height: $line-height-large; }
+}
+
+.company-commercial-data {
+  border-radius: 4px;
+  padding: 15px 20px;
+
+  p { line-height: $line-height-large; }
+}
+
+.panel {
+  position: relative;
+
+  .panel-body#stars { height: 93px; }
+
+  .panel-body.attachment {
+    position: relative;
+
+    textarea {
+      font-weight: $regular;
+      padding: 0 0 5px 0;
+      color: $navy;
+      border-bottom: 1px solid #607d8b;
+      font-size: $font-size-base;
+      line-height: $line-height-large;
+      margin-bottom: 0;
+      min-height: 12px;
+
+      &:focus {
+        border-bottom: 1px solid #607d8b;
+        box-shadow: none;
+      }
+    }
+
+    .btn-circle {
+      @include absolute(auto, 18px, auto, auto);
+
+      i.material-icons {
+        font-size: $font-size-medium;
+        @include rotate(45deg);
+      }
+    }
+
+    .attachment-files {
+      height: 85px;
+      padding-top: 9px;
+    }
+  }
+
+  .comment-comand {
+    @include absolute(auto, 18px, -17px, auto);
+
+    i.mdi {
+      font-size: $font-size-medium;
+      color: $navy;
+      line-height: 44px;
+    }
+
+    .like_btn {
+      right: 20px;
+    }
+  }
+
+  & + a + .panel { margin-top: 50px; }
+
+  .avatar {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    margin-right: 14px;
+    border-radius: 50%;
+    background-color: red;
+  }
+  
+  .name {
+    display: inline-block;
+    transform: translateY(-70%);
+  }
+
+  .date {
+    border-left: 1px solid #cfd8dc;
+    display: inline-block;
+    margin-left: 14px;
+    padding-left: 8px;
+    color: #cfd8dc;
+    transform: translateY(-33%);
+
+    i { font-size: 20px; }
+
+    span {
+      display: inline-block;
+      margin-left: 8px;
+      transform: translateY(-55%);
+    }
+  }
+
+  i.warning {
+    position: relative;
+    top: 18px;
+    left: -6px;
+    font-size: 14px;
+    color: $gray;
+  }
+}
+
+.company-answer {
+  margin: -18px -18px 0; 
+  border-bottom: 1px solid $gray-light;
+
+  .company-icon {
+    display: inline-block;
+    width: 25%;
+    padding: 18px;    
+    text-align: center;
+  }
+
+  .company-info {
+    display: inline-block;
+    width: 75%;
+    padding: 18px;
+    border-left: 1px solid $gray-light;
+
+    .company-user { font-weight: $medium; }
+
+    .company-date,
+    .company-post {
+      margin-bottom: 3px;
+      font-weight: $light;
+      font-size: $font-size-ex-small;
+    }
+    
+    .company-date {
+      i {
+        color: $green;
+        font-size: 11px;
+        vertical-align: text-bottom;
+        margin-right: 3px;
+      }
+
+      span { vertical-align: text-top; }
+    }
+    
+    .company-comment-number {
+      color: $gray;
+
+      i {
+        color: inherit;
+        font-size: $font-size-medium;
+      }
+
+      span {
+        margin-left: 4px;
+        vertical-align: text-top;
+        font-size: $font-size-small;
+        font-weight: $medium;
+      }
+    }
+  }
+}
+
+.company-answer-text {
+  font-weight: $regular;
+  padding: 18px 0;
+}
+
+// BEWERTEN SIE DIE ANTWORT VON extraenergie
+.stars {
+  text-align: center;
+
+  i { font-size: 45px; }
+
+  .star { @include transition(.3s); }
+  .first:hover { color: #ffebee; }
+  .second:hover { color: #f8bbd0; }
+  .thrid:hover { color: #f48fb1; }
+  .fourth:hover { color: #f06292; }
+  .fifth:hover { color: #ec407a; }
+}
+
+.star-text {
+  display: none;
+  font-weight: $regular;
+  @include transition(.3s);
+}
+
+.panel.comments {
+  .panel-title { display: inline-block; }
+
+  .comments-number {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 15px;
+    background-color: #f5f5f5;
+    margin-left: 12px;
+  }
+}
+
+.panel.business-awaiting {
+  .text-left {
+    margin-bottom: 9px;
+
+    &.dib p { padding-top: 9px; }
+
+    span { font-weight: $bold; }    
+  }
+}

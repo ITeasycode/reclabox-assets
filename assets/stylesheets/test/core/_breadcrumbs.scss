@@ -1,0 +1,21 @@
+.breadcrumbs {
+  margin-bottom: 10px;
+  font-size: $font-size-small;
+  color: $gray;
+
+  li {
+    display: inline-block;
+
+    a {
+      display: inline-block;
+      height: 13px;
+      padding: 0 3px;
+      color: $gray;
+
+      &:hover {
+        background-color: #f9dbe5;
+        color: $pink;
+      }
+    }
+  }  
+}

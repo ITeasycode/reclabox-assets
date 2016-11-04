@@ -1,0 +1,136 @@
+.useful-link {
+  .panel {
+    position: relative;
+
+    .panel-body {
+      height: 145px;
+      padding: 0;
+      background-position: 50% 50%;
+      background-size: cover;
+    }
+
+    .panel-footer {
+      @include absolute (auto, auto, 0, auto);
+      height: 48px;
+      width: 100%;
+      padding: 7px 10px;
+      background-color: #fff;
+      opacity: .89;
+
+      .from {
+        margin-bottom: 7px;
+        font-size: $font-size-ex-small;
+        font-weight: $bold;
+      }
+    }
+  }
+}
+
+.about-more li {
+  margin-bottom: 20px;
+
+  &:last-child { margin-bottom: 0; }
+}
+
+.right-panel {
+  display: inline-block;
+  width: 220px;
+
+  .suggest-link {
+    margin-bottom: 10px;
+    @include transition(.3s);
+
+    &:hover {
+      background-color: $pink;
+      color: $white !important;
+      -webkit-box-shadow: 0px 4px 5px 0px rgba(255,64,128,0.19);
+         -moz-box-shadow: 0px 4px 5px 0px rgba(255,64,128,0.19);
+              box-shadow: 0px 4px 5px 0px rgba(255,64,128,0.19);
+    }
+  }
+
+  .panel { margin-bottom: 10px; }
+
+  .panel.join-complaint {
+    .connect-now-image {
+      height: 111px;
+      margin-bottom: -3px;
+    }
+    p {
+      color: $gray;
+      font-size: $font-size-small;
+      line-height: $line-height-normal;
+      margin-bottom: 10px;
+    }
+
+    p.title {
+      color: $navy;
+      font-size: $font-size-base;
+      font-weight: $medium;
+      margin-bottom: 0;
+    }
+  }
+  .links {
+    margin-bottom: 15px;
+    text-align: center;
+
+    .link {
+      margin-bottom: 10px;
+      @include transition(.3s);
+      color: $pink;
+
+      &:active,
+      &:hover {
+        background-color: $pink;
+        color: $white;
+        -webkit-box-shadow: 0px 4px 5px 0px rgba(255,64,128,0.19);
+        -moz-box-shadow: 0px 4px 5px 0px rgba(255,64,128,0.19);
+        box-shadow: 0px 4px 5px 0px rgba(255,64,128,0.19);
+      }
+    }
+
+    a {
+      margin-right: 6px;
+      vertical-align: middle;
+
+
+      i {
+        font-size: 14px;
+        line-height: 25px;
+        color: $navy;
+      }
+
+      &.btn-rectangle {
+        height: 30px;
+        margin-right: 0;
+
+        i {
+          @include transition(.3s);
+        }
+
+        span {
+          display: inline-block;
+          margin-left: 12px;
+          color: $navy;
+          text-transform: none;
+          font-weight: $medium;
+          font-size: $font-size-base;
+          transform: translateY(-20%);
+          @include transition(0.3s);
+        }
+
+        &:hover {
+          background-color: $pink;
+          -webkit-box-shadow: 0px 4px 5px 0px rgba(255,64,128,0.19);
+             -moz-box-shadow: 0px 4px 5px 0px rgba(255,64,128,0.19);
+                  box-shadow: 0px 4px 5px 0px rgba(255,64,128,0.19);
+          
+          i,
+          span {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
