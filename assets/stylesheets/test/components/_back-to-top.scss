@@ -1,0 +1,28 @@
+.back-to-top {
+  position: fixed;
+  bottom: 100px;
+  left: 11%;
+  display: none;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  z-index: 999;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 32px;
+  @include transition(background-color .4s ease, color .4s ease);
+
+
+  &:hover {
+    background-color: #ffffff;
+    color: #1A2127;
+  }
+
+  i {
+    color: $gray;
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,32 @@
+.panel {
+  background-color: $white;
+
+  .panel-footer,
+  .panel-body,
+  .panel-header {
+    padding: 18px;
+
+    p {
+      line-height: $line-height-large;
+      font-weight: $regular;
+    }
+  }
+
+  .panel-title {
+    margin: 0;
+    font-size: $font-size-base;
+  }
+
+  .pink-panel { background-color: $pink; }
+  .pink-lighter-panel { background-color: #f06292; }
+  .default-panel { background-color: $gray-light; }
+  .gray-lighter-panel { background-color: $gray-lighter }
+  .white-panel { background-color: $white; }
+  .green-panel { background-color: $green; }
+  .green-dark-panel { background-color: $green-dark; }
+  .pink-light-panel { background-color: #f48fb1; }
+  .red-panel { background-color: #e91e63; }
+  .red-dark-panel { background-color: #d81b60; }
+  .blue-lighter-panel { background-color: #26c6da; }
+  .blue-light-panel { background-color: #00b8d4; }
+}
