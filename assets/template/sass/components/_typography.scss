@@ -1,0 +1,103 @@
+
+a {
+  text-decoration: none;
+  @include transition(all 0.6s ease 0s);
+}
+
+html{
+  line-height: 1.5;
+
+  @media only screen and (min-width: 0) {
+    font-size: 14px;
+  }
+
+  @media only screen and (min-width: $medium-screen) {
+    font-size: 14px;
+  }
+
+  @media only screen and (min-width: $large-screen) {
+    font-size: 14px;
+  }
+
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  color: $off-black;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+	line-height: 1.1;
+}
+
+// Header Styles
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+h1 { font-size: $h1-fontsize; line-height: 110%; margin: 1rem 0;}
+h2 { font-size: $h2-fontsize; line-height: 110%; margin: 1rem 0;}
+h3 { font-size: $h3-fontsize; line-height: 110%; margin: 1rem 0;}
+h4 { font-size: $h4-fontsize; line-height: 110%; margin: 1rem 0;}
+h5 { font-size: $h5-fontsize; line-height: 110%; margin: 1rem 0;}
+h6 { font-size: $h6-fontsize; line-height: 110%; margin: 1rem 0;}
+
+h1, h2, h3, h4, h5, h6 {
+  &.header, &.header a {
+    color: black;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 27px;
+    margin: 0 0 3px;
+    text-transform: uppercase;
+  }
+  &.header a {
+    @include opacity(0.5);
+    &:hover {
+      @include opacity(0.7);
+    }
+  }
+  &.card-title {
+    margin: 11px 0;
+  }
+}
+
+.header-wrapper {
+  display: table;
+
+  & > * {
+    display: table-cell;
+    padding-right: 12px;
+  }
+
+  & > a {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    color: $card-link-color;
+
+    &:hover {
+      color: $card-link-color-light;
+    }
+  }
+}
+
+// Text Styles
+em { font-style: italic; }
+strong { font-weight: 500; }
+small { font-size: 75%; }
+.light { font-weight: 300; }
+.thin { font-weight: 200; }
+
+
+.flow-text{
+  font-weight: 300;
+  $i: 0;
+  @while $i <= $intervals {
+    @media only screen and (min-width : 360 + ($i * $interval-size)) {
+      font-size: 1.2rem * (1 + (.02 * $i));
+    }
+    $i: $i + 1;
+  }
+
+  // Handle below 360px screen
+  @media only screen and (max-width: 360px) {
+    font-size: 1.2rem;
+  }
+}
