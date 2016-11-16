@@ -1,0 +1,85 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+      <title>RegisterPage</title>
+
+    </head>
+
+    <body>
+    	<a class="minilink" href="#usersRegister">Register</a>
+
+    	<div id="usersRegister" class="modal">
+    	  <div class="modal-content">
+    	  	<h4 class="modalHeader user">Möchten Sie kostenlos Mitglied werden?</h4>
+    	  	<h4 class="modalHeader firm hidden">Möchten Sie den Firmen-Account nutzen?</h4>
+    	  	<div class="row wrapper">
+    	  	    <div class="col s12">
+    	  	      <ul class="tabs">
+    	  	        <li class="tab"><a class="active" href="#USER-MITGLIEDSCHAFT">USER-MITGLIEDSCHAFT</a></li>
+    	  	        <li class="tab"><a href="#FIRMA-MITGLIEDSCHAFT">FIRMA-MITGLIEDSCHAFT</a></li>
+    	  	      </ul>
+    	  	    </div>
+    	  	    <div id="USER-MITGLIEDSCHAFT" class="col s12">
+    	  	    	<p>Bereits mit Ihrer E-Mail-Adresse und Passwort können Sie sich als Privatperson kostenlos anmelden und selbst Beschwerden, Kommentare oder Nachrichten an andere User schreiben. Falls Sie Ihren Namen angeben möchten, werden Ihre erstellten Inhalte unter diesem Namen veröffentlicht. </p>
+    	  	    	<form class="col s12" action="#">
+    	  	    	    <div class="row">
+    	  	    	    	<div class="input-field col s12">
+    	  	    	    		<input id="email" type="email" class="validate">
+    	  	    	    		<label for="email">E-Mail-Adresse *</label>
+    	  	    	    	</div>
+    	  	    	    	<div class="input-field col s12">
+    	  	    	    		<input id="password" type="password" class="validate">
+    	  	    	    		<label for="password">Passwort *</label>
+    	  	    	    	</div>
+    	  	    	    	<div class="input-field col s12">
+    	  	    	    		<input id="passwordRep" type="password" class="validate">
+    	  	    	    		<label for="passwordRep">Passwort wiederholen *</label>
+    	  	    	    	</div>
+    	  	    	      	<div class="input-field col s12">
+	    	  	    	        <input id="lastName" type="text" class="validate">
+	    	  	    	        <label for="lastName">Vorname</label>
+    	  	    	      	</div>
+    	  	    	      	<div class="input-field col s12">
+	    	  	    	        <input id="firstName" type="text" class="validate">
+	    	  	    	        <label for="firstName">Name</label>
+    	  	    	      	</div>
+    	  	    	    </div>
+    	  	    	    <p class="warning">Hinweis: wir geben Ihre E-Mail -Adresse nicht an Dritte weiter, bei uns  erhalten Sie keinen unerwünschen Spam. <a href="#">Datenschutz.</a></p>
+    	  	    	    <input type="checkbox" class="filled-in" id="filled-in-box" />
+    	  	    	    <label for="filled-in-box">Ja, ich habe die <a href="#">Nutzungsbedinungen</a> gelesen und akzeptiert</label>
+    	  	    	    <button class="registrieren btn waves-effect waves-light" type="submit" name="action">registrieren</button>
+    	  	    	</form>
+    	  	    </div>
+    	  	    <div id="FIRMA-MITGLIEDSCHAFT" class="col s12">
+    	  	    	<p>Nach dem Senden der Formulardaten erhalten Sie von uns eine E-Mail mit einem Verifizierungslink, der Sie zur Eingabe Ihrer Firmendaten führen wird. Sie können den Firmen-Account dann nach Freischaltung 14 Tage lang unverbindlich kostenlos testen, wir unterbreiten Ihnen rechtzeitig vor Ablauf ein Angebot zur weiteren Nutzung.</p>
+    	  	    	<p>Haben Sie vorab Fragen zum Firmen-Account? Fordern Sie weitere Informationen hier an: ReclaBox Support</p>
+    	  	    	<form class="col s12 firmRegistrarion" action="#">
+    	  	    	    <div class="row">
+    	  	    	    	<div class="input-field col s12">
+	    	  	    	        <input id="companyName" type="text" class="validate">
+	    	  	    	        <label for="companyName">Company / Institution</label>
+    	  	    	      	</div>
+    	  	    	    	<div class="input-field col s12">
+    	  	    	    		<input id="companyEmail" type="email" class="validate">
+    	  	    	    		<label for="companyEmail">E-Mail-Adresse</label>
+    	  	    	    	</div>
+    	  	    	    </div>
+    	  	    	    <p class="warning">Hinweis: wir geben Ihre E-Mail -Adresse nicht an Dritte weiter, bei uns  erhalten Sie keinen unerwünschen Spam. <a href="#">Datenschutz.</a></p>
+    	  	    	    <input type="checkbox" class="filled-in" id="filled-in-box" />
+    	  	    	    <label for="filled-in-box">Ja, ich habe die <a href="#">Nutzungsbedinungen</a> gelesen und akzeptiert</label>
+    	  	    	    <button class="registrierenFirm btn waves-effect waves-light" type="submit" name="action">registrieren als firma</button>
+    	  	    	</form>
+    	  	    </div>
+    	  	  </div>
+    	  </div>
+    	</div>
+
+    	<script type="text/javascript" src="js/jquery.js"></script>
+    	<script type="text/javascript" src="js/materialize.js"></script>
+    	<script type="text/javascript" src="js/script.js"></script>
+    </body>
+  </html>
