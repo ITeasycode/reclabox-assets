@@ -15,6 +15,7 @@
 html,
 body {
   height: 100%;
+  padding: 10px;
 }
 body {
   background: url("../img/bgImg2.png") 146px 96px #f06292;
@@ -39,10 +40,10 @@ body::before {
   letter-spacing: 1.5px;
 }
 .centered .card {
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
   -webkit-box-shadow: 0 13px 51px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0 13px 51px 0px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
 }
 .centered .card .card-content {
   padding: 30px;
@@ -59,7 +60,7 @@ body::before {
 .centered .card .card-content .btn:hover {
   background-color: #ff5a92;
 }
-@media screen and (min-width: 406px) {
+@media screen and (min-width: 471px) {
   body::before {
     display: inline-block;
   }

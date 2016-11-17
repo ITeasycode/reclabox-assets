@@ -14,6 +14,8 @@ body .minilink {
 #usersLogin {
   max-width: 370px;
   background: #fff;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
 }
 #usersLogin .modal-content {
   background: url("../img/userLoginBg.png") center 43px no-repeat #fafafa;
