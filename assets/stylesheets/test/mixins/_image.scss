@@ -1,8 +1,0 @@
-@mixin image-retina($file, $type: 'png', $size: contain) {
-  background-image: image-url("#{$file}.#{$type}");
-
-  @include retina {
-    background-image: image-url("#{$file}#{$retina-suffix}.#{$type}");
-    background-size: $size;
-  }
-}
