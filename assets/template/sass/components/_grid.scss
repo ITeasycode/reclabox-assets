@@ -2,20 +2,26 @@
   margin: 0 auto;
   max-width: 1170px;
   width: 90%;
-}
-@media #{$medium-and-up} {
-  .container {
-    width: 970px;
+  &-medium {
+    max-width: 990px;
+    margin: 0 auto;
   }
 }
+
 @media #{$medium-and-up} {
   .container {
     width: 970px;
+    &-medium {
+      width: 990px;
+    }
   }
 }
 @media #{$large-and-up} {
   .container {
     width: 1170px;
+    &-medium {
+      width: 990px;
+    }
   }
 }
 .container .row {

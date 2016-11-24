@@ -37,10 +37,11 @@ $primary-color: color("pink", "accent-2") !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
-$secondary-color: color("teal", "lighten-1") !default;
+$secondary-color: color("blue-grey", "base") !default;
 $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
-$link-color: color("light-blue", "darken-1") !default;
+$link-color: rgba(96, 125, 139, .87) !default;
+$link-color-hover: rgba(96, 125, 139, .54) !default;
 
 
 /* 2. Badges
@@ -57,17 +58,18 @@ $button-border: none !default;
 $button-background-focus: lighten($secondary-color, 4%) !default;
 $button-font-size: 1.3rem !default;
 $button-height: 36px !default;
-$button-padding: 0 2rem !default;
-$button-radius: 2px !default;
+$button-padding: 0 15px !default;
+$button-radius: 3px !default;
 
 // Disabled styles
 $button-disabled-background: #DFDFDF !default;
 $button-disabled-color: #9F9F9F !default;
 
 // Raised buttons
-$button-raised-background: $secondary-color !default;
-$button-raised-background-hover: lighten($button-raised-background, 5%) !default;
-$button-raised-color: #fff !default;
+$button-raised-background: #eceff1 !default;
+$button-raised-background-hover: #607d8b !default;
+$button-raised-color-hover: #ffffff !default;
+$button-raised-color: #607d8b !default;
 
 // Large buttons
 $button-large-icon-font-size: 1.6rem !default;
@@ -78,8 +80,9 @@ $button-flat-color: #343434 !default;
 $button-flat-disabled-color: lighten(#999, 10%) !default;
 
 // Floating buttons
-$button-floating-background: $secondary-color !default;
+$button-floating-background: lighten($secondary-color, 40%) !default;
 $button-floating-background-hover: $button-floating-background !default;
+$button-icon-floating-background: rgba(255, 255, 255, 0) !default;
 $button-floating-color: #fff !default;
 $button-floating-size: 37px !default;
 $button-floating-large-size: $button-floating-size * 1.5 !default;
@@ -216,9 +219,9 @@ $element-bottom-margin: ($gutter-width / 3 ) * 2 !default;
 /* 13. Navigation Bar
    ========================================================================== */
 
-$navbar-height: 64px !default;
+$navbar-height: 50px !default;
 $nav-top: 37px !default;
-$navbar-height-mobile: 56px !default;
+$navbar-height-mobile: 50px !default;
 $navbar-font-size: 1rem !default;
 $navbar-font-color: #607d8b !default;
 $navbar-font-color-light: #99aeb8 !default;
@@ -275,6 +278,7 @@ $toast-text-color: #fff !default;
    ========================================================================== */
 
 $off-black: rgba(0, 0, 0, 0.87) !default;
+
 // Header Styles
 $h1-fontsize: 4.2rem !default;
 $h2-fontsize: 3.56rem !default;
@@ -312,4 +316,4 @@ $collection-link-color: $secondary-color !default;
 /* 24. Progress Bar
    ========================================================================== */
 
-$progress-bar-color: $secondary-color !default;
+$progress-bar-color: $primary-color !default;

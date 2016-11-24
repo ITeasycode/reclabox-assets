@@ -8,7 +8,7 @@
   line-height: $button-height;
   outline: 0;
   padding: $button-padding;
-  text-transform: uppercase;
+  text-transform: capitalize;
   vertical-align: middle;
   // Gets rid of tap active state
   -webkit-tap-highlight-color: transparent;
@@ -45,7 +45,7 @@
 .btn-large,
 .btn-flat {
   i {
-    font-size: $button-font-size;
+    font-size: 1.4rem;
     line-height: inherit;
   }
 }
@@ -57,13 +57,21 @@
   background-color: $button-raised-background;
   text-align: center;
   letter-spacing: .5px;
-  @extend .z-depth-1;
   transition: .2s ease-out;
   cursor: pointer;
+  font-weight: 500;
 
   &:hover {
     background-color: $button-raised-background-hover;
+    color: $button-raised-color-hover;
     @extend .z-depth-1-half;
+
+  }
+
+  i.mdi {
+      font-size: 24px;
+      position: relative;
+      top: 1px;
   }
 }
 
@@ -80,7 +88,6 @@
   padding: 0;
   background-color: $button-floating-background;
   border-radius: $button-floating-radius;
-  @extend .z-depth-1;
   transition: .3s;
   cursor: pointer;
   vertical-align: middle;
@@ -108,6 +115,14 @@
     height: $button-floating-large-size;
     i {
       line-height: $button-floating-large-size;
+    }
+  }
+  &.icon-floating {
+    background-color: $button-icon-floating-background !important;
+
+    &:hover {
+      background-color: $button-icon-floating-background !important;
+      @extend .z-depth-0;
     }
   }
 }
@@ -205,7 +220,85 @@ button.btn-floating {
   }
 }
 
-// Block button
-.btn-block {
+.search-button,
+.search-close-button {
+  background: transparent center center no-repeat;
+  background-size: 24px 24px;
+  cursor: pointer;
+  border: 0;
   display: block;
+  height: 48px;
+  overflow: hidden;
+  top: 8px;
+  width: 48px;
+  z-index: 2;
 }
+
+
+
+.arrow-hamburger {
+  display: inline-block;
+  margin: 0 auto 0;
+  width: 16px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  position: relative;
+  right: 0;
+  height: 18px;
+  overflow: hidden;
+  padding: 0;
+  vertical-align: middle;
+
+  &_top, 
+  &_line,
+  &_bottom {
+    transition: 200ms ease-in-out;
+  }
+
+  .line {
+    background: #ff4081;
+    width: 16px;
+    height: 2px;
+    border-radius: 25px;
+    margin: 3px 0 2px;
+    position: relative;
+    transition: all 200ms ease-in-out;
+    z-index: 2;
+  }
+}
+
+.button-collapse {
+  
+    &:hover, 
+    &.active {
+      .arrow_top {
+        width: 10px;
+        transform: rotate(40deg);
+        margin-left: 5px;
+        top: 1px;
+        z-index: 1 !important;
+      }
+      
+      .arrow_bottom {
+        width: 10px;
+        transform: rotate(-40deg);
+        margin-left: 5px;
+        margin-top: 0px;
+        z-index: 1 !important;
+      }
+
+      .arrow_line {
+        width: 15px;
+      }
+
+    }
+    &.active {
+      .arrow-hamburger {
+        transform: rotate(180deg);
+      }
+    }
+
+}
+
+
+

@@ -14,24 +14,63 @@
 <body>
   <div class="wrapper grey lighten-5">
     
-    <div class="navbar-fixed">
-      <nav class="white" role="navigation">
-        <div class="nav-wrapper container">
-          <ul class="left hide-on-med-and-down">
-            <li><a class="waves-effect" href="#"><i class="material-icons">menu</i></a></li>
-          </ul>
-          <a id="logo-container" href="#" class="brand-logo">Logo</a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="#">Navbar Link</a></li>
-          </ul>
-
-          <ul id="nav-mobile" class="side-nav">
-            <li><a href="#">Navbar Link</a></li>
-          </ul>
-          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-        </div>
-      </nav>
-    </div><!-- end navbar-fixed -->
+    <header>
+      <div class="navbar-fixed">
+        <nav class="white" role="navigation">
+          <div class="nav-wrapper">
+            <ul>
+              <li>
+                <a href="#" data-activates="slide-out" class="button-collapse waves-effect">
+                  <div class="arrow-hamburger">
+                    <div class="line arrow_top"></div>
+                    <div class="line arrow_line"></div>
+                    <div class="line arrow_bottom"></div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <a id="logo-container" href="javascript:void(0)" class="brand-logo"><img src="img/img-site/logo-reclabox.jpg" alt="ReclaBox"></a>
+            <div class="nav-menu-wrapper">
+              <ul id="navHeader" class="nav-menu hide-on-med-and-down">
+                <li><a class="active" href="javascript:void(0)">BESCHWERDE LESEN</a></li>
+                <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li>
+              </ul>
+            </div>
+            <ul class="right hide-on-med-and-down nav-right">
+              <li>
+                <form id="search-form">
+                  <div class="search-widget">
+                    <button class="search-button"><i class="material-icons">search</i></button>
+                    <button class="search-close-button"><i class="material-icons">close</i></button>
+                    <input name="q" type="text" id="search-input" autocomplete="off">
+                    <label for="search-input">Name, Firma oder Schlagwort</label>
+                  </div>
+                </form>
+              </li>
+              <li><a href="javascript:void(0)"><i class="material-icons left">lock</i>LOGIN</a></li>
+              <li><a href="javascript:void(0)"><i class="material-icons left">person</i>REGISTRIEREN</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div><!-- end navbar-fixed -->
+      <div class="slide-nav-wrapper">
+        <ul id="slide-out" class="side-nav">
+          <li><div class="userView">
+            <div class="background">
+              <img src="http://materializecss.com/images/office.jpg">
+            </div>
+            <a href="#!user"><img class="circle" src="http://materializecss.com/images/yuna.jpg"></a>
+            <a href="#!name"><span class="white-text name">John Doe</span></a>
+            <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+          </div></li>
+          <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+          <li><a href="#!">Second Link</a></li>
+          <li><div class="divider"></div></li>
+          <li><a class="subheader">Subheader</a></li>
+          <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        </ul>
+      </div>
+    </header>
 
     <div class="container">
       
