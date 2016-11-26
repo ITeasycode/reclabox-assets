@@ -1,0 +1,148 @@
+body {
+  padding: 30px 0 0 0;
+}
+body .minilink {
+  margin: 30px;
+}
+@font-face {
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/roboto/Roboto-Regular.eot');
+  src: url('../fonts/roboto/Roboto-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto/Roboto-Regular.woff') format('woff'), url('../fonts/roboto/Roboto-Regular.ttf') format('truetype'), url('../fonts/roboto/Roboto-Regular.svg#icon') format('svg');
+}
+@font-face {
+  font-family: 'Roboto-Medium';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/roboto/Roboto-Medium.eot');
+  src: url('../fonts/roboto/Roboto-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto/Roboto-Medium.woff') format('woff'), url('../fonts/roboto/Roboto-Medium.ttf') format('truetype'), url('../fonts/roboto/Roboto-Medium.svg#icon') format('svg');
+}
+@font-face {
+  font-family: 'icon-font-3';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/icon-font-3/icon-font-3.eot');
+  src: url('../fonts/icon-font-3/icon-font-3.eot?#iefix') format('embedded-opentype'), url('../fonts/icon-font-3/icon-font-3.woff') format('woff'), url('../fonts/icon-font-3/icon-font-3.ttf') format('truetype'), url('../fonts/icon-font-3/icon-font-3.svg#icon') format('svg');
+}
+#newPassword {
+  max-width: 370px;
+  background: #fff;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  height: 580px;
+  max-height: 90%;
+}
+#newPassword .modal-content {
+  background: url("../img/userLoginBg.png") center 43px no-repeat #fafafa;
+  padding: 175px 0 0 0;
+}
+#newPassword .modal-content .back {
+  text-decoration: none;
+  color: #607d8b;
+  font: 25px/25px "icon-font-3";
+  position: absolute;
+  top: 24px;
+  left: 25px;
+}
+#newPassword .modal-content .textBox {
+  padding: 25px 40px 0 27px;
+  background: #fff;
+  font: 14px/18px "Roboto";
+  color: rgba(0, 0, 0, 0.78);
+}
+#newPassword .modal-content .textBox p {
+  margin: 0;
+}
+#newPassword .modal-content .textBox .textHeader {
+  padding: 0 0 12px 0;
+  font: 14px/18px "Roboto-Medium";
+}
+#newPassword .modal-content form {
+  padding: 0 -webkit-calc( (100% - 230px) / 2 ) 0 -webkit-calc( (100% - 230px) / 2 );
+  padding: 0 calc( (100% - 230px) / 2 ) 0 calc( (100% - 230px) / 2 );
+  font: 14px/14px "Roboto";
+  background: #fff;
+}
+#newPassword .modal-content form .input-field {
+  padding: 0;
+  margin-top: 20px;
+}
+#newPassword .modal-content form .input-field input {
+  padding: 0;
+  margin: 0 0 5px 0;
+  height: 2.2rem;
+  color: #000000;
+}
+#newPassword .modal-content form .input-field label {
+  left: 0;
+}
+#newPassword .modal-content form .input-field .icon {
+  font: 18px/15px "icon-font-3";
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  color: #b0bec5;
+  z-index: 50000;
+  cursor: pointer;
+}
+#newPassword .modal-content form input[type="checkbox"] + label {
+  padding-left: 26px;
+  line-height: 14px;
+  color: #607d8b;
+  margin: 0 0 11px 0;
+}
+#newPassword .modal-content form input[type="checkbox"].filled-in:not(:checked) + label:after {
+  width: 16px;
+  height: 16px;
+  top: -2px;
+  border: 2px solid #607d8b;
+}
+#newPassword .modal-content form input[type="checkbox"].filled-in:checked + label:after {
+  width: 16px;
+  height: 16px;
+  top: -2px;
+  border: 2px solid #607d8b;
+  background: #607d8b;
+  line-height: 16px;
+}
+#newPassword .modal-content form input[type="checkbox"].filled-in:checked + label:before {
+  left: 0;
+  top: -4px;
+}
+#newPassword .modal-content form input:focus:not([readonly]) + label {
+  color: #607d8b;
+}
+#newPassword .modal-content form input:not([type]):focus:not([readonly]),
+#newPassword .modal-content form input[type=text]:focus:not([readonly]),
+#newPassword .modal-content form input[type=password]:focus:not([readonly]),
+#newPassword .modal-content form input[type=email]:focus:not([readonly]),
+#newPassword .modal-content form input[type=url]:focus:not([readonly]),
+#newPassword .modal-content form input[type=time]:focus:not([readonly]),
+#newPassword .modal-content form input[type=date]:focus:not([readonly]),
+#newPassword .modal-content form input[type=datetime]:focus:not([readonly]),
+#newPassword .modal-content form input[type=datetime-local]:focus:not([readonly]),
+#newPassword .modal-content form input[type=tel]:focus:not([readonly]),
+#newPassword .modal-content form input[type=number]:focus:not([readonly]),
+#newPassword .modal-content form input[type=search]:focus:not([readonly]),
+#newPassword .modal-content form textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #607d8b;
+  -webkit-box-shadow: 0 1px 0 0 #607d8b;
+          box-shadow: 0 1px 0 0 #607d8b;
+}
+#newPassword .modal-content form .btn {
+  width: 100%;
+  background: #607d8b;
+  margin-bottom: 10px;
+}
+#newPassword .modal-content form .btn:hover {
+  background: #78909c;
+}
+#newPassword::-webkit-scrollbar {
+  width: 0;
+}
+@media screen and (min-height: 477px) {
+  #newPassword {
+    height: 580px;
+  }
+}
