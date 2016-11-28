@@ -11,6 +11,27 @@ body {
   // display: flex;
   // min-height: 100vh;
   // flex-direction: column;
+  position: relative;
+
+  
+  &.onSlideNav {
+    overflow-x: hidden;
+    .container, 
+    .container-medium.post {
+      position: relative;
+      transition-duration: .3s;
+      transition-timing-function: ease-in-out;
+      transform:translateX(300px)
+    }
+  }
+  .container, 
+  .container-medium.post {
+    position: relative;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+    transform:translateX(0);
+  }
+
 }
 
 main {
@@ -37,8 +58,22 @@ a {
 
   // Gets rid of tap active state
   -webkit-tap-highlight-color: transparent;
+
+  &:hover {
+    color: $link-color-hover;
+  }
 }
 
+// special
+.no-bg {
+  background-color: rgba(0, 0, 0, 0) !important;
+  @extend .z-depth-0;
+
+  .card-header {
+    padding: 5px 0 !important;
+    text-transform: inherit !important;
+  }
+}
 
 // Positioning
 .valign-wrapper {
@@ -47,6 +82,15 @@ a {
 
   .valign {
     display: block;
+  }
+}
+
+.table-wrapper {
+  display: table;
+  margin: 0 auto;
+
+  & > * {
+    display: table-cell;
   }
 }
 
@@ -117,11 +161,11 @@ i {
 
   &.left {
     float: left;
-    margin-right: 15px;
+    margin-right: 11px;
   }
   &.right {
     float: right;
-    margin-left: 15px;
+    margin-left: 11px;
   }
   &.tiny {
     font-size: 1rem;
@@ -136,6 +180,7 @@ i {
     font-size: 6rem;
   }
 }
+
 
 // Images
 img.responsive-img,
@@ -203,8 +248,14 @@ video.responsive-video {
 
 // Breadcrumbs
 .breadcrumb {
-  font-size: 18px;
-  color: rgba(255,255,255, .7);
+  color: rgba(01, 01, 01, .54);
+  font-family: Roboto;
+  font-size: 10px;
+  font-weight: 400;
+
+  &:hover {
+    color: rgba(01, 01, 01, .85);
+  }
 
   i,
   [class^="mdi-"], [class*="mdi-"],
@@ -215,15 +266,15 @@ video.responsive-video {
   }
 
   &:before {
-    content: '\E5CC';
-    color: rgba(255,255,255, .7);
+    content: '\00BB';
+    color: rgba(01, 01, 01, .54);
     vertical-align: top;
     display: inline-block;
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
-    font-size: 25px;
-    margin: 0 10px 0 8px;
+    font-size: 12px;
+    margin: 0px 3px 0 0px;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -233,6 +284,13 @@ video.responsive-video {
 
   &:last-child {
     color: #fff;
+  }
+  
+  &-last-child {
+    color: rgba(01, 01, 01, .54);
+    font-family: Roboto;
+    font-size: 10px;
+    font-weight: 400;
   }
 }
 
@@ -600,15 +658,17 @@ td, th{
 
 // Badges
 span.badge {
-  min-width: 3rem;
-  padding: 0 6px;
+  color: color('grey', 'darken-1');
+  min-width: 2rem;
+  padding: 4px 9px;
   text-align: center;
   font-size: 1rem;
   line-height: inherit;
-  color: color('grey', 'darken-1');
+  color: #757575;
   position: absolute;
   right: 15px;
   box-sizing: border-box;
+  border-radius: 11px;
 
   &.new {
     font-weight: 300;
@@ -655,7 +715,7 @@ nav ul a span.badge {
     height: 4px;
     display: block;
     width: 100%;
-    background-color: lighten($progress-bar-color, 40%);
+    background-color: #eceff1;
     border-radius: 2px;
     margin: $element-top-margin 0 $element-bottom-margin 0;
     overflow: hidden;
@@ -744,7 +804,10 @@ nav ul a span.badge {
 .center, .center-align {
   text-align: center;
 }
-
+.center {
+  margin: 0 auto;
+  display: block !important;
+}
 .left {
   float: left !important;
 }

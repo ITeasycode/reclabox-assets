@@ -56,135 +56,135 @@ jQuery.easing['jswing'] = jQuery.easing['swing'];
 
 jQuery.extend( jQuery.easing,
 {
-	def: 'easeOutQuad',
-	swing: function (x, t, b, c, d) {
-		//alert(jQuery.easing.default);
-		return jQuery.easing[jQuery.easing.def](x, t, b, c, d);
-	},
-	easeInQuad: function (x, t, b, c, d) {
-		return c*(t/=d)*t + b;
-	},
-	easeOutQuad: function (x, t, b, c, d) {
-		return -c *(t/=d)*(t-2) + b;
-	},
-	easeInOutQuad: function (x, t, b, c, d) {
-		if ((t/=d/2) < 1) return c/2*t*t + b;
-		return -c/2 * ((--t)*(t-2) - 1) + b;
-	},
-	easeInCubic: function (x, t, b, c, d) {
-		return c*(t/=d)*t*t + b;
-	},
-	easeOutCubic: function (x, t, b, c, d) {
-		return c*((t=t/d-1)*t*t + 1) + b;
-	},
-	easeInOutCubic: function (x, t, b, c, d) {
-		if ((t/=d/2) < 1) return c/2*t*t*t + b;
-		return c/2*((t-=2)*t*t + 2) + b;
-	},
-	easeInQuart: function (x, t, b, c, d) {
-		return c*(t/=d)*t*t*t + b;
-	},
-	easeOutQuart: function (x, t, b, c, d) {
-		return -c * ((t=t/d-1)*t*t*t - 1) + b;
-	},
-	easeInOutQuart: function (x, t, b, c, d) {
-		if ((t/=d/2) < 1) return c/2*t*t*t*t + b;
-		return -c/2 * ((t-=2)*t*t*t - 2) + b;
-	},
-	easeInQuint: function (x, t, b, c, d) {
-		return c*(t/=d)*t*t*t*t + b;
-	},
-	easeOutQuint: function (x, t, b, c, d) {
-		return c*((t=t/d-1)*t*t*t*t + 1) + b;
-	},
-	easeInOutQuint: function (x, t, b, c, d) {
-		if ((t/=d/2) < 1) return c/2*t*t*t*t*t + b;
-		return c/2*((t-=2)*t*t*t*t + 2) + b;
-	},
-	easeInSine: function (x, t, b, c, d) {
-		return -c * Math.cos(t/d * (Math.PI/2)) + c + b;
-	},
-	easeOutSine: function (x, t, b, c, d) {
-		return c * Math.sin(t/d * (Math.PI/2)) + b;
-	},
-	easeInOutSine: function (x, t, b, c, d) {
-		return -c/2 * (Math.cos(Math.PI*t/d) - 1) + b;
-	},
-	easeInExpo: function (x, t, b, c, d) {
-		return (t==0) ? b : c * Math.pow(2, 10 * (t/d - 1)) + b;
-	},
-	easeOutExpo: function (x, t, b, c, d) {
-		return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
-	},
-	easeInOutExpo: function (x, t, b, c, d) {
-		if (t==0) return b;
-		if (t==d) return b+c;
-		if ((t/=d/2) < 1) return c/2 * Math.pow(2, 10 * (t - 1)) + b;
-		return c/2 * (-Math.pow(2, -10 * --t) + 2) + b;
-	},
-	easeInCirc: function (x, t, b, c, d) {
-		return -c * (Math.sqrt(1 - (t/=d)*t) - 1) + b;
-	},
-	easeOutCirc: function (x, t, b, c, d) {
-		return c * Math.sqrt(1 - (t=t/d-1)*t) + b;
-	},
-	easeInOutCirc: function (x, t, b, c, d) {
-		if ((t/=d/2) < 1) return -c/2 * (Math.sqrt(1 - t*t) - 1) + b;
-		return c/2 * (Math.sqrt(1 - (t-=2)*t) + 1) + b;
-	},
-	easeInElastic: function (x, t, b, c, d) {
-		var s=1.70158;var p=0;var a=c;
-		if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
-		if (a < Math.abs(c)) { a=c; var s=p/4; }
-		else var s = p/(2*Math.PI) * Math.asin (c/a);
-		return -(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
-	},
-	easeOutElastic: function (x, t, b, c, d) {
-		var s=1.70158;var p=0;var a=c;
-		if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
-		if (a < Math.abs(c)) { a=c; var s=p/4; }
-		else var s = p/(2*Math.PI) * Math.asin (c/a);
-		return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
-	},
-	easeInOutElastic: function (x, t, b, c, d) {
-		var s=1.70158;var p=0;var a=c;
-		if (t==0) return b;  if ((t/=d/2)==2) return b+c;  if (!p) p=d*(.3*1.5);
-		if (a < Math.abs(c)) { a=c; var s=p/4; }
-		else var s = p/(2*Math.PI) * Math.asin (c/a);
-		if (t < 1) return -.5*(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
-		return a*Math.pow(2,-10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )*.5 + c + b;
-	},
-	easeInBack: function (x, t, b, c, d, s) {
-		if (s == undefined) s = 1.70158;
-		return c*(t/=d)*t*((s+1)*t - s) + b;
-	},
-	easeOutBack: function (x, t, b, c, d, s) {
-		if (s == undefined) s = 1.70158;
-		return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
-	},
-	easeInOutBack: function (x, t, b, c, d, s) {
-		if (s == undefined) s = 1.70158;
-		if ((t/=d/2) < 1) return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
-		return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
-	},
-	easeInBounce: function (x, t, b, c, d) {
-		return c - jQuery.easing.easeOutBounce (x, d-t, 0, c, d) + b;
-	},
-	easeOutBounce: function (x, t, b, c, d) {
-		if ((t/=d) < (1/2.75)) {
-			return c*(7.5625*t*t) + b;
-		} else if (t < (2/2.75)) {
-			return c*(7.5625*(t-=(1.5/2.75))*t + .75) + b;
-		} else if (t < (2.5/2.75)) {
-			return c*(7.5625*(t-=(2.25/2.75))*t + .9375) + b;
-		} else {
-			return c*(7.5625*(t-=(2.625/2.75))*t + .984375) + b;
-		}
-	},
-	easeInOutBounce: function (x, t, b, c, d) {
-		if (t < d/2) return jQuery.easing.easeInBounce (x, t*2, 0, c, d) * .5 + b;
-		return jQuery.easing.easeOutBounce (x, t*2-d, 0, c, d) * .5 + c*.5 + b;
-	}
+  def: 'easeOutQuad',
+  swing: function (x, t, b, c, d) {
+    //alert(jQuery.easing.default);
+    return jQuery.easing[jQuery.easing.def](x, t, b, c, d);
+  },
+  easeInQuad: function (x, t, b, c, d) {
+    return c*(t/=d)*t + b;
+  },
+  easeOutQuad: function (x, t, b, c, d) {
+    return -c *(t/=d)*(t-2) + b;
+  },
+  easeInOutQuad: function (x, t, b, c, d) {
+    if ((t/=d/2) < 1) return c/2*t*t + b;
+    return -c/2 * ((--t)*(t-2) - 1) + b;
+  },
+  easeInCubic: function (x, t, b, c, d) {
+    return c*(t/=d)*t*t + b;
+  },
+  easeOutCubic: function (x, t, b, c, d) {
+    return c*((t=t/d-1)*t*t + 1) + b;
+  },
+  easeInOutCubic: function (x, t, b, c, d) {
+    if ((t/=d/2) < 1) return c/2*t*t*t + b;
+    return c/2*((t-=2)*t*t + 2) + b;
+  },
+  easeInQuart: function (x, t, b, c, d) {
+    return c*(t/=d)*t*t*t + b;
+  },
+  easeOutQuart: function (x, t, b, c, d) {
+    return -c * ((t=t/d-1)*t*t*t - 1) + b;
+  },
+  easeInOutQuart: function (x, t, b, c, d) {
+    if ((t/=d/2) < 1) return c/2*t*t*t*t + b;
+    return -c/2 * ((t-=2)*t*t*t - 2) + b;
+  },
+  easeInQuint: function (x, t, b, c, d) {
+    return c*(t/=d)*t*t*t*t + b;
+  },
+  easeOutQuint: function (x, t, b, c, d) {
+    return c*((t=t/d-1)*t*t*t*t + 1) + b;
+  },
+  easeInOutQuint: function (x, t, b, c, d) {
+    if ((t/=d/2) < 1) return c/2*t*t*t*t*t + b;
+    return c/2*((t-=2)*t*t*t*t + 2) + b;
+  },
+  easeInSine: function (x, t, b, c, d) {
+    return -c * Math.cos(t/d * (Math.PI/2)) + c + b;
+  },
+  easeOutSine: function (x, t, b, c, d) {
+    return c * Math.sin(t/d * (Math.PI/2)) + b;
+  },
+  easeInOutSine: function (x, t, b, c, d) {
+    return -c/2 * (Math.cos(Math.PI*t/d) - 1) + b;
+  },
+  easeInExpo: function (x, t, b, c, d) {
+    return (t==0) ? b : c * Math.pow(2, 10 * (t/d - 1)) + b;
+  },
+  easeOutExpo: function (x, t, b, c, d) {
+    return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
+  },
+  easeInOutExpo: function (x, t, b, c, d) {
+    if (t==0) return b;
+    if (t==d) return b+c;
+    if ((t/=d/2) < 1) return c/2 * Math.pow(2, 10 * (t - 1)) + b;
+    return c/2 * (-Math.pow(2, -10 * --t) + 2) + b;
+  },
+  easeInCirc: function (x, t, b, c, d) {
+    return -c * (Math.sqrt(1 - (t/=d)*t) - 1) + b;
+  },
+  easeOutCirc: function (x, t, b, c, d) {
+    return c * Math.sqrt(1 - (t=t/d-1)*t) + b;
+  },
+  easeInOutCirc: function (x, t, b, c, d) {
+    if ((t/=d/2) < 1) return -c/2 * (Math.sqrt(1 - t*t) - 1) + b;
+    return c/2 * (Math.sqrt(1 - (t-=2)*t) + 1) + b;
+  },
+  easeInElastic: function (x, t, b, c, d) {
+    var s=1.70158;var p=0;var a=c;
+    if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
+    if (a < Math.abs(c)) { a=c; var s=p/4; }
+    else var s = p/(2*Math.PI) * Math.asin (c/a);
+    return -(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
+  },
+  easeOutElastic: function (x, t, b, c, d) {
+    var s=1.70158;var p=0;var a=c;
+    if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
+    if (a < Math.abs(c)) { a=c; var s=p/4; }
+    else var s = p/(2*Math.PI) * Math.asin (c/a);
+    return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
+  },
+  easeInOutElastic: function (x, t, b, c, d) {
+    var s=1.70158;var p=0;var a=c;
+    if (t==0) return b;  if ((t/=d/2)==2) return b+c;  if (!p) p=d*(.3*1.5);
+    if (a < Math.abs(c)) { a=c; var s=p/4; }
+    else var s = p/(2*Math.PI) * Math.asin (c/a);
+    if (t < 1) return -.5*(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
+    return a*Math.pow(2,-10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )*.5 + c + b;
+  },
+  easeInBack: function (x, t, b, c, d, s) {
+    if (s == undefined) s = 1.70158;
+    return c*(t/=d)*t*((s+1)*t - s) + b;
+  },
+  easeOutBack: function (x, t, b, c, d, s) {
+    if (s == undefined) s = 1.70158;
+    return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
+  },
+  easeInOutBack: function (x, t, b, c, d, s) {
+    if (s == undefined) s = 1.70158;
+    if ((t/=d/2) < 1) return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
+    return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
+  },
+  easeInBounce: function (x, t, b, c, d) {
+    return c - jQuery.easing.easeOutBounce (x, d-t, 0, c, d) + b;
+  },
+  easeOutBounce: function (x, t, b, c, d) {
+    if ((t/=d) < (1/2.75)) {
+      return c*(7.5625*t*t) + b;
+    } else if (t < (2/2.75)) {
+      return c*(7.5625*(t-=(1.5/2.75))*t + .75) + b;
+    } else if (t < (2.5/2.75)) {
+      return c*(7.5625*(t-=(2.25/2.75))*t + .9375) + b;
+    } else {
+      return c*(7.5625*(t-=(2.625/2.75))*t + .984375) + b;
+    }
+  },
+  easeInOutBounce: function (x, t, b, c, d) {
+    if (t < d/2) return jQuery.easing.easeInBounce (x, t*2, 0, c, d) * .5 + b;
+    return jQuery.easing.easeOutBounce (x, t*2-d, 0, c, d) * .5 + c*.5 + b;
+  }
 });
 
 /*
@@ -2360,55 +2360,57 @@ $(document).ready(function(){
           }
         });
 
-          $this.click(function() {
-            if (menuOut === true) {
+        $this.click(function() {
+          if (menuOut === true) {
+            menuOut = false;
+            panning = false;
+            removeMenu();
+          }
+          else {
+
+            // Disable Scrolling
+            var $body = $('body');
+            var oldWidth = $body.innerWidth();
+
+            console.log(oldWidth);
+            $body.css('overflow', 'hidden');
+            $body.width(oldWidth);
+
+            // Push current drag target on top of DOM tree
+            $('body').append(dragTarget);
+
+            if (options.edge === 'left') {
+              dragTarget.css({width: '50%', right: 0, left: ''});
+              menu_id.velocity({'translateX': [0, -1 * options.menuWidth]}, {duration: 300, queue: false, easing: 'easeOutQuad'});
+            }
+            else {
+              dragTarget.css({width: '50%', right: '', left: 0});
+              menu_id.velocity({'translateX': [0, options.menuWidth]}, {duration: 300, queue: false, easing: 'easeOutQuad'});
+            }
+
+            var overlay = $('<div id="sidenav-overlay"></div>');
+            overlay.css('opacity', 0)
+            .click(function(){
               menuOut = false;
               panning = false;
               removeMenu();
-            }
-            else {
+              overlay.velocity({opacity: 0}, {duration: 300, queue: false, easing: 'easeOutQuad',
+                complete: function() {
+                  $(this).remove();
+                } });
 
-              // Disable Scrolling
-              var $body = $('body');
-              var oldWidth = $body.innerWidth();
-              $body.css('overflow', 'hidden');
-              $body.width(oldWidth);
-
-              // Push current drag target on top of DOM tree
-              $('body').append(dragTarget);
-
-              if (options.edge === 'left') {
-                dragTarget.css({width: '50%', right: 0, left: ''});
-                menu_id.velocity({'translateX': [0, -1 * options.menuWidth]}, {duration: 300, queue: false, easing: 'easeOutQuad'});
-              }
-              else {
-                dragTarget.css({width: '50%', right: '', left: 0});
-                menu_id.velocity({'translateX': [0, options.menuWidth]}, {duration: 300, queue: false, easing: 'easeOutQuad'});
-              }
-
-              var overlay = $('<div id="sidenav-overlay"></div>');
-              overlay.css('opacity', 0)
-              .click(function(){
-                menuOut = false;
+            });
+            $('body').append(overlay);
+            overlay.velocity({opacity: 1}, {duration: 300, queue: false, easing: 'easeOutQuad',
+              complete: function () {
+                menuOut = true;
                 panning = false;
-                removeMenu();
-                overlay.velocity({opacity: 0}, {duration: 300, queue: false, easing: 'easeOutQuad',
-                  complete: function() {
-                    $(this).remove();
-                  } });
+              }
+            });
+          }
 
-              });
-              $('body').append(overlay);
-              overlay.velocity({opacity: 1}, {duration: 300, queue: false, easing: 'easeOutQuad',
-                complete: function () {
-                  menuOut = true;
-                  panning = false;
-                }
-              });
-            }
-
-            return false;
-          });
+          return false;
+        });
       });
 
 
@@ -2447,273 +2449,273 @@ $(document).ready(function(){
  */
 (function($) {
 
-	var jWindow = $(window);
-	var elements = [];
-	var elementsInView = [];
-	var isSpying = false;
-	var ticks = 0;
-	var unique_id = 1;
-	var offset = {
-		top : 0,
-		right : 0,
-		bottom : 0,
-		left : 0,
-	}
+  var jWindow = $(window);
+  var elements = [];
+  var elementsInView = [];
+  var isSpying = false;
+  var ticks = 0;
+  var unique_id = 1;
+  var offset = {
+    top : 0,
+    right : 0,
+    bottom : 0,
+    left : 0,
+  }
 
-	/**
-	 * Find elements that are within the boundary
-	 * @param {number} top
-	 * @param {number} right
-	 * @param {number} bottom
-	 * @param {number} left
-	 * @return {jQuery}		A collection of elements
-	 */
-	function findElements(top, right, bottom, left) {
-		var hits = $();
-		$.each(elements, function(i, element) {
-			if (element.height() > 0) {
-				var elTop = element.offset().top,
-					elLeft = element.offset().left,
-					elRight = elLeft + element.width(),
-					elBottom = elTop + element.height();
+  /**
+   * Find elements that are within the boundary
+   * @param {number} top
+   * @param {number} right
+   * @param {number} bottom
+   * @param {number} left
+   * @return {jQuery}   A collection of elements
+   */
+  function findElements(top, right, bottom, left) {
+    var hits = $();
+    $.each(elements, function(i, element) {
+      if (element.height() > 0) {
+        var elTop = element.offset().top,
+          elLeft = element.offset().left,
+          elRight = elLeft + element.width(),
+          elBottom = elTop + element.height();
 
-				var isIntersect = !(elLeft > right ||
-					elRight < left ||
-					elTop > bottom ||
-					elBottom < top);
+        var isIntersect = !(elLeft > right ||
+          elRight < left ||
+          elTop > bottom ||
+          elBottom < top);
 
-				if (isIntersect) {
-					hits.push(element);
-				}
-			}
-		});
+        if (isIntersect) {
+          hits.push(element);
+        }
+      }
+    });
 
-		return hits;
-	}
+    return hits;
+  }
 
 
-	/**
-	 * Called when the user scrolls the window
-	 */
-	function onScroll() {
-		// unique tick id
-		++ticks;
+  /**
+   * Called when the user scrolls the window
+   */
+  function onScroll() {
+    // unique tick id
+    ++ticks;
 
-		// viewport rectangle
-		var top = jWindow.scrollTop(),
-			left = jWindow.scrollLeft(),
-			right = left + jWindow.width(),
-			bottom = top + jWindow.height();
+    // viewport rectangle
+    var top = jWindow.scrollTop(),
+      left = jWindow.scrollLeft(),
+      right = left + jWindow.width(),
+      bottom = top + jWindow.height();
 
-		// determine which elements are in view
+    // determine which elements are in view
 //        + 60 accounts for fixed nav
-		var intersections = findElements(top+offset.top + 200, right+offset.right, bottom+offset.bottom, left+offset.left);
-		$.each(intersections, function(i, element) {
+    var intersections = findElements(top+offset.top + 200, right+offset.right, bottom+offset.bottom, left+offset.left);
+    $.each(intersections, function(i, element) {
 
-			var lastTick = element.data('scrollSpy:ticks');
-			if (typeof lastTick != 'number') {
-				// entered into view
-				element.triggerHandler('scrollSpy:enter');
-			}
+      var lastTick = element.data('scrollSpy:ticks');
+      if (typeof lastTick != 'number') {
+        // entered into view
+        element.triggerHandler('scrollSpy:enter');
+      }
 
-			// update tick id
-			element.data('scrollSpy:ticks', ticks);
-		});
+      // update tick id
+      element.data('scrollSpy:ticks', ticks);
+    });
 
-		// determine which elements are no longer in view
-		$.each(elementsInView, function(i, element) {
-			var lastTick = element.data('scrollSpy:ticks');
-			if (typeof lastTick == 'number' && lastTick !== ticks) {
-				// exited from view
-				element.triggerHandler('scrollSpy:exit');
-				element.data('scrollSpy:ticks', null);
-			}
-		});
+    // determine which elements are no longer in view
+    $.each(elementsInView, function(i, element) {
+      var lastTick = element.data('scrollSpy:ticks');
+      if (typeof lastTick == 'number' && lastTick !== ticks) {
+        // exited from view
+        element.triggerHandler('scrollSpy:exit');
+        element.data('scrollSpy:ticks', null);
+      }
+    });
 
-		// remember elements in view for next tick
-		elementsInView = intersections;
-	}
+    // remember elements in view for next tick
+    elementsInView = intersections;
+  }
 
-	/**
-	 * Called when window is resized
-	*/
-	function onWinSize() {
-		jWindow.trigger('scrollSpy:winSize');
-	}
+  /**
+   * Called when window is resized
+  */
+  function onWinSize() {
+    jWindow.trigger('scrollSpy:winSize');
+  }
 
-	/**
-	 * Get time in ms
+  /**
+   * Get time in ms
    * @license https://raw.github.com/jashkenas/underscore/master/LICENSE
-	 * @type {function}
-	 * @return {number}
-	 */
-	var getTime = (Date.now || function () {
-		return new Date().getTime();
-	});
+   * @type {function}
+   * @return {number}
+   */
+  var getTime = (Date.now || function () {
+    return new Date().getTime();
+  });
 
-	/**
-	 * Returns a function, that, when invoked, will only be triggered at most once
-	 * during a given window of time. Normally, the throttled function will run
-	 * as much as it can, without ever going more than once per `wait` duration;
-	 * but if you'd like to disable the execution on the leading edge, pass
-	 * `{leading: false}`. To disable execution on the trailing edge, ditto.
-	 * @license https://raw.github.com/jashkenas/underscore/master/LICENSE
-	 * @param {function} func
-	 * @param {number} wait
-	 * @param {Object=} options
-	 * @returns {Function}
-	 */
-	function throttle(func, wait, options) {
-		var context, args, result;
-		var timeout = null;
-		var previous = 0;
-		options || (options = {});
-		var later = function () {
-			previous = options.leading === false ? 0 : getTime();
-			timeout = null;
-			result = func.apply(context, args);
-			context = args = null;
-		};
-		return function () {
-			var now = getTime();
-			if (!previous && options.leading === false) previous = now;
-			var remaining = wait - (now - previous);
-			context = this;
-			args = arguments;
-			if (remaining <= 0) {
-				clearTimeout(timeout);
-				timeout = null;
-				previous = now;
-				result = func.apply(context, args);
-				context = args = null;
-			} else if (!timeout && options.trailing !== false) {
-				timeout = setTimeout(later, remaining);
-			}
-			return result;
-		};
-	};
+  /**
+   * Returns a function, that, when invoked, will only be triggered at most once
+   * during a given window of time. Normally, the throttled function will run
+   * as much as it can, without ever going more than once per `wait` duration;
+   * but if you'd like to disable the execution on the leading edge, pass
+   * `{leading: false}`. To disable execution on the trailing edge, ditto.
+   * @license https://raw.github.com/jashkenas/underscore/master/LICENSE
+   * @param {function} func
+   * @param {number} wait
+   * @param {Object=} options
+   * @returns {Function}
+   */
+  function throttle(func, wait, options) {
+    var context, args, result;
+    var timeout = null;
+    var previous = 0;
+    options || (options = {});
+    var later = function () {
+      previous = options.leading === false ? 0 : getTime();
+      timeout = null;
+      result = func.apply(context, args);
+      context = args = null;
+    };
+    return function () {
+      var now = getTime();
+      if (!previous && options.leading === false) previous = now;
+      var remaining = wait - (now - previous);
+      context = this;
+      args = arguments;
+      if (remaining <= 0) {
+        clearTimeout(timeout);
+        timeout = null;
+        previous = now;
+        result = func.apply(context, args);
+        context = args = null;
+      } else if (!timeout && options.trailing !== false) {
+        timeout = setTimeout(later, remaining);
+      }
+      return result;
+    };
+  };
 
-	/**
-	 * Enables ScrollSpy using a selector
-	 * @param {jQuery|string} selector  The elements collection, or a selector
-	 * @param {Object=} options	Optional.
+  /**
+   * Enables ScrollSpy using a selector
+   * @param {jQuery|string} selector  The elements collection, or a selector
+   * @param {Object=} options Optional.
         throttle : number -> scrollspy throttling. Default: 100 ms
         offsetTop : number -> offset from top. Default: 0
         offsetRight : number -> offset from right. Default: 0
         offsetBottom : number -> offset from bottom. Default: 0
         offsetLeft : number -> offset from left. Default: 0
-	 * @returns {jQuery}
-	 */
-	$.scrollSpy = function(selector, options) {
-	  var defaults = {
-			throttle: 100,
-			scrollOffset: 200 // offset - 200 allows elements near bottom of page to scroll
+   * @returns {jQuery}
+   */
+  $.scrollSpy = function(selector, options) {
+    var defaults = {
+      throttle: 100,
+      scrollOffset: 200 // offset - 200 allows elements near bottom of page to scroll
     };
     options = $.extend(defaults, options);
 
-		var visible = [];
-		selector = $(selector);
-		selector.each(function(i, element) {
-			elements.push($(element));
-			$(element).data("scrollSpy:id", i);
-			// Smooth scroll to section
-		  $('a[href="#' + $(element).attr('id') + '"]').click(function(e) {
-		    e.preventDefault();
-		    var offset = $(this.hash).offset().top + 1;
-	    	$('html, body').animate({ scrollTop: offset - options.scrollOffset }, {duration: 400, queue: false, easing: 'easeOutCubic'});
-		  });
-		});
+    var visible = [];
+    selector = $(selector);
+    selector.each(function(i, element) {
+      elements.push($(element));
+      $(element).data("scrollSpy:id", i);
+      // Smooth scroll to section
+      $('a[href="#' + $(element).attr('id') + '"]').click(function(e) {
+        e.preventDefault();
+        var offset = $(this.hash).offset().top + 1;
+        $('html, body').animate({ scrollTop: offset - options.scrollOffset }, {duration: 400, queue: false, easing: 'easeOutCubic'});
+      });
+    });
 
-		offset.top = options.offsetTop || 0;
-		offset.right = options.offsetRight || 0;
-		offset.bottom = options.offsetBottom || 0;
-		offset.left = options.offsetLeft || 0;
+    offset.top = options.offsetTop || 0;
+    offset.right = options.offsetRight || 0;
+    offset.bottom = options.offsetBottom || 0;
+    offset.left = options.offsetLeft || 0;
 
-		var throttledScroll = throttle(onScroll, options.throttle || 100);
-		var readyScroll = function(){
-			$(document).ready(throttledScroll);
-		};
+    var throttledScroll = throttle(onScroll, options.throttle || 100);
+    var readyScroll = function(){
+      $(document).ready(throttledScroll);
+    };
 
-		if (!isSpying) {
-			jWindow.on('scroll', readyScroll);
-			jWindow.on('resize', readyScroll);
-			isSpying = true;
-		}
+    if (!isSpying) {
+      jWindow.on('scroll', readyScroll);
+      jWindow.on('resize', readyScroll);
+      isSpying = true;
+    }
 
-		// perform a scan once, after current execution context, and after dom is ready
-		setTimeout(readyScroll, 0);
-
-
-		selector.on('scrollSpy:enter', function() {
-			visible = $.grep(visible, function(value) {
-	      return value.height() != 0;
-	    });
-
-			var $this = $(this);
-
-			if (visible[0]) {
-				$('a[href="#' + visible[0].attr('id') + '"]').removeClass('active');
-				if ($this.data('scrollSpy:id') < visible[0].data('scrollSpy:id')) {
-					visible.unshift($(this));
-				}
-				else {
-					visible.push($(this));
-				}
-			}
-			else {
-				visible.push($(this));
-			}
+    // perform a scan once, after current execution context, and after dom is ready
+    setTimeout(readyScroll, 0);
 
 
-			$('a[href="#' + visible[0].attr('id') + '"]').addClass('active');
-		});
-		selector.on('scrollSpy:exit', function() {
-			visible = $.grep(visible, function(value) {
-	      return value.height() != 0;
-	    });
+    selector.on('scrollSpy:enter', function() {
+      visible = $.grep(visible, function(value) {
+        return value.height() != 0;
+      });
 
-			if (visible[0]) {
-				$('a[href="#' + visible[0].attr('id') + '"]').removeClass('active');
-				var $this = $(this);
-				visible = $.grep(visible, function(value) {
-	        return value.attr('id') != $this.attr('id');
-	      });
-	      if (visible[0]) { // Check if empty
-					$('a[href="#' + visible[0].attr('id') + '"]').addClass('active');
-	      }
-			}
-		});
+      var $this = $(this);
 
-		return selector;
-	};
+      if (visible[0]) {
+        $('a[href="#' + visible[0].attr('id') + '"]').removeClass('active');
+        if ($this.data('scrollSpy:id') < visible[0].data('scrollSpy:id')) {
+          visible.unshift($(this));
+        }
+        else {
+          visible.push($(this));
+        }
+      }
+      else {
+        visible.push($(this));
+      }
 
-	/**
-	 * Listen for window resize events
-	 * @param {Object=} options						Optional. Set { throttle: number } to change throttling. Default: 100 ms
-	 * @returns {jQuery}		$(window)
-	 */
-	$.winSizeSpy = function(options) {
-		$.winSizeSpy = function() { return jWindow; }; // lock from multiple calls
-		options = options || {
-			throttle: 100
-		};
-		return jWindow.on('resize', throttle(onWinSize, options.throttle || 100));
-	};
 
-	/**
-	 * Enables ScrollSpy on a collection of elements
-	 * e.g. $('.scrollSpy').scrollSpy()
-	 * @param {Object=} options	Optional.
-											throttle : number -> scrollspy throttling. Default: 100 ms
-											offsetTop : number -> offset from top. Default: 0
-											offsetRight : number -> offset from right. Default: 0
-											offsetBottom : number -> offset from bottom. Default: 0
-											offsetLeft : number -> offset from left. Default: 0
-	 * @returns {jQuery}
-	 */
-	$.fn.scrollSpy = function(options) {
-		return $.scrollSpy($(this), options);
-	};
+      $('a[href="#' + visible[0].attr('id') + '"]').addClass('active');
+    });
+    selector.on('scrollSpy:exit', function() {
+      visible = $.grep(visible, function(value) {
+        return value.height() != 0;
+      });
+
+      if (visible[0]) {
+        $('a[href="#' + visible[0].attr('id') + '"]').removeClass('active');
+        var $this = $(this);
+        visible = $.grep(visible, function(value) {
+          return value.attr('id') != $this.attr('id');
+        });
+        if (visible[0]) { // Check if empty
+          $('a[href="#' + visible[0].attr('id') + '"]').addClass('active');
+        }
+      }
+    });
+
+    return selector;
+  };
+
+  /**
+   * Listen for window resize events
+   * @param {Object=} options           Optional. Set { throttle: number } to change throttling. Default: 100 ms
+   * @returns {jQuery}    $(window)
+   */
+  $.winSizeSpy = function(options) {
+    $.winSizeSpy = function() { return jWindow; }; // lock from multiple calls
+    options = options || {
+      throttle: 100
+    };
+    return jWindow.on('resize', throttle(onWinSize, options.throttle || 100));
+  };
+
+  /**
+   * Enables ScrollSpy on a collection of elements
+   * e.g. $('.scrollSpy').scrollSpy()
+   * @param {Object=} options Optional.
+                      throttle : number -> scrollspy throttling. Default: 100 ms
+                      offsetTop : number -> offset from top. Default: 0
+                      offsetRight : number -> offset from right. Default: 0
+                      offsetBottom : number -> offset from bottom. Default: 0
+                      offsetLeft : number -> offset from left. Default: 0
+   * @returns {jQuery}
+   */
+  $.fn.scrollSpy = function(options) {
+    return $.scrollSpy($(this), options);
+  };
 
 })(jQuery);
 ;(function ($) {
@@ -3403,11 +3405,11 @@ $(document).ready(function(){
 
     init : function(options) {
       var defaults = {
-      	navigation : true,
-      	indicators : true,
-      	height     : 600,
-      	transition : 500,
-      	interval   : 6000
+        navigation : true,
+        indicators : true,
+        height     : 600,
+        transition : 500,
+        interval   : 6000
       };
       options = $.extend(defaults, options);
 
@@ -3419,7 +3421,7 @@ $(document).ready(function(){
         var $slider = $this.find('ul.slides').first();
         var $slides = $slider.find('> li');
         var $active_index = $slider.find('.active').index();
-        var $active, $indicators, $interval, $navigation;
+        var $active, $indicators, $interval, $navigation, $intervalFunction;
         if ($active_index != -1) { $active = $slides.eq($active_index); }
 
         // Transitions the caption depending on alignment
@@ -3471,21 +3473,39 @@ $(document).ready(function(){
             if (options.indicators) {
               $indicators.eq(index).addClass('active');
             }
+
+            // if ($indicators.eq(index).prevAll()) {
+            //   // statement
+            //   var $indicatorsPrevAll = $indicators.eq(index).prevAll(),
+            //       $slidesPrevAll = $slides.eq(index).prevAll();
+
+            //       $indicatorsPrevAll.velocity(
+            //                           { 'width': 0, 'height': 0}, 
+            //                           {duration: options.transition, 
+            //                             delay: options.transition, 
+            //                             queue: false, 
+            //                             easing: 'easeOutQuad'});
+
+            //       var $clonIndicatorsPrevAll = $indicatorsPrevAll.clone();
+            //       $indicatorsPrevAll.remove();
+
+            //       console.log($('.indicators').append($($clonIndicatorsPrevAll)))
+            // }
           }
         }
 
         // interval 
         $intervalFunction = function () {
-        	$interval = setInterval(
-	            function(){
-	              $active_index = $slider.find('.active').index();
-	              if ($slides.length == $active_index + 1) $active_index = 0; // loop to start
-	              else $active_index += 1;
+          $interval = setInterval(
+              function(){
+                $active_index = $slider.find('.active').index();
+                if ($slides.length == $active_index + 1) $active_index = 0; // loop to start
+                else $active_index += 1;
 
-	              moveToSlide($active_index);
+                moveToSlide($active_index);
 
-	            }, options.transition + options.interval
-	         );
+              }, options.transition + options.interval
+           );
         }
 
         // Set height of slider
@@ -3493,7 +3513,7 @@ $(document).ready(function(){
         if (!$this.hasClass('fullscreen')) {
           if (options.indicators) {
             // Add height if indicators are present
-            $this.height(options.height + 40);
+            $this.height(options.height);
           }
           else {
             $this.height(options.height);
@@ -3517,20 +3537,20 @@ $(document).ready(function(){
 
         // dynamically add navigation next and prev
         if (options.navigation) {
-        	$navigation = $('<div class="navigation-slider"></div>');
-        	$navigation.append('<div class="prev btn-floating btn-large waves-effect waves-light red"><i class="material-icons">arrow_back</i></div>')
-        	$navigation.append('<div class="next btn-floating btn-large waves-effect waves-light red"><i class="material-icons">arrow_forward</i></div>')
-        	$this.append($navigation);
+          $navigation = $('<div class="navigation-slider"></div>');
+          $navigation.append('<div class="prev btn-floating icon-floating waves-effect"><i class="material-icons">arrow_back</i></div>')
+          $navigation.append('<div class="next btn-floating icon-floating waves-effect"><i class="material-icons">arrow_forward</i></div>')
+          $this.append($navigation);
 
-        	$navigation.find('.next').click(function(event) {
-        		$active_index = $slider.find('.active').index();
-        		moveToSlide($active_index + 1);
-        	});
+          $navigation.find('.next').click(function(event) {
+            $active_index = $slider.find('.active').index();
+            moveToSlide($active_index + 1);
+          });
 
-        	$navigation.find('.prev').click(function(event) {
-        		$active_index = $slider.find('.active').index();
-        		moveToSlide($active_index - 1);
-        	});
+          $navigation.find('.prev').click(function(event) {
+            $active_index = $slider.find('.active').index();
+            moveToSlide($active_index - 1);
+          });
 
         }
 
@@ -3539,13 +3559,13 @@ $(document).ready(function(){
           $indicators = $('<ul class="indicators"></ul>');
           $slides.each(function( index ) {
             var $indicator = $('<li class="indicator-item"></li>'),
-            	$indicatorImgBg;
+                $indicatorImgBg;
 
-            	if ($(this).find('img')) {
-            		$indicatorImgBg = $(this).find('img').clone();
-            	}
+              if ($(this).find('img')) {
+                $indicatorImgBg = $(this).find('img').clone();
+              }
 
-            	$indicator.append($indicatorImgBg);
+              $indicator.append($indicatorImgBg);
 
             // Handle clicks on indicators
             $indicator.click(function () {
@@ -3555,16 +3575,7 @@ $(document).ready(function(){
 
               // reset interval
               clearInterval($interval);
-              $interval = setInterval(
-                function(){
-                  $active_index = $slider.find('.active').index();
-                  if ($slides.length == $active_index + 1) $active_index = 0; // loop to start
-                  else $active_index += 1;
-
-                  moveToSlide($active_index);
-
-                }, options.transition + options.interval
-              );
+              $intervalFunction();
             });
 
             $indicators.append($indicator);
@@ -3603,10 +3614,10 @@ $(document).ready(function(){
 
         // pause scrolling hover
         $this.hover(function() {
-        	clearInterval($interval).stop();
+          clearInterval($interval);
         }, function() {
-        	clearInterval($interval);
-          	$intervalFunction();
+          clearInterval($interval);
+          $intervalFunction();
         });
         // HammerJS, Swipe navigation
 

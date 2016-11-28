@@ -6,56 +6,13 @@ nav {
   height: $navbar-height-mobile;
   line-height: $navbar-height-mobile;
 
-  &.nav-top {
-    @extend .z-depth-0;
-    background-color: color("blue-grey", "lighten-5");
-    height: $nav-top;
-    margin: 28px 0 25px;
-    a {
-      display: inline;
-      height: 37px;
-      line-height: 39px;
-      text-transform: uppercase;
-      font-family: Roboto;
-      font-size: 12px;
-      font-weight: 400;
-      padding: 0;
-      margin: 0 auto;
-
-      &:hover {
-        color: inherit;
-        background-color: rgba(255, 255, 255, 0);
-        border-bottom: 2px solid $navbar-font-color-light;
-      }
-    }
-    ul {
-      display: flex;
-      li {
-        -webkit-box-flex: 1;
-        -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-        flex-grow: 1;
-        display: inherit;
-        text-align: center;
-        padding: 0;
-      }
-    }
-    .indicator {
-      position: absolute;
-      bottom: 0;
-      height: 2px;
-      background-color: #607d8b;
-      will-change: left, right;
-    }
-  }
-
   a { color: $navbar-font-color; }
 
   i,
   [class^="mdi-"], [class*="mdi-"],
   i.material-icons {
     display: block;
-    font-size: 2rem;
+    font-size: 21px;
     height: $navbar-height-mobile;
     line-height: $navbar-height-mobile;
   }
@@ -65,9 +22,6 @@ nav {
     height: 100%;
   }
 
-  @media #{$large-and-up} {
-    a.button-collapse { display: none; }
-  }
 
 
   // Collapse button
@@ -76,9 +30,10 @@ nav {
     position: relative;
     z-index: 1;
     height: $navbar-height-mobile;
+    padding: 0 20px;
 
     i {
-      font-size: 2.7rem;
+      font-size: 22px;
       height: $navbar-height-mobile;
       line-height: $navbar-height-mobile;
     }
@@ -87,8 +42,9 @@ nav {
 
   // Logo
   .brand-logo {
-    position: absolute;
+    position: relative;
     color: $navbar-font-color;
+    float: left;
     display: inline-block;
     font-size: $navbar-brand-font-size;
     padding: 0;
@@ -157,7 +113,8 @@ nav {
       }
 
       &:hover {
-        background-color: rgba(0,0,0,.1);
+        background-color: rgba(0,0,0,.0);
+        color: $navbar-font-color;
       }
     }
 
@@ -202,13 +159,92 @@ nav {
       }
     }
   }
+
+  .nav-right {
+    margin-right: 15px;
+    a {
+      font-size: 12px;
+      line-height: 55px;
+    }
+    i.left {
+        margin-right: 5px;
+    }
+  }
+
+  &.nav-top, 
+  .nav-menu-wrapper {
+    a {
+      display: inline;
+      height: 37px;
+      line-height: 39px;
+      text-transform: uppercase;
+      font-family: Roboto;
+      font-size: 12px;
+      font-weight: 400;
+      padding: 0;
+      margin: 0 auto;
+
+      &:hover {
+        color: inherit;
+        background-color: rgba(255, 255, 255, 0);
+        border-bottom: 2px solid $navbar-font-color-light;
+      }
+    }
+    ul {
+      display: flex;
+      justify-content: space-around;
+      li {
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        display: inherit;
+        text-align: center;
+        padding: 0;
+      }
+    }
+    .indicator {
+      position: absolute;
+      bottom: 0;
+      height: 2px;
+      background-color: #607d8b;
+      will-change: left, right;
+    }
+  }
+
+  &.nav-top {
+    @extend .z-depth-0;
+    background-color: color("blue-grey", "lighten-5");
+    height: $nav-top;
+    margin: 28px 0 25px;
+  }
+
+  .nav-menu-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 330px;
+    margin: 0 10px;
+
+    a {
+      height: $navbar-height-mobile;
+      line-height: 50px;
+
+      &:hover {
+        color: inherit;
+        border-bottom: 2px solid #f48fb1;
+      }
+    }
+    .indicator {
+      background-color: $primary-color;
+    }
+  }
 }
 
 // Fixed Navbar
 .navbar-fixed {
   position: relative;
   height: $navbar-height-mobile;
-  z-index: 998;
+  z-index: 999;
 
   nav {
     position: fixed;

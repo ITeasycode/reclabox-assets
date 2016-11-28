@@ -145,11 +145,13 @@ textarea.materialize-textarea {
     font-size: 1rem;
     cursor: text;
     transition: .2s ease-out;
+    left: 0 !important;
   }
 
   label.active {
     font-size: $label-font-size;
     transform: translateY(-140%);
+    top: 0.8rem;
   }
 
   // Prefix Icons
@@ -233,14 +235,25 @@ textarea.materialize-textarea {
 // Default textarea
 textarea {
   width: 100%;
-  height: $input-height;
+  height: 2rem;
   background-color: transparent;
 
   &.materialize-textarea {
     overflow-y: hidden; /* prevents scroll bar flash */
-    padding: .8rem 0 1.6rem 0; /* prevents text jump on Enter keypress */
+    //padding: .8rem 0 1.6rem 0; /* prevents text jump on Enter keypress */
     resize: none;
-    min-height: $input-height;
+    padding: 0;
+    margin: 0 0 5px 0 !important;
+    min-height: 2.2rem !important;
+    color: #000000;
+    line-height: 2 !important;
+
+    & ~ label {
+      top: 0.4rem;
+      &.active {
+        top: 0.7rem;
+      }
+    }
   }
 }
 
