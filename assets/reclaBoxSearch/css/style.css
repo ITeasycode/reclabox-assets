@@ -225,14 +225,13 @@ body {
   background: #eceff1;
   color: #607d8b;
   text-transform: none;
-  font: 14px/40px "Roboto-Medium";
+  font: 14px/36px "Roboto-Medium";
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 .search-page .right-col .result-block .btn:hover {
   -webkit-box-shadow: 0 5px 7px rgba(0, 0, 0, 0.19);
           box-shadow: 0 5px 7px rgba(0, 0, 0, 0.19);
-  /*0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);*/
 }
 .search-page .right-col .result-block .pagination {
   text-align: center;
@@ -244,6 +243,7 @@ body {
 .search-page .right-col .result-block .pagination li a {
   background: transparent;
   color: #a7b7be;
+  line-height: 38px;
 }
 .search-page .right-col .result-block .pagination li .prev,
 .search-page .right-col .result-block .pagination li .next {
