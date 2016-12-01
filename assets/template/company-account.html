@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/materialdesignicons.min.css">
+  <link href="css/reclabox-materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+</head>
+<body>
+  <div class="wrapper grey lighten-5">
+    
+    <header>
+      <div class="navbar-fixed">
+        <nav class="white" role="navigation">
+          <div class="nav-wrapper">
+            <ul>
+              <li>
+                <a href="#" data-activates="slide-out" class="button-collapse waves-effect">
+                  <div class="arrow-hamburger">
+                    <div class="line arrow_top"></div>
+                    <div class="line arrow_line"></div>
+                    <div class="line arrow_bottom"></div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <a id="logo-container" href="javascript:void(0)" class="brand-logo"><img src="img/img-site/logo-reclabox.jpg" alt="ReclaBox"></a>
+            <div class="nav-menu-wrapper">
+              <ul id="navHeader" class="nav-menu hide-on-med-and-down">
+                <li><a class="active" href="javascript:void(0)">BESCHWERDE LESEN</a></li>
+                <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li>
+              </ul>
+            </div>
+            <ul class="right hide-on-med-and-down nav-right currently-logged">
+              <li>
+                <form id="search-form">
+                  <div class="search-widget">
+                    <button class="search-button"><i class="material-icons">search</i></button>
+                    <button class="search-close-button"><i class="material-icons">close</i></button>
+                    <input name="q" type="text" id="search-input" autocomplete="off">
+                    <label for="search-input">Name, Firma oder Schlagwort</label>
+                  </div>
+                </form>
+              </li>
+              <li><a href="javascript:void(0)"><i class="mdi mdi-bell-ring-outline left"></i></a></li>
+              <li><a href="javascript:void(0)"><img src="img/img-site/autor.jpg" alt=""></a></li>
+            </ul>
+          </div>
+        </nav>
+      </div><!-- end navbar-fixed -->
+      <div class="slide-nav-wrapper">
+        <ul id="slide-out" class="side-nav">
+          <li>
+            <div class="userView">
+              <div class="background">
+                <img src="http://materializecss.com/images/office.jpg">
+              </div>
+              <a href="#!user"><img class="circle" src="http://materializecss.com/images/yuna.jpg"></a>
+              <a href="#!name"><span class="white-text name">John Doe</span></a>
+              <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+            </div>
+          </li>
+          <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+          <li><a href="#!">Second Link</a></li>
+          <li><div class="divider"></div></li>
+          <li><a class="subheader">Subheader</a></li>
+          <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="container page-company">
+
+      <div class="section"><!-- content, sidebar, other components -->
+        <div class="row">
+
+          <div class="col s12 m3 l3"><!-- sidebar left -->
+
+            <div class="dropdown-wrapper">
+              <a  class="waves-effect waves-light btn full-width btn-theme-pink dropdown-button" 
+                  data-activates="btn-company"
+                  data-beloworigin="true"
+                  data-stoppropagation="true">
+
+                <i class="material-icons left">settings</i> 
+                <span>firmen-mitgliedschaft </span>
+                <i class="material-icons arrow_down right">keyboard_arrow_down</i>
+                <i class="material-icons arrow_up right">keyboard_arrow_up</i>
+              </a>
+              <!-- Dropdown Structure -->
+              <ul id="btn-company" class="dropdown-content">
+                <li>
+                  <form action="#">
+                    <p>
+                      <input class="with-gap right" name="group1" type="radio" id="company1" />
+                      <label for="company1">Deutsche Post AG <span class="pink-text text-accent-2">(1)</span></label>
+                    </p>
+                  </form>
+                </li>
+                <li>
+                  <form action="#">
+                    <p>
+                      <input class="with-gap right" name="group2" type="radio" id="company2" />
+                      <label for="company2">ReclaBox Suppore <span class="pink-text text-accent-2">(15)</span></label>
+                    </p>
+                  </form>
+                </li>
+                <li>
+                  <form action="#">
+                    <p>
+                      <input class="with-gap right" name="group3" type="radio" id="company3" />
+                      <label for="company3">Alle Beschwerde</label>
+                    </p>
+                  </form>
+                </li>
+                <li><a href="#!">Settings</a></li>
+              </ul>
+            </div>
+            
+            <div class="card-panel no-bg widget-sidebar widget-company">
+              <div class="card">
+                <div class="card-action table-wrapper">
+                  <div class="logo-company left">
+                    <i class="mdi mdi-domain"></i>
+                  </div>
+                  <div class="rank-company right">
+                    <span class="rank-5"></span>
+                  </div>
+                </div>    
+                <div class="card-content">
+                  <div class="card-title">
+                    <h6>Deutsche Post AG</h6>
+                  </div>
+                  <a href="javascript:void(0)">Post und Telekommunikationen » </a>
+                  <a href="javascript:void(0)">Bried-und Paketzusteller</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-panel widget-sidebar widget-navigation">
+              <div class="card ">
+                <div class="card-content">
+                  <div class="card-title">BESCHWERDEN</div>
+                  <ul>
+                    <li><a class="active" href="javascript:void(0)">Online <i class="material-icons right">chevron_right</i></a></li>
+                    <li><a href="javascript:void(0)">On hold 48 h <span>(1)</span> <i class="material-icons right">chevron_right</i></a></li>
+                    <li><a href="javascript:void(0)">Gelöschte <span>(7)</span> <i class="material-icons right">chevron_right</i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-title">Firmenatworten</div>
+                  <ul>
+                    <li><a href="javascript:void(0)">Veröffentlich <span>(21)</span><i class="material-icons right">chevron_right</i></a></li>
+                    <li><a href="javascript:void(0)">Entwürfe <i class="material-icons right">chevron_right</i></a></li>
+                    <li><a href="javascript:void(0)">Automatische <i class="material-icons right">chevron_right</i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div><!-- end sidebar left -->
+
+          <div class="col s12 m6 l6"><!-- content -->
+            <div class="card-panel bg-05">
+              <div class="card no-bg">
+                <div class="card-content content-table">
+                  <table class="highlight responsive-table">
+                    <tbody>
+                      <tr>
+                        <td class="icon"><i class="mdi-email-outline mdi blue-grey-text"></td>
+                        <td>ANSCHIRFT</td>
+                        <td>Zimmestr, 27 <br> 10117 Berlin</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="icon"><i class="mdi-google-maps mdi blue-grey-text"></td>
+                        <td>KARTE</td>
+                        <td><a href="javascript:void(0)">MAPS</a></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="icon"><img src="img/img-site/r-circle.png" alt=""></td>
+                        <td>RECLARANK</td>
+                        <td>4 (max. 5)</td>
+                        <td>
+                          <i class="mdi-arrow-up mdi teal-accent-4-text"></i>&nbsp;
+                          <span>9.2 %</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="icon"><img src="img/icon-svg/beschwerde.svg" alt=""></td>
+                        <td>BESCHWERDEN</td>
+                        <td>129</td>
+                        <td>
+                          <i class="mdi-arrow-up mdi pink-accent-2-text"></i>&nbsp;
+                          <span>4.2 %</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="icon"><i class="mdi-timer mdi blue-grey-text"></i></td>
+                        <td>ANTWORTZEIT</td>
+                        <td>23.1 Tage</td>
+                        <td>
+                          <i class="mdi-arrow-right mdi blue-grey-lighten-4-text"></i>&nbsp;
+                          <span>0.0 %</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="icon"><img src="img/icon-svg/beantwortete 2.svg" alt=""></td>
+                        <td>FIRMEANTWORTEN</td>
+                        <td>27% (36)</td>
+                        <td>
+                          <i class="mdi-arrow-up mdi teal-accent-4-text"></i>&nbsp;
+                          <span>10.0 %</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="icon"><img src="img/icon-svg/noch nicht geloste 2.svg" alt=""></td>
+                        <td>NOCH NICHT GELÖSTE BESCHWERDEN</td>
+                        <td>33% (42)</td>
+                        <td>
+                          <i class="mdi-arrow-up mdi teal-accent-4-text"></i>&nbsp;
+                          <span>0.0 %</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="icon"><img src="img/icon-svg/geloste 2.svg" alt=""></td>
+                        <td>GELÖSTE BESCHWERDEN</td>
+                        <td>25% (33)</td>
+                        <td>
+                          <i class="mdi-arrow-down mdi pink-accent-2-text"></i>&nbsp;
+                          <span>9.2 %</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="icon"><img src="img/icon-svg/endgiltig nicht 2.svg" alt=""></td>
+                        <td>ENDGÜLTIG NICHT GELÖSTE BESCHWERDE</td>
+                        <td>25% (33)</td>
+                        <td>
+                          <i class="mdi-arrow-right mdi blue-grey-lighten-4-text"></i>&nbsp;
+                          <span>0.0 %</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="icon"><i class="mdi-sort-variant mdi blue-grey-text"></td>
+                        <td>RECLARANK</td>
+                        <td>4 (von 10)</td>
+                        <td>
+                          <i class="mdi-arrow-right mdi blue-grey-lighten-4-text"></i>&nbsp;
+                          <span>0.0 %</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-panel no-bg">
+
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-title">
+                    <h6><a href="#">Guthaben anfordern nicht möglich</a></h6>
+                  </div>
+                  <p>Nachdem ich an einem Tag 7 (in Worten: sieben) Briefe von Care-Energy bekommen habe, steht nun fest, dass ich einiges an Guthaben zur Verfügung habe. Nach</p>
+                </div>
+                <div class="card-footer">
+                  <div class="card-action">
+                    <a href="#"><i class="material-icons">visibility</i>&ensp;536</a>
+                    <a href="#"><i class="material-icons">chat</i>&ensp;12</a>
+                    <a href="#"><i class="mdi mdi-file-image"></i>&ensp;0</a>
+                    <a href="#"><i class="mdi mdi-file-video"></i>&ensp;0</a>
+                    <a href="#"><img class="icon-svg" src="img/icon-svg/beantwortete 2.svg" alt=""></a>
+                    <div class="date right">
+                      <span>12.11.2017 | 08:45</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-title">
+                    <h6><a href="#">Keine Rückerstattung von OutdoorTrecking2010</a></h6>
+                  </div>
+                  <p>Bestellte Ware (circa 45 Euro) war zum gewünschten Zeitpunkt nicht lieferbar. Da ich keine Alternativbestellung wünschte, forderte ich umgehend eine Rückerstat-</p>
+                </div>
+                <div class="card-footer">
+                  <div class="card-action">
+                    <a href="#"><i class="material-icons">visibility</i>&ensp;536</a>
+                    <a href="#"><i class="material-icons">chat</i>&ensp;12</a>
+                    <a href="#"><i class="mdi mdi-file-image"></i>&ensp;0</a>
+                    <a href="#"><i class="mdi mdi-file-video"></i>&ensp;0</a>
+                    <a href="#"><img class="icon-svg" src="img/icon-svg/endgiltig nicht 2.svg" alt=""></a>
+                    <div class="date right">
+                      <span>12.11.2017 | 08:45</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-title">
+                    <h6><a href="#">Zusatzleistung doppelt bezahlt und nicht ersetzt</a></h6>
+                  </div>
+                  <p>Nach gebuchtem Flug (Februar 2016) und bezahlter Zusatzleistung (Koffer zusätzlich) musste ich für das Gepäck zweimal zahlen, da bei der Fluggesellschaft kein</p>
+                </div>
+                <div class="card-footer">
+                  <div class="card-action">
+                    <a href="#"><i class="material-icons">visibility</i>&ensp;536</a>
+                    <a href="#"><i class="material-icons">chat</i>&ensp;12</a>
+                    <a href="#"><i class="mdi mdi-file-image"></i>&ensp;0</a>
+                    <a href="#"><i class="mdi mdi-file-video"></i>&ensp;0</a>
+                    <a href="#"><img class="icon-svg" src="img/icon-svg/endgiltig nicht 2.svg" alt=""></a>
+                    <div class="date right">
+                      <span>12.11.2017 | 08:45</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <ul class="pagination center">
+              <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+              <li class="active"><a href="#!">1</a></li>
+              <li class="waves-effect"><a href="#!">2</a></li>
+              <li class="waves-effect"><a href="#!">3</a></li>
+              <li class="waves-effect"><a href="#!">4</a></li>
+              <li class="waves-effect"><a href="#!">5</a></li>
+              <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+            </ul>
+
+          </div><!-- end content left -->
+
+          <div class="col s12 m3 l3"><!-- sidebar -->
+
+            <div class="card-panel widget-sidebar">
+              <div class="card-header blue-grey lighten-5">
+                <h6>NACHRICHTEN</h6>
+              </div>
+              <div class="card no-bg">
+                <div class="card-content">
+                  <a href="javascript:void(0)">Posteingang (0)</a>
+                  <a href="javascript:void(0)">gelesen (0)</a>
+                  <a href="javascript:void(0)">ungelesen (0)</a>
+                  <a href="javascript:void(0)">gesendete Nachrichten (0)</a>
+                  <a href="javascript:void(0)">vom Empfänger gelesen (0)</a>
+                  <a href="javascript:void(0)">vom Empfänger ungelesen (0)</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-panel widget-sidebar">
+              <div class="card-header blue-grey lighten-5">
+                <h6>MERKZETTEL</h6>
+              </div>
+              <div class="card no-bg">
+                <div class="card-content">
+                  <a href="javascript:void(0)">gemerkte Beschwerden (1) </a>
+                  <a href="javascript:void(0)">verfolgte Beschwerden (0)</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-panel widget-sidebar">
+              <div class="card-header blue-grey lighten-5">
+                <h6>LINKS</h6>
+              </div>
+              <div class="card no-bg">
+                <div class="card-content">
+                  <a href="javascript:void(0)">gemerkte Beschwerden (1) </a>
+                  <a href="javascript:void(0)">verfolgte Beschwerden (0)</a>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- end sidebar left -->
+        </div>
+      </div><!-- End ontent, sidebar, other components -->
+
+    </div>
+  </div>
+  <!-- end wrapper -->
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/reclabox-materialize.js"></script>
+  <script src="js/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+
+  <script src="js/init.js"></script>
+
+  
+
+
+  </body>
+</html>

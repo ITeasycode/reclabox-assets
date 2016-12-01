@@ -26,10 +26,9 @@
     $('.tooltipped').tooltip({delay: 50, position: 'top'});
 
     $('.button-collapse').slideNav({
-         closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-         draggable: true // Choose whether you can drag to open on touch screens
-       }
-     );
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true // Choose whether you can drag to open on touch screens
+    });
         
 
     $uploaded_items.find('img').each(function () {

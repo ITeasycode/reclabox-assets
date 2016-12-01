@@ -24,11 +24,11 @@ form p:last-child {
   // Text Label Style
   + label {
     position: relative;
-    padding-left: 35px;
+    padding-left: 30px;
     cursor: pointer;
     display: inline-block;
     height: 25px;
-    line-height: 25px;
+    line-height: 20px;
     font-size: 1rem;
 
     -webkit-user-select: none; /* webkit (safari, chrome) browsers */
@@ -44,11 +44,11 @@ form p:last-child {
     position: absolute;
     top: 0;
     left: 0;
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     z-index: 0;
-    border: 2px solid $radio-empty-color;
-    border-radius: 1px;
+    border: 1px solid $radio-empty-color;
+    border-radius: 3px;
     margin-top: 2px;
     transition: .2s;
   }
@@ -75,7 +75,7 @@ form p:last-child {
 
 [type="checkbox"]:checked {
   + label:before {
-    top: -4px;
+    top: -6px;
     left: -5px;
     width: 12px;
     height: 22px;
