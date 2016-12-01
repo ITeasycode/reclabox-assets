@@ -1,12 +1,17 @@
 nav {
-  color: $navbar-font-color;
-  @extend .z-depth-2;
+  color: white;
+  @extend .z-theme-depth-2;
   background-color: $primary-color;
   width: 100%;
   height: $navbar-height-mobile;
   line-height: $navbar-height-mobile;
 
-  a { color: $navbar-font-color; }
+  a { 
+    color: $navbar-font-color; 
+    &:hover {
+      color: $navbar-font-color-light;
+    }
+  }
 
   i,
   [class^="mdi-"], [class*="mdi-"],
@@ -114,12 +119,37 @@ nav {
 
       &:hover {
         background-color: rgba(0,0,0,.0);
-        color: $navbar-font-color;
+        color: $navbar-font-color-light;
       }
     }
 
     &.left {
       float: left;
+    }
+
+    &.currently-logged {
+      a {
+        padding: 0 10px;
+        position: relative;
+
+        img {
+          position: relative;
+          width: 32px;
+          height: 33px;
+          border-radius: 50%;
+          top: 8px;
+        }
+        .mdi {
+          top: 1px;
+          position: relative;
+        }
+      }
+      .search-widget {
+          top: 0px;
+          .search-button {
+            left: -40px;
+          }
+      }
     }
   }
 
@@ -185,7 +215,7 @@ nav {
       margin: 0 auto;
 
       &:hover {
-        color: inherit;
+        color: $link-color-hover;
         background-color: rgba(255, 255, 255, 0);
         border-bottom: 2px solid $navbar-font-color-light;
       }
@@ -230,7 +260,7 @@ nav {
       line-height: 50px;
 
       &:hover {
-        color: inherit;
+        color: $link-color;
         border-bottom: 2px solid #f48fb1;
       }
     }

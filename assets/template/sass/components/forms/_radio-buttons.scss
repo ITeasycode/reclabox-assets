@@ -9,6 +9,7 @@
   opacity: 0;
 }
 
+label,
 [type="radio"]:not(:checked) + label,
 [type="radio"]:checked + label {
   position: relative;
@@ -24,6 +25,12 @@
   user-select: none;
 }
 
+[type="radio"].right + label {
+  padding-right: 0;
+  padding-left: 0;
+  width: 92%;
+}
+
 [type="radio"] + label:before,
 [type="radio"] + label:after {
   content: '';
@@ -36,7 +43,10 @@
   z-index: 0;
   transition: .28s ease;
 }
-
+[type="radio"].right + label:before,
+[type="radio"].right + label:after {
+  left: 100%;
+}
 /* Unchecked styles */
 [type="radio"]:not(:checked) + label:before,
 [type="radio"]:not(:checked) + label:after,

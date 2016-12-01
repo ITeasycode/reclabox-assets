@@ -73,7 +73,7 @@
     z-index: 99;
 
     .indicator-item {
-      @extend .z-depth-2;
+      @extend .z-theme-depth-2;
       display: inline-block;
       position: relative;
       cursor: pointer;

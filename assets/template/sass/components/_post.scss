@@ -286,38 +286,8 @@
 		}
 	}
 
-	.card-header {
-		padding: 5px 25px;
-		border-radius: 3px 3px 0 0;
-		text-transform: uppercase;
-		position: relative;
-
-		i.material-icons, i.mdi {
-			color: rgba(96, 125, 139, .54);
-			font-size: 16px;
-			position: relative;
-			top: 1px;
-		}
-
-		& > * {
-			color: rgba(0, 0, 0, .87);
-			font-size: 12px;
-			font-weight: 500;
-		}
-
-		h1, h2, h3, h4, h5, h6 {
-			margin: 9px 0;
-		}
-
-		&.white-text {
-			& > * {
-				color: rgba(255, 255, 255, 1);
-			}
-		}
-	}
-
 	.slider-post {
-		@extend .z-depth-3;
+		@extend .z-theme-depth-3;
 		max-width: 475px;
 		margin: 30px auto;
 
@@ -407,7 +377,7 @@
 
 	.uploaded {
 		&-item {
-			@extend .z-depth-2;
+			@extend .z-theme-depth-2;
 			display: inline-block;
 			border-radius: 4px;
 			height: 72px;

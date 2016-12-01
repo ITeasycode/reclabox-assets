@@ -138,7 +138,7 @@
       &:hover {
         color: #fff;
         background-color: #ff4081 !important;
-        @extend .z-depth-1-half;
+        @extend .z-theme-depth-1-half;
 
         & > i {
           color: #fff;
@@ -152,11 +152,11 @@
   }
   &-prev {
     left: -70px;
-    // @extend .z-depth-2;
+    // @extend .z-theme-depth-2;
   }
   &-next {
     right: -70px;
-    // @extend .z-depth-2;
+    // @extend .z-theme-depth-2;
   }
 
   /* Dots */
