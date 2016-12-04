@@ -1,0 +1,39 @@
+.centeredBox::before {
+  display: none;
+}
+.centeredBox .emailSubscribe {
+  width: 370px;
+}
+.centeredBox .emailSubscribe img {
+  width: 100%;
+  height: auto;
+  margin: 0 0 23px 0;
+}
+.centeredBox .emailSubscribe p {
+  font: 14px/14px "Roboto-Medium";
+  text-align: left;
+  padding: 0 0 0 26px;
+  margin: 0 0 16px 0;
+}
+.centeredBox .emailSubscribe form {
+  text-align: left;
+  padding: 13px -webkit-calc( (100% - 230px) / 2 ) 0 -webkit-calc( (100% - 230px) / 2 );
+  padding: 13px calc( (100% - 230px) / 2 ) 0 calc( (100% - 230px) / 2 );
+  padding-top: 0;
+}
+.centeredBox .emailSubscribe form .input-field {
+  margin: 0 0 8px 0;
+  padding: 0;
+}
+.centeredBox .emailSubscribe form .input-field label {
+  font-family: "Roboto-Medium";
+  left: 0;
+}
+.centeredBox .emailSubscribe form .btn {
+  text-transform: uppercase;
+}
+@media screen and (min-width: 471px) {
+  .centeredBox::before {
+    display: inline-block;
+  }
+}

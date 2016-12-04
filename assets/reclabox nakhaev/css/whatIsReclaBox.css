@@ -1,0 +1,143 @@
+section article:last-child {
+  margin-bottom: 0;
+}
+.whatIsReclaBox .quote-pad {
+  text-align: center;
+  margin: 0 auto;
+}
+.whatIsReclaBox .quote-pad .section-header {
+  display: inline-block;
+  text-align: left;
+  background: url("../img/happy-reclabox.png") center top no-repeat;
+  padding: 128px 0 0 0;
+}
+.whatIsReclaBox .quote-pad .section-header h1 {
+  font: 21px/24px "Roboto-Medium";
+  color: rgba(0, 0, 0, 0.87);
+}
+.whatIsReclaBox .quote-pad .section-header p {
+  font: 14px/24px "Roboto-Medium";
+  color: rgba(0, 0, 0, 0.54);
+}
+.whatIsReclaBox .quote-pad .quote-list {
+  max-width: 920px;
+  -webkit-column-count: 1;
+     -moz-column-count: 1;
+          column-count: 1;
+  margin: auto;
+}
+.whatIsReclaBox .quote-pad .quote-list .quote-item {
+  margin: 0;
+  padding: 0;
+}
+.whatIsReclaBox .quote-pad .quote-list .quote-item .wrapBox .quote-content,
+.whatIsReclaBox .quote-pad .quote-list .quote-item .wrapBox .quote-author {
+  margin: 0 12px 12px 0;
+  padding: 0;
+}
+.whatIsReclaBox .quote-pad .quote-list .quote-item .wrapBox .quote-content {
+  color: #e94480;
+  font: 14px/24px "Roboto-Bold";
+}
+.whatIsReclaBox .quote-pad .quote-list .quote-item .wrapBox .quote-author {
+  color: rgba(0, 0, 0, 0.54);
+  font: italic 12px/24px "Roboto-Bold";
+}
+.whatIsReclaBox .quote-pad .quote-list::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.whatIsReclaBox .about {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+.whatIsReclaBox .about h1 {
+  font: 21px/24px "Roboto-Medium";
+  text-align: left;
+  padding: 0 0 0 10px;
+}
+.whatIsReclaBox .about img {
+  margin: 10px;
+}
+.whatIsReclaBox .about p {
+  font: 14px/24px "Roboto";
+  color: rgba(0, 0, 0, 0.54);
+  margin: 0 0 26px 0;
+  text-align: justify;
+}
+.whatIsReclaBox .about p .bold {
+  font: 14px/24px "Roboto-Medium";
+}
+.whatIsReclaBox .commercial {
+  max-width: 800px;
+  margin: auto;
+}
+.whatIsReclaBox .commercial article {
+  max-width: 610px;
+}
+.whatIsReclaBox .commercial article h2 {
+  font: 21px/24px "Roboto-Medium";
+}
+.whatIsReclaBox .commercial article p {
+  font: 14px/24px "Roboto";
+  color: rgba(0, 0, 0, 0.54);
+  margin: 0 0 26px 0;
+  text-align: justify;
+}
+.whatIsReclaBox .commercial article form input {
+  max-width: 190px;
+}
+.whatIsReclaBox .commercial article form button {
+  margin-top: 19px;
+  max-width: 400px;
+}
+.whatIsReclaBox .commercial article form select {
+  padding: 0 20px;
+}
+@media screen and (min-width: 426px) {
+  .whatIsReclaBox .quote-pad .quote-list {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+    text-align: center;
+  }
+  .whatIsReclaBox .commercial article h2 {
+    font: 21px/24px "Roboto-Medium";
+  }
+  .whatIsReclaBox .commercial article p {
+    font: 14px/24px "Roboto";
+    color: rgba(0, 0, 0, 0.54);
+    margin: 0 0 26px 0;
+    text-align: justify;
+  }
+  .whatIsReclaBox .commercial article form button {
+    width: auto;
+  }
+  .whatIsReclaBox .commercial article form select {
+    width: auto;
+  }
+}
+@media screen and (min-width: 660px) {
+  .whatIsReclaBox .quote-pad .quote-list {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+    text-align: left;
+  }
+  .whatIsReclaBox .about img {
+    float: left;
+    padding: 0 25px 25px 0;
+  }
+  .whatIsReclaBox .commercial article p {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 990px) {
+  .whatIsReclaBox .quote-pad .quote-list {
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+  }
+}
