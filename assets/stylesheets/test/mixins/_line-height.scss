@@ -1,4 +1,0 @@
-@mixin line-height($heightValue: 12) {
-    line-height: $heightValue + px;
-    line-height: (0.125 * $heightValue) + rem;
-}
