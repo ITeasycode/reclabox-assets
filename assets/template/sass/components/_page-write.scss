@@ -1,0 +1,57 @@
+.page-write {
+	.section {
+		padding: 3rem 0;
+	}
+	.input-field-group {
+		.text {
+			color: $text-black-light-theme;
+		}
+	}
+	.text-editor, .upload-files {
+		margin-bottom: 2.7rem;
+		margin-left: 45px;
+		margin-top: -20px;
+		max-width: 610px;
+		.editor {
+			background-color: none;
+			@extend .z-depth-0;
+			padding: 0;
+		}
+	}
+
+	.editor-active button {
+	    margin-right: auto;
+	}
+
+	.help {
+		color: $link-color-hover;
+		cursor: pointer;
+		font-size: 16px;
+		&:hover {
+			color: $link-color;
+		}
+	}
+
+	.upload-files-input .input-wrapper {
+		height: auto;
+
+		.icon {
+			margin: 12px auto 0;
+		}
+
+		.text {
+			padding-top: 0;
+			& > * {
+				text-align: center;
+			}
+		}
+	}
+
+	.card-content {
+		p {
+			font-size: 12px;
+			color: $text-black-light-theme;
+			font-weight: 500;
+		}
+	}
+}

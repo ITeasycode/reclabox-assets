@@ -1,0 +1,10 @@
+.site-header {
+	min-height: 200px;
+	@extend .z-theme-depth-2;
+	
+	.navbar-fixed {
+		nav {
+			@extend .g-theme-1;
+		}
+	}
+}

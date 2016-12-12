@@ -1,5 +1,18 @@
 .dropdown-wrapper {
   margin-top: 8px;
+
+  &.widget-navigation-btn {
+    .dropdown-content li {
+      &:hover, &.active, &.selected {
+        background-color: $dropdown-hover-bg-color;
+        border-left: 2px solid $secondary-color;
+
+        a, p {
+          padding-left: 13px;
+        }
+      }
+    }
+  }
 }
 
 .dropdown-content {
@@ -29,11 +42,6 @@
 
     &:hover, &.active, &.selected {
       background-color: $dropdown-hover-bg-color;
-      border-left: 2px solid $secondary-color;
-
-      a, p {
-        padding-left: 13px;
-      }
     }
 
     &.active.selected {

@@ -15,9 +15,9 @@
 <body>
   <div class="wrapper grey lighten-5">
     
-    <header>
-      <div class="navbar-fixed">
-        <nav class="white" role="navigation">
+    <header class="site-header blue-grey">
+      <div class="navbar">
+        <nav class="" role="navigation">
           <div class="nav-wrapper">
             <ul>
               <li>
@@ -30,9 +30,9 @@
                 </a>
               </li>
             </ul>
-            <a id="logo-container" href="javascript:void(0)" class="brand-logo"><img src="img/img-site/logo-reclabox.jpg" alt="ReclaBox"></a>
-            <div class="nav-menu-wrapper">
-              <ul id="navHeader" class="nav-menu hide-on-med-and-down">
+            <a id="logo-container" href="javascript:void(0)" class="brand-logo hide"><img src="img/img-site/logo-reclabox.jpg" alt="ReclaBox"></a>
+            <div class="nav-header nav-theme hide">
+              <ul id="navHeader" class="nav-menu hide-on-med-and-down flex-wrapper">
                 <li><a class="active" href="javascript:void(0)">BESCHWERDE LESEN</a></li>
                 <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li>
               </ul>
@@ -48,8 +48,8 @@
                   </div>
                 </form>
               </li>
-              <li><a href="javascript:void(0)"><i class="mdi mdi-bell-ring-outline left"></i></a></li>
-              <li><a href="javascript:void(0)"><img src="img/img-site/autor.jpg" alt=""></a></li>
+              <li><a class="btn waves-effect waves-light" href="javascript:void(0)">login</a></li>
+              <li><a class="btn waves-effect waves-light" href="javascript:void(0)">registrieren </a></li>
             </ul>
           </div>
         </nav>
@@ -73,6 +73,26 @@
           <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
         </ul>
       </div>
+      <div class="container">
+        <div class="row">
+          <div class="brand-logo">
+            <a id="logo-container" href="javascript:void(0)" class="brand-logo"><img src="img/img-site/ugh.png" alt="ReclaBox"></a>
+          </div>
+          <div class="navbar">
+            <nav class="" role="navigation">
+              <div class="nav-wrapper">
+                <div class="nav-header nav-theme">
+                  <ul id="navHeader" class="nav-menu hide-on-med-and-down flex-wrapper">
+                    <li><a class="active" href="javascript:void(0)">BESCHWERDE LESEN</a></li>
+                    <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li>
+                    <!-- <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li> -->
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div><!-- end navbar-fixed -->
+        </div>
+      </div>
     </header>
 
     <div class="container page-company">
@@ -82,7 +102,7 @@
 
           <div class="col s12 m3 l3"><!-- sidebar left -->
 
-            <div class="dropdown-wrapper">
+            <div class="dropdown-wrapper widget-navigation-btn">
               <a  class="waves-effect waves-light btn full-width btn-theme-pink dropdown-button" 
                   data-activates="btn-company"
                   data-beloworigin="true"
@@ -165,8 +185,6 @@
                 </div>
               </div>
             </div>
-
-
 
           </div><!-- end sidebar left -->
 
@@ -267,11 +285,14 @@
             </div>
 
             <div class="card-panel no-bg">
-
               <div class="card">
                 <div class="card-content">
-                  <div class="card-title">
-                    <h6><a href="#">Guthaben anfordern nicht möglich</a></h6>
+                  <div class="card-title table-wrapper">
+                    <h6 class="left"><a href="#">Guthaben anfordern nicht möglich</a></h6>
+                    <div class="date right">
+                      <i class="mdi mdi-calendar-check teal-text"></i>
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
                   </div>
                   <p>Nachdem ich an einem Tag 7 (in Worten: sieben) Briefe von Care-Energy bekommen habe, steht nun fest, dass ich einiges an Guthaben zur Verfügung habe. Nach</p>
                 </div>
@@ -282,17 +303,18 @@
                     <a href="#"><i class="mdi mdi-file-image"></i>&ensp;0</a>
                     <a href="#"><i class="mdi mdi-file-video"></i>&ensp;0</a>
                     <a href="#"><img class="icon-svg" src="img/icon-svg/beantwortete 2.svg" alt=""></a>
-                    <div class="date right">
-                      <span>12.11.2017 | 08:45</span>
-                    </div>
                   </div>
                 </div>
               </div>
 
               <div class="card">
                 <div class="card-content">
-                  <div class="card-title">
-                    <h6><a href="#">Keine Rückerstattung von OutdoorTrecking2010</a></h6>
+                  <div class="card-title table-wrapper">
+                    <h6 class="left"><a href="#">Keine Rückerstattung von OutdoorTrecking2010</a></h6>
+                    <div class="date right">
+                      <i class="mdi mdi-calendar-check teal-text"></i>
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
                   </div>
                   <p>Bestellte Ware (circa 45 Euro) war zum gewünschten Zeitpunkt nicht lieferbar. Da ich keine Alternativbestellung wünschte, forderte ich umgehend eine Rückerstat-</p>
                 </div>
@@ -303,17 +325,18 @@
                     <a href="#"><i class="mdi mdi-file-image"></i>&ensp;0</a>
                     <a href="#"><i class="mdi mdi-file-video"></i>&ensp;0</a>
                     <a href="#"><img class="icon-svg" src="img/icon-svg/endgiltig nicht 2.svg" alt=""></a>
-                    <div class="date right">
-                      <span>12.11.2017 | 08:45</span>
-                    </div>
                   </div>
                 </div>
               </div>
               
               <div class="card">
                 <div class="card-content">
-                  <div class="card-title">
-                    <h6><a href="#">Zusatzleistung doppelt bezahlt und nicht ersetzt</a></h6>
+                  <div class="card-title table-wrapper">
+                    <h6 class="left"><a href="#">Zusatzleistung doppelt bezahlt und nicht ersetzt</a></h6>
+                    <div class="date right">
+                      <i class="mdi mdi-calendar-check teal-text"></i>
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
                   </div>
                   <p>Nach gebuchtem Flug (Februar 2016) und bezahlter Zusatzleistung (Koffer zusätzlich) musste ich für das Gepäck zweimal zahlen, da bei der Fluggesellschaft kein</p>
                 </div>
@@ -324,9 +347,6 @@
                     <a href="#"><i class="mdi mdi-file-image"></i>&ensp;0</a>
                     <a href="#"><i class="mdi mdi-file-video"></i>&ensp;0</a>
                     <a href="#"><img class="icon-svg" src="img/icon-svg/endgiltig nicht 2.svg" alt=""></a>
-                    <div class="date right">
-                      <span>12.11.2017 | 08:45</span>
-                    </div>
                   </div>
                 </div>
               </div>

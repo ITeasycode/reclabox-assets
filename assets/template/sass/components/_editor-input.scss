@@ -1,0 +1,87 @@
+// editor wrapper
+.editor-input {
+	.input-field {
+		margin-bottom: 2.7rem;
+
+		&:last-child {
+			margin-bottom: 1.7rem;
+		}
+
+		label.active {
+		  line-height: 25px;
+		}
+	}
+	&-group {
+		display: table;
+		width: 100%;
+		vertical-align: middle;
+		.input-field {
+			display: table-cell;
+
+			&:first-child {
+				width: 70%;
+			}
+
+			&:last-child {
+				width: 17%;
+			}
+		}
+	}
+	.input-field {
+		&.input-checkbox {
+			margin: 0 25px 0 0;
+		}
+		label i {
+			color: $secondary-color;
+			font-size: 20px;
+			position: relative;
+			top: -3px;
+			vertical-align: middle;
+			&:hover {
+				color: $link-color;
+			}
+		}
+	}
+}
+// editor container
+.editor {
+	& > .title-editor {
+		font-size: 14px;
+		font-weight: 400;
+	}
+
+	.editor-description {
+		color: $text-black-light-theme;
+		font-size: 12px;
+		font-weight: 400;
+		margin-bottom: 15px;
+	}
+
+	.upload-files {
+		padding: 0;
+
+		.uploaded {
+			position: relative;
+			left: -5px;
+		}
+
+		& > div {
+			margin-bottom: 15px;
+		}
+
+		.input-field {
+			margin-top: 0;
+		}
+
+		.editor-title {
+			margin-bottom: 5px;
+		}
+	}
+}
+
+// editor module
+.editor-active {
+	button {
+		margin-right: 0;
+	}
+}

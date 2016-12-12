@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/materialdesignicons.min.css">
+  <link href="css/reclabox-materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+</head>
+<body>
+  <div class="wrapper grey lighten-5">
+
+    <header class="site-header blue-grey">
+      <div class="navbar">
+        <nav class="" role="navigation">
+          <div class="nav-wrapper">
+            <ul>
+              <li>
+                <a href="#" data-activates="slide-out" class="button-collapse waves-effect">
+                  <div class="arrow-hamburger">
+                    <div class="line arrow_top"></div>
+                    <div class="line arrow_line"></div>
+                    <div class="line arrow_bottom"></div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <a id="logo-container" href="javascript:void(0)" class="brand-logo hide"><img src="img/img-site/logo-reclabox.jpg" alt="ReclaBox"></a>
+            <div class="nav-header nav-theme hide">
+              <ul id="navHeader" class="nav-menu hide-on-med-and-down flex-wrapper">
+                <li><a class="active" href="javascript:void(0)">BESCHWERDE LESEN</a></li>
+                <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li>
+              </ul>
+            </div>
+            <ul class="right hide-on-med-and-down nav-right currently-logged">
+              <li>
+                <form id="search-form">
+                  <div class="search-widget">
+                    <button class="search-button"><i class="material-icons">search</i></button>
+                    <button class="search-close-button"><i class="material-icons">close</i></button>
+                    <input name="q" type="text" id="search-input" autocomplete="off">
+                    <label for="search-input">Name, Firma oder Schlagwort</label>
+                  </div>
+                </form>
+              </li>
+              <li><a class="btn waves-effect waves-light" href="javascript:void(0)">login</a></li>
+              <li><a class="btn waves-effect waves-light" href="javascript:void(0)">registrieren </a></li>
+            </ul>
+          </div>
+        </nav>
+      </div><!-- end navbar-fixed -->
+      <div class="slide-nav-wrapper">
+        <ul id="slide-out" class="side-nav">
+          <li>
+            <div class="userView">
+              <div class="background">
+                <img src="http://materializecss.com/images/office.jpg">
+              </div>
+              <a href="#!user"><img class="circle" src="http://materializecss.com/images/yuna.jpg"></a>
+              <a href="#!name"><span class="white-text name">John Doe</span></a>
+              <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+            </div>
+          </li>
+          <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+          <li><a href="#!">Second Link</a></li>
+          <li><div class="divider"></div></li>
+          <li><a class="subheader">Subheader</a></li>
+          <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        </ul>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="brand-logo">
+            <a id="logo-container" href="javascript:void(0)" class="brand-logo"><img src="img/img-site/ugh.png" alt="ReclaBox"></a>
+          </div>
+          <div class="navbar">
+            <nav class="" role="navigation">
+              <div class="nav-wrapper">
+                <div class="nav-header nav-theme">
+                  <ul id="navHeader" class="nav-menu hide-on-med-and-down flex-wrapper">
+                    <li><a href="javascript:void(0)">BESCHWERDE LESEN</a></li>
+                    <li><a class="active" href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li>
+                    <!-- <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li> -->
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div><!-- end navbar-fixed -->
+        </div>
+      </div>
+    </header>
+
+    <div class="container-write page-write">
+      <div class="section">
+        <div class="card-panel">
+          <div class="card no-bg">
+            <div class="card-content center">
+              <div class="card-title">
+                <h5>Schritt 1 von 2. Schreiben Sie hier Ihrer Beschwerdetext</h5>
+              </div>
+              <p>mit einem (*)  gekennzeihnete Felder sind Pfhlitfelder</p>
+            </div>
+            <div class="card-editor-input">
+              <form action="#">
+                <div class="editor">
+
+                  <div class="input-field-group table-wrapper">
+                    <div class="help"><i class="mdi mdi-help-circle"></i></div>
+                    <div class="input-field">
+                      <input placeholder="Hermes Germany GmbH" id="firma-marke" type="text" >
+                      <label class="active" for="firma-marke">Beschwerde gegen Firma/Marke *</label>
+                    </div>
+                    <div class="input-field">
+                      <input placeholder="z.B. Berlin" id="ort" type="text" >
+                      <label class="active" for="ort">Ort</label>
+                    </div>
+                  </div>
+
+                  <div class="input-field-group table-wrapper">
+                    <div class="help"><i class="mdi mdi-help-circle"></i></div>
+                    <div class="input-field">
+                      <input placeholder="z.B. Münster" id="passiert" type="text" >
+                      <label class="active" for="passiert">Wo ist der Fall passiert?</label>
+                    </div>
+                    <div class="input-field">
+                      <input placeholder="z.B. 4814" id="plz" type="text" >
+                      <label class="active" for="plz">PLZ</label>
+                    </div>
+                    <div class="input-field"><a href="#">WEITERE ANGABEN</a></div>
+                  </div>
+
+                  <div class="input-field-group table-wrapper">
+                    <div class="help"><i class="mdi mdi-help-circle"></i></div>
+                    <div class="input-field">
+                      <input placeholder="z.B. 4814" id="uberschrift" type="text" >
+                      <label class="active" for="uberschrift">Überschrift *</label>
+                    </div>
+                  </div>
+
+                  <div class="input-field-group table-wrapper">
+                    <div class="help"><i class="mdi mdi-help-circle"></i></div>
+                    <div class="input-field">
+                      <input placeholder="Teaser" id="teaser" type="text" >
+                      <label class="active" for="teaser">z.B. International Airlines</label>
+                    </div>
+                  </div>
+                  <div class="input-field-group table-wrapper">
+                    <div class="help"><i class="mdi mdi-help-circle"></i></div>
+                    <div class="input-field">
+                      <input value="" id="bestell" type="text" >
+                      <label class="active" for="bestell">Bestell-/Kundennummer</label>
+                    </div>
+                  </div>
+
+                  <div class="input-field-group table-wrapper">
+                    <div class="help"><i class="mdi mdi-help-circle"></i></div>
+                    <div class="text">Beschwerdetext</div>
+                  </div>
+                  <div class="text-editor">
+                    <div class="editor"> 
+                      <nav class="editor-nav">
+                        <div class="nav-wrapper">
+                          <ul class="left">
+                            <li><a href=""><i class="mdi mdi-format-italic"></i></a></li>
+                            <li><a href=""><i class="mdi mdi-format-list-bulleted"></i></a></li>
+                            <li><a href=""><i class="mdi mdi-format-list-numbers"></i></a></li>
+                            <li><a class="active" href=""><i class="mdi mdi-spellcheck"></i></a></li>
+                            <li>
+                               <a class="dropdown-button" href="#!" data-activates="dropdown2">Deutsch<i class="mdi-chevron-down mdi"></i></a><ul id="dropdown2" class="dropdown-content">
+                                 <li><a class="active" href="#!">Deutsch</a></li>
+                                 <li><a href="#!">English</a></li>
+                               </ul>
+                            </li>
+                          </ul>
+                        </div>
+                      </nav>
+                      <div class="input-field">
+                        <textarea id="textarea1" class="materialize-textarea" style="height: 28.2px;"></textarea>
+                        <label for="textarea1" class=""></label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="input-field-group table-wrapper">
+                    <div class="help"><i class="mdi mdi-help-circle"></i></div>
+                    <div class="input-field">
+                      <input value="" id="forderung" type="text" >
+                      <label class="active" for="forderung">Ihre Forderung *</label>
+                    </div>
+                  </div>
+                  
+                  <div class="input-field-group table-wrapper">
+                    <div class="help"><i class="mdi mdi-help-circle"></i></div>
+                    <div class="text">Mediadatei hochladen</div>
+                  </div>
+                  <div class="upload-files">
+                    <div class="upload-files-input">
+                      <div class="input-wrapper">
+                        <div class="icon">
+                          <i class="material-icons">file_upload</i>
+                        </div>
+                        <div class="text">
+                          <p>upload your logo</p>
+                          <p>JPG, PNG, GIF</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="uploaded">
+                      <div class="uploaded-item">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" style="background-image: url(&quot;img/img-slider/1.jpeg&quot;); background-size: cover;">
+                        <i class="material-icons highlight_off">highlight_off</i>
+                        <div class="progress-wrapper">
+                          <span class="progress-number">72%</span>
+                          <div class="progress">
+                              <div class="determinate" style="width: 70%"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="uploaded-item">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" style="background-image: url(&quot;img/img-slider/2.jpeg&quot;); background-size: cover;">
+                        <i class="material-icons highlight_off">highlight_off</i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="input-field-group table-wrapper">
+                    <div class="help"><i class="mdi mdi-help-circle"></i></div>
+                    <div class="input-field">
+                      <input value="" id="email" type="text" >
+                      <label class="active" for="email">Ihre E-Mail Adresse *</label>
+                    </div>
+                  </div>
+
+                  <div class="input-field-group table-wrapper">
+                    <div class="help"><i class="mdi mdi-help-circle"></i></div>
+                    <div class="input-field">
+                      <input value="" id="vorname" type="text" >
+                      <label class="active" for="vorname">Ihr Vorname</label>
+                    </div>
+                    <div class="input-field">
+                      <input placeholder="Mustermann" id="name" type="text" >
+                      <label class="active" for="name">Ihr Name</label>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="editor-active">
+                  <button class="btn waves-effect waves-light z-theme-depth-4 center" type="submit" name="action">WEITER</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/reclabox-materialize.js"></script>
+  <script src="js/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>

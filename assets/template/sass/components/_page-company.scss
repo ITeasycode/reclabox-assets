@@ -139,19 +139,20 @@
 		.card-title {
 			background-color: #fafafa;
 			span {
-				display: inline-block;
-				text-align: center;
-				position: relative;
+				background-color: #607d8b;
+				border-radius: 3px;
 				color: white;
+				display: inline-block;
 				font-family: Roboto;
 				font-size: 14px;
 				font-weight: 400;
-				width: 20px;
 				height: 20px;
-				background-color: #607d8b;
-				border-radius: 3px;
-				vertical-align: middle;
+				line-height: 20px;
 				margin-right: 15px;
+				position: relative;
+				text-align: center;
+				vertical-align: middle;
+				width: 20px;
 			}
 			a {
 				display: inline-block;

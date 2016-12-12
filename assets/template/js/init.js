@@ -5,6 +5,8 @@
     var $uploaded_items = $('.uploaded-item'),
         $card_comment = $('.card-comment');
 
+    $('select').material_select();
+
     $('#textarea1').trigger('autoresize');
 
     $('.button-collapse').slideNav();
@@ -21,8 +23,40 @@
       slidesToScroll: 2
     });
 
-    $('ul#navHeader').navTop();
-    $('ul#navTop').navTop();
+    $('ul#navHeader').navTheme({fixedItems: true, indentItem: 50});
+    $('ul#navTop').navTheme();
+    $('ul#navContent').navTheme({fixedItems: true});
+
+
+    
+
+    // function nav_content (argument) {
+    //   var $this = argument;
+    //     console.log($this);
+
+    //     function countingWidth(elements) {
+    //       var $width_container = 0;
+
+    //       $(elements).each(function(index, el) {
+    //         var $el_width = $(el).width();
+
+    //         if ( $el_width > 0 ) {
+    //           $width_container = $width_container + ($el_width + 20);
+    //         }
+            
+    //       });
+
+    //       return $width_container;
+
+    //     };
+
+    //   $this.parent('.nav-wrapper').css('width', countingWidth( $this.find('li a') ));
+      
+    // }
+
+    // nav_content($('ul#navContent'));
+
+
     $('.tooltipped').tooltip({delay: 50, position: 'top'});
 
     $('.button-collapse').slideNav({
@@ -352,7 +386,9 @@
   var methods = {
     init : function(options) {
       var defaults = {
-        onShow: null
+        onShow: null,
+        fixedItems: false,
+        indentItem: 20
       };
       options = $.extend(defaults, options);
 
@@ -363,14 +399,15 @@
       var $this = $(this),
           window_width = $(window).width();
 
-
-
       $this.width('100%');
+      
       var $active, $content, $links = $this.find('li a'),
           $links_length = $links.length,
-          $tabs_width = $this.width(),
-          $tab_width = Math.max($tabs_width, $this[0].scrollWidth) / $links_length,
-          $index = 0;
+          $this_width = $this.width(),
+          $nav_wrap = $this.parent(),
+          $index = 0,
+          indent_all_links, i_w;
+
 
 
       // If the location.hash matches one of the links, use that as the active tab.
@@ -392,6 +429,33 @@
 
       };
 
+      // click nav-btn-content
+      function onClickBtnSlide() {
+        // body... 
+        $('.nav-btn-slide').on('click', function(event) {
+          event.preventDefault();
+          /* Act on the event */
+          if ($nav_wrap.position().left >= 0) {
+            var left_nav_wrapper = $this.width() - ($nav_wrap.parent().innerWidth() - 50);
+            $nav_wrap.velocity({"left": -left_nav_wrapper}, {duration: 300, queue: false, easing: 'easeOutQuad'});
+          } else {
+            $nav_wrap.velocity({"left": 0}, {duration: 300, queue: false, easing: 'easeOutQuad'});
+          }
+        });
+      }
+
+      // Width items li > a
+      i_w = countingWidth($this.find('li a'));
+
+      if (options.fixedItems) {
+        $nav_wrap.width(i_w + ($links_length * options.indentItem) );
+        indent_all_links = $this.width() - i_w;
+        onClickBtnSlide();
+      } else {
+        indent_all_links = $this_width - i_w;
+      }
+
+      console.log(indent_all_links)
       // If no match is found, use the first link or any with class 'active' as the initial active tab.
       if ($active.length === 0) {
         $active = $(this).find('li a.active').first();
@@ -414,21 +478,23 @@
       $this.append('<div class="indicator"></div>');
       var $indicator = $this.find('.indicator');
 
-      var indent_all_links = $tabs_width - countingWidth($this.find('li a'));
-
       $indicator.css('width', $active.width());
 
       if ($this.is(":visible")) {
-        $indicator.css({"left": Math.ceil(indent_all_links / $links_length) / 2 });
+        if ($index === 0) {
+          $indicator.css({"left": ($active.parent('li').outerWidth() - $active.width()) / 2 });
+        } else if ($index > 0) {
+          $indicator.css({"left": $active.parent('li').position().left + ( ($active.parent('li').outerWidth() - $active.width()) / 2 ) });
+        }
       }
       // $(window).resize(function () {
-      //   $tabs_width = $this.width();
-      //   $tab_width = Math.max($tabs_width, $this[0].scrollWidth) / $links_length;
+      //   $this_width = $this.width();
+      //   $tab_width = Math.max($this_width, $this[0].scrollWidth) / $links_length;
       //   if ($index < 0) {
       //     $index = 0;
       //   }
-      //   if ($tab_width !== 0 && $tabs_width !== 0) {
-      //     $indicator.css({"right": $tabs_width - (($index + 1) * $tab_width)});
+      //   if ($tab_width !== 0 && $this_width !== 0) {
+      //     $indicator.css({"right": $this_width - (($index + 1) * $tab_width)});
       //     $indicator.css({"left": $index * $tab_width});
       //   }
       // });
@@ -437,6 +503,7 @@
       $links.not($active).each(function () {
         $(this.hash).hide();
       });
+
 
 
       // Bind the click event handler
@@ -451,11 +518,11 @@
           return;
         }
 
-        $tabs_width = $this.width();
-        $tab_width = Math.max($tabs_width, $this[0].scrollWidth) / $links_length;
+        $this_width = $this.width();
 
         // Make the old tab inactive.
         $active.removeClass('active');
+
         if ($content !== undefined) {
           $content.hide();
         }
@@ -469,8 +536,8 @@
 
         var $active_parent = $active.parent('li'),
             $active_parent_prevAll = $active_parent.prevAll('li'),
-            $active_parent_width = $active_parent.width(),
-            $active_parent_prevAll_width = countingWidth($active_parent_prevAll);
+            $active_parent_prevAll_width = countingWidth($active_parent_prevAll),
+            active_left_position = ($active_parent_prevAll_width + ((indent_all_links / $links_length) / 2));
 
         // Make the tab active.
         $active.addClass('active');
@@ -492,10 +559,10 @@
 
         // Update indicator
         if (($index - $prev_index) >= 0) {
-          $indicator.velocity({"left": ($active_parent_prevAll_width + (Math.ceil(indent_all_links / $links_length) / 2))}, {duration: 300, queue: false, easing: 'easeOutQuad'});
+          $indicator.velocity({"left": active_left_position}, {duration: 300, queue: false, easing: 'easeOutQuad'});
         }
         else {
-          $indicator.velocity({"left": ($active_parent_prevAll_width + (Math.ceil(indent_all_links / $links_length) / 2))}, { duration: 300, queue: false, easing: 'easeOutQuad'});
+          $indicator.velocity({"left": active_left_position}, { duration: 300, queue: false, easing: 'easeOutQuad'});
         }
 
         // Prevent the anchor's default click action
@@ -509,7 +576,7 @@
     }
   };
 
-  $.fn.navTop = function(methodOrOptions) {
+  $.fn.navTheme = function(methodOrOptions) {
     if ( methods[methodOrOptions] ) {
       return methods[ methodOrOptions ].apply( this, Array.prototype.slice.call( arguments, 1 ));
     } else if ( typeof methodOrOptions === 'object' || ! methodOrOptions ) {

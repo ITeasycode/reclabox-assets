@@ -99,7 +99,50 @@
 
       <div class="section"><!-- content, sidebar, other components -->
         <div class="row">
-          <div class="col s12 m3 l3"><!-- sidebar -->
+
+          <div class="col s12 m3 l3"><!-- sidebar left -->
+
+            <div class="dropdown-wrapper widget-navigation-btn">
+              <a  class="waves-effect waves-light btn full-width btn-theme-pink dropdown-button" 
+                  data-activates="btn-company"
+                  data-beloworigin="true"
+                  data-stoppropagation="true">
+
+                <i class="material-icons left">settings</i> 
+                <span>firmen-mitgliedschaft </span>
+                <i class="material-icons arrow_down right">keyboard_arrow_down</i>
+                <i class="material-icons arrow_up right">keyboard_arrow_up</i>
+              </a>
+              <!-- Dropdown Structure -->
+              <ul id="btn-company" class="dropdown-content">
+                <li>
+                  <form action="#">
+                    <p>
+                      <input class="with-gap right" name="group1" type="radio" id="company1" />
+                      <label for="company1">Deutsche Post AG <span class="pink-text text-accent-2">(1)</span></label>
+                    </p>
+                  </form>
+                </li>
+                <li>
+                  <form action="#">
+                    <p>
+                      <input class="with-gap right" name="group2" type="radio" id="company2" />
+                      <label for="company2">ReclaBox Suppore <span class="pink-text text-accent-2">(15)</span></label>
+                    </p>
+                  </form>
+                </li>
+                <li>
+                  <form action="#">
+                    <p>
+                      <input class="with-gap right" name="group3" type="radio" id="company3" />
+                      <label for="company3">Alle Beschwerde</label>
+                    </p>
+                  </form>
+                </li>
+                <li><a href="#!">Settings</a></li>
+              </ul>
+            </div>
+            
             <div class="card-panel no-bg widget-sidebar widget-company">
               <div class="card">
                 <div class="card-action table-wrapper">
@@ -120,43 +163,30 @@
               </div>
             </div>
 
-            <div class="card-panel widget-sidebar widget-similar">
-              <div class="card-header blue-grey lighten-5">
-                <h6>Bried- und Paketzusteller</h6>
-              </div>
+            <div class="card-panel widget-sidebar widget-navigation">
               <div class="card ">
                 <div class="card-content">
-                  <div class="card-title"><span>1</span><a href="javascript:void(0)">GLS</a></div>
+                  <div class="card-title">BESCHWERDEN</div>
                   <ul>
-                    <li>ReclaRank: 5</li>
-                    <li>Beschwerden: 185</li>
-                    <li>Lösungsquote: 71%</li>
+                    <li><a href="javascript:void(0)">Online <i class="material-icons right">chevron_right</i></a></li>
+                    <li><a href="javascript:void(0)">On hold 48 h <span>(1)</span> <i class="material-icons right">chevron_right</i></a></li>
+                    <li><a href="javascript:void(0)">Gelöschte <span>(7)</span> <i class="material-icons right">chevron_right</i></a></li>
                   </ul>
                 </div>
               </div>
-              <div class="card active">
+              <div class="card">
                 <div class="card-content">
-                  <div class="card-title"><span>2</span>Deutsche Post AG</div>
+                  <div class="card-title">Firmenatworten</div>
                   <ul>
-                    <li>ReclaRank: 5</li>
-                    <li>Beschwerden: 185</li>
-                    <li>Lösungsquote: 71%</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card ">
-                <div class="card-content">
-                  <div class="card-title"><span>2</span><a href="javascript:void(0)">Terdera Co.</a></div>
-                  <ul>
-                    <li>ReclaRank: 5</li>
-                    <li>Beschwerden: 185</li>
-                    <li>Lösungsquote: 71%</li>
+                    <li><a href="javascript:void(0)">Veröffentlich <span>(21)</span><i class="material-icons right">chevron_right</i></a></li>
+                    <li><a href="javascript:void(0)">Entwürfe <i class="material-icons right">chevron_right</i></a></li>
+                    <li><a class="active" href="javascript:void(0)">Automatische <i class="material-icons right">chevron_right</i></a></li>
                   </ul>
                 </div>
               </div>
             </div>
 
-          </div><!-- end sidebar -->
+          </div><!-- end sidebar left -->
 
           <div class="col s12 m6 l6"><!-- content -->
             <div class="card-panel bg-05">
@@ -254,101 +284,143 @@
               </div>
             </div>
 
-            <div class="card-panel no-bg">
+            <div class="card-panel no-bg card-comment">
+              <div class="card-header">
+                <h6>Firmenantwort zur Beschwerde: 11 Tage Versanddauer in Deutschland!</h6>
+              </div>
               <div class="card">
                 <div class="card-content">
                   <div class="card-title table-wrapper">
-                    <h6 class="left"><a href="#">Guthaben anfordern nicht möglich</a></h6>
+                    <h6 class="left">von Deutsche Post AG</h6>
                     <div class="date right">
                       <i class="mdi mdi-calendar-check teal-text"></i>
                       <span>12.09.2016 | 14:53 Uhr </span>
                     </div>
                   </div>
-                  <p>Nachdem ich an einem Tag 7 (in Worten: sieben) Briefe von Care-Energy bekommen habe, steht nun fest, dass ich einiges an Guthaben zur Verfügung habe. Nach</p>
+                  <p>Pellentesque semper dictum arcu ut accumsan. Maecenas vel varius massa, ac pretium nisl. Nunc quis placerat ligula, nec varius nulla. In hac habitasse platea dictumst. Phasellus et suscipit ligula. Nam nec hendrerit libero, sit amet cursus dui.</p>
                 </div>
                 <div class="card-footer">
                   <div class="card-action">
-                    <a href="#"><i class="material-icons">visibility</i>&ensp;536</a>
-                    <a href="#"><i class="material-icons">chat</i>&ensp;12</a>
-                    <a href="#"><i class="mdi mdi-file-image"></i>&ensp;0</a>
-                    <a href="#"><i class="mdi mdi-file-video"></i>&ensp;0</a>
-                    <a href="#"><img class="icon-svg" src="img/icon-svg/beantwortete 2.svg" alt=""></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-content">
-                  <div class="card-title table-wrapper">
-                    <h6 class="left"><a href="#">Keine Rückerstattung von OutdoorTrecking2010</a></h6>
-                    <div class="date right">
-                      <i class="mdi mdi-calendar-check teal-text"></i>
-                      <span>12.09.2016 | 14:53 Uhr </span>
+                    <div class="rating left">
+                      <span><i class="mdi-star-outline mdi"></i></span>
+                      <span><i class="mdi-star mdi"></i></span>
+                      <span><i class="mdi-star mdi"></i></span>
+                      <span><i class="mdi-star mdi"></i></span>
+                      <span><i class="mdi-star mdi"></i></span>
+                      <span class="number">4.0</span>
                     </div>
-                  </div>
-                  <p>Bestellte Ware (circa 45 Euro) war zum gewünschten Zeitpunkt nicht lieferbar. Da ich keine Alternativbestellung wünschte, forderte ich umgehend eine Rückerstat-</p>
-                </div>
-                <div class="card-footer">
-                  <div class="card-action">
-                    <a href="#"><i class="material-icons">visibility</i>&ensp;536</a>
-                    <a href="#"><i class="material-icons">chat</i>&ensp;12</a>
-                    <a href="#"><i class="mdi mdi-file-image"></i>&ensp;0</a>
-                    <a href="#"><i class="mdi mdi-file-video"></i>&ensp;0</a>
-                    <a href="#"><img class="icon-svg" src="img/icon-svg/endgiltig nicht 2.svg" alt=""></a>
+                    <button class="btn waves-effect waves-light right z-theme-depth-4" type="submit" name="action">BEARBEITEN</button>
                   </div>
                 </div>
               </div>
-              
-              <div class="card">
-                <div class="card-content">
-                  <div class="card-title table-wrapper">
-                    <h6 class="left"><a href="#">Zusatzleistung doppelt bezahlt und nicht ersetzt</a></h6>
-                    <div class="date right">
-                      <i class="mdi mdi-calendar-check teal-text"></i>
-                      <span>12.09.2016 | 14:53 Uhr </span>
-                    </div>
-                  </div>
-                  <p>Nach gebuchtem Flug (Februar 2016) und bezahlter Zusatzleistung (Koffer zusätzlich) musste ich für das Gepäck zweimal zahlen, da bei der Fluggesellschaft kein</p>
-                </div>
-                <div class="card-footer">
-                  <div class="card-action">
-                    <a href="#"><i class="material-icons">visibility</i>&ensp;536</a>
-                    <a href="#"><i class="material-icons">chat</i>&ensp;12</a>
-                    <a href="#"><i class="mdi mdi-file-image"></i>&ensp;0</a>
-                    <a href="#"><i class="mdi mdi-file-video"></i>&ensp;0</a>
-                    <a href="#"><img class="icon-svg" src="img/icon-svg/endgiltig nicht 2.svg" alt=""></a>
-                  </div>
-                </div>
-              </div>
-
             </div>
 
-            <ul class="pagination center">
-              <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-              <li class="active"><a href="#!">1</a></li>
-              <li class="waves-effect"><a href="#!">2</a></li>
-              <li class="waves-effect"><a href="#!">3</a></li>
-              <li class="waves-effect"><a href="#!">4</a></li>
-              <li class="waves-effect"><a href="#!">5</a></li>
-              <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-            </ul>
+            <div class="card-panel no-bg card-comment">
+              <div class="card-header">
+                <h6>Firmenantwort zur Beschwerde: 11 Tage Versanddauer in Deutschland!</h6>
+              </div>
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-title table-wrapper">
+                    <h6 class="left">von Deutsche Post AG</h6>
+                    <div class="date right">
+                      <i class="mdi mdi-calendar-check teal-text"></i>
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                  </div>
+                  <p>Pellentesque semper dictum arcu ut accumsan. Maecenas vel varius massa, ac pretium nisl. Nunc quis placerat ligula, nec varius nulla. In hac habitasse platea dictumst. Phasellus et suscipit ligula. Nam nec hendrerit libero, sit amet cursus dui.</p>
+                </div>
+                <div class="card-footer">
+                  <div class="card-action">
+                    <div class="rating left">
+                      <span><i class="mdi-star-outline mdi"></i></span>
+                      <span><i class="mdi-star mdi"></i></span>
+                      <span><i class="mdi-star mdi"></i></span>
+                      <span><i class="mdi-star mdi"></i></span>
+                      <span><i class="mdi-star mdi"></i></span>
+                      <span class="number">4.0</span>
+                    </div>
+                    <button class="btn waves-effect waves-light right z-theme-depth-4" type="submit" name="action">BEARBEITEN</button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+            <div class="card-panel no-bg card-comment">
+              <div class="card-header">
+                <h6>Firmenantwort zur Beschwerde: 11 Tage Versanddauer in Deutschland!</h6>
+              </div>
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-title table-wrapper">
+                    <h6 class="left">von Deutsche Post AG</h6>
+                    <div class="date right">
+                      <i class="mdi mdi-calendar-check teal-text"></i>
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                  </div>
+                  <p>Pellentesque semper dictum arcu ut accumsan. Maecenas vel varius massa, ac pretium nisl. Nunc quis placerat ligula, nec varius nulla. In hac habitasse platea dictumst. Phasellus et suscipit ligula. Nam nec hendrerit libero, sit amet cursus dui.</p>
+                </div>
+                <div class="card-footer">
+                  <div class="card-action">
+                    <div class="rating left">
+                      <span><i class="mdi-star-outline mdi"></i></span>
+                      <span><i class="mdi-star mdi"></i></span>
+                      <span><i class="mdi-star mdi"></i></span>
+                      <span><i class="mdi-star mdi"></i></span>
+                      <span><i class="mdi-star mdi"></i></span>
+                      <span class="number">4.0</span>
+                    </div>
+                    <button class="btn waves-effect waves-light right z-theme-depth-4" type="submit" name="action">BEARBEITEN</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div><!-- end content -->
 
-          <div class="col s12 m3 l3"><!-- sidebar -->
+          <div class="col s12 m3 l3"><!-- sidebar right -->
 
-            <div class="card-panel no-bg widget-sidebar">
+            <div class="card-panel widget-sidebar widget-links">
               <div class="card-header blue-grey lighten-5">
-                <h6>KARTE ZUR BESCHWERDE</h6>
+                <h6>NACHRICHTEN</h6>
               </div>
               <div class="card no-bg">
                 <div class="card-content">
-                  <img src="img/img-site/frankfurt.jpg" alt="">
+                  <a href="javascript:void(0)">Posteingang (0)</a>
+                  <a href="javascript:void(0)">gelesen (0)</a>
+                  <a href="javascript:void(0)">ungelesen (0)</a>
+                  <a href="javascript:void(0)">gesendete Nachrichten (0)</a>
+                  <a href="javascript:void(0)">vom Empfänger gelesen (0)</a>
+                  <a href="javascript:void(0)">vom Empfänger ungelesen (0)</a>
                 </div>
               </div>
             </div>
 
-          </div><!-- end sidebar -->
+            <div class="card-panel widget-sidebar widget-links">
+              <div class="card-header blue-grey lighten-5">
+                <h6>MERKZETTEL</h6>
+              </div>
+              <div class="card no-bg">
+                <div class="card-content">
+                  <a href="javascript:void(0)">gemerkte Beschwerden (1) </a>
+                  <a href="javascript:void(0)">verfolgte Beschwerden (0)</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-panel widget-sidebar widget-links">
+              <div class="card-header blue-grey lighten-5">
+                <h6>LINKS</h6>
+              </div>
+              <div class="card no-bg">
+                <div class="card-content">
+                  <a href="javascript:void(0)">gemerkte Beschwerden (1) </a>
+                  <a href="javascript:void(0)">verfolgte Beschwerden (0)</a>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- end sidebar right -->
         </div>
       </div><!-- End ontent, sidebar, other components -->
 
@@ -363,9 +435,6 @@
   <script src="js/slick/slick.js" type="text/javascript" charset="utf-8"></script>
 
   <script src="js/init.js"></script>
-
-  
-
 
   </body>
 </html>
