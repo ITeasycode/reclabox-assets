@@ -27,6 +27,11 @@ body .minilink {
   font: 14px/14px "Roboto";
   background: #fff;
 }
+#usersLogin .modal-content form #message {
+  color: #ff4081;
+  line-height: 24px;
+  text-align: center;
+}
 #usersLogin .modal-content form .input-field {
   padding: 0;
 }
@@ -42,7 +47,7 @@ body .minilink {
 #usersLogin .modal-content form input[type="checkbox"] + label {
   padding-left: 26px;
   line-height: 14px;
-  margin: 0 0 11px 0;
+  margin: 20px 0 11px 0;
 }
 #usersLogin .modal-content form input[type="checkbox"].filled-in:not(:checked) + label:after {
   width: 16px;
@@ -75,8 +80,8 @@ body .minilink {
 #usersLogin {
   overflow: -moz-scrollbars-none;
 }
-@media screen and (min-height: 477px) {
+@media screen and (min-height: 524px) {
   #usersLogin {
-    min-height: 475px;
+    min-height: 522px;
   }
 }

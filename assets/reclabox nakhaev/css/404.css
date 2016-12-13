@@ -33,11 +33,15 @@ body::before {
   vertical-align: middle;
   max-width: 400px;
 }
+.centered img {
+  margin: 0 0 33px 0;
+}
 .centered h1 {
   font: 18px/35px "Roboto-Medium";
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 1.5px;
+  margin-bottom: 20px;
 }
 .centered .card {
   -webkit-box-shadow: 0 13px 51px 0px rgba(0, 0, 0, 0.2);
@@ -56,6 +60,8 @@ body::before {
 .centered .card .card-content .btn {
   margin: -6px 0 17px 0;
   background-color: #ff4081;
+  color: #fff;
+  padding: 0 30px;
 }
 .centered .card .card-content .btn:hover {
   background-color: #ff5a92;

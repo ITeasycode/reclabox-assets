@@ -137,17 +137,6 @@ body .minilink {
   #usersRegister .modal-content .hidden {
     display: none;
   }
-  #usersRegister .modal-content .wrapper form {
-    /*		button.registrieren, button.registrierenFirm {
-						width: 80%;
-					}
-					button.registrieren {
-						max-width: 300px;
-					}
-					button.registrierenFirm {
-						max-width: 300px;
-					}*/
-  }
   #usersRegister .modal-content .wrapper .tabs .tab a {
     padding: 0;
     display: inline;

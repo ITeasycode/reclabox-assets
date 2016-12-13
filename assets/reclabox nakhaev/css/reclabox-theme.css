@@ -25,7 +25,7 @@
 html {
   color: rgba(0, 0, 0, 0.87);
 }
-/*--------------------------form--------------------------*/
+/*--------------------------form input-field--------------------------*/
 form.col.s12 {
   padding-left: 0;
 }
@@ -34,16 +34,13 @@ form.col.s12 .row {
 }
 form.col.s12 .row .input-field {
   padding-left: 0;
+  padding-right: 0;
 }
-/*.row .col.s12 {
-	padding: 0;
-	margin-left: 0;
-}
-*/
 /*-----------------------buttons-----------------------*/
 .rb-blue-btn {
   width: 100%;
   background: #607d8b;
+  color: #fff;
 }
 .rb-blue-btn:hover,
 .rb-blue-btn:focus {
@@ -52,6 +49,7 @@ form.col.s12 .row .input-field {
 .rb-pink-btn {
   width: 100%;
   background: #ff4081;
+  margin-top: 20px;
 }
 .rb-pink-btn:hover,
 .rb-pink-btn:focus {
@@ -103,6 +101,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
 }
 input.rb-blue-input[type="checkbox"] + label {
   color: #607d8b;
+  margin-top: 20px;
 }
 input.rb-blue-input[type="checkbox"].filled-in:not(:checked) + label:after {
   border: 2px solid #607d8b;
@@ -112,37 +111,8 @@ input.rb-blue-input[type="checkbox"].filled-in:checked + label:after {
   background: #607d8b;
 }
 /*----------------------select----------------------*/
-select {
-  height: 36px;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
-  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.18);
-          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.18);
-  border: none;
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
-  margin-bottom: 25px;
-}
-select:hover,
-select:active,
-select:focus {
-  border: none;
-  outline: none;
-}
-select.rb-blue-select {
-  background: #607d8b;
-  color: #fff;
-}
-select.rb-blue-select option:hover,
-select.rb-blue-select option:focus {
-  background: #78909c;
-}
-select.rb-blue-select:hover,
-select.rb-blue-select:focus {
-  background: #78909c;
-}
-label[for="select"] {
-  top: -25px;
+.input-field .select-wrapper .dropdown-content li span {
+  color: #607d8b;
 }
 /*---------------------centered---------------------*/
 .centeredBox {
@@ -174,6 +144,20 @@ label[for="select"] {
 .card .card-content {
   padding: 15px;
   width: 100%;
+}
+/*----------------------modal-overlay----------------------*/
+.modal-overlay {
+  position: fixed;
+  z-index: 999;
+  top: -100px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 125%;
+  width: 100%;
+  background: #000;
+  display: none;
+  will-change: opacity;
 }
 /*----------------------container----------------------*/
 @media screen and (min-width: 1280px) {
