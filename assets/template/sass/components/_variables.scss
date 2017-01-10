@@ -28,20 +28,21 @@
  *  23. Collections
  *  24. Progress Bar
  *  25. Gradient
+ *  26. Border radius
  */
 
 
 /* 1. Colors
    ========================================================================== */
 
-$primary-color: color("pink", "accent-2") !default;
-$primary-color-light: lighten($primary-color, 5%) !default;
+$primary-color: color("pink", "base") !default;
+$primary-color-light: lighten($primary-color, 10%) !default;
 $primary-color-dark: darken($primary-color, 5%) !default;
 
 $secondary-color: color("blue-grey", "base") !default;
 $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
-$link-color: rgba(96, 125, 139, .87) !default;
+$link-color: $secondary-color !default;
 $link-color-hover: rgba(96, 125, 139, .54) !default;
 
 $text-black-theme: rgba(0, 0, 0, .87);
@@ -97,6 +98,7 @@ $button-floating-radius: 50% !default;
    ========================================================================== */
 
 $card-padding: 15px !default;
+$card-action-padding: 10px 25px;
 $card-bg-color: #fff !default;
 $card-link-color: color("blue-grey", "base") !default;
 $card-link-color-light: lighten($card-link-color, 20%) !default;
@@ -216,8 +218,8 @@ $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width 
 
 $num-cols: 12 !default;
 $gutter-width: 1.8rem !default;
-$element-top-margin: $gutter-width / 3 !default;
-$element-bottom-margin: ($gutter-width / 3 ) * 2 !default;
+$element-top-margin: 15px !default;
+$element-bottom-margin: 25px !default;
 
 
 /* 13. Navigation Bar
@@ -244,7 +246,7 @@ $sidenav-item-height: 48px !default;
 /* 15. Photo Slider
    ========================================================================== */
 
-$slider-bg-color: color('grey', 'base') !default;
+$slider-bg-color: color('grey', 'lighten-3') !default;
 $slider-bg-color-light: color('grey', 'lighten-2') !default;
 $slider-indicator-color: color('green', 'base') !default;
 
@@ -258,7 +260,7 @@ $spinner-default-color: $secondary-color !default;
 /* 17. Tabs
    ========================================================================== */
 
-$tabs-underline-color: $primary-color-light !default;
+$tabs-underline-color: #fff !default;
 $tabs-text-color: #607d8b !default;
 $tabs-bg-color: #fff !default;
 
@@ -266,7 +268,7 @@ $tabs-bg-color: #fff !default;
 /* 18. Tables
    ========================================================================== */
 
-$table-border-color: #d0d0d0 !default;
+$table-border-color: rgba(0, 0, 0, 0.1) !default;
 $table-striped-color: #f2f2f2 !default;
 
 
@@ -327,3 +329,8 @@ $progress-bar-color: $primary-color !default;
 
    $g-theme-start: #e91e63;
    $g-theme-end: #c2185b;
+
+/* 25. Gradient
+   ========================================================================== */
+
+   $br-theme: 3px !default;

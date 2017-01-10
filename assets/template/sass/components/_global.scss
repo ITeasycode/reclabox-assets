@@ -23,6 +23,16 @@ body {
       transition-timing-function: ease-in-out;
       transform:translateX(300px)
     }
+    .navbar {
+      position: relative;
+      height: $navbar-height-mobile;
+      z-index: 999;
+      @extend .blue-grey;
+
+      nav {
+        position: fixed;
+      }
+    }
   }
   .container, 
   .container-medium.post {
@@ -72,10 +82,8 @@ a {
 .no-bg {
   background-color: rgba(0, 0, 0, 0) !important;
   @extend .z-depth-0;
-
-  .card-header {
+  &-header {
     padding: 5px 0 !important;
-    text-transform: inherit !important;
   }
 }
 
@@ -105,6 +113,7 @@ a {
 
   & > * {
     display: table-cell;
+    vertical-align: middle;
   }
 }
 
@@ -241,13 +250,13 @@ i {
     font-size: 1rem;
   }
   &.small {
-    font-size: 2rem;
+    font-size: 18px;
   }
   &.medium {
-    font-size: 4rem;
+    font-size: 22px;
   }
   &.large {
-    font-size: 6rem;
+    font-size: 26px;
   }
 }
 
@@ -263,6 +272,15 @@ video.responsive-video {
 // Pagination
 
 .pagination {
+  margin-top: 40px;
+  
+  &.center {
+    margin-top: 40px;
+  }
+
+  &-wrapper {
+    margin: 15px 25px;
+  }
 
   li {
     display: inline-block;
@@ -322,13 +340,18 @@ video.responsive-video {
 
 // Breadcrumbs
 .breadcrumb {
-  color: rgba(01, 01, 01, .54);
+  color: $secondary-color;
   font-family: Roboto;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 400;
+  padding-left: 11px;
+
+  &:first-child {
+    padding-left: 0;
+  }
 
   &:hover {
-    color: rgba(01, 01, 01, .85);
+    color: $link-color-hover;
   }
 
   i,
@@ -339,32 +362,35 @@ video.responsive-video {
     font-size: 24px;
   }
 
-  &:before {
+  &::after {
     content: '\00BB';
-    color: rgba(01, 01, 01, .54);
-    vertical-align: top;
+    color: $secondary-color;
     display: inline-block;
-    font-family: 'Material Icons';
-    font-weight: normal;
+    font-size: 14px;
     font-style: normal;
-    font-size: 12px;
-    margin: 0px 3px 0 0px;
-    -webkit-font-smoothing: antialiased;
+    font-weight: normal;
+    height: auto;
+    margin: 0 4px;
+    position: absolute;
+    top: 0;
+    vertical-align: top;
+    width: auto;
   }
 
-  &:first-child:before {
-    display: none;
-  }
-
-  &:last-child {
-    color: #fff;
-  }
-  
   &-last-child {
     color: rgba(01, 01, 01, .54);
     font-family: Roboto;
-    font-size: 10px;
-    font-weight: 400;
+    font-size: 12px;
+    font-weight: 500;
+    padding-left: 11px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &-wrapper {
+    position: relative;
   }
 }
 
@@ -506,7 +532,6 @@ table {
   width:100%;
   display: table;
 
-  &.bordered > thead > tr,
   &.bordered > tbody > tr {
     border-bottom: 1px solid $table-border-color;
   }
@@ -534,10 +559,6 @@ table {
     }
   }
 
-}
-
-thead {
-  border-bottom: 1px solid $table-border-color;
 }
 
 td, th{

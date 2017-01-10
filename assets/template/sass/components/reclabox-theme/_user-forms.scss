@@ -1,0 +1,75 @@
+/* user login */
+.user-form {
+  max-width: 370px;
+  .card-panel, .card {
+    padding: 0;
+    margin: 0;
+  }
+  .card-panel.no-bg {
+    .card.no-bg {
+      .card-content {
+        background-color: white;
+        padding: 15px 25px 25px;
+        form {
+          padding: 0 -webkit-calc( (100% - 230px) / 2 );
+          padding: 0 calc( (100% - 230px) / 2 );
+        }
+      }
+    }
+  }
+  .card-content {
+    p {
+      font-size: 12px;
+    }
+  }
+  .card-image {
+    padding: 55px 0 0;
+    img {
+      max-width: 290px;
+      margin: 0 auto;
+    }
+    .btn-floating {
+      display: none;
+      position: absolute;
+      top: 13px;
+      left: 15px;
+      z-index: 999; 
+      i {
+        color: $secondary-color;  
+      }
+      
+    }
+  }
+
+  .btn {
+    margin-top: 25px;
+  }
+
+  .questions {
+    margin-top: 15px;
+  }
+  .form-login {
+    display: block;
+    &.logged {
+      a {
+        position: absolute;
+        bottom: 25px;
+        display: block;
+        left: 44%;
+      }
+    }
+  }
+  .form-newpassword {
+    display: none;
+  }
+}
+
+/* ----- user register ----- */
+.user-form.register-form {
+  max-width: 370px;
+
+  .indicator {
+    top: 0;
+    bottom: auto;
+  }
+}

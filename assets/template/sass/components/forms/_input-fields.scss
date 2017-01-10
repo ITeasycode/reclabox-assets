@@ -194,12 +194,12 @@ textarea.materialize-textarea {
 
   // Prefix Icons
   .prefix {
-    position: absolute;
+    position: absolute !important;
     width: $input-height;
-    font-size: 2rem;
+    font-size: 20px !important;
     transition: color .2s;
 
-    &.active { color: $input-focus-color; }
+    &.active { color: $input-focus-color !important; }
   }
 
   .prefix ~ input,
@@ -207,9 +207,10 @@ textarea.materialize-textarea {
   .prefix ~ label,
   .prefix ~ .validate ~ label,
   .prefix ~ .autocomplete-content {
-    margin-left: 3rem;
+    margin-left: 0;
+    padding-left: 2.3rem;
     width: 92%;
-    width: calc(100% - 3rem);
+    width: calc(100% - 2.3rem);
   }
 
   .prefix ~ label { margin-left: 3rem; }

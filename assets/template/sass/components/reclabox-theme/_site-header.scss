@@ -1,0 +1,26 @@
+.site-header {
+	min-height: 200px;
+	margin-bottom: 35px;
+	@extend .z-theme-depth-2;
+	
+	.navbar-fixed {
+		nav {
+			@extend .g-theme-1;
+		}
+	}
+
+	.navbar-bootom {
+		position: relative;
+		left: -35px;
+	}
+
+	.brand-logo-wrapper {
+		height: 76px;
+		img {
+			height: 220px;
+			left: -38px;
+			position: absolute;
+			top: -67px;
+		}
+	}
+}

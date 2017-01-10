@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/materialdesignicons.min.css">
+  <link href="css/reclabox-materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+</head>
+<body>
+  <div class="wrapper grey lighten-5">
+
+    <header class="site-header blue-grey">
+      <div class="navbar">
+        <nav class="" role="navigation">
+          <div class="nav-wrapper">
+            <ul>
+              <li>
+                <a href="#" data-activates="slide-out" class="button-collapse waves-effect">
+                  <div class="arrow-hamburger">
+                    <div class="line arrow_top"></div>
+                    <div class="line arrow_line"></div>
+                    <div class="line arrow_bottom"></div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <a id="logo-container" href="javascript:void(0)" class="brand-logo hide"><img src="img/img-site/logo-reclabox.jpg" alt="ReclaBox"></a>
+            <div class="nav-header nav-theme hide">
+              <ul id="navHeader" class="nav-menu hide-on-med-and-down flex-wrapper">
+                <li><a class="active" href="javascript:void(0)">BESCHWERDE LESEN</a></li>
+                <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li>
+              </ul>
+            </div>
+            <ul class="right hide-on-med-and-down nav-right currently-logged">
+              <li>
+                <form id="search-form">
+                  <div class="search-widget">
+                    <button class="search-button"><i class="material-icons">search</i></button>
+                    <button class="search-close-button"><i class="material-icons">close</i></button>
+                    <input name="q" type="text" id="search-input" autocomplete="off">
+                    <label for="search-input">Name, Firma oder Schlagwort</label>
+                  </div>
+                </form>
+              </li>
+              <li>
+                <a class="btn waves-effect waves-light" href="#usersLogin">login</a>
+              </li>
+              <li><a class="btn waves-effect waves-light" href="#usersRegister">registrieren </a></li>
+            </ul>
+          </div>
+        </nav>
+      </div><!-- end navbar-fixed -->
+
+      <div class="container"><!-- logo and nav-menu -->
+        <div class="row">
+          <div class="brand-logo">
+            <a id="logo-container" href="javascript:void(0)" class="brand-logo"><img src="img/img-site/ugh.png" alt="ReclaBox"></a>
+          </div>
+          <div class="navbar">
+            <nav class="" role="navigation">
+              <div class="nav-wrapper">
+                <div class="nav-header nav-theme">
+                  <ul id="navHeader" class="nav-menu hide-on-med-and-down flex-wrapper">
+                    <li><a class="active" href="javascript:void(0)">BESCHWERDE LESEN</a></li>
+                    <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li>
+                    <!-- <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li> -->
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div><!-- logo and nav-menu -->
+
+      <!-- components dropdown -->
+      <div class="slide-nav-wrapper"><!-- heade left nav -->
+        <ul id="slide-out" class="side-nav">
+          <li>
+            <div class="userView">
+              <div class="background">
+                <img src="http://materializecss.com/images/office.jpg">
+              </div>
+              <a href="#!user"><img class="circle" src="http://materializecss.com/images/yuna.jpg"></a>
+              <a href="#!name"><span class="white-text name">John Doe</span></a>
+              <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+            </div>
+          </li>
+          <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+          <li><a href="#!">Second Link</a></li>
+          <li><div class="divider"></div></li>
+          <li><a class="subheader">Subheader</a></li>
+          <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        </ul>
+      </div><!-- end heade left nav -->
+
+      <div class="modal-container"><!-- header modal user forms -->
+        <div id="usersLogin" class="modal"><!-- users login -->
+          <div class="modal-content">
+              <form class="" action="#">
+                <div class="input-field">
+                  <input id="email" type="text" class="validate">
+                  <label for="email">Email Adresse</label>
+                </div>
+                <div class="input-field">
+                  <input id="password" type="password" class="validate">
+                  <label for="password">password</label>
+                </div>
+                <div class="input-field">
+                  <input type="checkbox" class="filled-in" id="filled-in-box" />
+                  <label for="filled-in-box">Angemeldet bleiben</label>
+                </div>
+                <button class="full-width btn waves-effect waves-light" type="submit" name="action">einloggen</button>
+              </form>       
+            <ul class="questions">
+              <li><a href="#">password vergessen?</a></li>
+              <li><a href="#">Noch night Mitglied?</a></li>
+            </ul>
+          </div>
+        </div><!-- users login -->
+
+        <div id="usersRegister" class="modal register-form"><!-- user register -->
+          <div class="modal-content">
+            <div class="card-panel">
+              <div class="card-header blue-grey">
+                <ul class="tabs tabs-fixed-width">
+                  <li class="tab"><a class="active white-text" href="#USER-MITGLIEDSCHAFT">USER-MITGLIEDSCHAFT</a></li>
+                  <li class="tab"><a class="white-text" href="#FIRMA-MITGLIEDSCHAFT">FIRMA-MITGLIEDSCHAFT</a></li>
+                </ul>
+              </div>
+              <div class="card">
+                <div class="card-image">
+                  <img src="img/img-site/userLoginBg.png" title="">
+                </div>
+                <div class="card-content">
+                  <div class="card-title center">
+                    <h3 class="user">Möchten Sie kostenlos Mitglied werden?</h3>
+                    <h3 class="firm hide">Möchten Sie den Firmen-Account nutzen?</h3>
+                  </div>
+                  <div class="row">
+                    <div id="USER-MITGLIEDSCHAFT" class="col s12">
+                      <p>Bereits mit Ihrer E-Mail-Adresse und password können Sie sich als Privatperson kostenlos anmelden und selbst Beschwerden, Kommentare oder Nachrichten an andere User schreiben. Falls Sie Ihren Namen angeben möchten, werden Ihre erstellten Inhalte unter diesem Namen veröffentlicht. </p>
+                      <form class="col s12" action="#">
+                          <div class="row">
+                            <div class="input-field">
+                              <input id="email" type="email" class="validate">
+                              <label for="email">E-Mail-Adresse *</label>
+                            </div>
+                            <div class="input-field">
+                              <input id="password" type="password" class="validate">
+                              <label for="password">password *</label>
+                            </div>
+                            <div class="input-field">
+                              <input id="passwordRep" type="password" class="validate">
+                              <label for="passwordRep">password wiederholen *</label>
+                            </div>
+                              <div class="input-field">
+                                <input id="lastName" type="text" class="validate">
+                                <label for="lastName">Vorname</label>
+                              </div>
+                              <div class="input-field">
+                                <input id="firstName" type="text" class="validate">
+                                <label for="firstName">Name</label>
+                              </div>
+                          </div>
+                          <p class="warning">Hinweis: wir geben Ihre E-Mail -Adresse nicht an Dritte weiter, bei uns  erhalten Sie keinen unerwünschen Spam. <a href="#">Datenschutz.</a></p>
+                              <div class="input-field">
+                              <input type="checkbox" class="filled-in" id="filled-in-box-user" />
+                              <label for="filled-in-box-user">Ja, ich habe die <a href="#">Nutzungsbedinungen</a> gelesen und akzeptiert</label>
+                              </div>
+                          <button class="btn center waves-effect waves-light" type="submit" name="action">registrieren</button>
+                      </form>
+                    </div>
+                    <div id="FIRMA-MITGLIEDSCHAFT" class="col s12">
+                      <p>Nach dem Senden der Formulardaten erhalten Sie von uns eine E-Mail mit einem Verifizierungslink, der Sie zur Eingabe Ihrer Firmendaten führen wird. Sie können den Firmen-Account dann nach Freischaltung 14 Tage lang unverbindlich kostenlos testen, wir unterbreiten Ihnen rechtzeitig vor Ablauf ein Angebot zur weiteren Nutzung.</p>
+                      <p>Haben Sie vorab Fragen zum Firmen-Account? Fordern Sie weitere Informationen hier an: ReclaBox Support</p>
+                      <form class="col s12 firmRegistrarion" action="#">
+                          <div class="row">
+                            <div class="input-field">
+                                <input id="companyName" type="text" class="validate">
+                                <label for="companyName">Company / Institution</label>
+                              </div>
+                            <div class="input-field">
+                              <input id="companyEmail" type="email" class="validate">
+                              <label for="companyEmail">E-Mail-Adresse</label>
+                            </div>
+                          </div>
+                          <p class="warning">Hinweis: wir geben Ihre E-Mail -Adresse nicht an Dritte weiter, bei uns  erhalten Sie keinen unerwünschen Spam. <a href="#">Datenschutz.</a></p>
+                          <div class="input-field">
+                            <input type="checkbox" class="filled-in" id="filled-in-box-firm" />
+                            <label for="filled-in-box-firm">Ja, ich habe die <a href="#">Nutzungsbedinungen</a> gelesen und akzeptiert</label>
+                          </div>
+                          <button class="btn waves-effect waves-light center" type="submit" name="action">registrieren als firma</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+          </div>
+        </div><!-- end user register -->
+      </div><!-- end header modal user forms -->
+    </header>
+
+    <div class="container-medium post post-search"><!-- content, sidebar, other components -->
+      <div class="section">
+        <div class="row">
+          <div class="col s12 m4 l4"><!-- sidebar -->
+            <div class="card-panel widget-sidebar widget-navigation">
+              <div class="card ">
+                <div class="card-content">
+                  <ul>
+                    <li><a class="active" href="javascript:void(0)">Alle <i class="material-icons right">chevron_right</i></a></li>
+                    <li><a href="javascript:void(0)">Beschwerden <i class="material-icons right">chevron_right</i></a></li>
+                    <li><a href="javascript:void(0)">Firmenantworten<i class="material-icons right">chevron_right</i></a></li>
+                    <li><a href="javascript:void(0)">Kommentare<i class="material-icons right">chevron_right</i></a></li>
+                    <li><a href="javascript:void(0)">Firmen <i class="material-icons right">chevron_right</i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div><!-- end sidebar -->
+      
+          <div class="col s12 m8 l8"><!-- content -->
+            <div class="card-panel no-bg">
+              <div class="card-header">
+                <form class="search-form">
+                  <div class="row">
+                    <div class="input-field">
+                      <i class="mdi mdi-magnify prefix"></i>
+                      <input id="search" type="text" placeholder="Name, Firma oder Schlagwort" class="validate">
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="card no-bg">
+                <div class="card-content">
+                  <p class="total">Insgesamt <span class="count">18668</span> Ergebnisse gefunden für: "<span class="inquiry">hermes</span>"</p>
+                </div>
+              </div>
+            </div>
+
+            <section class="section">
+              <div class="section-header result-header center">
+                <p>Beschwerden 1 - 3 von insgesamt 6892 Treffern</p>
+              </div>
+              <div class="card-panel no-bg">
+                <div class="card result-item-content">
+                  <div class="card-content">
+                    <div class="card-title ">
+                      <h6><a href="#">Handy-Versand wird nicht veranlasst, niemand kann sagen wann</a></h6>
+                    </div>
+                    <p>Pellentesque ut condimentum lacus, at luctus nunc.<span class="keyWord">Hermes</span> suscipit neque nibh, convallis euismod sapien malesuada vitae. Aliquam et scelerisque libero. In finibus, nulla cursus finibus mollis, mauris diam tempor nisi, eget dapibus arcu tortor ut tortor. Curabitur cursus nunc vel </p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#"><i class="material-icons">visibility</i>&ensp;536</a>
+                    <a href="#"><i class="material-icons">chat</i>&ensp;12</a>
+                    <a href="#"><i class="material-icons">share</i>&ensp;7</a>
+                    <div class="date right">
+                      <i class="mdi mdi-calendar-check teal-text"></i>
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card result-item-content">
+                  <div class="card-content">
+                    <div class="card-title ">
+                      <h6><a href="#">Handy-Versand wird nicht veranlasst, niemand kann sagen wann</a></h6>
+                    </div>
+                    <p>Pellentesque ut condimentum lacus, at luctus nunc.<span class="keyWord">Hermes</span> suscipit neque nibh, convallis euismod sapien malesuada vitae. Aliquam et scelerisque libero. In finibus, nulla cursus finibus mollis, mauris diam tempor nisi, eget dapibus arcu tortor ut tortor. Curabitur cursus nunc vel </p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#"><i class="material-icons">visibility</i>&ensp;536</a>
+                    <a href="#"><i class="material-icons">chat</i>&ensp;12</a>
+                    <a href="#"><i class="material-icons">share</i>&ensp;7</a>
+                    <div class="date right">
+                      <i class="mdi mdi-calendar-check teal-text"></i>
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card result-item-content">
+                  <div class="card-content">
+                    <div class="card-title ">
+                      <h6><a href="#">Handy-Versand wird nicht veranlasst, niemand kann sagen wann</a></h6>
+                    </div>
+                    <p>Pellentesque ut condimentum lacus, at luctus nunc.<span class="keyWord">Hermes</span> suscipit neque nibh, convallis euismod sapien malesuada vitae. Aliquam et scelerisque libero. In finibus, nulla cursus finibus mollis, mauris diam tempor nisi, eget dapibus arcu tortor ut tortor. Curabitur cursus nunc vel </p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#"><i class="material-icons">visibility</i>&ensp;536</a>
+                    <a href="#"><i class="material-icons">chat</i>&ensp;12</a>
+                    <a href="#"><i class="material-icons">share</i>&ensp;7</a>
+                    <div class="date right">
+                      <i class="mdi mdi-calendar-check teal-text"></i>
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul class="pagination center">
+                <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                <li class="active"><a href="#!">1</a></li>
+                <li class="waves-effect"><a href="#!">2</a></li>
+                <li class="waves-effect"><a href="#!">3</a></li>
+                <li class="waves-effect"><a href="#!">4</a></li>
+                <li class="waves-effect"><a href="#!">5</a></li>
+                <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+              </ul>
+            </section>
+
+            <section class="section">
+              <div class="section-header result-header center">
+                <p>Firmenantworten 1 - 3 von insgesamt 6892 Treffern</p>
+              </div>
+              <div class="card-panel no-bg">
+                <div class="card-header">
+                  <div class="article-info table-wrapper clearfix">
+                    <div class="author">
+                      <a href="javascript:void(0)" title="James Khan">
+                        <img class="circle responsive-img" src="img/img-site/author.png" alt="">&emsp;
+                        <span>von Stil und Leben</span>
+                      </a>
+                    </div>
+                    <div class="report-alert">
+                      <a class="hide btn-floating icon-floating waves-effect waves-ripple" href="javascript:void(0)"><i class="material-icons">warning</i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-content">
+                    <div class="card-title">
+                      <h6><a href="#">Zusatzleistung doppelt bezahlt und nicht ersetzt</a></h6>
+                    </div>
+                    <p>Nach gebuchtem Flug (Februar 2016) und bezahlter Zusatzleistung (Koffer zusätzlich) musste ich für das Gepäck zweimal zahlen, da bei der Fluggesellschaft kein</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="card-action">
+                      <a href="#"><i class="material-icons">visibility</i>&ensp;536</a>
+                      <a href="#"><i class="material-icons">chat</i>&ensp;12</a>
+                      <a href="#"><i class="material-icons">share</i>&ensp;7</a>
+                      <div class="date right">
+                        <i class="mdi mdi-calendar-check teal-text"></i>
+                        <span>12.09.2016 | 14:53 Uhr </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-panel no-bg">
+                <div class="card-header">
+                  <div class="article-info table-wrapper clearfix">
+                    <div class="author">
+                      <a href="javascript:void(0)" title="James Khan">
+                        <img class="circle responsive-img" src="img/img-site/author.png" alt="">&emsp;
+                        <span>von Stil und Leben</span>
+                      </a>
+                    </div>
+                    <div class="report-alert">
+                      <a class="hide btn-floating icon-floating waves-effect waves-ripple" href="javascript:void(0)"><i class="material-icons">warning</i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-content">
+                    <div class="card-title">
+                      <h6><a href="#">Zusatzleistung doppelt bezahlt und nicht ersetzt</a></h6>
+                    </div>
+                    <p>Nach gebuchtem Flug (Februar 2016) und bezahlter Zusatzleistung (Koffer zusätzlich) musste ich für das Gepäck zweimal zahlen, da bei der Fluggesellschaft kein</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="card-action">
+                      <a href="#"><i class="material-icons">visibility</i>&ensp;536</a>
+                      <a href="#"><i class="material-icons">chat</i>&ensp;12</a>
+                      <a href="#"><i class="material-icons">share</i>&ensp;7</a>
+                      <div class="date right">
+                        <i class="mdi mdi-calendar-check teal-text"></i>
+                        <span>12.09.2016 | 14:53 Uhr </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-panel no-bg">
+                <div class="card-header">
+                  <div class="article-info table-wrapper clearfix">
+                    <div class="author">
+                      <a href="javascript:void(0)" title="James Khan">
+                        <img class="circle responsive-img" src="img/img-site/author.png" alt="">&emsp;
+                        <span>von Stil und Leben</span>
+                      </a>
+                    </div>
+                    <div class="report-alert">
+                      <a class="hide btn-floating icon-floating waves-effect waves-ripple" href="javascript:void(0)"><i class="material-icons">warning</i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-content">
+                    <div class="card-title">
+                      <h6><a href="#">Zusatzleistung doppelt bezahlt und nicht ersetzt</a></h6>
+                    </div>
+                    <p>Nach gebuchtem Flug (Februar 2016) und bezahlter Zusatzleistung (Koffer zusätzlich) musste ich für das Gepäck zweimal zahlen, da bei der Fluggesellschaft kein</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="card-action">
+                      <a href="#"><i class="material-icons">visibility</i>&ensp;536</a>
+                      <a href="#"><i class="material-icons">chat</i>&ensp;12</a>
+                      <a href="#"><i class="material-icons">share</i>&ensp;7</a>
+                      <div class="date right">
+                        <i class="mdi mdi-calendar-check teal-text"></i>
+                        <span>12.09.2016 | 14:53 Uhr </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul class="pagination center">
+                <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                <li class="active"><a href="#!">1</a></li>
+                <li class="waves-effect"><a href="#!">2</a></li>
+                <li class="waves-effect"><a href="#!">3</a></li>
+                <li class="waves-effect"><a href="#!">4</a></li>
+                <li class="waves-effect"><a href="#!">5</a></li>
+                <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+              </ul>
+            </section>
+            
+            <section class="section comments-wrapp">
+              <div class="section-header result-header center">
+                <p>Kommentare 1 - 3 von insgesamt 6892 Treffern</p>
+              </div>
+              <div class="card-panel no-bg">
+                <div class="card-header">
+                  <div class="article-info table-wrapper clearfix">
+                    <div class="author">
+                      <a href="javascript:void(0)" title="James Khan">
+                        <img class="circle responsive-img" src="img/img-site/author.png" alt="">&emsp;
+                        <span>James Khan</span>
+                      </a>
+                    </div>
+                    <div class="report-alert">
+                      <a class="hide btn-floating icon-floating waves-effect waves-ripple" href="javascript:void(0)"><i class="material-icons">warning</i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card teal">
+                  <div class="card-content white-text">
+                    <p>
+                      Curabitur congue nunc nisi, vitae lacinia magna tempor vel. Phasellus venenatis, risus sit amet finibus facilisis, sem est lacinia dui, non molestie sapien tellus eu risus. Maecenas consectetur sapien eget purus vehicula, in pharetra felis sagittis. Aliquam erat volutpat.
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="card-action white-text teal darken-1">
+                      <a href="#"><i class="material-icons">visibility</i>&ensp;536</a>
+                      <a href="#"><i class="material-icons">chat</i>&ensp;12</a>
+                      <a href="#"><i class="material-icons">share</i>&ensp;7</a>
+                      <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5"><i class="rbi-geloste"></i></a>
+                      <div class="date right">
+                        <i class="mdi mdi-calendar-check white-text"></i>
+                        <span class="white-text">12.09.2016 | 14:53 Uhr </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-panel no-bg">
+                <div class="card-header">
+                  <div class="article-info table-wrapper clearfix">
+                    <div class="author">
+                      <a href="javascript:void(0)" title="James Khan">
+                        <img class="circle responsive-img" src="img/img-site/author.png" alt="">&emsp;
+                        <span>James Khan</span>
+                      </a>
+                    </div>
+                    <div class="report-alert">
+                      <a class="hide btn-floating icon-floating waves-effect waves-ripple" href="javascript:void(0)"><i class="material-icons">warning</i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-content">
+                    <div class="card-title">
+                      <h6><a href="#">Kommentar zur Beschwerde: Ausbeutung bei Hermes</a></h6>
+                    </div>
+                    <p>
+                      Curabitur congue nunc nisi, vitae lacinia magna tempor vel. Phasellus venenatis, risus sit amet finibus facilisis, sem est lacinia dui, non molestie sapien tellus eu risus. Maecenas consectetur sapien eget purus vehicula, in pharetra felis sagittis. Aliquam erat volutpat.
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="card-action">
+                      <a href="#"><i class="material-icons">visibility</i>&ensp;536</a>
+                      <a href="#"><i class="material-icons">chat</i>&ensp;12</a>
+                      <a href="#"><i class="material-icons">share</i>&ensp;7</a>
+                      <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5"><i class="rbi-beschwerde"></i></a>
+                      <div class="date right">
+                        <i class="mdi mdi-calendar-check teal-text"></i>
+                        <span>12.09.2016 | 14:53 Uhr </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-panel no-bg">
+                <div class="card-header">
+                  <div class="article-info table-wrapper clearfix">
+                    <div class="author">
+                      <a href="javascript:void(0)" title="James Khan">
+                        <img class="circle responsive-img" src="img/img-site/author.png" alt="">&emsp;
+                        <span>James Khan</span>
+                      </a>
+                    </div>
+                    <div class="report-alert">
+                      <a class="hide btn-floating icon-floating waves-effect waves-ripple" href="javascript:void(0)"><i class="material-icons">warning</i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-content">
+                    <div class="card-title">
+                      <h6><a href="#">Kommentar zur Beschwerde: Ausbeutung bei Hermes</a></h6>
+                    </div>
+                    <p>
+                      Curabitur congue nunc nisi, vitae lacinia magna tempor vel. Phasellus venenatis, risus sit amet finibus facilisis, sem est lacinia dui, non molestie sapien tellus eu risus. Maecenas consectetur sapien eget purus vehicula, in pharetra felis sagittis. Aliquam erat volutpat.
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="card-action">
+                      <a href="#"><i class="material-icons">visibility</i>&ensp;536</a>
+                      <a href="#"><i class="material-icons">chat</i>&ensp;12</a>
+                      <a href="#"><i class="material-icons">share</i>&ensp;7</a>
+                      <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5"><i class="rbi-beschwerde"></i></a>
+                      <div class="date right">
+                        <i class="mdi mdi-calendar-check teal-text"></i>
+                        <span>12.09.2016 | 14:53 Uhr </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul class="pagination center">
+                <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                <li class="active"><a href="#!">1</a></li>
+                <li class="waves-effect"><a href="#!">2</a></li>
+                <li class="waves-effect"><a href="#!">3</a></li>
+                <li class="waves-effect"><a href="#!">4</a></li>
+                <li class="waves-effect"><a href="#!">5</a></li>
+                <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+              </ul>
+            </section>
+            
+          </div><!-- end content -->
+        </div>
+      </div>
+    </div><!-- End ontent, sidebar, other components -->
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/reclabox.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>

@@ -14,12 +14,13 @@
 // components
 @import "components/global";
 @import "components/icons-material-design";
+
 @import "components/grid";
 @import "components/navbar";
 @import "components/roboto";
 @import "components/typography";
 @import "components/cards";
-@import "components/rating";
+
 @import "components/toast";
 @import "components/tabs";
 @import "components/tooltip";
@@ -32,18 +33,30 @@
 @import "components/materialbox";
 @import "components/forms/forms";
 @import "components/table_of_contents";
-@import "components/sideNav";
-@import "components/page-company";
-@import "components/page-write";
-@import "components/post";
+
 @import "components/preloader";
 @import "components/slider";
 @import "components/carousel";
-@import "components/slick";
-@import "components/text-editor";
-@import "components/editor-input";
-@import "components/uploaded";
-@import "components/site-header";
+
+
+
 @import "components/date_picker/default";
 @import "components/date_picker/default.date";
 @import "components/date_picker/default.time";
+
+// theme reclabox
+// 
+@import "components/reclabox-theme/editor-input";
+@import "components/reclabox-theme/icons-reclabox";
+@import "components/reclabox-theme/loader";
+@import "components/reclabox-theme/pages";
+@import "components/reclabox-theme/post";
+@import "components/reclabox-theme/rating";
+@import "components/reclabox-theme/sidebar-widget";
+@import "components/reclabox-theme/sideNav";
+@import "components/reclabox-theme/site-header";
+@import "components/reclabox-theme/slick";
+@import "components/reclabox-theme/text-editor";
+@import "components/reclabox-theme/uploaded";
+@import "components/reclabox-theme/user-forms";
+

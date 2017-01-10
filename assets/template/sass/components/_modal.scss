@@ -25,6 +25,10 @@
 
   .modal-content {
     padding: 24px;
+
+    .card-header {
+      padding: 0;
+    }
   }
   .modal-close {
     cursor: pointer;
@@ -43,19 +47,20 @@
     }
   }
 }
-.lean-overlay {
-    position: fixed;
-    z-index:999;
-    top: -100px;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 125%;
-    width: 100%;
-    background: #000;
-    display: none;
+.modal-overlay {
+  cursor: pointer;
+  position: fixed;
+  z-index: 999;
+  top: -100px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 125%;
+  width: 100%;
+  background: #000;
+  display: none;
 
-    will-change: opacity;
+  will-change: opacity;
 }
 
 // Modal with fixed action footer
@@ -88,3 +93,30 @@
   border-radius: 0;
   will-change: bottom, opacity;
 }
+
+// Modal users forms
+.modal.user-form {
+  max-height: 95%;
+  .modal-content {
+    padding: 0;
+  }
+}
+
+// Modal Slide Img
+.modal.modal-slide-img {
+  opacity: 0;
+  max-height: 95%;
+  height: auto;
+  max-width: -moz-fit-content;
+  max-width: -webkit-fit-content;
+  max-width: fit-content;
+  padding: 15px;
+
+  .modal-content {
+    padding: 0;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+} 
