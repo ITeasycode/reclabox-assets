@@ -90,7 +90,7 @@ $button-floating-background-hover: $button-floating-background !default;
 $button-icon-floating-background: rgba(255, 255, 255, 0) !default;
 $button-floating-color: #fff !default;
 $button-floating-size: 37px !default;
-$button-floating-large-size: $button-floating-size * 1.5 !default;
+$button-floating-large-size: 58px !default;
 $button-floating-radius: 50% !default;
 
 
@@ -118,7 +118,7 @@ $collapsible-border-color: #ddd !default;
 $chip-bg-color: #eceff1 !default;
 $chip-border-color: #9e9e9e !default;
 $chip-selected-color: #26a69a !default;
-$chip-margin: 12px !default;
+$chip-margin: 0.61rem !default;
 
 
 /* 7. Date Picker
@@ -208,6 +208,7 @@ $large-screen: 1200px !default;
 
 $medium-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
 $large-and-up: "only screen and (min-width : #{$large-screen})" !default;
+
 $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
 $medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
 $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
@@ -237,8 +238,8 @@ $navbar-brand-font-size: 2.1rem !default;
    ========================================================================== */
 
 $sidenav-font-size: 14px !default;
-$sidenav-font-color: rgba(0,0,0,.87) !default;
-$sidenav-bg-color: #fff !default;
+$sidenav-font-color: #fff !default;
+$sidenav-bg-color: $secondary-color !default;
 $sidenav-padding: 16px !default;
 $sidenav-item-height: 48px !default;
 

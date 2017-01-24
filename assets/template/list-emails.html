@@ -48,12 +48,6 @@
                 </form>
               </li>
               <li>
-                <a class="btn waves-effect waves-light" href="#emailSubscribe">subscribe</a>
-              </li>
-              <li>
-                <a class="btn waves-effect waves-light" href="#emailUnsubscribe">unsubscribe</a>
-              </li>
-              <li>
                 <a class="btn waves-effect waves-light" href="#usersLogin">login</a>
               </li>
               <li><a class="btn waves-effect waves-light" href="#usersRegister">registrieren </a></li>
@@ -64,21 +58,25 @@
 
       <div class="container"><!-- logo and nav-menu -->
         <div class="row">
-          <div class="brand-logo-wrapper">
-            <a id="logo-container" href="javascript:void(0)" class="brand-logo"><img src="img/icon-svg/logo.svg" alt="ReclaBox"></a>
+          <div class="col s12">
+            <div class="brand-logo-wrapper">
+              <a id="logo-container" href="javascript:void(0)" class="brand-logo"><img src="img/icon-svg/logo.svg" alt="ReclaBox"></a>
+            </div>
           </div>
-          <div class="navbar navbar-bootom">
-            <nav class="" role="navigation">
-              <div class="nav-wrapper">
-                <div class="nav-header nav-theme">
-                  <ul id="navHeader" class="nav-menu hide-on-med-and-down flex-wrapper">
-                    <li><a class="active" href="javascript:void(0)">BESCHWERDE LESEN</a></li>
-                    <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li>
-                    <!-- <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li> -->
-                  </ul>
+          <div class="col s12">
+            <div class="navbar navbar-bootom">
+              <nav class="" role="navigation">
+                <div class="nav-wrapper">
+                  <div class="nav-header nav-theme">
+                    <ul id="navHeader" class="nav-menu hide-on-med-and-down flex-wrapper">
+                      <li><a class="active" href="javascript:void(0)">BESCHWERDE LESEN</a></li>
+                      <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li>
+                      <!-- <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li> -->
+                    </ul>
+                  </div>
                 </div>
-              </div>
-            </nav>
+              </nav>
+            </div>
           </div>
         </div>
       </div><!-- logo and nav-menu -->
@@ -91,11 +89,9 @@
           <li><a href="categories.html">categories</a></li>
           <li><a href="company-account.html">company account</a></li>
           <li><a href="company-account-profil.html">company account profil</a></li>
-          <li><a href="company-account-reclaRank-seal.html">company account reclaRank seal</a></li>
           <li><a href="company-account-links.html">company account links</a></li>
           <li><a href="company-account-automatic.html">company account automatic</a></li>
           <li><a href="company-public.html">company public</a></li>
-          <li><a href="company-rechnungen.html">company rechnungen</a></li>
           <li><a href="edit-email-sending.html">edit email sending</a></li>
           <li><a href="firmen.html">firmen</a></li>
           <li><a href="list-articles.html">list articles</a></li>
@@ -103,7 +99,6 @@
           <li><a href="schreiben.html">schreiben</a></li>
           <li><a href="search.html">search</a></li>
           <li><a href="404.html">404</a></li>
-          <li><a href="email-confirm.html">email confirm</a></li>
         </ul>
       </div><!-- end heade left nav -->
 
@@ -243,336 +238,291 @@
                 </div>
               </div>
             </div>
-            
-
           </div>
         </div><!-- end user register -->
-
-        <div id="emailSubscribe" class="modal user-form"><!-- email subscribe -->
-          <div class="modal-content">
-            <div class="card-panel no-bg">
-              <div class="card no-bg">
-                <div class="card-image">
-                  <img src="img/icon-svg/email-subscribe.svg" alt="">
-                </div>
-                <div class="card-content">
-                  <div class="card-title">
-                    <h6>Newsletter abonnieren</h6>
-                  </div>
-                  <form class="" action="#">
-                    <div class="row">
-                      <div class="input-field">
-                        <input id="email" type="email" class="rb-blue-input validate">
-                        <label for="email">E-Mail-Adresse *</label>
-                      </div>
-                    </div>
-                    <button class="waves-effect full-width waves-light btn btn-theme-pink white-text" type="submit" name="action">ABSCHICKEN</button>
-                  </form>  
-                </div>
-              </div>
-            </div>  
-          </div>
-        </div><!-- end email subscribe -->
-
-        <div id="emailUnsubscribe" class="modal user-form"><!-- email subscribe -->
-          <div class="modal-content">
-            <div class="card-panel no-bg">
-              <div class="card no-bg">
-                <div class="card-image">
-                  <img src="img/icon-svg/email-unsubscribe.svg" alt="">
-                </div>
-                <div class="card-content">
-                  <div class="card-title">
-                    <h6>Newsletter abonnieren</h6>
-                  </div>
-                  <form class="" action="#">
-                    <div class="row">
-                      <div class="input-field">
-                        <input id="email" type="email" class="rb-blue-input validate">
-                        <label for="email">E-Mail-Adresse *</label>
-                      </div>
-                    </div>
-                    <button class="waves-effect full-width waves-light btn btn-theme-pink white-text" type="submit" name="action">ABSCHICKEN</button>
-                  </form>  
-                </div>
-              </div>
-            </div>  
-          </div>
-        </div><!-- end email subscribe -->
       </div><!-- end header modal user forms -->
     </header>
 
-    <div class="container page-company post">
+    <div class="container post post-list-email">
       <div class="section"><!-- content, sidebar, other components -->
         <div class="row">
-          <div class="col s12 m3 l3"><!-- sidebar -->
-            <div class="card-panel no-bg widget-sidebar widget-company">
-              <div class="card">
-                <div class="card-action table-wrapper">
-                  <div class="logo-company left">
-                    <i class="mdi mdi-domain"></i>
-                  </div>
-                  <div class="rank-company right">
-                    <span class="rank-5"></span>
-                  </div>
-                </div>    
-                <div class="card-content">
-                  <div class="card-title">
-                    <h6>Deutsche Post AG</h6>
-                  </div>
-                  <a href="javascript:void(0)">Post und Telekommunikationen » </a>
-                  <a href="javascript:void(0)">Bried-und Paketzusteller</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-panel widget-sidebar widget-similar">
-              <div class="card-header blue-grey lighten-5">
-                <h6>Bried- und Paketzusteller</h6>
-              </div>
-              <div class="card ">
-                <div class="card-content">
-                  <div class="card-title"><span>1</span><a href="javascript:void(0)">GLS</a></div>
-                  <ul>
-                    <li>ReclaRank: 5</li>
-                    <li>Beschwerden: 185</li>
-                    <li>Lösungsquote: 71%</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card active">
-                <div class="card-content">
-                  <div class="card-title"><span>2</span>Deutsche Post AG</div>
-                  <ul>
-                    <li>ReclaRank: 5</li>
-                    <li>Beschwerden: 185</li>
-                    <li>Lösungsquote: 71%</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card ">
-                <div class="card-content">
-                  <div class="card-title"><span>2</span><a href="javascript:void(0)">Terdera Co.</a></div>
-                  <ul>
-                    <li>ReclaRank: 5</li>
-                    <li>Beschwerden: 185</li>
-                    <li>Lösungsquote: 71%</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div><!-- end sidebar -->
-
-          <div class="col s12 m6 l6"><!-- content -->
-            <section class="section">
-              <div class="card-panel bg-05">
-                <div class="card no-bg">
-                  <div class="card-content content-table">
-                    <table class="highlight responsive-table">
-                      <tbody>
-                        <tr>
-                          <td class="icon"><i class="mdi-email-outline mdi blue-grey-text"></td>
-                          <td>ANSCHIRFT</td>
-                          <td>Zimmestr, 27 <br> 10117 Berlin</td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td class="icon"><i class="mdi-google-maps mdi blue-grey-text"></td>
-                          <td>KARTE</td>
-                          <td><a href="javascript:void(0)">MAPS</a></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td class="icon"><img src="img/img-site/r-circle.png" alt=""></td>
-                          <td>RECLARANK</td>
-                          <td>4 (max. 5)</td>
-                          <td>
-                            <i class="mdi-arrow-up mdi teal-accent-4-text"></i>&nbsp;
-                            <span>9.2 %</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="icon"><i class="rbi rbi-beschwerde"></i></td>
-                          <td>BESCHWERDEN</td>
-                          <td>129</td>
-                          <td>
-                            <i class="mdi-arrow-up mdi pink-accent-2-text"></i>&nbsp;
-                            <span>4.2 %</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="icon"><i class="mdi-timer mdi blue-grey-text"></i></td>
-                          <td>ANTWORTZEIT</td>
-                          <td>23.1 Tage</td>
-                          <td>
-                            <i class="mdi-arrow-right mdi blue-grey-lighten-4-text"></i>&nbsp;
-                            <span>0.0 %</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="icon"><i class="rbi rbi-beantwortete-2"></i></td>
-                          <td>FIRMEANTWORTEN</td>
-                          <td>27% (36)</td>
-                          <td>
-                            <i class="mdi-arrow-up mdi teal-accent-4-text"></i>&nbsp;
-                            <span>10.0 %</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="icon"><i class="rbi rbi-noch-nicht-geloste-2"></i></td>
-                          <td>NOCH NICHT GELÖSTE BESCHWERDEN</td>
-                          <td>33% (42)</td>
-                          <td>
-                            <i class="mdi-arrow-up mdi teal-accent-4-text"></i>&nbsp;
-                            <span>0.0 %</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="icon"><i class="rbi rbi-geloste-2"></i></td>
-                          <td>GELÖSTE BESCHWERDEN</td>
-                          <td>25% (33)</td>
-                          <td>
-                            <i class="mdi-arrow-down mdi pink-accent-2-text"></i>&nbsp;
-                            <span>9.2 %</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="icon"><i class="rbi rbi-endgiltig-nicht-2"></i></td>
-                          <td>ENDGÜLTIG NICHT GELÖSTE BESCHWERDE</td>
-                          <td>25% (33)</td>
-                          <td>
-                            <i class="mdi-arrow-right mdi blue-grey-lighten-4-text"></i>&nbsp;
-                            <span>0.0 %</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="icon"><i class="mdi-sort-variant mdi blue-grey-text"></td>
-                          <td>RECLARANK</td>
-                          <td>4 (von 10)</td>
-                          <td>
-                            <i class="mdi-arrow-right mdi blue-grey-lighten-4-text"></i>&nbsp;
-                            <span>0.0 %</span>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section class="section">
-<!--               <div class="nav-slide-wrapper">
-                <nav class="nav-content nav-theme">
-                  <div class="nav-wrapper">
-                    <ul id="navContent" class="flex-wrapper">
-                      <li><a href="#">Profil</a></li>
-                      <li><a class="active" href="#">Kontaktdaten</a></li>
-                      <li><a href="#">Firmen hinzufügen</a></li>
-                      <li><a href="#">ReclaRank Siegel</a></li>
-                      <li><a href="#">Rechnungen (0)</a></li>
-                      <li><a href="#">ReclaBox API</a></li>
-                      <li><a href="#">Newsletter abmelden</a></li>
-                      <li><a href="#">hilfe</a></li>
-                    </ul>
-                  </div>
-                </nav>
-                <a class="waves-effect waves-light btn nav-btn-slide">
-                  <i class="mdi mdi-arrow-right"></i>
-                </a>
-              </div> -->
-
-              <div class="card-panel no-bg">
-                <div class="card no-bg">
-                  <div class="card-content">
-                    <div class="card-title">
-                      <h3>Ihre Kontaktdaten</h3>
+          <div class="col s12 m8 l9"><!-- content -->
+            <div class="card-collection">
+              <div class="collection">
+                <div class="collection-item">
+                  <div class="collection-header flex-wrapper"><!-- collection header -->
+                    <div class="autor">
+                      <img class="avatar" src="img/img-site/author.png" alt="">
+                      <span class="name">Peter Ballentin</span>
                     </div>
-                    <p>Beim Eingang einer Beschwerde erhalten Sie von uns eine E-Mail.
-                    Ändern oder Löschen Sie hier diese E-Mail-Adressen.</p>
-                  </div>
-                </div>
-                <div class="card no-bg">
-                  <div class="card-editor-input">
-                    <div class="editor-input">
-                      <form action="" class="form">
-                        <div class="row">
-                          <div class="col s12 m7">
-                            <div class="editor">
-                              <div class="editor-input-group">
-                                <div class="input-field left">
-                                  <input value="support@deutschepost.de" id="email-adresse" type="text" >
-                                  <label class="active" for="email-adresse">E-Mail Adress 1</label>
-                                </div>
-                                <div class="input-field right">
-                                  <input type="checkbox" class="filled-in" id="editor-checkbox3"  />
-                                  <label for="editor-checkbox3"><i class="mdi mdi-delete"></i></label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col s12 m7">
-                            <div class="editor">
-                              <div class="editor-input-group">
-                                <div class="input-field left">
-                                  <input value="beschwerde@deutschepost.de" id="email-adresse" type="text" >
-                                  <label class="active" for="email-adresse">E-Mail Adress 2</label>
-                                </div>
-                                <div class="input-field right">
-                                  <input type="checkbox" class="filled-in" id="editor-checkbox4"  />
-                                  <label for="editor-checkbox4"><i class="mdi mdi-delete"></i></label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="editor-active">
-                          <button class="btn waves-effect waves-light left z-theme-depth-4" type="submit" name="action">ÄNDERUNGEN SPEICHERN</button>
-                        </div>
-                      </form>
+                    <div class="text-preview">
+                      <span>Wir hatten schon im April 4 Fluge auf die Malediven gebucht! Im ...</span>
+                    </div>
+                    <div class="date right-align">
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                    <div class="nav-menu">
+                      <a href="#"><i class="mdi mdi-check medium right"></i></a>
+                      <a href="#"><i class="mdi mdi-check medium right"></i></a>
+                      <a href="#"><i class="mdi mdi-delete medium right"></i></a>
                     </div>
                   </div>
-                </div>
-                <br>
-                <div class="card no-bg">
-                  <div class="card-content">
-                    <p>
-                      Hier können Sie weitere Benachrichtigungs-E-Mail-Adressen anlegen
+                  <div class="collection-content"><!-- collection content -->
+                    <div class="article-info table-wrapper">
+                      <div class="autor">
+                        <img class="avatar" src="img/img-site/author.png" alt="">
+                        <span class="name">Peter Ballentin</span>
+                      </div>
+                      <div class="date">
+                        <span>12.09.2016 | 14:53 Uhr </span>
+                      </div>
+                    </div>
+                    <p>Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die 
                     </p>
                   </div>
-                  <div class="card-editor-input">
-                    <div class="editor-input">
-                      <form action="" class="form">
-                        <div class="row">
-                          <div class="col s12 m7">
-                            <div class="editor">
-                              <div class="input-field">
-                                <input value="" id="email-adresse" type="text" >
-                                <label class="active" for="email-adresse">Add E-mail adress</label>
-                              </div>
-                            </div>
-                          </div>
+                  <div class="text-editor"><!-- text editor -->
+                    <form action="" class="form">
+                      <div class="editor"> 
+                        <div class="input-field">
+                          <textarea id="textarea1" class="materialize-textarea" style="height: 28.2px;" placeholder="Ihre Nachricht"></textarea>
+                          <label for="textarea1" class=""></label>
                         </div>
-                        <div class="editor-active">
-                          <button class="btn waves-effect waves-light left z-theme-depth-4" type="submit" name="action">E-MAILADRESSE HINZUFÜNGEN</button>
-                        </div>
-                      </form>
-                    </div>
+                      </div>
+                      <div class="editor-active">
+                        <button class="btn waves-effect waves-light right z-theme-depth-4" type="submit" name="action">SPEICHERN</button>
+                      </div>
+                    </form>
                   </div>
                 </div>
-                <br>
-                <div class="card no-bg">
-                  <div class="card-content">
-                    <p>ReclaBox informiert Sie über den Verlauf der Beschwerden per E-Mail. Sie haben die Möglichkeit, diese Benachrichtigungen für einzelne Beschwerden zu stoppen. Folgen Sie dazu dem Link.</p><br>
-                    <a href="#">Konfiguration für einzelne Beschwerden</a>
+                <div class="collection-item">
+                  <div class="collection-header flex-wrapper"><!-- collection header -->
+                    <div class="autor">
+                      <img class="avatar" src="img/img-site/author.png" alt="">
+                      <span class="name">Peter Ballentin</span>
+                    </div>
+                    <div class="text-preview">
+                      <span>Wir hatten schon im April 4 Fluge auf die Malediven gebucht! Im ...</span>
+                    </div>
+                    <div class="date right-align">
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                    <div class="nav-menu">
+                      <a href="#"><i class="mdi mdi-check medium right"></i></a>
+                      <a href="#"><i class="mdi mdi-check medium right"></i></a>
+                      <a href="#"><i class="mdi mdi-delete medium right"></i></a>
+                    </div>
+                  </div>
+                  <div class="collection-content"><!-- collection content -->
+                    <div class="article-info table-wrapper">
+                      <div class="autor">
+                        <img class="avatar" src="img/img-site/author.png" alt="">
+                        <span class="name">Peter Ballentin</span>
+                      </div>
+                      <div class="date">
+                        <span>12.09.2016 | 14:53 Uhr </span>
+                      </div>
+                    </div>
+                    <p>Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die 
+                    </p>
+                  </div>
+                  <div class="text-editor"><!-- text editor -->
+                    <form action="" class="form">
+                      <div class="editor"> 
+                        <div class="input-field">
+                          <textarea id="textarea1" class="materialize-textarea" style="height: 28.2px;" placeholder="Ihre Nachricht"></textarea>
+                          <label for="textarea1" class=""></label>
+                        </div>
+                      </div>
+                      <div class="editor-active">
+                        <button class="btn waves-effect waves-light right z-theme-depth-4" type="submit" name="action">SPEICHERN</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="collection-item">
+                  <div class="collection-header flex-wrapper"><!-- collection header -->
+                    <div class="autor">
+                      <img class="avatar" src="img/img-site/author.png" alt="">
+                      <span class="name">Peter Ballentin</span>
+                    </div>
+                    <div class="text-preview">
+                      <span>Wir hatten schon im April 4 Fluge auf die Malediven gebucht! Im ...</span>
+                    </div>
+                    <div class="date right-align">
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                    <div class="nav-menu">
+                      <a href="#"><i class="mdi mdi-check medium right"></i></a>
+                      <a href="#"><i class="mdi mdi-check medium right"></i></a>
+                      <a href="#"><i class="mdi mdi-delete medium right"></i></a>
+                    </div>
+                  </div>
+                  <div class="collection-content"><!-- collection content -->
+                    <div class="article-info table-wrapper">
+                      <div class="autor">
+                        <img class="avatar" src="img/img-site/author.png" alt="">
+                        <span class="name">Peter Ballentin</span>
+                      </div>
+                      <div class="date">
+                        <span>12.09.2016 | 14:53 Uhr </span>
+                      </div>
+                    </div>
+                    <p>Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die 
+                    </p>
+                  </div>
+                  <div class="text-editor"><!-- text editor -->
+                    <form action="" class="form">
+                      <div class="editor"> 
+                        <div class="input-field">
+                          <textarea id="textarea1" class="materialize-textarea" style="height: 28.2px;" placeholder="Ihre Nachricht"></textarea>
+                          <label for="textarea1" class=""></label>
+                        </div>
+                      </div>
+                      <div class="editor-active">
+                        <button class="btn waves-effect waves-light right z-theme-depth-4" type="submit" name="action">SPEICHERN</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="collection-item">
+                  <div class="collection-header flex-wrapper"><!-- collection header -->
+                    <div class="autor">
+                      <img class="avatar" src="img/img-site/author.png" alt="">
+                      <span class="name">Peter Ballentin</span>
+                    </div>
+                    <div class="text-preview">
+                      <span>Wir hatten schon im April 4 Fluge auf die Malediven gebucht! Im ...</span>
+                    </div>
+                    <div class="date right-align">
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                    <div class="nav-menu">
+                      <a href="#"><i class="mdi mdi-check medium right"></i></a>
+                      <a href="#"><i class="mdi mdi-check medium right"></i></a>
+                      <a href="#"><i class="mdi mdi-delete medium right"></i></a>
+                    </div>
+                  </div>
+                  <div class="collection-content"><!-- collection content -->
+                    <div class="article-info table-wrapper">
+                      <div class="autor">
+                        <img class="avatar" src="img/img-site/author.png" alt="">
+                        <span class="name">Peter Ballentin</span>
+                      </div>
+                      <div class="date">
+                        <span>12.09.2016 | 14:53 Uhr </span>
+                      </div>
+                    </div>
+                    <p>Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die 
+                    </p>
+                  </div>
+                  <div class="text-editor"><!-- text editor -->
+                    <form action="" class="form">
+                      <div class="editor"> 
+                        <div class="input-field">
+                          <textarea id="textarea1" class="materialize-textarea" style="height: 28.2px;" placeholder="Ihre Nachricht"></textarea>
+                          <label for="textarea1" class=""></label>
+                        </div>
+                      </div>
+                      <div class="editor-active">
+                        <button class="btn waves-effect waves-light right z-theme-depth-4" type="submit" name="action">SPEICHERN</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="collection-item">
+                  <div class="collection-header flex-wrapper"><!-- collection header -->
+                    <div class="autor">
+                      <img class="avatar" src="img/img-site/author.png" alt="">
+                      <span class="name">Peter Ballentin</span>
+                    </div>
+                    <div class="text-preview">
+                      <span>Wir hatten schon im April 4 Fluge auf die Malediven gebucht! Im ...</span>
+                    </div>
+                    <div class="date right-align">
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                    <div class="nav-menu">
+                      <a href="#"><i class="mdi mdi-check medium right"></i></a>
+                      <a href="#"><i class="mdi mdi-check medium right"></i></a>
+                      <a href="#"><i class="mdi mdi-delete medium right"></i></a>
+                    </div>
+                  </div>
+                  <div class="collection-content"><!-- collection content -->
+                    <div class="article-info table-wrapper">
+                      <div class="autor">
+                        <img class="avatar" src="img/img-site/author.png" alt="">
+                        <span class="name">Peter Ballentin</span>
+                      </div>
+                      <div class="date">
+                        <span>12.09.2016 | 14:53 Uhr </span>
+                      </div>
+                    </div>
+                    <p>Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die 
+                    </p>
+                  </div>
+                  <div class="text-editor"><!-- text editor -->
+                    <form action="" class="form">
+                      <div class="editor"> 
+                        <div class="input-field">
+                          <textarea id="textarea1" class="materialize-textarea" style="height: 28.2px;" placeholder="Ihre Nachricht"></textarea>
+                          <label for="textarea1" class=""></label>
+                        </div>
+                      </div>
+                      <div class="editor-active">
+                        <button class="btn waves-effect waves-light right z-theme-depth-4" type="submit" name="action">SPEICHERN</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="collection-item">
+                  <div class="collection-header flex-wrapper"><!-- collection header -->
+                    <div class="autor">
+                      <img class="avatar" src="img/img-site/author.png" alt="">
+                      <span class="name">Peter Ballentin</span>
+                    </div>
+                    <div class="text-preview">
+                      <span>Wir hatten schon im April 4 Fluge auf die Malediven gebucht! Im ...</span>
+                    </div>
+                    <div class="date right-align">
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                    <div class="nav-menu">
+                      <a href="#"><i class="mdi mdi-check medium right"></i></a>
+                      <a href="#"><i class="mdi mdi-check medium right"></i></a>
+                      <a href="#"><i class="mdi mdi-delete medium right"></i></a>
+                    </div>
+                  </div>
+                  <div class="collection-content"><!-- collection content -->
+                    <div class="article-info table-wrapper">
+                      <div class="autor">
+                        <img class="avatar" src="img/img-site/author.png" alt="">
+                        <span class="name">Peter Ballentin</span>
+                      </div>
+                      <div class="date">
+                        <span>12.09.2016 | 14:53 Uhr </span>
+                      </div>
+                    </div>
+                    <p>Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die 
+                    </p>
+                  </div>
+                  <div class="text-editor"><!-- text editor -->
+                    <form action="" class="form">
+                      <div class="editor"> 
+                        <div class="input-field">
+                          <textarea id="textarea1" class="materialize-textarea" style="height: 28.2px;" placeholder="Ihre Nachricht"></textarea>
+                          <label for="textarea1" class=""></label>
+                        </div>
+                      </div>
+                      <div class="editor-active">
+                        <button class="btn waves-effect waves-light right z-theme-depth-4" type="submit" name="action">SPEICHERN</button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
-            </section>
+            </div>
           </div><!-- end content -->
-
-          <div class="col s12 m3 l3"><!-- sidebar right -->
+          <div class="col s12 m4 l3"><!-- sidebar -->
             <div class="card-panel widget-sidebar widget-links">
               <div class="card-header blue-grey lighten-5">
                 <h6>NACHRICHTEN</h6>
@@ -612,7 +562,7 @@
                 </div>
               </div>
             </div>
-
+            
             <div class="card-panel widget-sidebar widget-links">
               <div class="card-header blue-grey lighten-5">
                 <h6>firmenmitgliedschaft</h6>
@@ -630,7 +580,7 @@
                 </div>
               </div>
             </div>
-          </div><!-- end sidebar right -->
+          </div><!-- end sidebar -->
         </div>
       </div><!-- End ontent, sidebar, other components -->
 
@@ -640,7 +590,7 @@
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="js/reclabox.js"></script>
   <script src="js/init.js"></script>
 

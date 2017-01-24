@@ -24,12 +24,12 @@ form p:last-child {
   // Text Label Style
   + label {
     position: relative;
-    padding-left: 25px;
+    padding-left: 30px;
     cursor: pointer;
     display: inline-block;
     height: 25px;
-    line-height: 20px;
-    font-size: 12px;
+    line-height: 25px;
+    font-size: 1rem;
 
     -webkit-user-select: none; /* webkit (safari, chrome) browsers */
     -moz-user-select: none; /* mozilla browsers */
@@ -44,11 +44,11 @@ form p:last-child {
     position: absolute;
     top: 0;
     left: 0;
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     z-index: 0;
-    border: 1px solid $radio-empty-color;
-    border-radius: 3px;
+    border: 2px solid $radio-empty-color;
+    border-radius: 1px;
     margin-top: 2px;
     transition: .2s;
   }
@@ -75,7 +75,7 @@ form p:last-child {
 
 [type="checkbox"]:checked {
   + label:before {
-    top: -6px;
+    top: -4px;
     left: -5px;
     width: 12px;
     height: 22px;
@@ -149,8 +149,8 @@ form p:last-child {
   }
 
   &:not(:checked) + label:after {
-    height: 16px;
-    width: 16px;
+    height: 20px;
+    width: 20px;
     background-color: transparent;
     border: 2px solid $radio-empty-color;
     top: 0px;
@@ -161,9 +161,9 @@ form p:last-child {
   &:checked {
     + label:before {
       top: 0;
-      left: 0px;
+      left: 1px;
       width: 8px;
-      height: 11px;
+      height: 13px;
       border-top: 2px solid transparent;
       border-left: 2px solid transparent;
       border-right: 2px solid $input-background;
@@ -177,8 +177,8 @@ form p:last-child {
 
     + label:after {
       top: 0;
-      width: 16px;
-      height: 16px;
+      width: 20px;
+      height: 20px;
       border: 2px solid $secondary-color;
       background-color: $secondary-color;
       z-index: 0;

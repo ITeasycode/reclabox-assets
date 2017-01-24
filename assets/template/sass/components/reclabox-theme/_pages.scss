@@ -8,10 +8,6 @@
 // ------ Page Cat ------
 .page-cat {
 
-	.section {
-		padding: 25px 0 40px;
-	}
-
 	.collection {
 	  border: none;
 	  display: inline-block;
@@ -34,18 +30,19 @@
 	  	    margin: 0;
 	  	    padding: 0;
 
-	  	    [class^="rbi-"] {
-	  	    	margin-right: 5px;
-
+	  	    .rbi {
+	  	    	height: 26px;
+	  	    	width: 25px;
+	  	    	margin-right: 10px;
+	  	    	float: left;
 	  	    	&::before {
-					height: 26px;
-					width: 25px;
+	  	    		top: 5%;
 	  	    	}
 	  	    }
 
 	  	    a {
 	  	      color: $link-color;
-	  	      line-height: 26px !important;
+	  	      line-height: 28px !important;
 	  	      &:hover {
 	  					color: $link-color-hover;
 	  				}
@@ -101,15 +98,10 @@
 
 // ------ Page Company ------
 .page-company {
-
-	.section {
-		padding-top: 42px;
-		padding-bottom: 25px;
-	}
-
+	padding-bottom: 25px;
 	.card-panel {
 		padding: 0;
-		margin-bottom: 25px;
+		margin-bottom: 30px;
 
 		.card {
 			padding: 0;
@@ -206,6 +198,22 @@
 		background: url("../img/img-site/reclarank.png") -426px -29px no-repeat;
 	}
 
+	.input-field {
+		&.radio-rank {
+			min-height: 115px;
+			label, [type="radio"]:not(:checked) + label, 
+			[type="radio"]:checked + label {
+				padding-left: 25px;
+			}
+		}
+		span[class|="rank"] {
+			float: none;
+			position: absolute;
+			top: 29px;
+			left: -21px;
+		}
+	}
+
 	// widget sidebar company
 	.widget-company {
 		.card-action {
@@ -235,7 +243,7 @@
 // ------ Page Write ------
 .page-write {
 	.section {
-		padding: 3rem 0;
+		padding: 0 0 25px;
 	}
 	.input-field-group {
 		.text {

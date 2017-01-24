@@ -15,17 +15,11 @@
 @media #{$medium-and-up} {
   .container {
     width: 970px;
-    &-medium {
-      width: 990px;
-    }
   }
 }
 @media #{$large-and-up} {
   .container {
     width: 1170px;
-    &-medium {
-      width: 990px;
-    }
   }
 }
 .container .row {

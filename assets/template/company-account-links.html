@@ -13,8 +13,7 @@
 
 </head>
 <body>
-  <div class="wrapper grey lighten-5">
-    
+  <div class="wrapper grey lighten-5">    
     <header class="site-header blue-grey">
       <div class="navbar">
         <nav class="" role="navigation">
@@ -48,37 +47,27 @@
                   </div>
                 </form>
               </li>
-              <li><a class="btn waves-effect waves-light" href="javascript:void(0)">login</a></li>
-              <li><a class="btn waves-effect waves-light" href="javascript:void(0)">registrieren </a></li>
+              <li>
+                <a class="btn waves-effect waves-light" href="#emailSubscribe">subscribe</a>
+              </li>
+              <li>
+                <a class="btn waves-effect waves-light" href="#emailUnsubscribe">unsubscribe</a>
+              </li>
+              <li>
+                <a class="btn waves-effect waves-light" href="#usersLogin">login</a>
+              </li>
+              <li><a class="btn waves-effect waves-light" href="#usersRegister">registrieren </a></li>
             </ul>
           </div>
         </nav>
       </div><!-- end navbar-fixed -->
-      <div class="slide-nav-wrapper">
-        <ul id="slide-out" class="side-nav">
-          <li>
-            <div class="userView">
-              <div class="background">
-                <img src="http://materializecss.com/images/office.jpg">
-              </div>
-              <a href="#!user"><img class="circle" src="http://materializecss.com/images/yuna.jpg"></a>
-              <a href="#!name"><span class="white-text name">John Doe</span></a>
-              <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-            </div>
-          </li>
-          <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-          <li><a href="#!">Second Link</a></li>
-          <li><div class="divider"></div></li>
-          <li><a class="subheader">Subheader</a></li>
-          <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-        </ul>
-      </div>
-      <div class="container">
+
+      <div class="container"><!-- logo and nav-menu -->
         <div class="row">
-          <div class="brand-logo">
-            <a id="logo-container" href="javascript:void(0)" class="brand-logo"><img src="img/img-site/ugh.png" alt="ReclaBox"></a>
+          <div class="brand-logo-wrapper">
+            <a id="logo-container" href="javascript:void(0)" class="brand-logo"><img src="img/icon-svg/logo.svg" alt="ReclaBox"></a>
           </div>
-          <div class="navbar">
+          <div class="navbar navbar-bootom">
             <nav class="" role="navigation">
               <div class="nav-wrapper">
                 <div class="nav-header nav-theme">
@@ -90,19 +79,235 @@
                 </div>
               </div>
             </nav>
-          </div><!-- end navbar-fixed -->
+          </div>
         </div>
-      </div>
+      </div><!-- logo and nav-menu -->
+
+      <!-- components dropdown -->
+      <div class="slide-nav-wrapper"><!-- heade left nav -->
+        <ul id="slide-out" class="side-nav slide-nav">
+          <li><a href="beschwerde-lesen.html">beschwerde lesen</a></li>
+          <li><a href="beschwerde.html">beschwerde</a></li>
+          <li><a href="categories.html">categories</a></li>
+          <li><a href="company-account.html">company account</a></li>
+          <li><a href="company-account-profil.html">company account profil</a></li>
+          <li><a href="company-account-reclaRank-seal.html">company account reclaRank seal</a></li>
+          <li><a href="company-account-links.html">company account links</a></li>
+          <li><a href="company-account-automatic.html">company account automatic</a></li>
+          <li><a href="company-public.html">company public</a></li>
+          <li><a href="company-rechnungen.html">company rechnungen</a></li>
+          <li><a href="edit-email-sending.html">edit email sending</a></li>
+          <li><a href="firmen.html">firmen</a></li>
+          <li><a href="list-articles.html">list articles</a></li>
+          <li><a href="request-firm-management.html">request firm management</a></li>
+          <li><a href="schreiben.html">schreiben</a></li>
+          <li><a href="search.html">search</a></li>
+          <li><a href="404.html">404</a></li>
+          <li><a href="email-confirm.html">email confirm</a></li>
+        </ul>
+      </div><!-- end heade left nav -->
+
+      <div class="modal-container"><!-- header modal user forms -->
+        <div id="usersLogin" class="modal user-form"><!-- users login -->
+          <div class="modal-content">
+            <div class="card-panel no-bg">
+              <div class="card no-bg">
+                <div class="card-image">
+                  <a class="btn-floating icon-floating waves-effect u-f-btn-prev" href="javascript:void(0)">
+                    <i class="mdi mdi-arrow-left"></i>
+                  </a>
+                  <img src="img/icon-svg/auth-graphics.svg" title="">
+                </div>
+                <div class="card-content form-login">
+                  <form class="" action="#">
+                    <div class="input-field">
+                      <input id="emailLogin" type="email" class="validate">
+                      <label for="emailLogin">Email Adresse</label>
+                    </div>
+                    <div class="input-field">
+                      <input id="passwordLogin" type="password" class="validate">
+                      <label for="passwordLogin">password</label>
+                    </div>
+                    <div class="input-field">
+                      <input type="checkbox" class="filled-in" id="filled-in-box" />
+                      <label for="filled-in-box">Angemeldet bleiben</label>
+                    </div>
+                    <button id="btn-waves" class="full-width btn waves-effect waves-light disabled" type="submit" name="action">einloggen</button>
+                  </form>
+                  <div class="questions">
+                    <a class="center" href="#newPassword">password vergessen?</a>
+                    <a class="center" href="#">Noch night Mitglied?</a> 
+                  </div> 
+                </div>
+                <div id="newPassword" class="card-content form-newpassword">
+                  <div class="card-title">
+                    <h6>Haben Sie Ihr password vergessen?</h6>
+                  </div>
+                  <p>
+                    Bitte geben Sie Ihre E-Mail-Adresse ein, mit der Sie sich bereits registriert haben. Vergeben Sie sich außerdem ein neues password. Sie erhalten dann eine E-Mail mit einem Freischaltlink. Nach- dem Sie diesen bestätigt haben, können Sie sich
+                  </p>
+                  <form class="" action="#">
+                    <div class="input-field">
+                      <input id="email" type="email" class="rb-blue-input validate">
+                      <label for="email">E-Mail-Adresse *</label>
+                    </div>
+                    <div class="input-field">
+                      <input id="password" type="password" class="rb-blue-input validate">
+                      <label for="password">Neu password *</label>
+                    </div>
+                    <div class="input-field">
+                      <input id="passwordRep" type="password" class="rb-blue-input validate">
+                      <label for="passwordRep">Neu password (wiederholen)*</label>
+                    </div>
+                    <button class="full-width btn waves-effect waves-light" type="submit" name="action">ABSCHICKEN</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- end users login -->
+
+        <div id="usersRegister" class="modal register-form user-form"><!-- user register -->
+          <div class="modal-content">
+            <div class="card-panel no-bg">
+              <div class="card-header blue-grey tabs-wrapper">
+                <ul class="tabs tabs-fixed-width">
+                  <li class="tab"><a class="active white-text" href="#user-mitgliedschaft">USER-MITGLIEDSCHAFT</a></li>
+                  <li class="tab"><a class="white-text" href="#firma-mitgliedschaft">FIRMA-MITGLIEDSCHAFT</a></li>
+                </ul>
+              </div>
+              <div class="card no-bg">
+                <div class="card-image">
+                  <img src="img/icon-svg/auth-graphics.svg" title="">
+                </div>
+                <div id="user-mitgliedschaft" class="card-content">
+                  <div class="card-title">
+                    <h6 class="user">Möchten Sie kostenlos Mitglied werden?</h6>
+                  </div>
+                  <p>Bereits mit Ihrer E-Mail-Adresse und password können Sie sich als Privatperson kostenlos anmelden und selbst Beschwerden, Kommentare oder Nachrichten an andere User schreiben. Falls Sie Ihren Namen angeben möchten, werden Ihre erstellten Inhalte unter diesem Namen veröffentlicht. </p>
+                  <form class="col s12" action="#">
+                    <div class="row">
+                      <div class="input-field">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">E-Mail-Adresse *</label>
+                      </div>
+                      <div class="input-field">
+                        <input id="password" type="password" class="validate">
+                        <label for="password">password *</label>
+                      </div>
+                      <div class="input-field">
+                        <input id="passwordRep" type="password" class="validate">
+                        <label for="passwordRep">password wiederholen *</label>
+                      </div>
+                        <div class="input-field">
+                          <input id="lastName" type="text" class="validate">
+                          <label for="lastName">Vorname</label>
+                        </div>
+                        <div class="input-field">
+                          <input id="firstName" type="text" class="validate">
+                          <label for="firstName">Name</label>
+                        </div>
+                    </div>
+                    <p class="warning">Hinweis: wir geben Ihre E-Mail -Adresse nicht an Dritte weiter, bei uns  erhalten Sie keinen unerwünschen Spam. <a href="#">Datenschutz.</a></p>
+                    <div class="input-field">
+                      <input type="checkbox" class="filled-in" id="filled-in-box-user" />
+                      <label for="filled-in-box-user">Ja, ich habe die <a href="#">Nutzungsbedinungen</a> gelesen und akzeptiert</label>
+                    </div>
+                    <button class="btn center waves-effect waves-light full-width" type="submit" name="action">registrieren</button>
+                  </form>
+                </div>
+                <div id="firma-mitgliedschaft" class="card-content">
+                  <div class="card-title">
+                    <h6 class="firm">Möchten Sie den Firmen-Account nutzen?</h6>
+                  </div>
+                  <p>Nach dem Senden der Formulardaten erhalten Sie von uns eine E-Mail mit einem Verifizierungslink, der Sie zur Eingabe Ihrer Firmendaten führen wird. Sie können den Firmen-Account dann nach Freischaltung 14 Tage lang unverbindlich kostenlos testen, wir unterbreiten Ihnen rechtzeitig vor Ablauf ein Angebot zur weiteren Nutzung.</p>
+                  <p>Haben Sie vorab Fragen zum Firmen-Account? Fordern Sie weitere Informationen hier an: ReclaBox Support</p>
+                  <form class="col s12 firmRegistrarion" action="#">
+                      <div class="row">
+                        <div class="input-field">
+                            <input id="companyName" type="text" class="validate">
+                            <label for="companyName">Company / Institution</label>
+                          </div>
+                        <div class="input-field">
+                          <input id="companyEmail" type="email" class="validate">
+                          <label for="companyEmail">E-Mail-Adresse</label>
+                        </div>
+                      </div>
+                      <p class="warning">Hinweis: wir geben Ihre E-Mail -Adresse nicht an Dritte weiter, bei uns  erhalten Sie keinen unerwünschen Spam. <a href="#">Datenschutz.</a></p>
+                      <div class="input-field">
+                        <input type="checkbox" class="filled-in" id="filled-in-box-firm" />
+                        <label for="filled-in-box-firm">Ja, ich habe die <a href="#">Nutzungsbedinungen</a> gelesen und akzeptiert</label>
+                      </div>
+                      <button class="btn waves-effect waves-light center full-width" type="submit" name="action">registrieren als firma</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            
+
+          </div>
+        </div><!-- end user register -->
+
+        <div id="emailSubscribe" class="modal user-form"><!-- email subscribe -->
+          <div class="modal-content">
+            <div class="card-panel no-bg">
+              <div class="card no-bg">
+                <div class="card-image">
+                  <img src="img/icon-svg/email-subscribe.svg" alt="">
+                </div>
+                <div class="card-content">
+                  <div class="card-title">
+                    <h6>Newsletter abonnieren</h6>
+                  </div>
+                  <form class="" action="#">
+                    <div class="row">
+                      <div class="input-field">
+                        <input id="email" type="email" class="rb-blue-input validate">
+                        <label for="email">E-Mail-Adresse *</label>
+                      </div>
+                    </div>
+                    <button class="waves-effect full-width waves-light btn btn-theme-pink white-text" type="submit" name="action">ABSCHICKEN</button>
+                  </form>  
+                </div>
+              </div>
+            </div>  
+          </div>
+        </div><!-- end email subscribe -->
+
+        <div id="emailUnsubscribe" class="modal user-form"><!-- email subscribe -->
+          <div class="modal-content">
+            <div class="card-panel no-bg">
+              <div class="card no-bg">
+                <div class="card-image">
+                  <img src="img/icon-svg/email-unsubscribe.svg" alt="">
+                </div>
+                <div class="card-content">
+                  <div class="card-title">
+                    <h6>Newsletter abonnieren</h6>
+                  </div>
+                  <form class="" action="#">
+                    <div class="row">
+                      <div class="input-field">
+                        <input id="email" type="email" class="rb-blue-input validate">
+                        <label for="email">E-Mail-Adresse *</label>
+                      </div>
+                    </div>
+                    <button class="waves-effect full-width waves-light btn btn-theme-pink white-text" type="submit" name="action">ABSCHICKEN</button>
+                  </form>  
+                </div>
+              </div>
+            </div>  
+          </div>
+        </div><!-- end email subscribe -->
+      </div><!-- end header modal user forms -->
     </header>
 
-    <div class="container page-company">
+    <div class="container page-company post">
 
       <div class="section"><!-- content, sidebar, other components -->
         <div class="row">
-
           <div class="col s12 m3 l3"><!-- sidebar left -->
-
-            <div class="dropdown-wrapper widget-navigation-btn">
+            <div class="dropdown-wrapper widget-sidebar widget-navigation-btn">
               <a  class="waves-effect waves-light btn full-width btn-theme-pink dropdown-button" 
                   data-activates="btn-company"
                   data-beloworigin="true"
@@ -163,31 +368,32 @@
               </div>
             </div>
 
-            <div class="card-panel widget-sidebar widget-navigation">
-              <div class="card ">
-                <div class="card-content">
-                  <div class="card-title">BESCHWERDEN</div>
-                  <ul>
-                    <li><a href="javascript:void(0)">Online <i class="material-icons right">chevron_right</i></a></li>
-                    <li><a href="javascript:void(0)">On hold 48 h <span>(1)</span> <i class="material-icons right">chevron_right</i></a></li>
-                    <li><a href="javascript:void(0)">Gelöschte <span>(7)</span> <i class="material-icons right">chevron_right</i></a></li>
-                  </ul>
+            <div class="card-panel widget-sidebar widget-navigation vertical-union">
+              <div class="vertical-union-container">
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="card-title">BESCHWERDEN</div>
+                    <ul>
+                      <li><a href="javascript:void(0)">Online <i class="material-icons right">chevron_right</i></a></li>
+                      <li><a href="javascript:void(0)">On hold 48 h <span>(1)</span> <i class="material-icons right">chevron_right</i></a></li>
+                      <li><a href="javascript:void(0)">Gelöschte <span>(7)</span> <i class="material-icons right">chevron_right</i></a></li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-content">
-                  <div class="card-title">Firmenatworten</div>
-                  <ul>
-                    <li><a href="javascript:void(0)">Veröffentlich <span>(21)</span><i class="material-icons right">chevron_right</i></a></li>
-                    <li><a href="javascript:void(0)">Entwürfe <i class="material-icons right">chevron_right</i></a></li>
-                    <li><a class="active" href="javascript:void(0)">Automatische <i class="material-icons right">chevron_right</i></a></li>
-                  </ul>
+                <div class="divider"></div>
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="card-title">Firmenatworten</div>
+                    <ul>
+                      <li><a href="javascript:void(0)">Veröffentlich <span>(21)</span><i class="material-icons right">chevron_right</i></a></li>
+                      <li><a href="javascript:void(0)">Entwürfe <i class="material-icons right">chevron_right</i></a></li>
+                      <li><a class="active" href="javascript:void(0)">Automatische <i class="material-icons right">chevron_right</i></a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-
           </div><!-- end sidebar left -->
-
           <div class="col s12 m6 l6"><!-- content -->
             <div class="card-panel bg-05">
               <div class="card no-bg">
@@ -216,7 +422,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <td class="icon"><img src="img/icon-svg/beschwerde.svg" alt=""></td>
+                        <td class="icon"><i class="rbi rbi-beschwerde"></i></td>
                         <td>BESCHWERDEN</td>
                         <td>129</td>
                         <td>
@@ -234,7 +440,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <td class="icon"><img src="img/icon-svg/beantwortete 2.svg" alt=""></td>
+                        <td class="icon"><i class="rbi rbi-beantwortete-2"></i></td>
                         <td>FIRMEANTWORTEN</td>
                         <td>27% (36)</td>
                         <td>
@@ -243,7 +449,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <td class="icon"><img src="img/icon-svg/noch nicht geloste 2.svg" alt=""></td>
+                        <td class="icon"><i class="rbi rbi-noch-nicht-geloste-2"></i></td>
                         <td>NOCH NICHT GELÖSTE BESCHWERDEN</td>
                         <td>33% (42)</td>
                         <td>
@@ -252,7 +458,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <td class="icon"><img src="img/icon-svg/geloste 2.svg" alt=""></td>
+                        <td class="icon"><i class="rbi rbi-geloste-2"></i></td>
                         <td>GELÖSTE BESCHWERDEN</td>
                         <td>25% (33)</td>
                         <td>
@@ -261,7 +467,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <td class="icon"><img src="img/icon-svg/endgiltig nicht 2.svg" alt=""></td>
+                        <td class="icon"><i class="rbi rbi-endgiltig-nicht-2"></i></td>
                         <td>ENDGÜLTIG NICHT GELÖSTE BESCHWERDE</td>
                         <td>25% (33)</td>
                         <td>
@@ -398,7 +604,6 @@
           </div><!-- end content -->
 
           <div class="col s12 m3 l3"><!-- sidebar right -->
-
             <div class="card-panel widget-sidebar widget-links">
               <div class="card-header blue-grey lighten-5">
                 <h6>NACHRICHTEN</h6>
@@ -439,6 +644,23 @@
               </div>
             </div>
 
+            <div class="card-panel widget-sidebar widget-links">
+              <div class="card-header blue-grey lighten-5">
+                <h6>firmenmitgliedschaft</h6>
+              </div>
+              <div class="card no-bg">
+                <div class="card-content">
+                  <a href="javascript:void(0)">Profil</a>
+                  <a href="javascript:void(0)">Kontaktdaten</a>
+                  <a href="javascript:void(0)">Firmen hinzufügen</a>
+                  <a href="javascript:void(0)">ReclaRank Siegel</a>
+                  <a href="javascript:void(0)">Rechnungen (0)</a>
+                  <a href="javascript:void(0)">ReclaBox API</a>
+                  <a href="javascript:void(0)">Newsletter abmelden</a>
+                  <a href="javascript:void(0)">Hilfe</a>
+                </div>
+              </div>
+            </div>
           </div><!-- end sidebar right -->
         </div>
       </div><!-- End ontent, sidebar, other components -->

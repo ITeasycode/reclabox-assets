@@ -1,36 +1,47 @@
 .rbi {
+	font-size: inherit;
 	display: inline-block;
 	position: relative;
+	line-height: 1;
 	height: 15px;
 	width: 15px;
 
 	&::before {
+		bottom: 0;
 		content: "";
-		min-height: 100%;
+		display: inherit;
 		height: auto;
+		left: 0;
+		min-height: 100%;
 		min-width: 100%;
-		display: inline-block;
-		position: absolute;
-		top: 11%;
-		left: -8%;
-
-		vertical-align: middle;
+		position: relative;
+		right: 0;
+		top: 0;
+		vertical-align: text-bottom;
 		z-index: 9;
 	}
 
-	&.large {
-		height: 33px;
-		width: 33px;
-
-		&::before {
-			top: 8%;
-			left: -13%;
-		}
+	&.medium {
+		font-size: inherit;
+		height: 20px !important;
+		width: 20px !important;
 	}
 
-	&-beschwerde {
+	&.large {
+		height: 33px !important;
+		left: -5px !important;
+		top: 3px !important;
+		width: 33px !important;
+	}
+
+	&-beschwerde-2 {
 		&::before {
 			background: url("../img/icon-svg/beschwerde-2.svg") no-repeat 0 0;
+		}
+	}
+	&-beschwerde {
+		&::before {
+			background: url("../img/icon-svg/beschwerde.svg") no-repeat 0 0;
 		}
 	}
 	&-beantwortete-2 {
@@ -55,13 +66,12 @@
 	}
 	&-geloste-2 {
 		&::before {
-			background: url("../img/icon-svg/geloste 2.svg") no-repeat 0 0;
+			background: url("../img/icon-svg/geloste-2.svg") no-repeat 0 0;
 		}
 	}
 	&-reclarank {
 		&::before {
 			background: url("../img/img-site/r-circle.png") no-repeat 0 0;
-			top: 1px !important;
 		}
 	}
 	&-endgiltig-nicht {
@@ -82,6 +92,26 @@
 	&-noch-nicht-geloste-2 {
 		&::before {
 			background: url("../img/icon-svg/noch-nicht-geloste-2.svg") no-repeat 0 0;
+		}
+	}
+	&-hielfreicher-commentar {
+		&::before {
+			background: url("../img/icon-svg/hielfreicher-commentar.svg") no-repeat 0 0;
+		}
+	}
+	&-hielfreicher-commentar-filled {
+		&::before {
+			background: url("../img/icon-svg/hielfreicher-commentar-filled.svg") no-repeat 0 0;
+		}
+	}
+	&-image {
+		&::before {
+			background: url("../img/icon-svg/image.svg") no-repeat 0 0;
+		}
+	}
+	&-video {
+		&::before {
+			background: url("../img/icon-svg/video.svg") no-repeat 0 0;
 		}
 	}
 
@@ -204,6 +234,11 @@
 	  &::before {
 	  	background: url("../img/icon-svg/smartphone.svg") no-repeat scroll center center / 24px auto;
 	  }
+	}
+	&-star-outline {
+		&::before {
+			background: url("../img/icon-svg/star.svg") no-repeat center center;
+		}
 	}
 }
 

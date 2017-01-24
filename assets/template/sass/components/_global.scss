@@ -83,7 +83,7 @@ a {
   background-color: rgba(0, 0, 0, 0) !important;
   @extend .z-depth-0;
   &-header {
-    padding: 5px 0 !important;
+    padding: 0 !important;
   }
 }
 
@@ -259,7 +259,12 @@ i {
     font-size: 26px;
   }
 }
-
+.mdi {
+  &::before {
+    display: inline !important;
+    line-height: inherit !important;
+  }
+}
 
 // Images
 img.responsive-img,
@@ -273,10 +278,6 @@ video.responsive-video {
 
 .pagination {
   margin-top: 40px;
-  
-  &.center {
-    margin-top: 40px;
-  }
 
   &-wrapper {
     margin: 15px 25px;
@@ -442,6 +443,15 @@ ul.staggered-list li {
 .fade-in {
   opacity: 0;
   transform-origin: 0 50%;
+}
+
+$t-duration: 1.5s;
+$t-timing-function: 0,1.15,0,.98;
+$property-w: all;
+$property-h: height;
+
+.transition-theme-w{
+  @include transition(width 1s cubic-bezier($t-timing-function));
 }
 
 
@@ -894,6 +904,12 @@ nav ul a span.badge {
 
 .hide {
   display: none !important;
+}
+.invisible {
+  opacity: 0;
+}
+.visible {
+  opacity: 1;
 }
 
 // Text Align

@@ -1,14 +1,18 @@
 .dropdown-wrapper {
-  margin-top: 8px;
-
   &.widget-navigation-btn {
-    .dropdown-content li {
-      &:hover, &.active, &.selected {
-        background-color: $dropdown-hover-bg-color;
-        border-left: 2px solid $secondary-color;
+    margin: 15px 0 25px;
 
-        a, p {
-          padding-left: 13px;
+    .dropdown-content {
+      border-radius: 0 0 3px 3px;
+      padding: 5px 0 15px;
+      li {
+        &:hover, &.active, &.selected {
+          background-color: $dropdown-hover-bg-color;
+          border-left: 2px solid $secondary-color;
+
+          a, p {
+            padding-left: 13px;
+          }
         }
       }
     }
@@ -89,6 +93,7 @@
   &.active {
     background-color: white;
     color: $secondary-color;
+    border-radius: 3px 3px 0 0;
     i.arrow_up {
       display: block;
     }

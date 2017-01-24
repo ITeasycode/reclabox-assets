@@ -14,6 +14,7 @@
 </head>
 <body>
   <div class="wrapper grey lighten-5">
+    
     <header class="site-header blue-grey">
       <div class="navbar">
         <nav class="" role="navigation">
@@ -303,9 +304,51 @@
     </header>
 
     <div class="container page-company post">
+
       <div class="section"><!-- content, sidebar, other components -->
         <div class="row">
-          <div class="col s12 m3 l3"><!-- sidebar -->
+          <div class="col s12 m3 l3"><!-- sidebar left -->
+            <div class="dropdown-wrapper widget-sidebar widget-navigation-btn">
+              <a  class="waves-effect waves-light btn full-width btn-theme-pink dropdown-button" 
+                  data-activates="btn-company"
+                  data-beloworigin="true"
+                  data-stoppropagation="true">
+
+                <i class="material-icons left">settings</i> 
+                <span>firmen-mitgliedschaft </span>
+                <i class="material-icons arrow_down right">keyboard_arrow_down</i>
+                <i class="material-icons arrow_up right">keyboard_arrow_up</i>
+              </a>
+              <!-- Dropdown Structure -->
+              <ul id="btn-company" class="dropdown-content">
+                <li>
+                  <form action="#">
+                    <p>
+                      <input class="with-gap right" name="group1" type="radio" id="company1" />
+                      <label for="company1">Deutsche Post AG <span class="pink-text text-accent-2">(1)</span></label>
+                    </p>
+                  </form>
+                </li>
+                <li>
+                  <form action="#">
+                    <p>
+                      <input class="with-gap right" name="group2" type="radio" id="company2" />
+                      <label for="company2">ReclaBox Suppore <span class="pink-text text-accent-2">(15)</span></label>
+                    </p>
+                  </form>
+                </li>
+                <li>
+                  <form action="#">
+                    <p>
+                      <input class="with-gap right" name="group3" type="radio" id="company3" />
+                      <label for="company3">Alle Beschwerde</label>
+                    </p>
+                  </form>
+                </li>
+                <li><a href="#!">Settings</a></li>
+              </ul>
+            </div>
+            
             <div class="card-panel no-bg widget-sidebar widget-company">
               <div class="card">
                 <div class="card-action table-wrapper">
@@ -326,252 +369,210 @@
               </div>
             </div>
 
-            <div class="card-panel widget-sidebar widget-similar">
-              <div class="card-header blue-grey lighten-5">
-                <h6>Bried- und Paketzusteller</h6>
-              </div>
-              <div class="card ">
-                <div class="card-content">
-                  <div class="card-title"><span>1</span><a href="javascript:void(0)">GLS</a></div>
-                  <ul>
-                    <li>ReclaRank: 5</li>
-                    <li>Beschwerden: 185</li>
-                    <li>Lösungsquote: 71%</li>
-                  </ul>
+            <div class="card-panel widget-sidebar widget-navigation vertical-union">
+              <div class="vertical-union-container">
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="card-title">BESCHWERDEN</div>
+                    <ul>
+                      <li><a href="javascript:void(0)">Online <i class="material-icons right">chevron_right</i></a></li>
+                      <li><a href="javascript:void(0)">On hold 48 h <span>(1)</span> <i class="material-icons right">chevron_right</i></a></li>
+                      <li><a href="javascript:void(0)">Gelöschte <span>(7)</span> <i class="material-icons right">chevron_right</i></a></li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <div class="card active">
-                <div class="card-content">
-                  <div class="card-title"><span>2</span>Deutsche Post AG</div>
-                  <ul>
-                    <li>ReclaRank: 5</li>
-                    <li>Beschwerden: 185</li>
-                    <li>Lösungsquote: 71%</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card ">
-                <div class="card-content">
-                  <div class="card-title"><span>2</span><a href="javascript:void(0)">Terdera Co.</a></div>
-                  <ul>
-                    <li>ReclaRank: 5</li>
-                    <li>Beschwerden: 185</li>
-                    <li>Lösungsquote: 71%</li>
-                  </ul>
+                <div class="divider"></div>
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="card-title">Firmenatworten</div>
+                    <ul>
+                      <li><a href="javascript:void(0)">Veröffentlich <span>(21)</span><i class="material-icons right">chevron_right</i></a></li>
+                      <li><a href="javascript:void(0)">Entwürfe <i class="material-icons right">chevron_right</i></a></li>
+                      <li><a class="active" href="javascript:void(0)">Automatische <i class="material-icons right">chevron_right</i></a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </div><!-- end sidebar -->
-
+          </div><!-- end sidebar left -->
           <div class="col s12 m6 l6"><!-- content -->
-            <section class="section">
-              <div class="card-panel bg-05">
-                <div class="card no-bg">
-                  <div class="card-content content-table">
-                    <table class="highlight responsive-table">
-                      <tbody>
-                        <tr>
-                          <td class="icon"><i class="mdi-email-outline mdi blue-grey-text"></td>
-                          <td>ANSCHIRFT</td>
-                          <td>Zimmestr, 27 <br> 10117 Berlin</td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td class="icon"><i class="mdi-google-maps mdi blue-grey-text"></td>
-                          <td>KARTE</td>
-                          <td><a href="javascript:void(0)">MAPS</a></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td class="icon"><img src="img/img-site/r-circle.png" alt=""></td>
-                          <td>RECLARANK</td>
-                          <td>4 (max. 5)</td>
-                          <td>
-                            <i class="mdi-arrow-up mdi teal-accent-4-text"></i>&nbsp;
-                            <span>9.2 %</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="icon"><i class="rbi rbi-beschwerde"></i></td>
-                          <td>BESCHWERDEN</td>
-                          <td>129</td>
-                          <td>
-                            <i class="mdi-arrow-up mdi pink-accent-2-text"></i>&nbsp;
-                            <span>4.2 %</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="icon"><i class="mdi-timer mdi blue-grey-text"></i></td>
-                          <td>ANTWORTZEIT</td>
-                          <td>23.1 Tage</td>
-                          <td>
-                            <i class="mdi-arrow-right mdi blue-grey-lighten-4-text"></i>&nbsp;
-                            <span>0.0 %</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="icon"><i class="rbi rbi-beantwortete-2"></i></td>
-                          <td>FIRMEANTWORTEN</td>
-                          <td>27% (36)</td>
-                          <td>
-                            <i class="mdi-arrow-up mdi teal-accent-4-text"></i>&nbsp;
-                            <span>10.0 %</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="icon"><i class="rbi rbi-noch-nicht-geloste-2"></i></td>
-                          <td>NOCH NICHT GELÖSTE BESCHWERDEN</td>
-                          <td>33% (42)</td>
-                          <td>
-                            <i class="mdi-arrow-up mdi teal-accent-4-text"></i>&nbsp;
-                            <span>0.0 %</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="icon"><i class="rbi rbi-geloste-2"></i></td>
-                          <td>GELÖSTE BESCHWERDEN</td>
-                          <td>25% (33)</td>
-                          <td>
-                            <i class="mdi-arrow-down mdi pink-accent-2-text"></i>&nbsp;
-                            <span>9.2 %</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="icon"><i class="rbi rbi-endgiltig-nicht-2"></i></td>
-                          <td>ENDGÜLTIG NICHT GELÖSTE BESCHWERDE</td>
-                          <td>25% (33)</td>
-                          <td>
-                            <i class="mdi-arrow-right mdi blue-grey-lighten-4-text"></i>&nbsp;
-                            <span>0.0 %</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="icon"><i class="mdi-sort-variant mdi blue-grey-text"></td>
-                          <td>RECLARANK</td>
-                          <td>4 (von 10)</td>
-                          <td>
-                            <i class="mdi-arrow-right mdi blue-grey-lighten-4-text"></i>&nbsp;
-                            <span>0.0 %</span>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+            <div class="card-panel bg-05">
+              <div class="card no-bg">
+                <div class="card-content content-table">
+                  <table class="highlight responsive-table">
+                    <tbody>
+                      <tr>
+                        <td class="icon"><i class="mdi-email-outline mdi blue-grey-text"></td>
+                        <td>ANSCHIRFT</td>
+                        <td>Zimmestr, 27 <br> 10117 Berlin</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="icon"><i class="mdi-google-maps mdi blue-grey-text"></td>
+                        <td>KARTE</td>
+                        <td><a href="javascript:void(0)">MAPS</a></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="icon"><img src="img/img-site/r-circle.png" alt=""></td>
+                        <td>RECLARANK</td>
+                        <td>4 (max. 5)</td>
+                        <td>
+                          <i class="mdi-arrow-up mdi teal-accent-4-text"></i>&nbsp;
+                          <span>9.2 %</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="icon"><i class="rbi rbi-beschwerde"></i></td>
+                        <td>BESCHWERDEN</td>
+                        <td>129</td>
+                        <td>
+                          <i class="mdi-arrow-up mdi pink-accent-2-text"></i>&nbsp;
+                          <span>4.2 %</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="icon"><i class="mdi-timer mdi blue-grey-text"></i></td>
+                        <td>ANTWORTZEIT</td>
+                        <td>23.1 Tage</td>
+                        <td>
+                          <i class="mdi-arrow-right mdi blue-grey-lighten-4-text"></i>&nbsp;
+                          <span>0.0 %</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="icon"><i class="rbi rbi-beantwortete-2"></i></td>
+                        <td>FIRMEANTWORTEN</td>
+                        <td>27% (36)</td>
+                        <td>
+                          <i class="mdi-arrow-up mdi teal-accent-4-text"></i>&nbsp;
+                          <span>10.0 %</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="icon"><i class="rbi rbi-noch-nicht-geloste-2"></i></td>
+                        <td>NOCH NICHT GELÖSTE BESCHWERDEN</td>
+                        <td>33% (42)</td>
+                        <td>
+                          <i class="mdi-arrow-up mdi teal-accent-4-text"></i>&nbsp;
+                          <span>0.0 %</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="icon"><i class="rbi rbi-geloste-2"></i></td>
+                        <td>GELÖSTE BESCHWERDEN</td>
+                        <td>25% (33)</td>
+                        <td>
+                          <i class="mdi-arrow-down mdi pink-accent-2-text"></i>&nbsp;
+                          <span>9.2 %</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="icon"><i class="rbi rbi-endgiltig-nicht-2"></i></td>
+                        <td>ENDGÜLTIG NICHT GELÖSTE BESCHWERDE</td>
+                        <td>25% (33)</td>
+                        <td>
+                          <i class="mdi-arrow-right mdi blue-grey-lighten-4-text"></i>&nbsp;
+                          <span>0.0 %</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="icon"><i class="mdi-sort-variant mdi blue-grey-text"></td>
+                        <td>RECLARANK</td>
+                        <td>4 (von 10)</td>
+                        <td>
+                          <i class="mdi-arrow-right mdi blue-grey-lighten-4-text"></i>&nbsp;
+                          <span>0.0 %</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="card-panel no-bg">
+              <div class="card no-bg">
+                <div class="card-content">
+                  <div class="card-title">
+                    <h3>ReclaRank Siegel/Box erstellen und einbinden</h3>
                   </div>
                 </div>
               </div>
-            </section>
-            <section class="section">
-<!--               <div class="nav-slide-wrapper">
-                <nav class="nav-content nav-theme">
-                  <div class="nav-wrapper">
-                    <ul id="navContent" class="flex-wrapper">
-                      <li><a href="#">Profil</a></li>
-                      <li><a class="active" href="#">Kontaktdaten</a></li>
-                      <li><a href="#">Firmen hinzufügen</a></li>
-                      <li><a href="#">ReclaRank Siegel</a></li>
-                      <li><a href="#">Rechnungen (0)</a></li>
-                      <li><a href="#">ReclaBox API</a></li>
-                      <li><a href="#">Newsletter abmelden</a></li>
-                      <li><a href="#">hilfe</a></li>
-                    </ul>
-                  </div>
-                </nav>
-                <a class="waves-effect waves-light btn nav-btn-slide">
-                  <i class="mdi mdi-arrow-right"></i>
-                </a>
-              </div> -->
+              <div class="card no-bg">
+                <div class="card-editor-input">
+                  <div class="editor-input">
+                    <form action="" class="form">
+                      <div class="row">
+                        <div class="col s12">
+                          <div class="editor">
+                            <div class="row">
+                              <div class="col s7">
+                                <div class="input-field">
+                                  <input placeholder="z. B. flughafen-hamburg.de" id="company-name" type="text">
+                                  <label for="company-name" class="active">1. Geben Sie Ihre URL an</label><!-- class="active" -->
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col s12">
+                                <div class="input-field">
+                                  <p class="input-field-header">2. Wählen Sie Siegel bzw. Box.</p>
+                                </div>
+                              </div>
+                              <div class="col s3">
+                                <div class="input-field center radio-rank">
+                                  <input class="with-gap" name="group1" type="radio" id="test1">
+                                  <label for="test1" class="img1"><span class="rank-5"></span></label> 
+                                </div>                               
+                              </div>
+                              <div class="col s3">
+                                <div class="input-field center radio-rank">
+                                  <input class="with-gap" name="group1" type="radio" id="test2">
+                                  <label for="test2" class="img2"><span class="rank-5"></span></label>
+                                </div>
+                              </div>
+                              <div class="col s3">
+                                <div class="input-field center radio-rank">
+                                  <input class="with-gap" name="group1" type="radio" id="test3">
+                                  <label for="test3" class="img3"><span class="rank-5"></span></label>
+                                </div>
+                              </div>
+                              <div class="col s3">
+                                <div class="input-field center radio-rank">
+                                  <input class="with-gap" name="group1" type="radio" id="test4">
+                                  <label for="test4" class="img4"><span class="rank-5"></span></label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col s12">
+                                <div class="input-field">
+                                  <p class="input-field-header">3. Kopieren Sie den Code</p>
+                                  <p> Rechte Maustaste oder Tasten [Strg] + [C] zum Kopieren. Einfügen mit [Strg] + [V]. </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col s12">
+                                <div class="input-field">
+                                  <input placeholder="Bitte auf den Button Klicken um den code zu generieren" id="email-adresse" type="text">
+                                  <label class="active" for="email-adresse"></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
-              <div class="card-panel no-bg">
-                <div class="card no-bg">
-                  <div class="card-content">
-                    <div class="card-title">
-                      <h3>Ihre Kontaktdaten</h3>
-                    </div>
-                    <p>Beim Eingang einer Beschwerde erhalten Sie von uns eine E-Mail.
-                    Ändern oder Löschen Sie hier diese E-Mail-Adressen.</p>
-                  </div>
-                </div>
-                <div class="card no-bg">
-                  <div class="card-editor-input">
-                    <div class="editor-input">
-                      <form action="" class="form">
-                        <div class="row">
-                          <div class="col s12 m7">
-                            <div class="editor">
-                              <div class="editor-input-group">
-                                <div class="input-field left">
-                                  <input value="support@deutschepost.de" id="email-adresse" type="text" >
-                                  <label class="active" for="email-adresse">E-Mail Adress 1</label>
-                                </div>
-                                <div class="input-field right">
-                                  <input type="checkbox" class="filled-in" id="editor-checkbox3"  />
-                                  <label for="editor-checkbox3"><i class="mdi mdi-delete"></i></label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col s12 m7">
-                            <div class="editor">
-                              <div class="editor-input-group">
-                                <div class="input-field left">
-                                  <input value="beschwerde@deutschepost.de" id="email-adresse" type="text" >
-                                  <label class="active" for="email-adresse">E-Mail Adress 2</label>
-                                </div>
-                                <div class="input-field right">
-                                  <input type="checkbox" class="filled-in" id="editor-checkbox4"  />
-                                  <label for="editor-checkbox4"><i class="mdi mdi-delete"></i></label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="editor-active">
-                          <button class="btn waves-effect waves-light left z-theme-depth-4" type="submit" name="action">ÄNDERUNGEN SPEICHERN</button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-                <br>
-                <div class="card no-bg">
-                  <div class="card-content">
-                    <p>
-                      Hier können Sie weitere Benachrichtigungs-E-Mail-Adressen anlegen
-                    </p>
-                  </div>
-                  <div class="card-editor-input">
-                    <div class="editor-input">
-                      <form action="" class="form">
-                        <div class="row">
-                          <div class="col s12 m7">
-                            <div class="editor">
-                              <div class="input-field">
-                                <input value="" id="email-adresse" type="text" >
-                                <label class="active" for="email-adresse">Add E-mail adress</label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="editor-active">
-                          <button class="btn waves-effect waves-light left z-theme-depth-4" type="submit" name="action">E-MAILADRESSE HINZUFÜNGEN</button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-                <br>
-                <div class="card no-bg">
-                  <div class="card-content">
-                    <p>ReclaBox informiert Sie über den Verlauf der Beschwerden per E-Mail. Sie haben die Möglichkeit, diese Benachrichtigungen für einzelne Beschwerden zu stoppen. Folgen Sie dazu dem Link.</p><br>
-                    <a href="#">Konfiguration für einzelne Beschwerden</a>
+                      <div class="editor-active">
+                        <button class="btn waves-effect waves-light left z-theme-depth-4" type="submit" name="action">CODE GENERIEREN</button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
-            </section>
+            </div>
           </div><!-- end content -->
-
           <div class="col s12 m3 l3"><!-- sidebar right -->
             <div class="card-panel widget-sidebar widget-links">
               <div class="card-header blue-grey lighten-5">
@@ -633,7 +634,6 @@
           </div><!-- end sidebar right -->
         </div>
       </div><!-- End ontent, sidebar, other components -->
-
     </div>
   </div>
   <!-- end wrapper -->
@@ -643,6 +643,6 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/reclabox.js"></script>
   <script src="js/init.js"></script>
-
+  
   </body>
 </html>

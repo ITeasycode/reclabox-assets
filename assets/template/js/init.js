@@ -13,48 +13,76 @@ function removeEventDefault(event){
 
   $(function(){
 
-    var $uploaded_items = $('.uploaded-item'),
-        $card_comment = $('.card-comment');
-
-    // init components
-
-    $('.modal').modal();
-
+    // ------------------- init components
+    // Forms
     $('select').material_select();
-
     $('#textarea1').trigger('autoresize');
-
-    $('.button-collapse').slideNav();
-    
-    $('.slider-post').slider({height : 400, autoScroll: false});
-
-    $("#topBeschwerden").slick({
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 3
-    });
-
-    $("#neuesteBeschwerden").slick({
-      infinite: true,
-      slidesToShow: 2,
-      slidesToScroll: 2
-    });
-
-    $('.modal').modal({
-      ending_top: '3%',
-    });
-
-    $('ul#navHeader').navTheme({fixedItems: true, indentItem: 50});
-    $('ul#navTop').navTheme();
-    $('ul#navContent').navTheme({fixedItems: true});
-
-    $('.tooltipped').tooltip({delay: 50, position: 'top'});
-
+    // Slide Nav
     $('.button-collapse').slideNav({
       closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
       draggable: true // Choose whether you can drag to open on touch screens
     });
-        
+    // Slider
+    $('.slider-post').slider({height : 400, autoScroll: false});
+    // Slick
+    $("#topBeschwerden").slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      responsive: [
+        {
+          breakpoint: 1199,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+    $("#neuesteBeschwerden").slick({
+      infinite: true,
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      responsive: [
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+    // Modal
+    $('.modal').modal({
+      ending_top: '3%',
+    });
+    // Nav Theme
+    $(window).resize(function(event) {
+      /* Act on the event */
+      $('ul#navHeader').navTheme({fixedItems: true, indentItem: 50});
+      $('ul#navTop').navTheme();
+      $('ul#navContent').navTheme({fixedItems: true});
+    });
+    
+    $('ul#navHeader').navTheme({fixedItems: true, indentItem: 50});
+    $('ul#navTop').navTheme();
+    $('ul#navContent').navTheme({fixedItems: true});
+
+    // Tooltip
+    $('.tooltipped').tooltip({delay: 50, position: 'top'});
+
+    // Variables
+    var $uploaded_items = $('.uploaded-item'),
+        $card_comment = $('.card-comment');
+       
     // Image adjustment method
     $uploaded_items.find('img').each(function () {
       var placeholderBase64 = 'data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
@@ -66,7 +94,7 @@ function removeEventDefault(event){
         $(this).attr('src', placeholderBase64);
       }
     });
-
+    // Card comment hover
     $card_comment.hover(function() {
       $(this).find('.report-alert a.hide').removeClass('hide');
     }, function() {
@@ -107,29 +135,79 @@ function removeEventDefault(event){
   }); // end of document ready
 })(jQuery); // end of jQuery name space
 
+// ---------- list emails -----------
+;(function ($) {
+  /* body... */
+  var $list_email = $('.post-list-email');
+
+      $list_email.find('.collection-header').click(function(event) {
+        /* Act on the event */
+        removeEventDefault(event);
+
+        if ($(this).parent('.collection-item').hasClass('active')) {
+          $(this).parent('.collection-item').removeClass('active');
+        } else {
+          if ($list_email.find('.collection-item').hasClass('active')) {
+            $list_email.find('.collection-item').removeClass('active');
+            $(this).parent('.collection-item').addClass('active');
+          } else {
+            $(this).parent('.collection-item').addClass('active');
+          }
+        }
+      });
+
+
+})(jQuery);
+
 // ----------- login form functions -----------
 ;(function ($) {
   // Methods for testing the validation form
-  // - search
+  // - user forms
   // - password
+  // - search
   var $btnDisabled = $('button.disabled');
   var $passwordLogin = $('#passwordLogin');
 
-  if ($btnDisabled) {
-    $btnDisabled[0].onclick = null;
-  }
+  // ------- User Forms -------
+  // - register
+  // - login
+  var $obj_register = $('#usersLogin');
+
+  function width_tab_register (argument) {
+    var argument = argument;
+
+    $obj_register.find('.tab').click(function(event) {
+      /* Act on the event */
+      
+      var this_href = $(this).find('a').attr('href')
+
+      if (this_href == argument) {
+        // statement
+        $obj_register.addClass('register-form');
+        setTimeout(function(){
+          $obj_register.find('.register-nav').removeClass('invisible');
+        }, 400);
+        
+      } else {
+        $obj_register.removeClass('register-form');
+        $obj_register.find('.register-nav').addClass('invisible');
+      }
+    });
+
+  };
+  width_tab_register('#userRegisterTabContent');
+
+  $obj_register.find('.btn-register-nav').click(function(event) {
+    /* Act on the event */
+    var this_href = $(this).attr('href');
+    $obj_register.find('.tabs').addClass('hide');
+    $obj_register.find('.register-nav').addClass('hide');
+    $obj_register.find('.register-forms > .card-image.hide').removeClass('hide');
+    $(this_href).removeClass('hide');
+  });
+
 
   // ------- password --------
-  $passwordLogin.on('input keyup', function(eventObject) {
-    var number = $(this).val().length;
-
-    if(number > 5) {
-      $btnDisabled.removeClass('disabled');
-    } else {
-      $btnDisabled.addClass('disabled');
-    }
-      
-  });
 
   // Methods intercept the request and send an ajax request
   // - event click to button
