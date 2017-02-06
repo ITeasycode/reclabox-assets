@@ -1,57 +1,161 @@
+.dropdown-wrapper.widget-navigation-btn {
+  margin: 15px 0 25px; }
+.dropdown-wrapper.widget-navigation-btn .dropdown-content {
+  border-radius: 0 0 3px 3px;
+  padding: 5px 0 15px; }
+.dropdown-wrapper.widget-navigation-btn .dropdown-content li:hover, .dropdown-wrapper.widget-navigation-btn .dropdown-content li.active, .dropdown-wrapper.widget-navigation-btn .dropdown-content li.selected {
+  background-color: #fafafa;
+  border-left: 2px solid #607d8b; }
+.dropdown-wrapper.widget-navigation-btn .dropdown-content li:hover a, .dropdown-wrapper.widget-navigation-btn .dropdown-content li:hover p, .dropdown-wrapper.widget-navigation-btn .dropdown-content li.active a, .dropdown-wrapper.widget-navigation-btn .dropdown-content li.active p, .dropdown-wrapper.widget-navigation-btn .dropdown-content li.selected a, .dropdown-wrapper.widget-navigation-btn .dropdown-content li.selected p {
+  padding-left: 13px; }
+
 .dropdown-content {
-  @extend .z-depth-1;
-  background-color: $dropdown-bg-color;
+  background-color: #fff;
+  border-radius: 3px;
   margin: 0;
   display: none;
-  min-width: 100px;
+  min-width: 150px;
   max-height: 650px;
   overflow-y: auto;
   opacity: 0;
   position: absolute;
+  padding-bottom: 15px;
   z-index: 999;
-  will-change: width, height;
+  will-change: width, height; }
+.dropdown-content li {
+  clear: both;
+  color: rgba(0, 0, 0, 0.87);
+  cursor: pointer;
+  min-height: 35px;
+  line-height: 1.5rem;
+  width: 100%;
+  text-align: left;
+  text-transform: none; }
+.dropdown-content li:hover, .dropdown-content li.active, .dropdown-content li.selected {
+  background-color: #fafafa; }
+.dropdown-content li.active.selected {
+  background-color: #ededed; }
+.dropdown-content li.divider {
+  min-height: 0;
+  height: 1px; }
+.dropdown-content li > a, .dropdown-content li > span, .dropdown-content li p {
+  font-size: 14px;
+  color: #607d8b;
+  display: block;
+  line-height: 22px;
+  padding: 6.5px 15px;
+  transition: none;
+  margin-top: 10px; }
+.dropdown-content li > span > label {
+  top: 1px;
+  left: 3px;
+  height: 18px; }
+.dropdown-content li > a > i {
+  height: inherit;
+  line-height: inherit; }
+.dropdown-content li p {
+  color: rgba(0, 0, 0, 0.87); }
+.dropdown-content li p label {
+  color: rgba(0, 0, 0, 0.87); }
 
-  li {
-    clear: both;
-    color: $off-black;
-    cursor: pointer;
-    min-height: $dropdown-item-height;
-    line-height: 1.5rem;
-    width: 100%;
-    text-align: left;
-    text-transform: none;
+.dropdown-button i.arrow_up {
+  display: none; }
 
-    &:hover, &.active, &.selected {
-      background-color: $dropdown-hover-bg-color;
-    }
+.dropdown-button.active {
+  background-color: white;
+  color: #607d8b;
+  border-radius: 3px 3px 0 0; }
+.dropdown-button.active i.arrow_up {
+  display: block; }
+.dropdown-button.active i.arrow_down {
+  display: none; }
 
-    &.active.selected {
-      background-color: darken($dropdown-hover-bg-color, 5%);
-    }
+/*!
+ * Waves v0.6.0
+ * http://fian.my.id/Waves
+ *
+ * Copyright 2014 Alfiana E. Sibuea and other contributors
+ * Released under the MIT license
+ * https://github.com/fians/Waves/blob/master/LICENSE
+ */
+.waves-effect {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  vertical-align: middle;
+  z-index: 1;
+  will-change: opacity, transform;
+  transition: all .3s ease-out; }
+.waves-effect .waves-ripple {
+  position: absolute;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  opacity: 0;
+  background: #d5dee2;
+  transition: all 0.7s ease-out;
+  transition-property: transform, opacity;
+  transform: scale(0);
+  pointer-events: none; }
+.waves-effect.waves-light .waves-ripple {
+  background-color: rgba(255, 255, 255, 0.45); }
+.waves-effect.waves-red .waves-ripple {
+  background-color: rgba(244, 67, 54, 0.7); }
+.waves-effect.waves-yellow .waves-ripple {
+  background-color: rgba(255, 235, 59, 0.7); }
+.waves-effect.waves-orange .waves-ripple {
+  background-color: rgba(255, 152, 0, 0.7); }
+.waves-effect.waves-purple .waves-ripple {
+  background-color: rgba(156, 39, 176, 0.7); }
+.waves-effect.waves-green .waves-ripple {
+  background-color: rgba(76, 175, 80, 0.7); }
+.waves-effect.waves-teal .waves-ripple {
+  background-color: rgba(0, 150, 136, 0.7); }
+.waves-effect input[type="button"], .waves-effect input[type="reset"], .waves-effect input[type="submit"] {
+  border: 0;
+  font-style: normal;
+  font-size: inherit;
+  text-transform: inherit;
+  background: none; }
+.waves-effect img {
+  position: relative;
+  z-index: -1; }
 
-    &.divider {
-      min-height: 0;
-      height: 1px;
-    }
+.waves-notransition {
+  transition: none !important; }
 
-    & > a, & > span {
-      font-size: 16px;
-      color: $dropdown-color;
-      display: block;
-      line-height: 22px;
-      padding: (($dropdown-item-height - 22) / 2) 16px;
-    }
+.waves-circle {
+  transform: translateZ(0);
+  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%); }
 
-    & > span > label {
-      top: 1px;
-      left: 3px;
-      height: 18px;
-    }
+.waves-input-wrapper {
+  border-radius: 0.2em;
+  vertical-align: bottom; }
+.waves-input-wrapper .waves-button-input {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1; }
 
-    // Icon alignment override
-    & > a > i {
-      height: inherit;
-      line-height: inherit;
-    }
-  }
-}
+.waves-circle {
+  text-align: center;
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.5em;
+  border-radius: 50%;
+  -webkit-mask-image: none; }
+
+.waves-block {
+  display: block; }
+
+/* Firefox Bug: link not triggered */
+.waves-effect .waves-ripple {
+  z-index: -1; }
