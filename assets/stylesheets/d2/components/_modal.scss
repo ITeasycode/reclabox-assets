@@ -1,65 +1,84 @@
 .modal {
+  @extend .z-depth-4;
+
   display: none;
   position: fixed;
   left: 0;
   right: 0;
-  background-color: white;
+  background-color: #fafafa;
   padding: 0;
   max-height: 70%;
   width: 55%;
   margin: auto;
   overflow-y: auto;
+
   border-radius: 2px;
-  will-change: top, opacity; }
-@media only screen and (max-width: 992px) {
-  .modal {
-    width: 80%; } }
-.modal h1, .modal h2, .modal h3, .modal h4 {
-  margin-top: 0; }
-.modal .modal-content {
-  padding: 24px; }
-.modal .modal-content .card-header {
-  padding: 0; }
-.modal .modal-close {
-  cursor: pointer; }
-.modal .modal-footer {
-  border-radius: 0 0 2px 2px;
-  background-color: #fafafa;
-  padding: 4px 6px;
-  height: 56px;
-  width: 100%; }
-.modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-flat {
-  float: right;
-  margin: 6px 0; }
+  will-change: top, opacity;
 
-.modal-overlay {
-  cursor: pointer;
-  position: fixed;
-  z-index: 999;
-  top: -100px;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 125%;
-  width: 100%;
-  background: #000;
-  display: none;
-  will-change: opacity; }
+  @media #{$medium-and-down} {
+   width: 80%;
+  }
 
+  h1,h2,h3,h4 {
+    margin-top: 0;
+  }
+
+  .modal-content {
+    padding: 24px;
+  }
+  .modal-close {
+    cursor: pointer;
+  }
+
+  .modal-footer {
+    border-radius: 0 0 2px 2px;
+    background-color: #fafafa;
+    padding: 4px 6px;
+    height: 56px;
+    width: 100%;
+
+    .btn, .btn-flat {
+      float: right;
+      margin: 6px 0;
+    }
+  }
+}
+.lean-overlay {
+    position: fixed;
+    z-index:999;
+    top: -100px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 125%;
+    width: 100%;
+    background: #000;
+    display: none;
+
+    will-change: opacity;
+}
+
+// Modal with fixed action footer
 .modal.modal-fixed-footer {
   padding: 0;
-  height: 70%; }
-.modal.modal-fixed-footer .modal-content {
-  position: absolute;
-  height: calc(100% - 56px);
-  max-height: 100%;
-  width: 100%;
-  overflow-y: auto; }
-.modal.modal-fixed-footer .modal-footer {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  position: absolute;
-  bottom: 0; }
+  height: 70%;
 
+  .modal-content {
+    position: absolute;
+    height: calc(100% - 56px);
+    max-height: 100%;
+    width: 100%;
+    overflow-y: auto;
+  }
+
+  .modal-footer {
+    border-top: 1px solid rgba(0,0,0,.1);
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+// Modal Bottom Sheet Style
 .modal.bottom-sheet {
   top: auto;
   bottom: -100%;
@@ -67,23 +86,5 @@
   width: 100%;
   max-height: 45%;
   border-radius: 0;
-  will-change: bottom, opacity; }
-
-.modal.user-form {
-  max-height: 95%; }
-.modal.user-form .modal-content {
-  padding: 0; }
-
-.modal.modal-slide-img {
-  opacity: 0;
-  max-height: 95%;
-  height: auto;
-  max-width: -moz-fit-content;
-  max-width: -webkit-fit-content;
-  max-width: fit-content;
-  padding: 15px; }
-.modal.modal-slide-img .modal-content {
-  padding: 0; }
-.modal.modal-slide-img .modal-content img {
-  display: block;
-  margin: 0 auto; }
+  will-change: bottom, opacity;
+}
