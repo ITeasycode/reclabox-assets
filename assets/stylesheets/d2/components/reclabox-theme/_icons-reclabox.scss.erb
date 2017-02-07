@@ -1,0 +1,243 @@
+.rbi {
+  font-size: inherit;
+  display: inline-block;
+  position: relative;
+  line-height: 1;
+  height: 15px;
+  width: 15px;
+
+  &::before {
+    bottom: 0;
+    content: "";
+    display: inherit;
+    height: auto;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    position: relative;
+    right: 0;
+    top: 0;
+    vertical-align: text-bottom;
+    z-index: 9;
+  }
+
+  &.medium {
+    font-size: inherit;
+    height: 20px !important;
+    width: 20px !important;
+  }
+
+  &.large {
+    height: 33px !important;
+    left: -5px !important;
+    top: 3px !important;
+    width: 33px !important;
+  }
+
+  &-beschwerde-2 {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/beschwerde-2.svg") %>") no-repeat 0 0;
+    }
+  }
+  &-beschwerde {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/beschwerde.svg") %>") no-repeat 0 0;
+    }
+  }
+  &-beantwortete-2 {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/beantwortete-2.svg") %>") no-repeat 0 0;
+    }
+  }
+  &-beantwortete {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/beantwortete.svg") %>") no-repeat 0 0;
+    }
+  }
+  &-beantwortete-22 {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/beantwortete-2.svg") %>") no-repeat 0 0;
+    }
+  }
+  &-geloste {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/geloste.svg") %>") no-repeat 0 0;
+    }
+  }
+  &-geloste-2 {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/geloste-2.svg") %>") no-repeat 0 0;
+    }
+  }
+  &-reclarank {
+    &::before {
+      background: url("<%= asset_path("d2/img-site/r-circle.png") %>") no-repeat 0 0;
+    }
+  }
+  &-endgiltig-nicht {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/endgiltig-nicht.svg") %>") no-repeat 0 0;
+    }
+  }
+  &-endgiltig-nicht-2 {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/endgiltig-nicht-2.svg") %>") no-repeat 0 0;
+    }
+  }
+  &-noch-nicht-geloste {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/noch-nicht-geloste.svg") %>") no-repeat 0 0;
+    }
+  }
+  &-noch-nicht-geloste-2 {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/noch-nicht-geloste-2.svg") %>") no-repeat 0 0;
+    }
+  }
+  &-hielfreicher-commentar {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/hielfreicher-commentar.svg") %>") no-repeat 0 0;
+    }
+  }
+  &-hielfreicher-commentar-filled {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/hielfreicher-commentar-filled.svg") %>") no-repeat 0 0;
+    }
+  }
+  &-image {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/image.svg") %>") no-repeat 0 0;
+    }
+  }
+  &-video {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/video.svg") %>") no-repeat 0 0;
+    }
+  }
+
+  &-bicycle {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/bicycle.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-box {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/box.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-car {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/car.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-column {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/column.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-courthouse {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/courthouse.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-deodorant {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/deodorant.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-driller {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/driller.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-faucet {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/faucet.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-first-aid-kit {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/first-aid-kit.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-groceries {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/groceries.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-handshake {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/handshake.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-house {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/house.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-interview {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/interview.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-money {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/money.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-mortarboard {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/mortarboard.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-newspaper {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/newspaper.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-office-worker {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/office-worker.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-repair-tools {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/repair-tools.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-shopping-cart {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/shopping-cart.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-shopping-smartphone {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/shopping-smartphone.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-wifi {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/wifi.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-compass {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/compass.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-presentation {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/presentation.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-smartphone {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/smartphone.svg") %>") no-repeat scroll center center / 24px auto;
+    }
+  }
+  &-star-outline {
+    &::before {
+      background: url("<%= asset_path("d2/icon-svg/star.svg") %>") no-repeat center center;
+    }
+  }
+}

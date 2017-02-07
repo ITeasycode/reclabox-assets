@@ -1,13 +1,36 @@
+.dropdown-wrapper {
+  &.widget-navigation-btn {
+    margin: 15px 0 25px;
+
+    .dropdown-content {
+      border-radius: 0 0 3px 3px;
+      padding: 5px 0 15px;
+      li {
+        &:hover, &.active, &.selected {
+          background-color: $dropdown-hover-bg-color;
+          border-left: 2px solid $secondary-color;
+
+          a, p {
+            padding-left: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+
 .dropdown-content {
-  @extend .z-depth-1;
+  @extend .z-theme-depth-1;
   background-color: $dropdown-bg-color;
+  border-radius: 3px;
   margin: 0;
   display: none;
-  min-width: 100px;
+  min-width: 150px;
   max-height: 650px;
   overflow-y: auto;
   opacity: 0;
   position: absolute;
+  padding-bottom: 15px;
   z-index: 999;
   will-change: width, height;
 
@@ -34,12 +57,14 @@
       height: 1px;
     }
 
-    & > a, & > span {
-      font-size: 16px;
+    & > a, & > span, p {
+      font-size: 14px;
       color: $dropdown-color;
       display: block;
       line-height: 22px;
-      padding: (($dropdown-item-height - 22) / 2) 16px;
+      padding: (($dropdown-item-height - 22) / 2) 15px;
+      transition: none;
+      margin-top: 10px;
     }
 
     & > span > label {
@@ -52,6 +77,28 @@
     & > a > i {
       height: inherit;
       line-height: inherit;
+    }
+    p {
+      color: $text-black-theme;
+      label {
+        color: $text-black-theme;
+      }
+    }
+  }
+}
+.dropdown-button {
+  i.arrow_up {
+    display: none;
+  }
+  &.active {
+    background-color: white;
+    color: $secondary-color;
+    border-radius: 3px 3px 0 0;
+    i.arrow_up {
+      display: block;
+    }
+    i.arrow_down {
+      display: none;
     }
   }
 }

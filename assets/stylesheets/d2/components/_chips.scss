@@ -1,6 +1,7 @@
 .chip {
   display: inline-block;
   height: 32px;
+  float: left;
   font-size: 12px;
   font-weight: 500;
   color: color("blue-grey", "lighten-1");
@@ -10,6 +11,14 @@
   margin-bottom: $chip-margin;
   margin-right: $chip-margin;
   border-radius: 3px;
+
+  &:nth-child(odd) {
+    clear: left;
+    @media #{$medium-and-down} {
+      clear: none;
+      float: left;
+    }
+  }
 
   img {
     float: left;
@@ -28,7 +37,7 @@
   }
 
   &:hover {
-    @extend .z-depth-2;
+    @extend .z-theme-depth-2;
   }
 }
 

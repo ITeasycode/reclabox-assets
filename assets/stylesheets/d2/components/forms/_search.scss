@@ -1,6 +1,6 @@
 .search-widget {
   box-sizing: border-box;
-  color: inherit;
+  color: white;
   font-size: 14px;
   height: $navbar-height-mobile;
   margin: 0;
@@ -33,7 +33,7 @@
     text-align: left;
     background: 0;
     box-shadow: none;
-    color: #9e9e9e;
+    color: white;
     top: 12px;
     position: relative;
     height: 31px;
@@ -41,7 +41,7 @@
     &:focus,
     &:hover {
       box-shadow: none;
-      border-bottom: 1px solid #607d8b;
+      border-bottom: 1px solid white;
     }
   }
 
@@ -50,11 +50,14 @@
     bottom: 0;
     font-size: 14px;
     font-weight: 300;
-    color: #9e9e9e;
+    color: white;
     left: 0;
     right: 0;
     pointer-events: none;
     position: absolute;
+    padding-left: 0;
+    line-height: 46px;
+    height: $navbar-height-mobile;
     display: block;
     top: 4px;
     width: 100%;
@@ -63,7 +66,7 @@
 
     &:after {
       box-sizing: border-box;
-      background-color: #607d8b;
+      background-color: white;
       bottom: 0px;
       content: '';
       height: 2px;
@@ -84,6 +87,9 @@
     left: -48px;
     top: 0px;
     color: inherit;
+    &:hover {
+      color: white;
+    }
   }
 
   .search-close-button {
@@ -107,12 +113,20 @@
     input {
       outline: none;
     }
+    input:not([type]),
+    input[type=text],
+    input[type=search] {
+      // Focused label style
+      &:focus:not([readonly])+label {
+        color: white;
+      }
+    }
 
     label:after {
       left: 0;
       width: 100%;
       visibility: visible;
-      
+      color: white !important;
     }
   }
 }
