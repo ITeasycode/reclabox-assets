@@ -14,7 +14,7 @@
 
   
   @media #{$large-and-up} {
-    right: 16px;
+    right: 0px;
     top: 0px;
   }
 
@@ -34,9 +34,11 @@
     background: 0;
     box-shadow: none;
     color: white;
-    top: 12px;
+    top: 8px;
     position: relative;
-    height: 31px;
+    height: 35px;
+    z-index: 1;
+    right: 20px;
 
     &:focus,
     &:hover {
@@ -51,15 +53,15 @@
     font-size: 14px;
     font-weight: 300;
     color: white;
-    left: 0;
-    right: 0;
+    left: -20px;
+    right: -12px;
     pointer-events: none;
     position: absolute;
     padding-left: 0;
     line-height: 46px;
     height: $navbar-height-mobile;
     display: block;
-    top: 4px;
+    top: 2px;
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
@@ -73,7 +75,7 @@
       width: 10px;
       left: 45%;
       position: absolute;
-      top: 38px !important;
+      top: 40px !important;
       transition: .2s cubic-bezier(.4, 0, .2, 1) !important;
       visibility: hidden;
       opacity: 1 !important;
@@ -81,26 +83,31 @@
 
   }
 
-  .search-button {
+  button {
+    background-color: inherit;
+    border: 0 none;
     box-sizing: border-box;
+    color: ingerit;
     position: absolute;
+    top: 0;
+    z-index: 2;
+  }
+
+  .search-button {
     left: -48px;
-    top: 0px;
-    color: inherit;
     &:hover {
       color: white;
     }
   }
 
   .search-close-button {
-    box-sizing: border-box;
-    position: absolute;
     right: -16px;
-    top: 0px;
     display:none;
     opacity: 0;
     transition: .2s cubic-bezier(.4, 0, .2, 1) !important;
-    color: inherit;
+    &:hover {
+      color: white;
+    }
   }
 
   &.text-entered {
@@ -123,8 +130,8 @@
     }
 
     label:after {
-      left: 0;
-      width: 100%;
+      left: -20px;
+      width: 110%;
       visibility: visible;
       color: white !important;
     }
@@ -134,7 +141,7 @@
 .search-open {
 
   .search-widget {
-    width: 302px;
+    width: 300px;
 
     .search-close-button {
       display: block;

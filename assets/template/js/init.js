@@ -13,10 +13,31 @@ function removeEventDefault(event){
 
   $(function(){
 
-    // ------------------- init components
+    // ------------ init components ----------
     // Forms
     $('select').material_select();
     $('#textarea1').trigger('autoresize');
+
+    var $pageWrite = $('.page-write');
+    var $slideInput = $pageWrite.find('#slide-input');
+
+    $slideInput.removeClass('hide').slideUp('slow').addClass('hide');
+    
+    $pageWrite.find('.btn').click(function(event) {
+      /* Act on the event */
+      var id = $(this).attr('href');
+      if (id == '#slide-input') {
+        // statement
+        removeEventDefault(event);
+        if ($(id).hasClass('hide')) {
+          $(id).removeClass('hide').slideDown('slow');
+        } else {
+          $(id).slideUp('slow', function () {
+            $(this).addClass('hide');
+          });
+        }          }
+    });
+
     // Slide Nav
     $('.button-collapse').slideNav({
       closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
@@ -155,8 +176,6 @@ function removeEventDefault(event){
           }
         }
       });
-
-
 })(jQuery);
 
 // ----------- login form functions -----------
@@ -172,6 +191,8 @@ function removeEventDefault(event){
   // - register
   // - login
   var $obj_register = $('#usersLogin');
+  var $uFBtn = $('.u-f-btn-prev');
+  var this_href;
 
   function width_tab_register (argument) {
     var argument = argument;
@@ -193,21 +214,88 @@ function removeEventDefault(event){
         $obj_register.find('.register-nav').addClass('invisible');
       }
     });
-
   };
   width_tab_register('#userRegisterTabContent');
 
   $obj_register.find('.btn-register-nav').click(function(event) {
     /* Act on the event */
-    var this_href = $(this).attr('href');
+    this_href = $(this).attr('href');
     $obj_register.find('.tabs').addClass('hide');
     $obj_register.find('.register-nav').addClass('hide');
     $obj_register.find('.register-forms > .card-image.hide').removeClass('hide');
     $(this_href).removeClass('hide');
+    $uFBtn.removeClass('hide').addClass('prev-regisrer-nav');
   });
 
 
   // ------- password --------
+  // - password display method, and hide it.
+  // - Methods to display the password entering and form recovery
+  
+  // password display method, and hide it.
+  var inputArrayPassword = $('input[type^="password"]'),
+      iconEye = $('<i class="mdi mdi-eye password-eye small hide"></i>');
+      inputArrayPassword.after(iconEye);
+
+      inputArrayPassword.on('input', function(event) {
+        var inputEventThis = $(this);
+        if (inputEventThis.val().length > 0) {
+          inputEventThis.next('i.password-eye').removeClass('hide');
+        } else {
+          inputEventThis.next('i.password-eye').addClass('hide');
+        }
+      });
+
+      inputArrayPassword.next('i.password-eye').on('click', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        if ($(this).prev('input').attr('type') == "password") {
+          $(this).prev('input').attr('type', 'text');
+          $(this).removeClass('mdi-eye').addClass('mdi-eye-off');
+        } else {
+          $(this).prev('input').attr('type', 'password');
+          $(this).removeClass('mdi-eye-off').addClass('mdi-eye');
+        }
+      });
+
+      
+
+  // Methods to display the password entering and form recovery
+  var $questionsLink = $('.questions > a');
+  var $siblingsCardContent, id;
+
+  $questionsLink.click(function(event) {
+    /* Act on the event */
+    id = $(this).attr('href');
+
+    if ($(id)) {
+      removeEventDefault(event);
+
+      $siblingsCardContent = $(id).siblings('.card-content');
+      $siblingsCardContent.addClass('hide');
+      $(id).removeClass('hide');
+      $uFBtn.removeClass('hide').addClass('prev-login');
+    }
+  });
+
+  $uFBtn.click(function(event) {
+    /* Act on the event */
+    removeEventDefault(event);
+
+    if($(this).hasClass('prev-login')) {
+      $(id).addClass('hide');
+      $siblingsCardContent.removeClass('hide')
+      setTimeout(function () {
+        $uFBtn.addClass('hide').removeClass('prev-login');
+      }, 500);
+    } else {
+      $obj_register.find('.tabs').removeClass('hide');
+      $obj_register.find('.register-nav').removeClass('hide');
+      $obj_register.find('.register-forms > .card-image').addClass('hide');
+      $(this_href).addClass('hide');
+      $uFBtn.addClass('hide').removeClass('prev-regisrer-nav');
+    }
+  });
 
   // Methods intercept the request and send an ajax request
   // - event click to button
@@ -272,37 +360,6 @@ function removeEventDefault(event){
 
   }
 
-  // Методы для отображения форм входа и востановления пароля
-  var $questionsLink = $('.questions > a');
-  var $uFBtn = $('.u-f-btn-prev');
-  var $siblingsCardContent, id;
-
-  $questionsLink.click(function(event) {
-    /* Act on the event */
-    removeEventDefault(event);
-    id = $(this).attr('href');
-    if ($(id)) {
-      $siblingsCardContent = $(id).siblings('.card-content');
-      $siblingsCardContent.css({
-        'display': 'none'
-      });
-      $(id).css({
-        'display': 'block'
-      });
-      $uFBtn.css('display', 'block');
-    }
-  });
-  $uFBtn.click(function(event) {
-    /* Act on the event */
-    removeEventDefault(event);
-    $(id).css('display', 'none');
-    $siblingsCardContent.css('display', 'block');
-    setTimeout(function () {
-      // body... 
-      $uFBtn.css('display', 'none');
-    }, 500);
-    
-  });
 })(jQuery);
 
 // -------- search function -------

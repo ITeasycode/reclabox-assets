@@ -40,6 +40,7 @@ textarea.materialize-textarea {
   border: none;
   border-bottom: $input-border;
   border-radius: 0;
+  color: $text-black-theme;
   outline: none;
   height: $input-height;
   width: 100%;
@@ -122,6 +123,19 @@ textarea.materialize-textarea {
   }
 }
 
+.password-eye {
+  color: $text-black-light-theme;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  cursor: pointer;
+  line-height: 30px;
+  &:hover {
+    color: $text-black-theme;
+  }
+}
+
 // Styling for input field wrapper
 .input-field-group {
   &.table-wrapper {
@@ -130,9 +144,9 @@ textarea.materialize-textarea {
     width: auto;
   }
   .input-field {
-    max-width: 320px;
+    max-width: 100%;
     padding-right: 30px;
-    width: 320px;
+    width: auto;
   }
   .help {
     padding: 0 15px;

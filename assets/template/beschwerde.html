@@ -40,17 +40,23 @@
               <li>
                 <form id="search-form">
                   <div class="search-widget">
-                    <button class="search-button"><i class="material-icons">search</i></button>
-                    <button class="search-close-button"><i class="material-icons">close</i></button>
-                    <input name="q" type="text" id="search-input" autocomplete="off">
+                    <button class="search-button"><i class="material-icons small">search</i></button>
+                    <button class="search-close-button"><i class="material-icons small">close</i></button>
+                    <input name="q" type="text" id="search-input" autocomplete="off"/>
                     <label for="search-input">Name, Firma oder Schlagwort</label>
                   </div>
                 </form>
               </li>
               <li>
-                <a class="btn waves-effect waves-light" href="#usersLogin">login</a>
+                <a class="btn waves-effect waves-light" href="#emailSubscribe">subscribe</a>
               </li>
-              <li><a class="btn waves-effect waves-light" href="#usersRegister">registrieren </a></li>
+              <li>
+                <a class="btn waves-effect waves-light" href="#emailUnsubscribe">unsubscribe</a>
+              </li>
+              <li>
+                <a class="btn waves-effect waves-light" href="#usersLogin">login/regisrieren</a>
+              </li>
+              <!-- <li><a class="btn waves-effect waves-light" href="#usersRegister">registrieren </a></li> -->
             </ul>
           </div>
         </nav>
@@ -58,25 +64,21 @@
 
       <div class="container"><!-- logo and nav-menu -->
         <div class="row">
-          <div class="col s12">
-            <div class="brand-logo-wrapper">
-              <a id="logo-container" href="javascript:void(0)" class="brand-logo"><img src="img/icon-svg/logo.svg" alt="ReclaBox"></a>
-            </div>
+          <div class="brand-logo-wrapper">
+            <a id="logo-container" href="javascript:void(0)" class="brand-logo"><img src="img/icon-svg/logo.svg" alt="ReclaBox"></a>
           </div>
-          <div class="col s12">
-            <div class="navbar navbar-bootom">
-              <nav class="" role="navigation">
-                <div class="nav-wrapper">
-                  <div class="nav-header nav-theme">
-                    <ul id="navHeader" class="nav-menu hide-on-med-and-down flex-wrapper">
-                      <li><a class="active" href="javascript:void(0)">BESCHWERDE LESEN</a></li>
-                      <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li>
-                      <!-- <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li> -->
-                    </ul>
-                  </div>
+          <div class="navbar navbar-bootom">
+            <nav class="" role="navigation">
+              <div class="nav-wrapper">
+                <div class="nav-header nav-theme">
+                  <ul id="navHeader" class="nav-menu hide-on-med-and-down flex-wrapper">
+                    <li><a class="active" href="javascript:void(0)">BESCHWERDE LESEN</a></li>
+                    <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li>
+                    <!-- <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li> -->
+                  </ul>
                 </div>
-              </nav>
-            </div>
+              </div>
+            </nav>
           </div>
         </div>
       </div><!-- logo and nav-menu -->
@@ -89,16 +91,21 @@
           <li><a href="categories.html">categories</a></li>
           <li><a href="company-account.html">company account</a></li>
           <li><a href="company-account-profil.html">company account profil</a></li>
+          <li><a href="company-account-reclaRank-seal.html">company account reclaRank seal</a></li>
           <li><a href="company-account-links.html">company account links</a></li>
           <li><a href="company-account-automatic.html">company account automatic</a></li>
           <li><a href="company-public.html">company public</a></li>
+          <li><a href="company-rechnungen.html">company rechnungen</a></li>
           <li><a href="edit-email-sending.html">edit email sending</a></li>
           <li><a href="firmen.html">firmen</a></li>
           <li><a href="list-articles.html">list articles</a></li>
+          <li><a href="list-emails.html">list emails</a></li>
           <li><a href="request-firm-management.html">request firm management</a></li>
           <li><a href="schreiben.html">schreiben</a></li>
+          <li><a href="vorschau.html">vorschau</a></li>
           <li><a href="search.html">search</a></li>
           <li><a href="404.html">404</a></li>
+          <li><a href="email-confirm.html">email confirm</a></li>
         </ul>
       </div><!-- end heade left nav -->
 
@@ -106,14 +113,20 @@
         <div id="usersLogin" class="modal user-form"><!-- users login -->
           <div class="modal-content">
             <div class="card-panel no-bg">
-              <div class="card no-bg">
-                <div class="card-image">
-                  <a class="btn-floating icon-floating waves-effect u-f-btn-prev" href="javascript:void(0)">
-                    <i class="mdi mdi-arrow-left"></i>
+              <div class="card-header white tabs-wrapper">
+                <ul class="tabs tabs-fixed-width">
+                  <li class="tab"><a class="active" href="#userLoginTabContent">Login</a></li>
+                  <li class="tab"><a class="" href="#userRegisterTabContent">Register</a></li>
+                </ul>
+              </div>
+              <div id="userLoginTabContent" class="card no-bg"><!-- forms login and passwrd recovery -->
+                <div class="card-image grey lighten-5">
+                  <a class="icon-floating btn u-f-btn-prev hide" href="javascript:void(0)">
+                    <i class="mdi mdi-arrow-left"></i>Back
                   </a>
                   <img src="img/icon-svg/auth-graphics.svg" title="">
                 </div>
-                <div class="card-content form-login">
+                <div id="formLogin" class="card-content form-login">
                   <form class="" action="#">
                     <div class="input-field">
                       <input id="emailLogin" type="email" class="validate">
@@ -127,14 +140,14 @@
                       <input type="checkbox" class="filled-in" id="filled-in-box" />
                       <label for="filled-in-box">Angemeldet bleiben</label>
                     </div>
-                    <button id="btn-waves" class="full-width btn waves-effect waves-light disabled" type="submit" name="action">einloggen</button>
+                    <button id="btn-waves" class="full-width btn waves-effect waves-light" type="submit" name="action">einloggen</button>
                   </form>
                   <div class="questions">
                     <a class="center" href="#newPassword">password vergessen?</a>
                     <a class="center" href="#">Noch night Mitglied?</a> 
                   </div> 
                 </div>
-                <div id="newPassword" class="card-content form-newpassword">
+                <div id="newPassword" class="card-content hide form-newpassword">
                   <div class="card-title">
                     <h6>Haben Sie Ihr password vergessen?</h6>
                   </div>
@@ -157,67 +170,67 @@
                     <button class="full-width btn waves-effect waves-light" type="submit" name="action">ABSCHICKEN</button>
                   </form>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- end users login -->
-
-        <div id="usersRegister" class="modal register-form user-form"><!-- user register -->
-          <div class="modal-content">
-            <div class="card-panel no-bg">
-              <div class="card-header blue-grey tabs-wrapper">
-                <ul class="tabs tabs-fixed-width">
-                  <li class="tab"><a class="active white-text" href="#user-mitgliedschaft">USER-MITGLIEDSCHAFT</a></li>
-                  <li class="tab"><a class="white-text" href="#firma-mitgliedschaft">FIRMA-MITGLIEDSCHAFT</a></li>
-                </ul>
-              </div>
-              <div class="card no-bg">
-                <div class="card-image">
-                  <img src="img/icon-svg/auth-graphics.svg" title="">
-                </div>
-                <div id="user-mitgliedschaft" class="card-content">
-                  <div class="card-title">
-                    <h6 class="user">Möchten Sie kostenlos Mitglied werden?</h6>
+              </div><!-- end forms login and recovery -->
+              <div id="userRegisterTabContent" class="card no-bg"><!-- forms register and nav -->
+                <div class="register-nav invisible">
+                  <div class="card-content center">
+                    <p>Chooose the type of account</p>
                   </div>
-                  <p>Bereits mit Ihrer E-Mail-Adresse und password können Sie sich als Privatperson kostenlos anmelden und selbst Beschwerden, Kommentare oder Nachrichten an andere User schreiben. Falls Sie Ihren Namen angeben möchten, werden Ihre erstellten Inhalte unter diesem Namen veröffentlicht. </p>
-                  <form class="col s12" action="#">
-                    <div class="row">
-                      <div class="input-field">
-                        <input id="email" type="email" class="validate">
-                        <label for="email">E-Mail-Adresse *</label>
-                      </div>
-                      <div class="input-field">
-                        <input id="password" type="password" class="validate">
-                        <label for="password">password *</label>
-                      </div>
-                      <div class="input-field">
-                        <input id="passwordRep" type="password" class="validate">
-                        <label for="passwordRep">password wiederholen *</label>
-                      </div>
+                  <ul class="table-wrapper">
+                    <li class="item">
+                      <a class="center btn-register-nav" href="#userMitgliedschaft"><i class="mdi mdi-emoticon-sad"></i></a>
+                      <p class="center">I am <br> a consumer</p>
+                    </li>
+                    <li class="item">
+                      <a class="center btn-register-nav" href="#firmaMitgliedschaft"><i class="mdi mdi-domain"></i></a>
+                      <p class="center">I am organisation <br> or company</p>
+                    </li>
+                  </ul>
+                </div>
+                <div id="registerForms" class="register-forms">
+                  <div class="card-image hide">
+                    <a class="icon-floating btn u-f-btn-prev hide" href="javascript:void(0)">
+                      <i class="mdi mdi-arrow-left"></i>Back
+                    </a>
+                    <img src="img/icon-svg/auth-graphics.svg" title="">
+                  </div>
+                  <div id="userMitgliedschaft" class="card-content hide">
+                    <p>Bereits mit Ihrer E-Mail-Adresse und password können Sie sich als Privatperson kostenlos anmelden und selbst Beschwerden, Kommentare oder Nachrichten an andere User schreiben. Falls Sie Ihren Namen angeben möchten, werden Ihre erstellten Inhalte unter diesem Namen veröffentlicht. </p>
+                    <form class="col s12" action="#">
+                      <div class="row">
                         <div class="input-field">
-                          <input id="lastName" type="text" class="validate">
-                          <label for="lastName">Vorname</label>
+                          <input id="email" type="email" class="validate">
+                          <label for="email">E-Mail-Adresse *</label>
                         </div>
                         <div class="input-field">
-                          <input id="firstName" type="text" class="validate">
-                          <label for="firstName">Name</label>
+                          <input id="password" type="password" class="validate">
+                          <label for="password">password *</label>
                         </div>
-                    </div>
-                    <p class="warning">Hinweis: wir geben Ihre E-Mail -Adresse nicht an Dritte weiter, bei uns  erhalten Sie keinen unerwünschen Spam. <a href="#">Datenschutz.</a></p>
-                    <div class="input-field">
-                      <input type="checkbox" class="filled-in" id="filled-in-box-user" />
-                      <label for="filled-in-box-user">Ja, ich habe die <a href="#">Nutzungsbedinungen</a> gelesen und akzeptiert</label>
-                    </div>
-                    <button class="btn center waves-effect waves-light full-width" type="submit" name="action">registrieren</button>
-                  </form>
-                </div>
-                <div id="firma-mitgliedschaft" class="card-content">
-                  <div class="card-title">
-                    <h6 class="firm">Möchten Sie den Firmen-Account nutzen?</h6>
+                        <div class="input-field">
+                          <input id="passwordRep" type="password" class="validate">
+                          <label for="passwordRep">password wiederholen *</label>
+                        </div>
+                          <div class="input-field">
+                            <input id="lastName" type="text" class="validate">
+                            <label for="lastName">Vorname</label>
+                          </div>
+                          <div class="input-field">
+                            <input id="firstName" type="text" class="validate">
+                            <label for="firstName">Name</label>
+                          </div>
+                      </div>
+                      <p class="warning">Hinweis: wir geben Ihre E-Mail -Adresse nicht an Dritte weiter, bei uns  erhalten Sie keinen unerwünschen Spam. <a href="#">Datenschutz.</a></p>
+                      <div class="input-field">
+                        <input type="checkbox" class="filled-in" id="filled-in-box-user" />
+                        <label for="filled-in-box-user">Ja, ich habe die <a href="#">Nutzungsbedinungen</a> gelesen und akzeptiert</label>
+                      </div>
+                      <button class="btn center waves-effect waves-light" type="submit" name="action">registrieren</button>
+                    </form>
                   </div>
-                  <p>Nach dem Senden der Formulardaten erhalten Sie von uns eine E-Mail mit einem Verifizierungslink, der Sie zur Eingabe Ihrer Firmendaten führen wird. Sie können den Firmen-Account dann nach Freischaltung 14 Tage lang unverbindlich kostenlos testen, wir unterbreiten Ihnen rechtzeitig vor Ablauf ein Angebot zur weiteren Nutzung.</p>
-                  <p>Haben Sie vorab Fragen zum Firmen-Account? Fordern Sie weitere Informationen hier an: ReclaBox Support</p>
-                  <form class="col s12 firmRegistrarion" action="#">
+                  <div id="firmaMitgliedschaft" class="card-content hide">
+                    <p>Nach dem Senden der Formulardaten erhalten Sie von uns eine E-Mail mit einem Verifizierungslink, der Sie zur Eingabe Ihrer Firmendaten führen wird. Sie können den Firmen-Account dann nach Freischaltung 14 Tage lang unverbindlich kostenlos testen, wir unterbreiten Ihnen rechtzeitig vor Ablauf ein Angebot zur weiteren Nutzung.</p>
+                    <p>Haben Sie vorab Fragen zum Firmen-Account? Fordern Sie weitere Informationen hier an: ReclaBox Support</p>
+                    <form class="col s12 firmRegistrarion" action="#">
                       <div class="row">
                         <div class="input-field">
                             <input id="companyName" type="text" class="validate">
@@ -233,15 +246,66 @@
                         <input type="checkbox" class="filled-in" id="filled-in-box-firm" />
                         <label for="filled-in-box-firm">Ja, ich habe die <a href="#">Nutzungsbedinungen</a> gelesen und akzeptiert</label>
                       </div>
-                      <button class="btn waves-effect waves-light center full-width" type="submit" name="action">registrieren als firma</button>
-                  </form>
+                      <button class="btn waves-effect waves-light center" type="submit" name="action">registrieren als firma</button>
+                    </form>
+                  </div>
+                </div>
+              </div><!-- end forms register and nav -->
+            </div>
+          </div>
+        </div><!-- end users login -->
+
+        <div id="emailSubscribe" class="modal user-form"><!-- email subscribe -->
+          <div class="modal-content">
+            <div class="card-panel no-bg">
+              <div class="card no-bg">
+                <div class="card-image grey lighten-5">
+                  <img src="img/icon-svg/email-subscribe.svg" alt="">
+                </div>
+                <div class="card-content">
+                  <div class="card-title">
+                    <h6>Newsletter abonnieren</h6>
+                  </div>
+                  <form class="" action="#">
+                    <div class="row">
+                      <div class="input-field">
+                        <input id="email" type="email" class="rb-blue-input validate">
+                        <label for="email">E-Mail-Adresse *</label>
+                      </div>
+                    </div>
+                    <button class="waves-effect full-width waves-light btn btn-theme-pink white-text" type="submit" name="action">ABSCHICKEN</button>
+                  </form>  
                 </div>
               </div>
-            </div>
-            
-
+            </div>  
           </div>
-        </div><!-- end user register -->
+        </div><!-- end email subscribe -->
+
+        <div id="emailUnsubscribe" class="modal user-form"><!-- email subscribe -->
+          <div class="modal-content">
+            <div class="card-panel no-bg">
+              <div class="card no-bg">
+                <div class="card-image grey lighten-5">
+                  <img src="img/icon-svg/email-unsubscribe.svg" alt="">
+                </div>
+                <div class="card-content">
+                  <div class="card-title">
+                    <h6>Newsletter abonnieren</h6>
+                  </div>
+                  <form class="" action="#">
+                    <div class="row">
+                      <div class="input-field">
+                        <input id="email" type="email" class="rb-blue-input validate">
+                        <label for="email">E-Mail-Adresse *</label>
+                      </div>
+                    </div>
+                    <button class="waves-effect full-width waves-light btn btn-theme-pink white-text" type="submit" name="action">ABSCHICKEN</button>
+                  </form>  
+                </div>
+              </div>
+            </div>  
+          </div>
+        </div><!-- end email subscribe -->
       </div><!-- end header modal user forms -->
     </header>
     <div class="container post">
@@ -259,11 +323,11 @@
               <h2 class="title">Telefonservice ist eine absolute Katastrophe!</h2>
               <div class="company-info">
                 <div class="company-name">
-                  <i class="material-icons">business</i>
+                  <i class="material-icons tiny">business</i>
                   <a href="/test">OPODO DEUTSCHLAND</a>
                 </div>
                 <div class="company-place">
-                  <i class="material-icons">room</i>
+                  <i class="material-icons tiny">room</i>
                   <span>GROSSBEEREN</span>
                 </div>
               </div>
@@ -344,13 +408,13 @@
               <div class="card no-bg">
                 <div class="company-answer">
                   <div class="company-icon">
-                    <i class="mdi mdi-domain"></i>
+                    <i class="mdi mdi-domain medium"></i>
                   </div>
                   <div class="company-info">
                     <a class="company-user" href="javascript:void(0)">ExtraEnergie GMBH</a>
                     <p class="company-post">Kundenservice</p>
                     <p class="company-date">
-                      <i class="mdi mdi-calendar-check teal-text"></i>
+                      <i class="mdi mdi-calendar-check teal-text tiny"></i>
                       <span>Nach 2 Monaten</span>
                     </p>
                   </div>
@@ -561,7 +625,7 @@
                         <img class="circle responsive-img" src="img/img-site/author.png" alt="">&emsp;
                         <span>James Khan</span>
                       </a>
-                      <i class="material-icons">event_note</i>&nbsp;
+                      <i class="material-icons tiny">event_note</i>&nbsp;
                       <span class="date-publication">Vor 1 Woche</span>
                     </div>
                     <div class="report-alert">
@@ -577,7 +641,7 @@
                   </div>
                   <div class="card-footer">
                     <div class="card-action white-text teal darken-1">
-                      <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5" data-tooltip-id="245ea3dd-52ba-7010-cfcc-536ae8f0e729"><i class="rbi rbi-geloste medium"></i></a>
+                      <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5" data-tooltip-id="245ea3dd-52ba-7010-cfcc-536ae8f0e729"><i class="rbi rbi-geloste medium-rbi"></i></a>
                       <a href="javascript:void(0)" title="">Die Beschwerde ist gelöst</a>
                     </div>
                   </div>
@@ -592,7 +656,7 @@
                         <img class="circle responsive-img" src="img/img-site/author.png" alt="">&emsp;
                         <span>James Khan</span>
                       </a>
-                      <i class="material-icons">event_note</i>&nbsp;
+                      <i class="material-icons tiny">event_note</i>&nbsp;
                       <span class="date-publication">Vor 1 Woche</span>
                     </div>
                     <div class="report-alert">
@@ -617,7 +681,7 @@
                         <img class="circle responsive-img" src="img/img-site/author.png" alt="">&emsp;
                         <span>James Khan</span>
                       </a>
-                      <i class="material-icons">event_note</i>&nbsp;
+                      <i class="material-icons tiny">event_note</i>&nbsp;
                       <span class="date-publication">Vor 1 Woche</span>
                     </div>
                     <div class="report-alert">
@@ -642,7 +706,7 @@
                         <img class="circle responsive-img" src="img/img-site/author.png" alt="">&emsp;
                         <span>James Khan</span>
                       </a>
-                      <i class="material-icons">event_note</i>&nbsp;
+                      <i class="material-icons tiny">event_note</i>&nbsp;
                       <span class="date-publication">Vor 1 Woche</span>
                     </div>
                     <div class="report-alert">
@@ -658,7 +722,7 @@
                   </div>
                   <div class="card-footer">
                     <div class="card-action white-text pink lighten-2">
-                      <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5" data-tooltip-id="245ea3dd-52ba-7010-cfcc-536ae8f0e729"><i class="rbi rbi-noch-nicht-geloste medium"></i></a>
+                      <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5" data-tooltip-id="245ea3dd-52ba-7010-cfcc-536ae8f0e729"><i class="rbi rbi-noch-nicht-geloste medium-rbi"></i></a>
                       <a href="javascript:void(0)" title="">Die Beschwerde ist gelöst</a>
                     </div>
                   </div>
@@ -673,7 +737,7 @@
                         <img class="circle responsive-img" src="img/img-site/author.png" alt="">&emsp;
                         <span>James Khan</span>
                       </a>
-                      <i class="material-icons">event_note</i>&nbsp;
+                      <i class="material-icons tiny">event_note</i>&nbsp;
                       <span class="date-publication">Vor 1 Woche</span>
                     </div>
                     <div class="report-alert">
@@ -704,7 +768,7 @@
                   </div>
                   <div class="card-footer">
                     <div class="card-action white-text pink darken-1">
-                      <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5" data-tooltip-id="245ea3dd-52ba-7010-cfcc-536ae8f0e729"><i class="rbi rbi-endgiltig-nicht medium"></i></a>
+                      <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5" data-tooltip-id="245ea3dd-52ba-7010-cfcc-536ae8f0e729"><i class="rbi rbi-endgiltig-nicht medium-rbi"></i></a>
                       <a href="javascript:void(0)" title="">Die Beschwerde ist gelöst</a>
                     </div>
                   </div>
@@ -719,7 +783,7 @@
                         <img class="circle responsive-img" src="img/img-site/author.png" alt="">&emsp;
                         <span>James Khan</span>
                       </a>
-                      <i class="material-icons">event_note</i>&nbsp;
+                      <i class="material-icons tiny">event_note</i>&nbsp;
                       <span class="date-publication">Vor 1 Woche</span>
                     </div>
                     <div class="report-alert">
@@ -735,7 +799,7 @@
                   </div>
                   <div class="card-footer">
                     <div class="card-action white-text cyan accent-4">
-                      <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5" data-tooltip-id="245ea3dd-52ba-7010-cfcc-536ae8f0e729"><i class="rbi rbi-hielfreicher-commentar medium"></i></a>
+                      <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5" data-tooltip-id="245ea3dd-52ba-7010-cfcc-536ae8f0e729"><i class="rbi rbi-hielfreicher-commentar medium-rbi"></i></a>
                       <a href="javascript:void(0)" title="">Die Beschwerde ist gelöst</a>
                     </div>
                   </div>
@@ -749,18 +813,15 @@
             <div class="card-panel no-bg widget-sidebar widget-btn-wrapper">
               <div class="card-header no-bg-header widget-header-btn">
                 <div class="links">
-                  <a class="btn-floating icon-floating waves-effect" href="javascript:void(0)"><i class="mdi mdi-file-pdf"></i></a>
-                  <a class="btn-floating icon-floating waves-effect" href="javascript:void(0)"><i class="mdi mdi-printer"></i>
+                  <a class="btn-floating icon-floating waves-effect" href="javascript:void(0)"><i class="mdi mdi-file-pdf tiny"></i></a>
+                  <a class="btn-floating icon-floating waves-effect" href="javascript:void(0)"><i class="mdi mdi-printer tiny"></i>
                   </a>
-                  <a class="btn-floating icon-floating waves-effect" href="javascript:void(0)"><i class="mdi mdi-alert"></i></a>
-                  <a class="btn-floating icon-floating waves-effect" href="javascript:void(0)"><i class="mdi mdi-bookmark-outline"></i></a>
+                  <a class="btn-floating icon-floating waves-effect" href="javascript:void(0)"><i class="mdi mdi-alert tiny"></i></a>
+                  <a class="btn-floating icon-floating waves-effect" href="javascript:void(0)"><i class="mdi mdi-bookmark-outline tiny"></i></a>
                 </div>
               </div>
               <div class="card">
                 <div class="card-image">
-<!--                   <object type="image/svg+xml" data="img/icon-svg/jetzt-anschliessen.svg">
-                    Kiwi Logo
-                  </object> -->
                   <img src="img/icon-svg/jetzt-anschliessen.svg" title="">
                 </div>
                 <div class="card-content">

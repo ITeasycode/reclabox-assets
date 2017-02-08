@@ -91,6 +91,25 @@ a {
   background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
+// Indent
+.m-b {
+  &-tiny {
+    margin-bottom: 5px !important;
+  }
+  &-small {
+    margin-bottom: 10px !important;
+  }
+  &-medium {
+    margin-bottom: 15px !important;
+  }
+  &-large {
+    margin-bottom: 25px !important;
+  }
+}
+
+
+
+
 // Text
 // 
 .text-uppercase {
@@ -247,16 +266,16 @@ i {
     margin-left: 11px;
   }
   &.tiny {
-    font-size: 1rem;
+    font-size: 18px !important;
   }
   &.small {
-    font-size: 18px;
+    font-size: 24px !important;
   }
   &.medium {
-    font-size: 22px;
+    font-size: 36px !important;
   }
   &.large {
-    font-size: 26px;
+    font-size: 48px !important;
   }
 }
 .mdi {
@@ -948,9 +967,9 @@ nav ul a span.badge {
 }
 
 .center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .truncate {

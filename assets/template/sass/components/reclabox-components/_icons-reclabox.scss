@@ -1,10 +1,10 @@
 .rbi {
-	font-size: inherit;
-	display: inline-block;
-	position: relative;
-	line-height: 1;
-	height: 15px;
-	width: 15px;
+    font-size: 14px;
+    display: inline-block;
+    position: relative;
+    line-height: 1;
+    height: 17px;
+    width: 16px;
 
 	&::before {
 		bottom: 0;
@@ -17,21 +17,21 @@
 		position: relative;
 		right: 0;
 		top: 0;
-		vertical-align: text-bottom;
+		vertical-align: middle;
 		z-index: 9;
 	}
 
-	&.medium {
-		font-size: inherit;
+	&.medium-rbi {
+		font-size: inherit !important;
 		height: 20px !important;
 		width: 20px !important;
 	}
 
-	&.large {
-		height: 33px !important;
+	&.large-rbi {
+		font-size: 33px !important;
+		height: 34px !important;
 		left: -5px !important;
-		top: 3px !important;
-		width: 33px !important;
+		width: 34px !important;
 	}
 
 	&-beschwerde-2 {

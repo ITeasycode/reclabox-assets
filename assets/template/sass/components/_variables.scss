@@ -45,8 +45,8 @@ $error-color: color("red", "base") !default;
 $link-color: $secondary-color !default;
 $link-color-hover: rgba(96, 125, 139, .54) !default;
 
-$text-black-theme: rgba(0, 0, 0, .87);
-$text-black-light-theme: rgba(0, 0, 0, .54);
+$text-black-theme: rgba(0, 0, 0, .87) !default;
+$text-black-light-theme: rgba(0, 0, 0, .54) !default;
 
 
 /* 2. Badges
@@ -118,7 +118,7 @@ $collapsible-border-color: #ddd !default;
 $chip-bg-color: #eceff1 !default;
 $chip-border-color: #9e9e9e !default;
 $chip-selected-color: #26a69a !default;
-$chip-margin: 0.61rem !default;
+$chip-margin: 0.51rem !default;
 
 
 /* 7. Date Picker

@@ -1,16 +1,5 @@
 // editor wrapper
 .editor-input {
-	.input-field {
-		margin-bottom: 2.7rem;
-
-		&:last-child {
-			margin-bottom: 1.7rem;
-		}
-
-		label.active {
-		  line-height: 25px;
-		}
-	}
 	&-group {
 		display: table;
 		width: 100%;
@@ -27,6 +16,19 @@
 			}
 		}
 	}
+	
+	.input-field {
+		margin-bottom: 2.7rem;
+
+		&:last-child {
+			margin-bottom: 1.7rem;
+		}
+
+		label.active {
+		  line-height: 25px;
+		}
+	}
+	
 	.input-field {
 		&.input-checkbox {
 			margin: 0 25px 0 0;
@@ -35,7 +37,7 @@
 			color: $secondary-color;
 			font-size: 20px;
 			position: relative;
-			top: -3px;
+			top: -1px;
 			vertical-align: middle;
 			&:hover {
 				color: $link-color;
