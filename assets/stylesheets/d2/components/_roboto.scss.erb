@@ -47,3 +47,54 @@
         url("<%= asset_path("d2/roboto/Roboto-Bold.ttf") %>") format("truetype");
     font-weight: 700;
 }
+
+.contentm {
+  padding: 0;
+  /*width: 298px;*/
+  height: 246px;
+}
+
+.w450 {
+  border: 0;
+  position: absolute;
+  top: 0; left: 0;
+  width: 450px;
+  display: none;
+}
+
+.w450top { background: url(<%= asset_path('winbg/450top.png') %>); height: 28px; text-align: right; padding: 17px 40px 0 110px; color: #900; font-size: 10px; cursor: move;}
+.w450content { background: url(<%= asset_path('winbg/450content.png') %>); text-align: left; padding: 0 40px; cursor: move;}
+.w450bottom { background: url(<%= asset_path('winbg/450bottom.png') %>);height: 45px; cursor: move; }
+
+a.mkomm { width: 154px; height: 24px; background: url(<%= asset_path('mit_kommentaren.png') %>) 0 0 no-repeat; border: 0; cursor: pointer; margin: 0 10px 0 0; display: block; float: right;}
+a.mkomm:hover { background-position: 0 -24px; }
+
+a.okomm { width: 163px; height: 24px; background: url(<%= asset_path('ohne_kommentare.png') %>) 0 0 no-repeat; border: 0; cursor: pointer; margin: 0 10px 0 0; display: block;}
+a.okomm:hover { background-position: 0 -24px; }
+
+input.abs { width: 114px; height: 24px; background: url(<%= asset_path('abschicken.png') %>) 0 0 no-repeat; border: 0; cursor: pointer; margin: 0 10px 0 0;}
+input.abs:hover { background-position: 0 -24px;}
+
+input.zur { width: 82px; height: 24px; background: url(<%= asset_path('zurueck.png') %>) 0 0 no-repeat; border: none; cursor: pointer; margin: 0 10px 0 0;}
+input.zur:hover { background-position: 0 -24px; }
+
+.fletter {
+  color: #e91e63;
+  font-weight: normal;
+}
+
+.w650box {
+  border: 0;
+  position: absolute;
+  top: 0; left: 0;
+  width: 650px;
+  display: none;
+}
+
+.w650top { background: url(<%= asset_path('winbg/650top.png') %>); height: 28px; text-align: right; padding: 17px 40px 0 220px; color: #900; font-size: 10px; cursor: move;}
+.w650content { background: url(<%= asset_path('winbg/650content.png') %>); text-align: left; padding: 0 40px; cursor: move;}
+.w650bottom { background: url(<%= asset_path('winbg/650bottom.png') %>);height: 45px; cursor: move;}
+
+#profilebox .w450content {
+  min-height: 105px;
+}
