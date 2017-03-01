@@ -68,6 +68,11 @@
 						top: 1px;
 					}
 				}
+				.date {
+					i.mdi {
+						top: 1px;
+					}
+				}
 			}
 
 			&.company-commercial-data {
@@ -84,7 +89,7 @@
 			}
 
 			& > p {
-				line-height: 1.7;
+				line-height: 24px;
 
 				&:first-child {
 					span.first-letter {
@@ -112,6 +117,18 @@
 				line-height: 24px;
 				margin: 15px 0 20px;
 			}
+
+			&.content-table {
+				.rbi {
+					height: 18px;
+					top: 0;
+					width: 18px;
+				}
+			}
+
+			// &.chips-container {
+		 //    margin-top: -1px !important;
+		 //  }
 		}
 
 		.card-title {
@@ -121,6 +138,11 @@
 				left: -3px;
 				width: 18px;
 			}
+			// @-moz-document url-prefix() {
+			//  	.rbi {
+			//  		top: -1px;
+	 	// 		}
+			// }
 		}
 
 		&.widget-sidebar {
@@ -172,11 +194,10 @@
 				padding: 15px 25px;
 			}
 			.card-content {
-				z-index: 1;
+				padding-bottom: 50px !important;
 			}
 			.card-action {
 				padding-top: 0;
-				z-index: 2;
 			}
 		}
 
@@ -210,10 +231,6 @@
 				margin-bottom: 15px;
 			}
 
-			.uploaded {
-				position: relative;
-				left: -5px;
-			}
 		}
 
 		&.card-comment {
@@ -221,7 +238,7 @@
 				position: relative;
 				.btn-floating {
 					position: absolute;
-					top: 2px;
+					top: -1px;
 					right: -2px;
 				}
 			}
@@ -343,26 +360,21 @@
 		width: 100%;
 		padding: 0;
 		vertical-align: middle;
-		display: inline-block;
 
 		i.mdi {
 	    color: rgba(96, 125, 139, 0.54);
 	    position: relative;
 		}
 
-		& > span {
-			line-height: 1.5;
-		}
-
-		& > * {
+		& > div {
 			font-size: 12px;
 			font-weight: 400;
-			line-height: 1.5;
 
 			&.author, 
 			&.company-response {
 				color: $text-black-light-theme;
 				* {
+					vertical-align: middle;
 					font-size: 14px;
 				}
 
@@ -370,7 +382,7 @@
 					& > a:first-child {
 						&::after {
 							content: "|";
-							color: $text-black-light-theme;
+							color: #eee;
 					    display: inline;
 					    margin: 0 10px;
 					    font-size: 20px;
@@ -386,17 +398,6 @@
 					top: 1px;
 				}
 			}
-			&.author {
-				* {
-					vertical-align: middle;
-					line-height: 2;
-				}
-			}
-			&.company-response {
-				* {
-					vertical-align: top;
-				}
-			}
 
 			&.article-data {
 				color: rgba(0, 0, 0, .54);
@@ -404,11 +405,6 @@
 
 			&:last-child {
 				text-align: right;
-			}
-		}
-		.date {
-			& > * {
-				line-height: 1.5;
 			}
 		}
 	}
@@ -556,6 +552,13 @@
 			padding-left: 0;
 			padding-right: 0;
 		}
+
+		.rbi {
+			height: 23px;
+			width: 23px;
+			top: -0.109rem;
+			vertical-align: middle;
+		}
 		thead {
 			th {
 				font-family: Roboto;
@@ -586,10 +589,6 @@
 				a {
 					vertical-align: middle;
 				}
-				.rbi {
-					position: relative;
-					top: 1px;
-				}
 			}
 
 			td:first-child {
@@ -600,6 +599,9 @@
 			td:last-child {
 				a {
 					color: #e91e63;
+					.rbi {
+						top: -0.1081rem;
+					}
 				}
 			}
 		}
@@ -614,7 +616,7 @@
 				display: none;
 				position: absolute;
 				right: 25px;
-				top: 10px;
+				top: 12px;
 				z-index: 9;
 			}
 			.collection {
@@ -701,8 +703,8 @@
 				& > * {
 					vertical-align: middle;
 				}
-				.avatar-wrapper {
-					margin-right: 20px;
+				.avatar {
+					margin-right: 25px;
 				}
 			}
 			.article-info {

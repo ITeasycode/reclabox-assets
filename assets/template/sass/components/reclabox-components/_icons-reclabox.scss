@@ -1,360 +1,246 @@
-@font-face {
-	font-family: 'fontello';
-	src: url('../fonts/fontello.eot?72446603');
-	src: url('../fonts/fontello.eot?72446603#iefix') format('embedded-opentype'),
-	url('../fonts/fontello.woff2?72446603') format('woff2'),
-	url('../fonts/fontello.woff?72446603') format('woff'),
-	url('../fonts/fontello.ttf?72446603') format('truetype'),
-	url('../fonts/fontello.svg?72446603#fontello') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+.rbi {
+    font-size: 14px;
+    display: inline-block;
+    position: relative;
+    line-height: 1;
+    height: 17px;
+    width: 16px;
 
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'fontello';
-    src: url('../font/fontello.svg?72446603#fontello') format('svg');
-  }
-}
-*/
-[class^="rbi-"],
-[class*=" rbi-"] {
-	&:before {
-		font: normal normal normal 24px/1 "fontello";
-		font-size: inherit;
-		speak: none;
+	&::before {
+		bottom: 0;
+		content: "";
+		display: inherit;
+		height: auto;
+		left: 0;
+		min-height: 100%;
+		min-width: 100%;
+		position: relative;
+		right: 0;
+		top: 0;
+		vertical-align: middle;
+		z-index: 9;
+	}
 
-		display: inline-block;
-		text-decoration: inherit;
-		text-rendering: auto;
+	&.medium-rbi {
+		font-size: inherit !important;
+		height: 20px !important;
+		width: 20px !important;
+	}
 
-		/* For safety - reset parent styles, that can break glyph codes*/
-		font-variant: normal;
-		text-transform: none;
+	&.large-rbi {
+		font-size: 33px !important;
+		height: 34px !important;
+		left: -5px !important;
+		width: 34px !important;
+	}
 
-		/* Font smoothing. That was taken from TWBS */
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
+	&-beschwerde-2 {
+		&::before {
+			background: url("../img/icon-svg/beschwerde-2.svg") no-repeat 0 0;
+		}
+	}
+	&-beschwerde {
+		&::before {
+			background: url("../img/icon-svg/beschwerde.svg") no-repeat 0 0;
+		}
+	}
+	&-beantwortete-2 {
+		&::before {
+			background: url("../img/icon-svg/beantwortete-2.svg") no-repeat 0 0;
+		}
+	}
+	&-beantwortete {
+		&::before {
+			background: url("../img/icon-svg/beantwortete.svg") no-repeat 0 0;
+		}
+	}
+	&-beantwortete-22 {
+		&::before {
+			background: url("../img/icon-svg/beantwortete-2.svg") no-repeat 0 0;
+		}
+	}
+	&-geloste {
+		&::before {
+			background: url("../img/icon-svg/geloste.svg") no-repeat 0 0;
+		}
+	}
+	&-geloste-2 {
+		&::before {
+			background: url("../img/icon-svg/geloste-2.svg") no-repeat 0 0;
+		}
+	}
+	&-reclarank {
+		&::before {
+			background: url("../img/img-site/r-circle.png") no-repeat 0 0;
+		}
+	}
+	&-endgiltig-nicht {
+		&::before {
+			background: url("../img/icon-svg/endgiltig-nicht.svg") no-repeat 0 0;
+		}
+	}
+	&-endgiltig-nicht-2 {
+		&::before {
+			background: url("../img/icon-svg/endgiltig-nicht-2.svg") no-repeat 0 0;
+		}
+	}
+	&-noch-nicht-geloste {
+		&::before {
+			background: url("../img/icon-svg/noch-nicht-geloste.svg") no-repeat 0 0;
+		}
+	}
+	&-noch-nicht-geloste-2 {
+		&::before {
+			background: url("../img/icon-svg/noch-nicht-geloste-2.svg") no-repeat 0 0;
+		}
+	}
+	&-hielfreicher-commentar {
+		&::before {
+			background: url("../img/icon-svg/hielfreicher-commentar.svg") no-repeat 0 0;
+		}
+	}
+	&-hielfreicher-commentar-filled {
+		&::before {
+			background: url("../img/icon-svg/hielfreicher-commentar-filled.svg") no-repeat 0 0;
+		}
+	}
+	&-image {
+		&::before {
+			background: url("../img/icon-svg/image.svg") no-repeat 0 0;
+		}
+	}
+	&-video {
+		&::before {
+			background: url("../img/icon-svg/video.svg") no-repeat 0 0;
+		}
+	}
 
-		/* Uncomment for 3D effect */
-		/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+	&-bicycle {
+	  &::before {
+	  	background: url("../img/icon-svg/bicycle.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-box {
+	  &::before {
+	  	background: url("../img/icon-svg/box.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-car {
+	  &::before {
+	  	background: url("../img/icon-svg/car.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-column {
+	  &::before {
+	  	background: url("../img/icon-svg/column.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-courthouse {
+	  &::before {
+	  	background: url("../img/icon-svg/courthouse.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-deodorant {
+	  &::before {
+	  	background: url("../img/icon-svg/deodorant.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-driller {
+	  &::before {
+	  	background: url("../img/icon-svg/driller.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-faucet {
+	  &::before {
+	  	background: url("../img/icon-svg/faucet.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-first-aid-kit {
+	  &::before {
+	  	background: url("../img/icon-svg/first-aid-kit.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-groceries {
+	  &::before {
+	  	background: url("../img/icon-svg/groceries.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-handshake {
+	  &::before {
+	  	background: url("../img/icon-svg/handshake.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-house {
+	  &::before {
+	  	background: url("../img/icon-svg/house.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-interview {
+	  &::before {
+	  	background: url("../img/icon-svg/interview.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-money {
+	  &::before {
+	  	background: url("../img/icon-svg/money.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-mortarboard {
+	  &::before {
+	  	background: url("../img/icon-svg/mortarboard.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-newspaper {
+	  &::before {
+	  	background: url("../img/icon-svg/newspaper.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-office-worker {
+	  &::before {
+	  	background: url("../img/icon-svg/office-worker.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-repair-tools {
+	  &::before {
+	  	background: url("../img/icon-svg/repair-tools.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-shopping-cart {
+	  &::before {
+	  	background: url("../img/icon-svg/shopping-cart.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-shopping-smartphone {
+	  &::before {
+	  	background: url("../img/icon-svg/shopping-smartphone.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-wifi {
+	  &::before {
+	  	background: url("../img/icon-svg/wifi.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-compass {
+	  &::before {
+	  	background: url("../img/icon-svg/compass.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-presentation {
+	  &::before {
+	  	background: url("../img/icon-svg/presentation.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-smartphone {
+	  &::before {
+	  	background: url("../img/icon-svg/smartphone.svg") no-repeat scroll center center / 24px auto;
+	  }
+	}
+	&-star-outline {
+		&::before {
+			background: url("../img/icon-svg/star.svg") no-repeat center center;
+		}
 	}
 }
-.rbi {
-	&-hielfreicher-commentar:before { content: '\e813'; } /* '' */
-	&-noch-nicht-geloste:before { content: '\e801'; } /* '' */
-	&-star-outline:before { content: '\e820'; } /* '' */
-	&-star:before { content: '\e821'; } /* '' */
-	&-box:before { content: '\e824'; } /* '' */
-	&-reclarank:before { content: '\e823'; } /* '' */
-	&-wifi:before { content: '\e825'; } /* '' */
-	&-money:before { content: '\e828'; } /* '' */
-	&-interview:before { content: '\e829'; } /* '' */
-	&-smartphone:before { content: '\e82a'; } /* '' */
-	&-house:before { content: '\e82c'; } /* '' */
-	&-beantwortete:before { content: '\e82d'; } /* '' */
-	&-beschwerde:before { content: '\e82e'; } /* '' */
-	&-bicycle:before { content: '\e82f'; } /* '' */
-	&-bookmark-remove:before { content: '\e830'; } /* '' */
-	&-car:before { content: '\e831'; } /* '' */
-	&-column:before { content: '\e832'; } /* '' */
-	&-compass:before { content: '\e833'; } /* '' */
-	&-courthouse:before { content: '\e834'; } /* '' */
-	&-deodorant:before { content: '\e835'; } /* '' */
-	&-driller:before { content: '\e836'; } /* '' */
-	&-endgiltig-nicht:before { content: '\e837'; } /* '' */
-	&-faucet:before { content: '\e838'; } /* '' */
-	&-first-aid-kit:before { content: '\e839'; } /* '' */
-	&-geloste:before { content: '\e83a'; } /* '' */
-	&-groceries:before { content: '\e83b'; } /* '' */
-	&-handshake:before { content: '\e83c'; } /* '' */
-	&-mortarboard:before { content: '\e83e'; } /* '' */
-	&-newspaper:before { content: '\e83f'; } /* '' */
-	&-office-worker:before { content: '\e840'; } /* '' */
-	&-presentation:before { content: '\e841'; } /* '' */
-	&-repair-tools:before { content: '\e842'; } /* '' */
-	&-shopping-cart:before { content: '\e843'; } /* '' */
-	&-shape:before { content: '\e845'; } /* '' */
-	&-image:before { content: '\e846'; } /* '' */
-	&-video:before { content: '\e847'; } /* '' */
-}
-
-//.rbi {
-//	font-size: 14px;
-//	display: inline-block;
-//	position: relative;
-//	line-height: 1;
-//	height: 17px;
-//	width: 16px;
-//
-//	&::before {
-//		bottom: 0;
-//		content: "";
-//		display: inherit;
-//		height: auto;
-//		left: 0;
-//		min-height: 100%;
-//		min-width: 100%;
-//		position: relative;
-//		right: 0;
-//		top: 0;
-//		vertical-align: middle;
-//		z-index: 9;
-//	}
-//
-//	&.medium-rbi {
-//		font-size: inherit !important;
-//		height: 20px !important;
-//		width: 20px !important;
-//	}
-//
-//	&.large-rbi {
-//		font-size: 33px !important;
-//		height: 34px !important;
-//		left: -5px !important;
-//		width: 34px !important;
-//	}
-//
-//	&-beschwerde-2 {
-//		&::before {
-//			background: url("../img/icon-svg/beschwerde-2.svg") no-repeat 0 0;
-//		}
-//	}
-//	&-beschwerde {
-//		&::before {
-//			background: url("../img/icon-svg/beschwerde.svg") no-repeat 0 0;
-//		}
-//	}
-//	&-beantwortete-2 {
-//		&::before {
-//			background: url("../img/icon-svg/beantwortete-2.svg") no-repeat 0 0;
-//		}
-//	}
-//	&-beantwortete {
-//		&::before {
-//			background: url("../img/icon-svg/beantwortete.svg") no-repeat 0 0;
-//		}
-//	}
-//	&-beantwortete-22 {
-//		&::before {
-//			background: url("../img/icon-svg/beantwortete-2.svg") no-repeat 0 0;
-//		}
-//	}
-//	&-geloste {
-//		&::before {
-//			background: url("../img/icon-svg/geloste.svg") no-repeat 0 0;
-//		}
-//	}
-//	&-geloste-2 {
-//		&::before {
-//			background: url("../img/icon-svg/geloste-2.svg") no-repeat 0 0;
-//		}
-//	}
-//	&-reclarank {
-//		&::before {
-//			background: url("../img/img-site/r-circle.png") no-repeat 0 0;
-//		}
-//	}
-//	&-endgiltig-nicht {
-//		&::before {
-//			background: url("../img/icon-svg/endgiltig-nicht.svg") no-repeat 0 0;
-//		}
-//	}
-//	&-endgiltig-nicht-2 {
-//		&::before {
-//			background: url("../img/icon-svg/endgiltig-nicht-2.svg") no-repeat 0 0;
-//		}
-//	}
-//	&-noch-nicht-geloste {
-//		&::before {
-//			background: url("../img/icon-svg/noch-nicht-geloste.svg") no-repeat 0 0;
-//		}
-//	}
-//	&-noch-nicht-geloste-2 {
-//		&::before {
-//			background: url("../img/icon-svg/noch-nicht-geloste-2.svg") no-repeat 0 0;
-//		}
-//	}
-//	&-hielfreicher-commentar {
-//		&::before {
-//			background: url("../img/icon-svg/hielfreicher-commentar.svg") no-repeat 0 0;
-//		}
-//	}
-//	&-hielfreicher-commentar-filled {
-//		&::before {
-//			background: url("../img/icon-svg/hielfreicher-commentar-filled.svg") no-repeat 0 0;
-//		}
-//	}
-//	&-image {
-//		&::before {
-//			background: url("../img/icon-svg/image.svg") no-repeat 0 0;
-//		}
-//	}
-//	&-video {
-//		&::before {
-//			background: url("../img/icon-svg/video.svg") no-repeat 0 0;
-//		}
-//	}
-//
-//	&-bicycle {
-//	  &::before {
-//	  	background: url("../img/icon-svg/bicycle.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-box {
-//	  &::before {
-//	  	background: url("../img/icon-svg/box.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-car {
-//	  &::before {
-//	  	background: url("../img/icon-svg/car.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-column {
-//	  &::before {
-//	  	background: url("../img/icon-svg/column.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-courthouse {
-//	  &::before {
-//	  	background: url("../img/icon-svg/courthouse.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-deodorant {
-//	  &::before {
-//	  	background: url("../img/icon-svg/deodorant.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-driller {
-//	  &::before {
-//	  	background: url("../img/icon-svg/driller.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-faucet {
-//	  &::before {
-//	  	background: url("../img/icon-svg/faucet.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-first-aid-kit {
-//	  &::before {
-//	  	background: url("../img/icon-svg/first-aid-kit.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-groceries {
-//	  &::before {
-//	  	background: url("../img/icon-svg/groceries.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-handshake {
-//	  &::before {
-//	  	background: url("../img/icon-svg/handshake.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-house {
-//	  &::before {
-//	  	background: url("../img/icon-svg/house.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-interview {
-//	  &::before {
-//	  	background: url("../img/icon-svg/interview.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-money {
-//	  &::before {
-//	  	background: url("../img/icon-svg/money.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-mortarboard {
-//	  &::before {
-//	  	background: url("../img/icon-svg/mortarboard.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-newspaper {
-//	  &::before {
-//	  	background: url("../img/icon-svg/newspaper.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-office-worker {
-//	  &::before {
-//	  	background: url("../img/icon-svg/office-worker.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-repair-tools {
-//	  &::before {
-//	  	background: url("../img/icon-svg/repair-tools.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-shopping-cart {
-//	  &::before {
-//	  	background: url("../img/icon-svg/shopping-cart.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-shopping-smartphone {
-//	  &::before {
-//	  	background: url("../img/icon-svg/shopping-smartphone.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-wifi {
-//	  &::before {
-//	  	background: url("../img/icon-svg/wifi.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-compass {
-//	  &::before {
-//	  	background: url("../img/icon-svg/compass.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-presentation {
-//	  &::before {
-//	  	background: url("../img/icon-svg/presentation.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-smartphone {
-//	  &::before {
-//	  	background: url("../img/icon-svg/smartphone.svg") no-repeat scroll center center / 24px auto;
-//	  }
-//	}
-//	&-star-outline {
-//		&::before {
-//			background: url("../img/icon-svg/star-outline.svg") no-repeat center center;
-//		}
-//	}
-//	&-star-1 {
-//		&::before {
-//			background: url("../img/icon-svg/star-1.svg") no-repeat center center;
-//		}
-//	}
-//	&-star-2 {
-//		&::before {
-//			background: url("../img/icon-svg/star-2.svg") no-repeat center center;
-//		}
-//	}
-//	&-star-3 {
-//		&::before {
-//			background: url("../img/icon-svg/star-3.svg") no-repeat center center;
-//		}
-//	}
-//	&-star-4 {
-//		&::before {
-//			background: url("../img/icon-svg/star-4.svg") no-repeat center center;
-//		}
-//	}
-//	&-star-5 {
-//		&::before {
-//			background: url("../img/icon-svg/star-5.svg") no-repeat center center;
-//		}
-//	}
-//	&-bookmark-remove {
-//		&::before {
-//			background: url("../img/icon-svg/bookmark-remove.svg") no-repeat center center;
-//		}
-//	}
-//}
 
 
 

@@ -13,18 +13,47 @@ function removeEventDefault(event){
 
   $(function(){
 
-    // ------------------- init components
+    // ------------ init components ----------
     // Forms
+		// ---------------------------------------
     $('select').material_select();
     $('#textarea1').trigger('autoresize');
+
+    var $pageWrite = $('.page-write');
+    var $slideInput = $pageWrite.find('#slide-input');
+
+    $slideInput.removeClass('hide').slideUp('slow').addClass('hide');
+    
+    $pageWrite.find('.btn').click(function(event) {
+      /* Act on the event */
+      var id = $(this).attr('href');
+      if (id === '#slide-input') {
+        // statement
+        removeEventDefault(event);
+
+        if ($(id).hasClass('hide')) {
+          $(id).removeClass('hide').slideDown('slow');
+        } else {
+          $(id).slideUp('slow', function () {
+            $(this).addClass('hide');
+          });
+        }          
+      }
+    });
+
     // Slide Nav
+		// ----------------------------------------
     $('.button-collapse').slideNav({
       closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
       draggable: true // Choose whether you can drag to open on touch screens
     });
+
     // Slider
+		// ----------------------------------------
     $('.slider-post').slider({height : 400, autoScroll: false});
+
     // Slick
+		// ----------------------------------------
     $("#topBeschwerden").slick({
       infinite: true,
       slidesToShow: 3,
@@ -60,11 +89,15 @@ function removeEventDefault(event){
         }
       ]
     });
+
     // Modal
+		// -----------------------------------
     $('.modal').modal({
       ending_top: '3%',
     });
+
     // Nav Theme
+		// -----------------------------------
     $(window).resize(function(event) {
       /* Act on the event */
       $('ul#navHeader').navTheme({fixedItems: true, indentItem: 50});
@@ -77,13 +110,23 @@ function removeEventDefault(event){
     $('ul#navContent').navTheme({fixedItems: true});
 
     // Tooltip
+		// -----------------------------------
     $('.tooltipped').tooltip({delay: 50, position: 'top'});
 
+    // Methods
+		// - Image adjustment
+		// - Card comment hover
+		// - Rating
+		// - Button collapse
+		// -----------------------------------
+
     // Variables
+		// -----------------------------------
     var $uploaded_items = $('.uploaded-item'),
         $card_comment = $('.card-comment');
        
     // Image adjustment method
+		// -----------------------------------
     $uploaded_items.find('img').each(function () {
       var placeholderBase64 = 'data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
       if ($(this).attr('src') !== placeholderBase64) {
@@ -94,7 +137,9 @@ function removeEventDefault(event){
         $(this).attr('src', placeholderBase64);
       }
     });
+    
     // Card comment hover
+		// ------------------------------------
     $card_comment.hover(function() {
       $(this).find('.report-alert a.hide').removeClass('hide');
     }, function() {
@@ -110,7 +155,8 @@ function removeEventDefault(event){
       $('.user').addClass('hide');
     })
 
-    // hover method for rating
+    // Rating methods
+		// ------------------------------------
     var $rating = $('.rating'),
         $ratingText = $('.rating-text');
 
@@ -121,7 +167,17 @@ function removeEventDefault(event){
           $ratingText.html($(this).attr('title'));
         });
 
-    // button collapse
+				$rating.find('a').on('click', function(event) {
+					removeEventDefault(event);
+					var $this = $(this);
+					$this.addClass('star-scale');
+					setTimeout(function(){
+						$this.removeClass('star-scale');
+					}, 400);
+				});
+
+    // Button collapse
+		// -------------------------------------
     $('.button-collapse').click(function(event) {
       /* Act on the event */
       removeEventDefault(event);
@@ -135,7 +191,36 @@ function removeEventDefault(event){
   }); // end of document ready
 })(jQuery); // end of jQuery name space
 
-// ---------- list emails -----------
+;(function($){
+	$(function(){
+		var $btnArray = $('.post-search').find('.btn');
+		var resContent;
+
+		$btnArray.on('click', function(event) {
+			removeEventDefault(event);
+			resContent($(this));
+		});
+
+		resContent = function(arg) {
+
+			var res = '#res_' + $(arg).data('res');
+
+			if($(res).hasClass('hide')) {
+				$(res).hide().removeClass('hide').slideDown(400);
+				if($(res).next('.pagination').hasClass('hide')) {
+					$(res).next('.pagination').removeClass('hide');
+				}
+			}
+
+			$(arg).addClass('hide');
+
+			return;
+		}
+	});
+})(jQuery);
+
+// ---------- list emails method -----------
+// -----------------------------------------
 ;(function ($) {
   /* body... */
   var $list_email = $('.post-list-email');
@@ -155,11 +240,10 @@ function removeEventDefault(event){
           }
         }
       });
-
-
 })(jQuery);
 
-// ----------- login form functions -----------
+// ----------- Users form method -----------
+// -----------------------------------------
 ;(function ($) {
   // Methods for testing the validation form
   // - user forms
@@ -172,6 +256,8 @@ function removeEventDefault(event){
   // - register
   // - login
   var $obj_register = $('#usersLogin');
+  var $uFBtn = $('.u-f-btn-prev');
+  var this_href;
 
   function width_tab_register (argument) {
     var argument = argument;
@@ -193,21 +279,88 @@ function removeEventDefault(event){
         $obj_register.find('.register-nav').addClass('invisible');
       }
     });
-
   };
   width_tab_register('#userRegisterTabContent');
 
   $obj_register.find('.btn-register-nav').click(function(event) {
     /* Act on the event */
-    var this_href = $(this).attr('href');
+    this_href = $(this).attr('href');
     $obj_register.find('.tabs').addClass('hide');
     $obj_register.find('.register-nav').addClass('hide');
     $obj_register.find('.register-forms > .card-image.hide').removeClass('hide');
     $(this_href).removeClass('hide');
+    $uFBtn.removeClass('hide').addClass('prev-regisrer-nav');
   });
 
 
   // ------- password --------
+  // - password display method, and hide it.
+  // - Methods to display the password entering and form recovery
+  
+  // password display method, and hide it.
+  var inputArrayPassword = $('input[type^="password"]'),
+      iconEye = $('<i class="mdi mdi-eye password-eye small hide"></i>');
+      inputArrayPassword.after(iconEye);
+
+      inputArrayPassword.on('input', function(event) {
+        var inputEventThis = $(this);
+        if (inputEventThis.val().length > 0) {
+          inputEventThis.next('i.password-eye').removeClass('hide');
+        } else {
+          inputEventThis.next('i.password-eye').addClass('hide');
+        }
+      });
+
+      inputArrayPassword.next('i.password-eye').on('click', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        if ($(this).prev('input').attr('type') == "password") {
+          $(this).prev('input').attr('type', 'text');
+          $(this).removeClass('mdi-eye').addClass('mdi-eye-off');
+        } else {
+          $(this).prev('input').attr('type', 'password');
+          $(this).removeClass('mdi-eye-off').addClass('mdi-eye');
+        }
+      });
+
+      
+
+  // Methods to display the password entering and form recovery
+  var $questionsLink = $('.questions > a');
+  var $siblingsCardContent, id;
+
+  $questionsLink.click(function(event) {
+    /* Act on the event */
+    id = $(this).attr('href');
+
+    if ($(id)) {
+      removeEventDefault(event);
+
+      $siblingsCardContent = $(id).siblings('.card-content');
+      $siblingsCardContent.addClass('hide');
+      $(id).removeClass('hide');
+      $uFBtn.removeClass('hide').addClass('prev-login');
+    }
+  });
+
+  $uFBtn.click(function(event) {
+    /* Act on the event */
+    removeEventDefault(event);
+
+    if($(this).hasClass('prev-login')) {
+      $(id).addClass('hide');
+      $siblingsCardContent.removeClass('hide')
+      setTimeout(function () {
+        $uFBtn.addClass('hide').removeClass('prev-login');
+      }, 500);
+    } else {
+      $obj_register.find('.tabs').removeClass('hide');
+      $obj_register.find('.register-nav').removeClass('hide');
+      $obj_register.find('.register-forms > .card-image').addClass('hide');
+      $(this_href).addClass('hide');
+      $uFBtn.addClass('hide').removeClass('prev-regisrer-nav');
+    }
+  });
 
   // Methods intercept the request and send an ajax request
   // - event click to button
@@ -272,40 +425,10 @@ function removeEventDefault(event){
 
   }
 
-  // Методы для отображения форм входа и востановления пароля
-  var $questionsLink = $('.questions > a');
-  var $uFBtn = $('.u-f-btn-prev');
-  var $siblingsCardContent, id;
-
-  $questionsLink.click(function(event) {
-    /* Act on the event */
-    removeEventDefault(event);
-    id = $(this).attr('href');
-    if ($(id)) {
-      $siblingsCardContent = $(id).siblings('.card-content');
-      $siblingsCardContent.css({
-        'display': 'none'
-      });
-      $(id).css({
-        'display': 'block'
-      });
-      $uFBtn.css('display', 'block');
-    }
-  });
-  $uFBtn.click(function(event) {
-    /* Act on the event */
-    removeEventDefault(event);
-    $(id).css('display', 'none');
-    $siblingsCardContent.css('display', 'block');
-    setTimeout(function () {
-      // body... 
-      $uFBtn.css('display', 'none');
-    }, 500);
-    
-  });
 })(jQuery);
 
 // -------- search function -------
+// --------------------------------
 ;(function ($) {
   var $body = $('body');
   var $searchButton = $('.search-button');
@@ -366,11 +489,10 @@ function removeEventDefault(event){
 }( jQuery ));
 
 // -------- slider function -------
+// --------------------------------
 ;(function ($) {
-
   var methods = {
-
-    init : function(options) {
+  	init : function(options) {
       var defaults = {
         navigation : true,
         indicators : true,
@@ -379,10 +501,10 @@ function removeEventDefault(event){
         autoScroll : true,
         interval   : 6000
       };
+
       options = $.extend(defaults, options);
 
       return this.each(function() {
-
         // For each slider, we want to keep track of
         // which slide is active and its associated content
         var $this = $(this);
@@ -420,10 +542,19 @@ function removeEventDefault(event){
             $caption = $active.find('.caption');
 
             $active.removeClass('active');
-            $active.velocity({opacity: 0}, {duration: options.transition, queue: false, easing: 'easeOutQuad',
-                              complete: function() {
-                                $slides.not('.active').velocity({opacity: 0, translateX: 0, translateY: 0}, {duration: 0, queue: false});
-                              } });
+            $active.velocity(
+            	{
+								opacity: 0
+            	},
+							{
+								duration: options.transition,
+								queue: false,
+								easing: 'easeOutQuad',
+								complete: function() {
+									$slides.not('.active').velocity({opacity: 0, translateX: 0, translateY: 0}, {duration: 0, queue: false});
+								}
+							}
+						);
             captionTransition($caption, options.transition);
 
 
@@ -818,9 +949,6 @@ function removeEventDefault(event){
         });
 
       });
-
-
-
     },
     pause : function() {
       $(this).trigger('sliderPause');
@@ -836,15 +964,14 @@ function removeEventDefault(event){
     }
   };
 
-
-    $.fn.slider = function(methodOrOptions) {
-      if ( methods[methodOrOptions] ) {
-        return methods[ methodOrOptions ].apply( this, Array.prototype.slice.call( arguments, 1 ));
-      } else if ( typeof methodOrOptions === 'object' || ! methodOrOptions ) {
-        // Default to "init"
-        return methods.init.apply( this, arguments );
-      } else {
-        $.error( 'Method ' +  methodOrOptions + ' does not exist on jQuery.tooltip' );
-      }
-    }; // Plugin end
+	$.fn.slider = function(methodOrOptions) {
+		if ( methods[methodOrOptions] ) {
+			return methods[ methodOrOptions ].apply( this, Array.prototype.slice.call( arguments, 1 ));
+		} else if ( typeof methodOrOptions === 'object' || ! methodOrOptions ) {
+			// Default to "init"
+			return methods.init.apply( this, arguments );
+		} else {
+			$.error( 'Method ' +  methodOrOptions + ' does not exist on jQuery.tooltip' );
+		}
+	}; // Plugin end
 }( jQuery ));

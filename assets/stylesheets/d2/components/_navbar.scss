@@ -16,9 +16,8 @@ nav {
   [class^="mdi-"], [class*="mdi-"],
   i.material-icons {
     display: block;
-    font-size: 21px;
-    height: $navbar-height-mobile;
-    line-height: $navbar-height-mobile;
+    height: 45px !important;
+    line-height: 46px !important;
   }
 
   .nav-wrapper {
@@ -30,7 +29,6 @@ nav {
   .search-widget {
     .search-button {
       color: white;
-
     }
   }
 
@@ -43,7 +41,7 @@ nav {
     padding: 0 20px;
 
     i {
-      font-size: 22px;
+      // font-size: 22px;
       height: $navbar-height-mobile;
       line-height: $navbar-height-mobile;
     }
@@ -123,7 +121,6 @@ nav {
         line-height: 37px;
         margin-left: 10px;
         margin-right: 10px;
-        margin-top: -2px;
         padding: 0 15px !important;
         text-transform: uppercase;
 
@@ -162,7 +159,7 @@ nav {
       .search-widget {
           top: 0px;
           .search-button {
-            left: -40px;
+            left: -60px;
           }
       }
     }
@@ -216,13 +213,13 @@ nav {
     }
   }
 
-  
-
+  // nav header
   .nav-header.nav-theme {
     display: inline-block;
+    left: -22px;
+    margin: 0;
     position: relative;
     width: auto;
-    margin: 0 10px;
 
     a {
       font-size: 15px;

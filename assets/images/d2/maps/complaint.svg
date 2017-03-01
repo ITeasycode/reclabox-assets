@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="48px" viewBox="0 0 34 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>complaint</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M13,40.2373687 C13,40.2373687 26,20.1797017 26,13 C26,5.82029825 20.1797017,0 13,0 C5.82029825,0 0,5.82029825 0,13 C0,20.1797017 13,40.2373687 13,40.2373687 Z" id="path-1"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.148494112 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPad-Pro-Portrait" transform="translate(-224.000000, -111.000000)">
+            <g id="complaint" transform="translate(228.000000, 116.000000)">
+                <g id="Oval-9-Copy">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <path d="M19.1,13.05 C19.1,16.392625 16.392625,19.1 13.05,19.1 C9.707375,19.1 7,16.392625 7,13.05 C7,9.707375 9.707375,7 13.05,7 C16.392625,7 19.1,9.707375 19.1,13.05 Z M15.696875,10.025 C15.091875,10.025 14.5625,10.554375 14.5625,11.159375 C14.5625,11.764375 15.091875,12.29375 15.696875,12.29375 C16.301875,12.29375 16.83125,11.764375 16.83125,11.159375 C16.83125,10.554375 16.301875,10.025 15.696875,10.025 Z M11.5375,11.159375 C11.5375,10.554375 11.008125,10.025 10.403125,10.025 C9.798125,10.025 9.26875,10.554375 9.26875,11.159375 C9.26875,11.764375 9.798125,12.29375 10.403125,12.29375 C11.008125,12.29375 11.5375,11.764375 11.5375,11.159375 Z M13.05,14.5625 C11.7265625,14.5625 10.5619375,15.107 9.8813125,15.9313125 L10.9551875,17.0051875 C11.2955,16.453125 12.1046875,16.075 13.05,16.075 C13.9953125,16.075 14.8045,16.453125 15.1448125,17.0051875 L16.2186875,15.9313125 C15.5380625,15.107 14.3734375,14.5625 13.05,14.5625 Z" id="Combined-Shape-Copy-2" fill="#607D8B"></path>
+            </g>
+        </g>
+    </g>
+</svg>

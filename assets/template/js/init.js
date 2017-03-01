@@ -15,7 +15,6 @@ function removeEventDefault(event){
 
     // ------------ init components ----------
     // Forms
-		// ---------------------------------------
     $('select').material_select();
     $('#textarea1').trigger('autoresize');
 
@@ -27,33 +26,26 @@ function removeEventDefault(event){
     $pageWrite.find('.btn').click(function(event) {
       /* Act on the event */
       var id = $(this).attr('href');
-      if (id === '#slide-input') {
+      if (id == '#slide-input') {
         // statement
         removeEventDefault(event);
-
         if ($(id).hasClass('hide')) {
           $(id).removeClass('hide').slideDown('slow');
         } else {
           $(id).slideUp('slow', function () {
             $(this).addClass('hide');
           });
-        }          
-      }
+        }          }
     });
 
     // Slide Nav
-		// ----------------------------------------
     $('.button-collapse').slideNav({
       closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
       draggable: true // Choose whether you can drag to open on touch screens
     });
-
     // Slider
-		// ----------------------------------------
     $('.slider-post').slider({height : 400, autoScroll: false});
-
     // Slick
-		// ----------------------------------------
     $("#topBeschwerden").slick({
       infinite: true,
       slidesToShow: 3,
@@ -89,15 +81,11 @@ function removeEventDefault(event){
         }
       ]
     });
-
     // Modal
-		// -----------------------------------
     $('.modal').modal({
       ending_top: '3%',
     });
-
     // Nav Theme
-		// -----------------------------------
     $(window).resize(function(event) {
       /* Act on the event */
       $('ul#navHeader').navTheme({fixedItems: true, indentItem: 50});
@@ -110,23 +98,13 @@ function removeEventDefault(event){
     $('ul#navContent').navTheme({fixedItems: true});
 
     // Tooltip
-		// -----------------------------------
     $('.tooltipped').tooltip({delay: 50, position: 'top'});
 
-    // Methods
-		// - Image adjustment
-		// - Card comment hover
-		// - Rating
-		// - Button collapse
-		// -----------------------------------
-
     // Variables
-		// -----------------------------------
     var $uploaded_items = $('.uploaded-item'),
         $card_comment = $('.card-comment');
        
     // Image adjustment method
-		// -----------------------------------
     $uploaded_items.find('img').each(function () {
       var placeholderBase64 = 'data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
       if ($(this).attr('src') !== placeholderBase64) {
@@ -137,9 +115,7 @@ function removeEventDefault(event){
         $(this).attr('src', placeholderBase64);
       }
     });
-    
     // Card comment hover
-		// ------------------------------------
     $card_comment.hover(function() {
       $(this).find('.report-alert a.hide').removeClass('hide');
     }, function() {
@@ -155,8 +131,7 @@ function removeEventDefault(event){
       $('.user').addClass('hide');
     })
 
-    // Rating methods
-		// ------------------------------------
+    // hover method for rating
     var $rating = $('.rating'),
         $ratingText = $('.rating-text');
 
@@ -167,17 +142,7 @@ function removeEventDefault(event){
           $ratingText.html($(this).attr('title'));
         });
 
-				$rating.find('a').on('click', function(event) {
-					removeEventDefault(event);
-					var $this = $(this);
-					$this.addClass('star-scale');
-					setTimeout(function(){
-						$this.removeClass('star-scale');
-					}, 400);
-				});
-
-    // Button collapse
-		// -------------------------------------
+    // button collapse
     $('.button-collapse').click(function(event) {
       /* Act on the event */
       removeEventDefault(event);
@@ -191,36 +156,7 @@ function removeEventDefault(event){
   }); // end of document ready
 })(jQuery); // end of jQuery name space
 
-;(function($){
-	$(function(){
-		var $btnArray = $('.post-search').find('.btn');
-		var resContent;
-
-		$btnArray.on('click', function(event) {
-			removeEventDefault(event);
-			resContent($(this));
-		});
-
-		resContent = function(arg) {
-
-			var res = '#res_' + $(arg).data('res');
-
-			if($(res).hasClass('hide')) {
-				$(res).hide().removeClass('hide').slideDown(400);
-				if($(res).next('.pagination').hasClass('hide')) {
-					$(res).next('.pagination').removeClass('hide');
-				}
-			}
-
-			$(arg).addClass('hide');
-
-			return;
-		}
-	});
-})(jQuery);
-
-// ---------- list emails method -----------
-// -----------------------------------------
+// ---------- list emails -----------
 ;(function ($) {
   /* body... */
   var $list_email = $('.post-list-email');
@@ -242,8 +178,7 @@ function removeEventDefault(event){
       });
 })(jQuery);
 
-// ----------- Users form method -----------
-// -----------------------------------------
+// ----------- login form functions -----------
 ;(function ($) {
   // Methods for testing the validation form
   // - user forms
@@ -428,7 +363,6 @@ function removeEventDefault(event){
 })(jQuery);
 
 // -------- search function -------
-// --------------------------------
 ;(function ($) {
   var $body = $('body');
   var $searchButton = $('.search-button');
@@ -489,10 +423,11 @@ function removeEventDefault(event){
 }( jQuery ));
 
 // -------- slider function -------
-// --------------------------------
 ;(function ($) {
+
   var methods = {
-  	init : function(options) {
+
+    init : function(options) {
       var defaults = {
         navigation : true,
         indicators : true,
@@ -501,10 +436,10 @@ function removeEventDefault(event){
         autoScroll : true,
         interval   : 6000
       };
-
       options = $.extend(defaults, options);
 
       return this.each(function() {
+
         // For each slider, we want to keep track of
         // which slide is active and its associated content
         var $this = $(this);
@@ -542,19 +477,10 @@ function removeEventDefault(event){
             $caption = $active.find('.caption');
 
             $active.removeClass('active');
-            $active.velocity(
-            	{
-								opacity: 0
-            	},
-							{
-								duration: options.transition,
-								queue: false,
-								easing: 'easeOutQuad',
-								complete: function() {
-									$slides.not('.active').velocity({opacity: 0, translateX: 0, translateY: 0}, {duration: 0, queue: false});
-								}
-							}
-						);
+            $active.velocity({opacity: 0}, {duration: options.transition, queue: false, easing: 'easeOutQuad',
+                              complete: function() {
+                                $slides.not('.active').velocity({opacity: 0, translateX: 0, translateY: 0}, {duration: 0, queue: false});
+                              } });
             captionTransition($caption, options.transition);
 
 
@@ -949,6 +875,9 @@ function removeEventDefault(event){
         });
 
       });
+
+
+
     },
     pause : function() {
       $(this).trigger('sliderPause');
@@ -964,14 +893,15 @@ function removeEventDefault(event){
     }
   };
 
-	$.fn.slider = function(methodOrOptions) {
-		if ( methods[methodOrOptions] ) {
-			return methods[ methodOrOptions ].apply( this, Array.prototype.slice.call( arguments, 1 ));
-		} else if ( typeof methodOrOptions === 'object' || ! methodOrOptions ) {
-			// Default to "init"
-			return methods.init.apply( this, arguments );
-		} else {
-			$.error( 'Method ' +  methodOrOptions + ' does not exist on jQuery.tooltip' );
-		}
-	}; // Plugin end
+
+    $.fn.slider = function(methodOrOptions) {
+      if ( methods[methodOrOptions] ) {
+        return methods[ methodOrOptions ].apply( this, Array.prototype.slice.call( arguments, 1 ));
+      } else if ( typeof methodOrOptions === 'object' || ! methodOrOptions ) {
+        // Default to "init"
+        return methods.init.apply( this, arguments );
+      } else {
+        $.error( 'Method ' +  methodOrOptions + ' does not exist on jQuery.tooltip' );
+      }
+    }; // Plugin end
 }( jQuery ));
