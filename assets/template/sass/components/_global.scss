@@ -398,10 +398,10 @@ video.responsive-video {
   }
 
   &-last-child {
-    color: rgba(01, 01, 01, .54);
+    color: $text-black-theme;
     font-family: Roboto;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 400;
     padding-left: 11px;
 
     &::after {
@@ -411,6 +411,10 @@ video.responsive-video {
 
   &-wrapper {
     position: relative;
+    & > span:first-child {
+      font-weight: 500;
+      padding-left: 0;
+    }
   }
 }
 
@@ -944,6 +948,9 @@ nav ul a span.badge {
 .center {
   margin: 0 auto;
   display: block !important;
+  &.hide {
+    display: none !important;
+  }
 }
 .left {
   float: left !important;
