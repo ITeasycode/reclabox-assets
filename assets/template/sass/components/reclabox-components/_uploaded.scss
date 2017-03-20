@@ -13,11 +13,11 @@
 	}
 
 	&-input {
+		border: 1px dashed #607d8b;
 		.input-wrapper {
-			border: 1px dashed #607d8b;
 			border-radius: 3px;
 			height: 65px;
-			width: 100%;
+			max-width: 100%;
 
 			& > div {
 				color: rgba(96, 125, 139, .87);

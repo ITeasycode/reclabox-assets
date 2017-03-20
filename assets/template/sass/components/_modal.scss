@@ -23,6 +23,15 @@
     margin-top: 0;
   }
 
+  &.modal-report {
+    background-color: inherit;
+    .modal-content {
+      .card-header {
+        padding: 10px 15px;
+      }
+    }
+  }
+
   .modal-content {
     padding: 24px;
 

@@ -1,0 +1,36 @@
+.functional-tooltips {
+  @extend .z-theme-depth-1;
+  background-color: white;
+  position: absolute;
+  padding: 0 25px 15px;
+  min-width: 200px;
+  left: -13%;
+  bottom: 55px;
+  z-index: 998;
+
+  &:before {
+    content: '';
+    border: 10px solid transparent;
+    border-top: 10px solid white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 15px;
+    bottom: -20px;
+    z-index: 999;
+  }
+  &:after {
+    content: '';
+    box-shadow: 4px -4px 18px rgba(0, 0, 0, 0.08);
+    height: 15px;
+    position: absolute;
+    bottom: -10px;
+    transform: rotate(135deg);
+    width: 15px;
+    z-index: 998;
+    left: 0;
+    margin: 0 auto;
+    right: 0;
+  }
+}
