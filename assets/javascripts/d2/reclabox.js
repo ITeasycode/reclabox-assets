@@ -3088,7 +3088,7 @@ var h=!0;e?(a('input[type="checkbox"]',this).prop("checked",function(a,b){return
         }
 
         // Prevent the anchor's default click action
-        e.preventDefault();
+//        e.preventDefault();
       });
     });
 
