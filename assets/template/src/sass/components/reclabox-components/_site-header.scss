@@ -1,0 +1,53 @@
+.site-header {
+  min-height: 200px;
+  margin-bottom: 35px;
+  @extend .z-theme-depth-2;
+
+  @media #{$medium-and-down} {
+    min-height: 100%;
+  }
+
+  .navbar-fixed {
+    nav {
+      @extend .g-theme-1;
+    }
+  }
+
+  .users-menu {
+    .btn {
+      background-color: $secondary-color;
+      color: white;
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+  }
+
+  .navbar-bootom {
+    position: relative;
+    left: 10px;
+  }
+  .brand-logo {
+    &.rb-brand-logo {
+      height: 50px;
+      overflow: hidden;
+      img {
+        height: auto;
+        left: -5px;
+        position: relative;
+        top: -25px;
+        width: 75%;
+      }
+    }
+  }
+
+  .brand-logo-wrapper {
+    height: 76px;
+    img {
+      height: 220px;
+      left: -40px;
+      position: absolute;
+      top: -67px;
+    }
+  }
+}

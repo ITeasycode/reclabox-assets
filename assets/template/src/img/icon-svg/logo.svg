@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="139px" height="139px" viewBox="0 0 139 139" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>character copy 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0.211817779,2.28145407 C0.211817779,1.17859315 1.09733982,0.284547731 2.21458895,0.284547731 L34.0322394,0.284547731 C35.1383394,0.284547731 36.0350106,1.17825646 36.0350106,2.28177013 L36.0350106,19.721446 C36.0350106,20.8244815 35.1494885,21.9069927 34.08356,22.1336841 L2.16326833,28.9221828 C1.08551195,29.1513896 0.211817779,28.4358523 0.211817779,27.3402921 L0.211817779,2.28145407 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="35.8231928" height="28.6804087" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="35.8231928" height="28.6804087" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="character-copy-5">
+            <text id="reclabox" font-family="GothamPro-Bold, Gotham Pro" font-size="20" font-weight="bold" fill="#FFFFFF">
+                <tspan x="26" y="88">reclabox</tspan>
+            </text>
+            <g id="Group" transform="translate(26.000000, 44.000000)">
+                <g id="Oval-5-Copy-3">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Mask" stroke="#EFEFEF" mask="url(#mask-2)" stroke-width="2" fill="#FFFFFF">
+                        <use mask="url(#mask-4)" xlink:href="#path-1"></use>
+                    </g>
+                    <ellipse fill="#ECECEC" mask="url(#mask-3)" cx="0.951612903" cy="28.0625" rx="8.9516129" ry="9.0625"></ellipse>
+                </g>
+                <ellipse id="Oval-5" fill="#E91E63" cx="9.5483871" cy="12.0833333" rx="2.38709677" ry="2.41666667"></ellipse>
+                <ellipse id="Oval-5-Copy" fill="#E91E63" cx="17.9032258" cy="12.0833333" rx="2.38709677" ry="2.41666667"></ellipse>
+                <ellipse id="Oval-5-Copy-2" fill="#E91E63" cx="26.2580645" cy="12.0833333" rx="2.38709677" ry="2.41666667"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

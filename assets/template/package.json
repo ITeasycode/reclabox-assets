@@ -1,0 +1,36 @@
+{
+  "name": "reclabox",
+  "version": "1.0.0",
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true,
+      "jquery": true
+    }
+  },
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^7.2.1",
+    "babel-preset-env": "^1.3.2",
+    "browser-sync": "^2.18.8",
+    "eslint": "^3.19.0",
+    "eslint-config-jquery": "^1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-if": "^2.0.2",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.1.2",
+    "gulp-watch": "^4.3.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=development gulp"
+  },
+  "author": "",
+  "license": "ISC"
+}

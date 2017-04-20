@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Template - Home</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/reclabox-icons/1.1.0/reclabox-icon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/materialdesignicons.min.css"/>
+  <link href="css/reclabox-materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+</head>
+<body>
+<div class="wrapper grey lighten-5">
+
+  <header class="site-header blue-grey">
+    <div class="navbar">
+      <nav class="" role="navigation">
+        <div class="nav-wrapper">
+          <ul>
+            <li>
+              <a href="#" data-activates="slide-out" class="button-collapse waves-effect">
+                <div class="arrow-hamburger">
+                  <div class="line arrow_top"></div>
+                  <div class="line arrow_line"></div>
+                  <div class="line arrow_bottom"></div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <a id="logo-container" href="javascript:void(0)" class="brand-logo hide"><img src="img/img-site/logo-reclabox.jpg" alt="ReclaBox"></a>
+          <div class="nav-header nav-theme hide">
+            <ul id="navHeader" class="nav-menu hide-on-med-and-down flex-wrapper">
+              <li><a class="active" href="javascript:void(0)">BESCHWERDE LESEN</a></li>
+              <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li>
+            </ul>
+          </div>
+          <ul class="right hide-on-med-and-down nav-right currently-logged users-menu">
+            <li>
+              <form id="search-form">
+                <div class="search-widget">
+                  <button class="search-button"><i class="material-icons small">search</i></button>
+                  <button class="search-close-button"><i class="material-icons small">close</i></button>
+                  <input name="q" type="text" id="search-input" autocomplete="off"/>
+                  <label for="search-input">Name, Firma oder Schlagwort</label>
+                </div>
+              </form>
+            </li>
+            <li>
+              <a class="btn waves-effect waves-light" href="#emailSubscribe">subscribe</a>
+            </li>
+            <li>
+              <a class="btn waves-effect waves-light" href="#emailUnsubscribe">unsubscribe</a>
+            </li>
+            <li>
+              <a class="btn waves-effect waves-light" href="#usersLogin">login/regisrieren</a>
+            </li>
+            <!-- <li><a class="btn waves-effect waves-light" href="#usersRegister">registrieren </a></li> -->
+          </ul>
+        </div>
+      </nav>
+    </div><!-- end navbar-fixed -->
+
+    <div class="container"><!-- logo and nav-menu -->
+      <div class="row">
+        <div class="brand-logo-wrapper">
+          <a id="logo-container" href="javascript:void(0)" class="brand-logo"><img src="img/icon-svg/logo.svg" alt="ReclaBox"></a>
+        </div>
+        <div class="navbar navbar-bootom">
+          <nav class="" role="navigation">
+            <div class="nav-wrapper">
+              <div class="nav-header nav-theme">
+                <ul id="navHeader" class="nav-menu hide-on-med-and-down flex-wrapper">
+                  <li><a class="active" href="javascript:void(0)">BESCHWERDE LESEN</a></li>
+                  <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li>
+                  <!-- <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li> -->
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div><!-- logo and nav-menu -->
+
+    <!-- components dropdown -->
+    <div class="slide-nav-wrapper"><!-- heade left nav -->
+      <ul id="slide-out" class="side-nav slide-nav">
+        <li><a href="beschwerde.html">Beschwerde</a></li>
+        <li><a href="beschwerde-lesen.html">Beschwerde Lesen</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="company-account.html">Company Account</a></li>
+        <li><a href="company-account-profil.html">Company Account Profil</a></li>
+        <li><a href="company-account-reclaRank-seal.html">Company Account ReclaRank Seal</a></li>
+        <li><a href="company-account-links.html">Company Account Links</a></li>
+        <li><a href="company-account-automatic.html">Company Account Automatic</a></li>
+        <li><a href="company-public.html">Company Public</a></li>
+        <li><a href="company-rechnungen.html">Company Rechnungen</a></li>
+        <li><a href="edit-email-sending.html">Edit Email Sending</a></li>
+        <li><a href="firmen.html">Firmen</a></li>
+        <li><a href="help.html">Help</a></li>
+        <li><a href="list-articles.html">List Articles</a></li>
+        <li><a href="list-emails.html">List Emails</a></li>
+        <li><a href="nutzungsbedingungen.html">Nutzungsbedingungen</a></li>
+        <li><a href="request-firm-management.html">Request Firm Management</a></li>
+        <li><a href="schreiben.html">Schreiben</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="vorschau.html">Vorschau</a></li>
+        <li><a href="404.html">404</a></li>
+
+        <li><a href="email-confirm.html">email confirm</a></li>
+      </ul>
+    </div><!-- end heade left nav -->
+
+    <div class="modal-container"><!-- header modal user forms -->
+      <div id="usersLogin" class="modal user-form"><!-- users login -->
+        <div class="modal-content">
+          <div class="card-panel no-bg">
+            <div class="card-header white tabs-wrapper">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a class="active" href="#userLoginTabContent">Login</a></li>
+                <li class="tab"><a class="" href="#userRegisterTabContent">Register</a></li>
+              </ul>
+            </div>
+            <div id="userLoginTabContent" class="card no-bg"><!-- forms login and passwrd recovery -->
+              <div class="card-image grey lighten-5">
+                <a class="icon-floating btn u-f-btn-prev hide" href="javascript:void(0)">
+                  <i class="mdi mdi-arrow-left"></i>Back
+                </a>
+                <img src="img/icon-svg/auth-graphics.svg" title="">
+              </div>
+              <div id="formLogin" class="card-content form-login">
+                <form class="" action="#">
+                  <div class="input-field">
+                    <input id="emailLogin" type="email" class="validate">
+                    <label for="emailLogin">Email Adresse</label>
+                  </div>
+                  <div class="input-field">
+                    <input id="passwordLogin" type="password" class="validate">
+                    <label for="passwordLogin">password</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="checkbox" class="filled-in" id="filled-in-box" />
+                    <label for="filled-in-box">Angemeldet bleiben</label>
+                  </div>
+                  <button id="btn-waves" class="full-width btn waves-effect waves-light" type="submit" name="action">einloggen</button>
+                </form>
+                <div class="questions">
+                  <a class="center" href="#newPassword">password vergessen?</a>
+                  <a class="center" href="#">Noch night Mitglied?</a>
+                </div>
+              </div>
+              <div id="newPassword" class="card-content hide form-newpassword">
+                <div class="card-title">
+                  <h6>Haben Sie Ihr password vergessen?</h6>
+                </div>
+                <p>
+                  Bitte geben Sie Ihre E-Mail-Adresse ein, mit der Sie sich bereits registriert haben. Vergeben Sie sich außerdem ein neues password. Sie erhalten dann eine E-Mail mit einem Freischaltlink. Nach- dem Sie diesen bestätigt haben, können Sie sich
+                </p>
+                <form class="" action="#">
+                  <div class="input-field">
+                    <input id="email0" type="email" class="rb-blue-input validate">
+                    <label for="email0">E-Mail-Adresse *</label>
+                  </div>
+                  <div class="input-field">
+                    <input id="password0" type="password" class="rb-blue-input validate">
+                    <label for="password0">Neu password *</label>
+                  </div>
+                  <div class="input-field">
+                    <input id="passwordRep0" type="password" class="rb-blue-input validate">
+                    <label for="passwordRep0">Neu password (wiederholen)*</label>
+                  </div>
+                  <button class="full-width btn waves-effect waves-light" type="submit" name="action">ABSCHICKEN</button>
+                </form>
+              </div>
+            </div><!-- end forms login and recovery -->
+            <div id="userRegisterTabContent" class="card no-bg"><!-- forms register and nav -->
+              <div class="register-nav invisible">
+                <div class="card-content center">
+                  <p>Chooose the type of account</p>
+                </div>
+                <ul class="table-wrapper">
+                  <li class="item">
+                    <a class="center btn-register-nav" href="#userMitgliedschaft"><i class="mdi mdi-emoticon-sad"></i></a>
+                    <p class="center">I am <br> a consumer</p>
+                  </li>
+                  <li class="item">
+                    <a class="center btn-register-nav" href="#firmaMitgliedschaft"><i class="mdi mdi-domain"></i></a>
+                    <p class="center">I am organisation <br> or company</p>
+                  </li>
+                </ul>
+              </div>
+              <div id="registerForms" class="register-forms">
+                <div class="card-image hide">
+                  <a class="icon-floating btn u-f-btn-prev hide" href="javascript:void(0)">
+                    <i class="mdi mdi-arrow-left"></i>Back
+                  </a>
+                  <img src="img/icon-svg/auth-graphics.svg" title="">
+                </div>
+                <div id="userMitgliedschaft" class="card-content hide">
+                  <p>Bereits mit Ihrer E-Mail-Adresse und password können Sie sich als Privatperson kostenlos anmelden und selbst Beschwerden, Kommentare oder Nachrichten an andere User schreiben. Falls Sie Ihren Namen angeben möchten, werden Ihre erstellten Inhalte unter diesem Namen veröffentlicht. </p>
+                  <form class="col s12" action="#">
+                    <div class="row">
+                      <div class="input-field">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">E-Mail-Adresse *</label>
+                      </div>
+                      <div class="input-field">
+                        <input id="password" type="password" class="validate">
+                        <label for="password">password *</label>
+                      </div>
+                      <div class="input-field">
+                        <input id="passwordRep" type="password" class="validate">
+                        <label for="passwordRep">password wiederholen *</label>
+                      </div>
+                      <div class="input-field">
+                        <input id="lastName" type="text" class="validate">
+                        <label for="lastName">Vorname</label>
+                      </div>
+                      <div class="input-field">
+                        <input id="firstName" type="text" class="validate">
+                        <label for="firstName">Name</label>
+                      </div>
+                    </div>
+                    <p class="warning">Hinweis: wir geben Ihre E-Mail -Adresse nicht an Dritte weiter, bei uns  erhalten Sie keinen unerwünschen Spam. <a href="#">Datenschutz.</a></p>
+                    <div class="input-field">
+                      <input type="checkbox" class="filled-in" id="filled-in-box-user" />
+                      <label for="filled-in-box-user">Ja, ich habe die <a href="#">Nutzungsbedinungen</a> gelesen und akzeptiert</label>
+                    </div>
+                    <button class="btn center waves-effect waves-light" type="submit" name="action">registrieren</button>
+                  </form>
+                </div>
+                <div id="firmaMitgliedschaft" class="card-content hide">
+                  <p>Nach dem Senden der Formulardaten erhalten Sie von uns eine E-Mail mit einem Verifizierungslink, der Sie zur Eingabe Ihrer Firmendaten führen wird. Sie können den Firmen-Account dann nach Freischaltung 14 Tage lang unverbindlich kostenlos testen, wir unterbreiten Ihnen rechtzeitig vor Ablauf ein Angebot zur weiteren Nutzung.</p>
+                  <p>Haben Sie vorab Fragen zum Firmen-Account? Fordern Sie weitere Informationen hier an: ReclaBox Support</p>
+                  <form class="col s12 firmRegistrarion" action="#">
+                    <div class="row">
+                      <div class="input-field">
+                        <input id="companyName" type="text" class="validate">
+                        <label for="companyName">Company / Institution</label>
+                      </div>
+                      <div class="input-field">
+                        <input id="companyEmail" type="email" class="validate">
+                        <label for="companyEmail">E-Mail-Adresse</label>
+                      </div>
+                    </div>
+                    <p class="warning">Hinweis: wir geben Ihre E-Mail -Adresse nicht an Dritte weiter, bei uns  erhalten Sie keinen unerwünschen Spam. <a href="#">Datenschutz.</a></p>
+                    <div class="input-field">
+                      <input type="checkbox" class="filled-in" id="filled-in-box-firm" />
+                      <label for="filled-in-box-firm">Ja, ich habe die <a href="#">Nutzungsbedinungen</a> gelesen und akzeptiert</label>
+                    </div>
+                    <button class="btn waves-effect waves-light center" type="submit" name="action">registrieren als firma</button>
+                  </form>
+                </div>
+              </div>
+            </div><!-- end forms register and nav -->
+          </div>
+        </div>
+      </div><!-- end users login -->
+
+      <div id="emailSubscribe" class="modal user-form"><!-- email subscribe -->
+        <div class="modal-content">
+          <div class="card-panel no-bg">
+            <div class="card no-bg">
+              <div class="card-image grey lighten-5">
+                <img src="img/icon-svg/email-subscribe.svg" alt="">
+              </div>
+              <div class="card-content">
+                <div class="card-title">
+                  <h6>Newsletter abonnieren</h6>
+                </div>
+                <form class="" action="#">
+                  <div class="row">
+                    <div class="input-field">
+                      <input id="email2" type="email" class="rb-blue-input validate">
+                      <label for="email2">E-Mail-Adresse *</label>
+                    </div>
+                  </div>
+                  <button class="waves-effect full-width waves-light btn btn-theme-pink white-text" type="submit" name="action">ABSCHICKEN</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- end email subscribe -->
+
+      <div id="emailUnsubscribe" class="modal user-form"><!-- email subscribe -->
+        <div class="modal-content">
+          <div class="card-panel no-bg">
+            <div class="card no-bg">
+              <div class="card-image grey lighten-5">
+                <img src="img/icon-svg/email-unsubscribe.svg" alt="">
+              </div>
+              <div class="card-content">
+                <div class="card-title">
+                  <h6>Newsletter abonnieren</h6>
+                </div>
+                <form class="" action="#">
+                  <div class="row">
+                    <div class="input-field">
+                      <input id="email1" type="email" class="rb-blue-input validate">
+                      <label for="email1">E-Mail-Adresse *</label>
+                    </div>
+                  </div>
+                  <button class="waves-effect full-width waves-light btn btn-theme-pink white-text" type="submit" name="action">ABSCHICKEN</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- end email subscribe -->
+    </div><!-- end header modal user forms -->
+  </header>
+
+    <div class="container post">
+      <div class="section"><!-- Hot story -->
+        <div class="row">
+          <div class="col s12 m8 l8">
+            <div class="card-panel no-bg">
+              <div class="card hot-story">
+                <div class="card-content">
+                  <span class="hot-story-text">hot beschwerden</span>
+                  <div class="breadcrumb-wrapper">
+                    <a href="#!" class="breadcrumb">Mobilität und Reisen</a>
+                    <a href="#!" class="breadcrumb">Fluggesellschaften</a>
+                    <a href="#!" class="breadcrumb breadcrumb-last-child">Turkish Airlines</a>
+                  </div>
+                  <div class="card-title">
+                    <h2>
+                      <span class="tooltipped left" href="javascript:void(0)" data-tooltip="Warte seit 5">
+                        <i class="rbi rbi-endgiltig-nicht medium pink-text"></i>
+                      </span>
+                      <a class="" href="#">Lieferung angeblich zugestellt.<!--  Jedoch Liefe-rung nie erhalten. --></a>
+                    </h2>
+                  </div>
+                  <p>Sehr geehrte Damen und Herren, meine Lieferung wurde angeblich zugestellt. Jedoch habe ich die Ware niemals erhalten. Es lag auch kein Zettel im Briefkasten, dass das die Abgabe irgendwo anders erfolgt wäre Sehr geehrte Damen und Herren, meine Lieferung wurde angeblich zugestellt. Jedoch habe ich die Ware niemals erhalten. Es lag auch kein Zettel im Briefkasten, dass das die Abgabe irgendwo anders erfolgt wäre...</p>
+                </div>
+                <div class="card-action">
+                  <a href="#"><i class="mdi mdi-comment-text"></i>&nbsp;536</a>
+                  <a href="#"><i class="rbi rbi-image"></i>&nbsp;12</a>
+                  <a href="#"><i class="rbi rbi-video"></i>&nbsp;7</a>
+                  <a href="#"><i class="mdi mdi-eye"></i>&nbsp;7</a>
+                  <div class="date right">
+                    <span>12.09.2016 | 14:53 Uhr </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4 l4">
+            <div class="card-panel no-bg vertical-union">
+              <div class="card-header">
+                <h6 class="h-title"><a href="#">NEUESTEN FIRMENANTWORTEN</a></h6>
+              </div>
+              <div class="vertical-union-container">
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="card-title">
+                      <i class="mdi mdi-calendar-check teal-text tiny"></i>von Wolf GmbH:
+                    </div>
+                    <p><a href="#">Sehr geehrter Hr. Hülswitt die Gewährleistungszeit...</a></p>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="card-title">
+                      NOBASOL AS:
+                    </div>
+                    <p><a href="#">Sehr geehrter Hr. Hülswitt die Gewährleistungszeit...</a></p>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="card-title">
+                      <i class="mdi mdi-calendar-check teal-text tiny"></i>Rakuten Deutschland:
+                    </div>
+                    <p><a href="#">Sehr geehrter Hr. Hülswitt die Gewährleistungszeit...</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- End Hot story -->
+
+      <div class="section"><!-- Top beschwerden -->
+        <div class="row">
+          <div class="card-panel no-bg carousel-container">
+            <div class="card-header">
+              <h6><a href="#">TOP BESCHWERDEN</a></h6>
+            </div>
+            <div id="topBeschwerden">
+              <div class="card card-carousel">
+                <div class="card-content">
+                  <div class="breadcrumb-wrapper">
+                    <a href="#!" class="breadcrumb">Mobilität und Reisen</a>
+                    <a href="#!" class="breadcrumb breadcrumb-last-child">Fluggesellschaften</a>
+                  </div>
+                  <div class="card-title">
+                    <h6>
+                      <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5"><i class="rbi rbi-noch-nicht-geloste tiny"></i></a>
+                      <a href="#">Warte seit 5 Monaten auf die Rückerstattung!</a>
+                    </h6>
+                  </div>
+                  <p>
+                    Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt,
+                    Ware war dann nicht lieferbar und warte seit Monaten nun auf die. Finger weg von der Firma! Habe vor 5 Monaten
+                  </p>
+                </div>
+                <div class="card-action">
+                  <a href="#"><i class="mdi mdi-comment-text"></i>&nbsp;536</a>
+                  <a href="#"><i class="rbi rbi-image"></i>&nbsp;12</a>
+                  <a href="#"><i class="rbi rbi-video"></i>&nbsp;7</a>
+                  <a href="#"><i class="mdi mdi-eye"></i>&nbsp;7</a>
+                  <div class="date right">
+                    <span>12.09.2016 | 14:53 Uhr </span>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-carousel">
+                <div class="card-content">
+                  <div class="breadcrumb-wrapper">
+                    <a href="#!" class="breadcrumb">Mobilität und Reisen</a>
+                    <a href="#!" class="breadcrumb breadcrumb-last-child">Fluggesellschaften</a>
+                  </div>
+                  <div class="card-title">
+                    <h6>
+                      <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5"><i class="rbi rbi-noch-nicht-geloste tiny"></i></a>
+                      <a href="#">Warte seit 5 Monaten auf die Rückerstattung die Rückerstattung!</a>
+                    </h6>
+                  </div>
+                  <p>Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die 
+                  </p>
+                </div>
+                <div class="card-action">
+                  <a href="#"><i class="mdi mdi-comment-text"></i>&nbsp;536</a>
+                  <a href="#"><i class="rbi rbi-image"></i>&nbsp;12</a>
+                  <a href="#"><i class="rbi rbi-video"></i>&nbsp;7</a>
+                  <a href="#"><i class="mdi mdi-eye"></i>&nbsp;7</a>
+                  <div class="date right">
+                    <span>12.09.2016 | 14:53 Uhr </span>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-carousel">
+                <div class="card-content">
+                  <div class="breadcrumb-wrapper">
+                    <a href="#!" class="breadcrumb">Mobilität und Reisen</a>
+                    <a href="#!" class="breadcrumb breadcrumb-last-child">Fluggesellschaften</a>
+                  </div>
+                  <div class="card-title">
+                    <h6>
+                      <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5"><i class="rbi rbi-noch-nicht-geloste tiny"></i></a>
+                      <a href="#">Warte seit 5 Monaten auf die Rückerstattung!</a>
+                    </h6>
+                  </div>
+                  <p>Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die 
+                  </p>
+                </div>
+                <div class="card-action">
+                  <a href="#"><i class="mdi mdi-comment-text"></i>&nbsp;536</a>
+                  <a href="#"><i class="rbi rbi-image"></i>&nbsp;12</a>
+                  <a href="#"><i class="rbi rbi-video"></i>&nbsp;7</a>
+                  <a href="#"><i class="mdi mdi-eye"></i>&nbsp;7</a>
+                  <div class="date right">
+                    <span>12.09.2016 | 14:53 Uhr </span>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-carousel">
+                <div class="card-content">
+                  <div class="breadcrumb-wrapper">
+                    <a href="#!" class="breadcrumb">Mobilität und Reisen</a>
+                    <a href="#!" class="breadcrumb breadcrumb-last-child">Fluggesellschaften</a>
+                  </div>
+                  <div class="card-title">
+                    <h6>
+                      <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5"><i class="rbi rbi-noch-nicht-geloste tiny"></i></a>
+                      <a href="#">Warte seit 5 Monaten auf die Rückerstattung die Rückerstattung!</a>
+                    </h6>
+                  </div>
+                  <p>Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die 
+                  </p>
+                </div>
+                <div class="card-action">
+                  <a href="#"><i class="mdi mdi-comment-text"></i>&nbsp;536</a>
+                  <a href="#"><i class="rbi rbi-image"></i>&nbsp;12</a>
+                  <a href="#"><i class="rbi rbi-video"></i>&nbsp;7</a>
+                  <a href="#"><i class="mdi mdi-eye"></i>&nbsp;7</a>
+                  <div class="date right">
+                    <span>12.09.2016 | 14:53 Uhr </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- End Top beschwerden -->
+
+      <div class="section"><!-- neueste beschwerden -->
+        <div class="row">
+          <div class="card-panel no-bg vertical-union carousel-container">
+            <div class="card-header"><h6><a href="#">NEUESTE BESCHWERDEN</a></h6></div>
+            <div id="neuesteBeschwerden">
+              <div class="vertical-union-container card-carousel">
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="breadcrumb-wrapper">
+                      <a href="#!" class="breadcrumb">Mobilität und Reisen</a>
+                      <a href="#!" class="breadcrumb breadcrumb-last-child">Fluggesellschaften</a>
+                    </div>
+                    <div class="card-title">
+                      <h6>
+                        <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5"><i class="rbi rbi-noch-nicht-geloste tiny"></i></a>
+                        <a href="#">Warte seit 5 Monaten auf die Rückerstattung die Rückerstattung!</a>
+                      </h6>
+                    </div>
+                    <p>Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die 
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#"><i class="mdi mdi-comment-text"></i>&nbsp;536</a>
+                    <a href="#"><i class="rbi rbi-image"></i>&nbsp;12</a>
+                    <a href="#"><i class="rbi rbi-video"></i>&nbsp;7</a>
+                    <a href="#"><i class="mdi mdi-eye"></i>&nbsp;7</a>
+                    <div class="date right">
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="breadcrumb-wrapper">
+                      <a href="#!" class="breadcrumb">Mobilität und Reisen</a>
+                      <a href="#!" class="breadcrumb breadcrumb-last-child">Fluggesellschaften</a>
+                    </div>
+                    <div class="card-title">
+                      <h6>
+                        <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5"><i class="rbi rbi-noch-nicht-geloste tiny"></i></a>
+                        <a href="#">Warte seit 5 Monaten auf die Rückerstattung die Rückerstattung! Warte seit 5 Monaten auf die Rückerstattung</a>
+                      </h6>
+                    </div>
+                    <p>Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die 
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#"><i class="mdi mdi-comment-text"></i>&nbsp;536</a>
+                    <a href="#"><i class="rbi rbi-image"></i>&nbsp;12</a>
+                    <a href="#"><i class="rbi rbi-video"></i>&nbsp;7</a>
+                    <a href="#"><i class="mdi mdi-eye"></i>&nbsp;7</a>
+                    <div class="date right">
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="breadcrumb-wrapper">
+                      <a href="#!" class="breadcrumb">Mobilität und Reisen</a>
+                      <a href="#!" class="breadcrumb breadcrumb-last-child">Fluggesellschaften</a>
+                    </div>
+                    <div class="card-title">
+                      <h6>
+                        <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5"><i class="rbi rbi-noch-nicht-geloste tiny"></i></a>
+                        <a href="#">Warte seit 5 Monaten auf die Rückerstattung die Rückerstattung!</a>
+                      </h6>
+                    </div>
+                    <p>Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die 
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#"><i class="mdi mdi-comment-text"></i>&nbsp;536</a>
+                    <a href="#"><i class="rbi rbi-image"></i>&nbsp;12</a>
+                    <a href="#"><i class="rbi rbi-video"></i>&nbsp;7</a>
+                    <a href="#"><i class="mdi mdi-eye"></i>&nbsp;7</a>
+                    <div class="date right">
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="vertical-union-container card-carousel">
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="breadcrumb-wrapper">
+                      <!--<a href="#!" class="breadcrumb">Mobilität und Reisen</a>-->
+                      <!--<a href="#!" class="breadcrumb breadcrumb-last-child">Fluggesellschaften</a>-->
+											<span class="breadcrumb-last-child">Fluggesellschaften</span>
+                    </div>
+                    <div class="card-title">
+                      <h6>
+                        <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5"><i class="rbi rbi-noch-nicht-geloste tiny"></i></a>
+                        <a href="#">Warte seit 5 Monaten auf die Rückerstattung die Rückerstattung!</a>
+                      </h6>
+                    </div>
+                    <p>Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die 
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#"><i class="mdi mdi-comment-text"></i>&nbsp;536</a>
+                    <a href="#"><i class="rbi rbi-image"></i>&nbsp;12</a>
+                    <a href="#"><i class="rbi rbi-video"></i>&nbsp;7</a>
+                    <a href="#"><i class="mdi mdi-eye"></i>&nbsp;7</a>
+                    <div class="date right">
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="breadcrumb-wrapper">
+                      <a href="#!" class="breadcrumb">Mobilität und Reisen</a>
+                      <a href="#!" class="breadcrumb breadcrumb-last-child">Fluggesellschaften</a>
+                    </div>
+                    <div class="card-title">
+                      <h6>
+                        <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5"><i class="rbi rbi-noch-nicht-geloste tiny"></i></a>
+                        <a href="#">Warte seit 5 Monaten auf die Rückerstattung die Rückerstattung! Warte seit 5 Monaten auf die Rückerstattung</a>
+                      </h6>
+                    </div>
+                    <p>Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die 
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#"><i class="mdi mdi-comment-text"></i>&nbsp;536</a>
+                    <a href="#"><i class="rbi rbi-image"></i>&nbsp;12</a>
+                    <a href="#"><i class="rbi rbi-video"></i>&nbsp;7</a>
+                    <a href="#"><i class="mdi mdi-eye"></i>&nbsp;7</a>
+                    <div class="date right">
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="breadcrumb-wrapper">
+                      <a href="#!" class="breadcrumb">Mobilität und Reisen</a>
+                      <a href="#!" class="breadcrumb breadcrumb-last-child">Fluggesellschaften</a>
+                    </div>
+                    <div class="card-title">
+                      <h6>
+                        <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5"><i class="rbi rbi-noch-nicht-geloste tiny"></i></a>
+                        <a href="#">Warte seit 5 Monaten auf die Rückerstattung die Rückerstattung!</a>
+                      </h6>
+                    </div>
+                    <p>Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die 
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#"><i class="mdi mdi-comment-text"></i>&nbsp;536</a>
+                    <a href="#"><i class="rbi rbi-image"></i>&nbsp;12</a>
+                    <a href="#"><i class="rbi rbi-video"></i>&nbsp;7</a>
+                    <a href="#"><i class="mdi mdi-eye"></i>&nbsp;7</a>
+                    <div class="date right">
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="vertical-union-container card-carousel">
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="breadcrumb-wrapper">
+                      <a href="#!" class="breadcrumb">Mobilität und Reisen</a>
+                      <a href="#!" class="breadcrumb breadcrumb-last-child">Fluggesellschaften</a>
+                    </div>
+                    <div class="card-title">
+                      <h6>
+                        <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5"><i class="rbi rbi-noch-nicht-geloste tiny"></i></a>
+                        <a href="#">Warte seit 5 Monaten auf die Rückerstattung die Rückerstattung! Warte seit 5 Monaten auf die Rückerstattung</a>
+                      </h6>
+                    </div>
+                    <p>Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die 
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#"><i class="mdi mdi-comment-text"></i>&nbsp;536</a>
+                    <a href="#"><i class="rbi rbi-image"></i>&nbsp;12</a>
+                    <a href="#"><i class="rbi rbi-video"></i>&nbsp;7</a>
+                    <a href="#"><i class="mdi mdi-eye"></i>&nbsp;7</a>
+                    <div class="date right">
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="breadcrumb-wrapper">
+                      <a href="#!" class="breadcrumb">Mobilität und Reisen</a>
+                      <a href="#!" class="breadcrumb breadcrumb-last-child">Fluggesellschaften</a>
+                    </div>
+                    <div class="card-title">
+                      <h6>
+                        <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5"><i class="rbi rbi-noch-nicht-geloste tiny"></i></a>
+                        <a href="#">Warte seit 5 Monaten auf die Rückerstattung die Rückerstattung!</a>
+                      </h6>
+                    </div>
+                    <p>Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die 
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#"><i class="mdi mdi-comment-text"></i>&nbsp;536</a>
+                    <a href="#"><i class="rbi rbi-image"></i>&nbsp;12</a>
+                    <a href="#"><i class="rbi rbi-video"></i>&nbsp;7</a>
+                    <a href="#"><i class="mdi mdi-eye"></i>&nbsp;7</a>
+                    <div class="date right">
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="breadcrumb-wrapper">
+                      <a href="#!" class="breadcrumb">Mobilität und Reisen</a>
+                      <a href="#!" class="breadcrumb breadcrumb-last-child">Fluggesellschaften</a>
+                    </div>
+                    <div class="card-title">
+                      <h6>
+                        <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5"><i class="rbi rbi-noch-nicht-geloste tiny"></i></a>
+                        <a href="#">Warte seit 5 Monaten auf die Rückerstattung die Rückerstattung!</a>
+                      </h6>
+                    </div>
+                    <p>Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die 
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#"><i class="mdi mdi-comment-text"></i>&nbsp;536</a>
+                    <a href="#"><i class="rbi rbi-image"></i>&nbsp;12</a>
+                    <a href="#"><i class="rbi rbi-video"></i>&nbsp;7</a>
+                    <a href="#"><i class="mdi mdi-eye"></i>&nbsp;7</a>
+                    <div class="date right">
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="vertical-union-container card-carousel">
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="breadcrumb-wrapper">
+                      <a href="#!" class="breadcrumb">Mobilität und Reisen</a>
+                      <a href="#!" class="breadcrumb breadcrumb-last-child">Fluggesellschaften</a>
+                    </div>
+                    <div class="card-title">
+                      <h6>
+                        <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5"><i class="rbi rbi-noch-nicht-geloste tiny"></i></a>
+                        <a href="#">Warte seit 5 Monaten auf die Rückerstattung die Rückerstattung!</a>
+                      </h6>
+                    </div>
+                    <p>Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die 
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#"><i class="mdi mdi-comment-text"></i>&nbsp;536</a>
+                    <a href="#"><i class="rbi rbi-image"></i>&nbsp;12</a>
+                    <a href="#"><i class="rbi rbi-video"></i>&nbsp;7</a>
+                    <a href="#"><i class="mdi mdi-eye"></i>&nbsp;7</a>
+                    <div class="date right">
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="breadcrumb-wrapper">
+                      <a href="#!" class="breadcrumb">Mobilität und Reisen</a>
+                      <a href="#!" class="breadcrumb breadcrumb-last-child">Fluggesellschaften</a>
+                    </div>
+                    <div class="card-title">
+                      <h6>
+                        <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5"><i class="rbi rbi-noch-nicht-geloste tiny"></i></a>
+                        <a href="#">Warte seit 5 Monaten auf die Rückerstattung die Rückerstattung!</a>
+                      </h6>
+                    </div>
+                    <p>Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die 
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#"><i class="mdi mdi-comment-text"></i>&nbsp;536</a>
+                    <a href="#"><i class="rbi rbi-image"></i>&nbsp;12</a>
+                    <a href="#"><i class="rbi rbi-video"></i>&nbsp;7</a>
+                    <a href="#"><i class="mdi mdi-eye"></i>&nbsp;7</a>
+                    <div class="date right">
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="breadcrumb-wrapper">
+                      <a href="#!" class="breadcrumb">Mobilität und Reisen</a>
+                      <a href="#!" class="breadcrumb breadcrumb-last-child">Fluggesellschaften</a>
+                    </div>
+                    <div class="card-title">
+                      <h6>
+                        <a class="tooltipped" href="javascript:void(0)" data-tooltip="Warte seit 5"><i class="rbi rbi-noch-nicht-geloste tiny"></i></a>
+                        <a href="#">Warte seit 5 Monaten auf die Rückerstattung die Rückerstattung!</a>
+                      </h6>
+                    </div>
+                    <p>Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die Finger weg von der Firma! Habe vor 5 Monaten Waren im Wert von 90 EUR vorausbezahlt, Ware war dann nicht lieferbar und warte seit Monaten nun auf die 
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#"><i class="mdi mdi-comment-text"></i>&nbsp;536</a>
+                    <a href="#"><i class="rbi rbi-image"></i>&nbsp;12</a>
+                    <a href="#"><i class="rbi rbi-video"></i>&nbsp;7</a>
+                    <a href="#"><i class="mdi mdi-eye"></i>&nbsp;7</a>
+                    <div class="date right">
+                      <span>12.09.2016 | 14:53 Uhr </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- end neueste beschwerden -->
+
+      <div class="section"><!-- neu bei reclabox, die neuesten kommentare, schlagworte -->
+        <div class="row">
+          <div class="col s12 m4 l4">
+            <div class="card-panel no-bg vertical-union widget">
+              <div class="card-header">
+                <h6><a href="#">NEU BEI RECLABOX</a></h6>
+              </div>
+              <div class="vertical-union-container">
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="card-title">
+                      <a href="#">ReclaBox Firmen-Mitgliedschaft:</a>
+                    </div>
+                    <p>Seit geraumer Zeit gibt es für Firmen die Mögl...
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="card-title">
+                      <a href="#">Kommentieren bei ReclaBox:</a>
+                    </div>
+                    <p>Die Beschwerdeführer können sich ab heute allein...
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="card-title">
+                      <a href="#">Beschwerde lösen</a>
+                    </div>
+                    <p>Eingeloggte Nutzer können selbst ihre Besch...
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="card-title">
+                      <a href="#">Beschwerde lösen</a>
+                    </div>
+                    <p>Eingeloggte Nutzer können selbst ihre Bes...
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="card no-bg">
+                  <div class="card-content">
+                    <div class="card-title">
+                      <a href="#">Beschwerde als pdf:</a>
+                    </div>
+                    <p>Jede Beschwerde kann als pdf gespeichert... </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m5 l5">
+            <div class="card-panel no-bg vertical-union widget">
+              <div class="card-header">
+                <h6><a href="#">DIE NEUESTEN KOMMENTARE</a></h6>
+              </div>
+              <div class="vertical-union-container">
+                  <div class="card no-bg horizontal">
+                  <div class="card-image">
+                      <div class="avatar-wrapper pink darken-4">
+                        <span>DD</span>
+                      </div>
+                  </div>
+                  <div class="card-stacked">
+                      <div class="card-content">
+                          <div class="card-title">
+                              Jenna Marbles:
+                          </div>
+                          <p><a href="#">Die Beschwerdeführer können sich ab heute allein...</a></p>
+                      </div>
+                  </div>
+                </div>
+                  <div class="divider"></div>
+                  <div class="card no-bg horizontal">
+                      <div class="card-image">
+                        <div class="avatar-wrapper purple darken-4">
+                          <span>JM</span>
+                        </div>
+                      </div>
+                      <div class="card-stacked">
+                          <div class="card-content">
+                              <div class="card-title">
+                                  Jenna Marbles:
+                              </div>
+                              <p><a href="#">Die Beschwerdeführer können sich ab heute allein...</a></p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="card no-bg horizontal">
+                      <div class="card-image">
+                        <div class="avatar-wrapper red darken-4">
+                          <span>WD</span>
+                        </div>
+                      </div>
+                      <div class="card-stacked">
+                          <div class="card-content">
+                              <div class="card-title">
+                                  Jenna Marbles:
+                              </div>
+                              <p><a href="#">Die Beschwerdeführer können sich ab heute allein...</a></p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="card no-bg horizontal">
+                      <div class="card-image">
+                        <div class="avatar-wrapper blue darken-4">
+                          <span>WD</span>
+                        </div>
+                      </div>
+                      <div class="card-stacked">
+                        <div class="card-content">
+                          <div class="card-title">
+                              Jenna Marbles:
+                          </div>
+                          <p><a href="#">Die Beschwerdeführer können sich ab heute allein...</a></p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="card no-bg horizontal">
+                      <div class="card-image">
+                        <div class="avatar-wrapper green darken-4">
+                          <span>WD</span>
+                        </div>
+                      </div>
+                      <div class="card-stacked">
+                          <div class="card-content">
+                              <div class="card-title">
+                                  Jenna Marbles:
+                              </div>
+                              <p><a href="#">Die Beschwerdeführer können sich ab heute allein...</a></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m3 l3">
+            
+            <div class="card-panel no-bg widget-tags">
+              <div class="card-header">
+                <h6><a href="#">SCHLAGWORTE</a></h6>
+              </div>
+              <div class="card no-bg">
+                <div class="card-content chips-container">
+                  <a class="chip waves-effect waves-light" href="javascript:void(0)">VERSICHERUNG</a>
+                  <a class="chip pink lighten-4 white-text waves-effect waves-light" href="javascript:void(0)">DEUTSCHE BAHN</a>
+                  <a class="chip waves-effect waves-light" href="javascript:void(0)">FREENET</a>
+                  <a class="chip pink accent-2 white-text waves-effect waves-light" href="javascript:void(0)">FLEXSTROM</a>
+                  <a class="chip pink lighten-5 waves-effect waves-light" href="javascript:void(0)">E WIE EINFACH STROM & GAS</a>
+                  <a class="chip pink accent-2 white-text waves-effect waves-light" href="javascript:void(0)">DPD</a>
+                  <a class="chip waves-effect waves-light" href="javascript:void(0)">VERSICHERUNG</a>
+                  <a class="chip waves-effect waves-light" href="javascript:void(0)">DPD</a>
+                  <a class="chip waves-effect waves-light" href="javascript:void(0)">1x1</a>
+                  <a class="chip waves-effect waves-light" href="javascript:void(0)">DPD</a>
+                  <a class="chip pink accent-2 white-text waves-effect waves-light" href="javascript:void(0)">VERSICHERUNG</a>
+                  <a class="chip pink lighten-4 white-text waves-effect waves-light" href="javascript:void(0)">FREENET</a>
+                  <a class="chip pink lighten-5 white-text waves-effect waves-light" href="javascript:void(0)">FLEXSTROM</a>
+                  <a class="chip waves-effect waves-light" href="javascript:void(0)">DEUTSCHE BAHN</a>
+                  <a class="chip waves-effect waves-light" href="javascript:void(0)">DPD</a>
+                  <a class="chip pink lighten-5 waves-effect waves-light" href="javascript:void(0)">E WIE EINFACH STROM & GAS</a>
+                  <a class="chip pink accent-2 white-text waves-effect waves-light" href="javascript:void(0)">DPD</a>
+                  <a class="chip pink accent-2 white-text waves-effect waves-light" href="javascript:void(0)">VERSICHERUNG</a>
+                  <a class="chip pink lighten-4 white-text waves-effect waves-light" href="javascript:void(0)">FREENET</a>
+                  <a class="chip pink lighten-5 waves-effect waves-light" href="javascript:void(0)">E WIE EINFACH STROM</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- end neueste beschwerden, die neuesten kommentare, schlagworte -->
+    </div>
+
+ </div>
+
+  <!--  Scripts-->
+  <script src="js/init.js"></script>
+
+  </body>
+</html>

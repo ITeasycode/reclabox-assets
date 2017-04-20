@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Template - Home</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/reclabox-icons/1.1.0/reclabox-icon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/materialdesignicons.min.css"/>
+  <link href="css/reclabox-materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+</head>
+<body>
+<div class="wrapper grey lighten-5">
+
+  <header class="site-header blue-grey">
+    <div class="navbar">
+      <nav class="" role="navigation">
+        <div class="nav-wrapper">
+          <ul>
+            <li>
+              <a href="#" data-activates="slide-out" class="button-collapse waves-effect">
+                <div class="arrow-hamburger">
+                  <div class="line arrow_top"></div>
+                  <div class="line arrow_line"></div>
+                  <div class="line arrow_bottom"></div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <a id="logo-container" href="javascript:void(0)" class="brand-logo hide"><img src="img/img-site/logo-reclabox.jpg" alt="ReclaBox"></a>
+          <div class="nav-header nav-theme hide">
+            <ul id="navHeader" class="nav-menu hide-on-med-and-down flex-wrapper">
+              <li><a class="active" href="javascript:void(0)">BESCHWERDE LESEN</a></li>
+              <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li>
+            </ul>
+          </div>
+          <ul class="right hide-on-med-and-down nav-right currently-logged users-menu">
+            <li>
+              <form id="search-form">
+                <div class="search-widget">
+                  <button class="search-button"><i class="material-icons small">search</i></button>
+                  <button class="search-close-button"><i class="material-icons small">close</i></button>
+                  <input name="q" type="text" id="search-input" autocomplete="off"/>
+                  <label for="search-input">Name, Firma oder Schlagwort</label>
+                </div>
+              </form>
+            </li>
+            <li>
+              <a class="btn waves-effect waves-light" href="#emailSubscribe">subscribe</a>
+            </li>
+            <li>
+              <a class="btn waves-effect waves-light" href="#emailUnsubscribe">unsubscribe</a>
+            </li>
+            <li>
+              <a class="btn waves-effect waves-light" href="#usersLogin">login/regisrieren</a>
+            </li>
+            <!-- <li><a class="btn waves-effect waves-light" href="#usersRegister">registrieren </a></li> -->
+          </ul>
+        </div>
+      </nav>
+    </div><!-- end navbar-fixed -->
+
+    <div class="container"><!-- logo and nav-menu -->
+      <div class="row">
+        <div class="brand-logo-wrapper">
+          <a id="logo-container" href="javascript:void(0)" class="brand-logo"><img src="img/icon-svg/logo.svg" alt="ReclaBox"></a>
+        </div>
+        <div class="navbar navbar-bootom">
+          <nav class="" role="navigation">
+            <div class="nav-wrapper">
+              <div class="nav-header nav-theme">
+                <ul id="navHeader" class="nav-menu hide-on-med-and-down flex-wrapper">
+                  <li><a class="active" href="javascript:void(0)">BESCHWERDE LESEN</a></li>
+                  <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li>
+                  <!-- <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li> -->
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div><!-- logo and nav-menu -->
+
+    <!-- components dropdown -->
+    <div class="slide-nav-wrapper"><!-- heade left nav -->
+      <ul id="slide-out" class="side-nav slide-nav">
+        <li><a href="beschwerde.html">Beschwerde</a></li>
+        <li><a href="beschwerde-lesen.html">Beschwerde Lesen</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="company-account.html">Company Account</a></li>
+        <li><a href="company-account-profil.html">Company Account Profil</a></li>
+        <li><a href="company-account-reclaRank-seal.html">Company Account ReclaRank Seal</a></li>
+        <li><a href="company-account-links.html">Company Account Links</a></li>
+        <li><a href="company-account-automatic.html">Company Account Automatic</a></li>
+        <li><a href="company-public.html">Company Public</a></li>
+        <li><a href="company-rechnungen.html">Company Rechnungen</a></li>
+        <li><a href="edit-email-sending.html">Edit Email Sending</a></li>
+        <li><a href="firmen.html">Firmen</a></li>
+        <li><a href="help.html">Help</a></li>
+        <li><a href="list-articles.html">List Articles</a></li>
+        <li><a href="list-emails.html">List Emails</a></li>
+        <li><a href="nutzungsbedingungen.html">Nutzungsbedingungen</a></li>
+        <li><a href="request-firm-management.html">Request Firm Management</a></li>
+        <li><a href="schreiben.html">Schreiben</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="vorschau.html">Vorschau</a></li>
+        <li><a href="404.html">404</a></li>
+
+        <li><a href="email-confirm.html">email confirm</a></li>
+      </ul>
+    </div><!-- end heade left nav -->
+
+    <div class="modal-container"><!-- header modal user forms -->
+      <div id="usersLogin" class="modal user-form"><!-- users login -->
+        <div class="modal-content">
+          <div class="card-panel no-bg">
+            <div class="card-header white tabs-wrapper">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a class="active" href="#userLoginTabContent">Login</a></li>
+                <li class="tab"><a class="" href="#userRegisterTabContent">Register</a></li>
+              </ul>
+            </div>
+            <div id="userLoginTabContent" class="card no-bg"><!-- forms login and passwrd recovery -->
+              <div class="card-image grey lighten-5">
+                <a class="icon-floating btn u-f-btn-prev hide" href="javascript:void(0)">
+                  <i class="mdi mdi-arrow-left"></i>Back
+                </a>
+                <img src="img/icon-svg/auth-graphics.svg" title="">
+              </div>
+              <div id="formLogin" class="card-content form-login">
+                <form class="" action="#">
+                  <div class="input-field">
+                    <input id="emailLogin" type="email" class="validate">
+                    <label for="emailLogin">Email Adresse</label>
+                  </div>
+                  <div class="input-field">
+                    <input id="passwordLogin" type="password" class="validate">
+                    <label for="passwordLogin">password</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="checkbox" class="filled-in" id="filled-in-box" />
+                    <label for="filled-in-box">Angemeldet bleiben</label>
+                  </div>
+                  <button id="btn-waves" class="full-width btn waves-effect waves-light" type="submit" name="action">einloggen</button>
+                </form>
+                <div class="questions">
+                  <a class="center" href="#newPassword">password vergessen?</a>
+                  <a class="center" href="#">Noch night Mitglied?</a>
+                </div>
+              </div>
+              <div id="newPassword" class="card-content hide form-newpassword">
+                <div class="card-title">
+                  <h6>Haben Sie Ihr password vergessen?</h6>
+                </div>
+                <p>
+                  Bitte geben Sie Ihre E-Mail-Adresse ein, mit der Sie sich bereits registriert haben. Vergeben Sie sich außerdem ein neues password. Sie erhalten dann eine E-Mail mit einem Freischaltlink. Nach- dem Sie diesen bestätigt haben, können Sie sich
+                </p>
+                <form class="" action="#">
+                  <div class="input-field">
+                    <input id="email0" type="email" class="rb-blue-input validate">
+                    <label for="email0">E-Mail-Adresse *</label>
+                  </div>
+                  <div class="input-field">
+                    <input id="password0" type="password" class="rb-blue-input validate">
+                    <label for="password0">Neu password *</label>
+                  </div>
+                  <div class="input-field">
+                    <input id="passwordRep0" type="password" class="rb-blue-input validate">
+                    <label for="passwordRep0">Neu password (wiederholen)*</label>
+                  </div>
+                  <button class="full-width btn waves-effect waves-light" type="submit" name="action">ABSCHICKEN</button>
+                </form>
+              </div>
+            </div><!-- end forms login and recovery -->
+            <div id="userRegisterTabContent" class="card no-bg"><!-- forms register and nav -->
+              <div class="register-nav invisible">
+                <div class="card-content center">
+                  <p>Chooose the type of account</p>
+                </div>
+                <ul class="table-wrapper">
+                  <li class="item">
+                    <a class="center btn-register-nav" href="#userMitgliedschaft"><i class="mdi mdi-emoticon-sad"></i></a>
+                    <p class="center">I am <br> a consumer</p>
+                  </li>
+                  <li class="item">
+                    <a class="center btn-register-nav" href="#firmaMitgliedschaft"><i class="mdi mdi-domain"></i></a>
+                    <p class="center">I am organisation <br> or company</p>
+                  </li>
+                </ul>
+              </div>
+              <div id="registerForms" class="register-forms">
+                <div class="card-image hide">
+                  <a class="icon-floating btn u-f-btn-prev hide" href="javascript:void(0)">
+                    <i class="mdi mdi-arrow-left"></i>Back
+                  </a>
+                  <img src="img/icon-svg/auth-graphics.svg" title="">
+                </div>
+                <div id="userMitgliedschaft" class="card-content hide">
+                  <p>Bereits mit Ihrer E-Mail-Adresse und password können Sie sich als Privatperson kostenlos anmelden und selbst Beschwerden, Kommentare oder Nachrichten an andere User schreiben. Falls Sie Ihren Namen angeben möchten, werden Ihre erstellten Inhalte unter diesem Namen veröffentlicht. </p>
+                  <form class="col s12" action="#">
+                    <div class="row">
+                      <div class="input-field">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">E-Mail-Adresse *</label>
+                      </div>
+                      <div class="input-field">
+                        <input id="password" type="password" class="validate">
+                        <label for="password">password *</label>
+                      </div>
+                      <div class="input-field">
+                        <input id="passwordRep" type="password" class="validate">
+                        <label for="passwordRep">password wiederholen *</label>
+                      </div>
+                      <div class="input-field">
+                        <input id="lastName" type="text" class="validate">
+                        <label for="lastName">Vorname</label>
+                      </div>
+                      <div class="input-field">
+                        <input id="firstName" type="text" class="validate">
+                        <label for="firstName">Name</label>
+                      </div>
+                    </div>
+                    <p class="warning">Hinweis: wir geben Ihre E-Mail -Adresse nicht an Dritte weiter, bei uns  erhalten Sie keinen unerwünschen Spam. <a href="#">Datenschutz.</a></p>
+                    <div class="input-field">
+                      <input type="checkbox" class="filled-in" id="filled-in-box-user" />
+                      <label for="filled-in-box-user">Ja, ich habe die <a href="#">Nutzungsbedinungen</a> gelesen und akzeptiert</label>
+                    </div>
+                    <button class="btn center waves-effect waves-light" type="submit" name="action">registrieren</button>
+                  </form>
+                </div>
+                <div id="firmaMitgliedschaft" class="card-content hide">
+                  <p>Nach dem Senden der Formulardaten erhalten Sie von uns eine E-Mail mit einem Verifizierungslink, der Sie zur Eingabe Ihrer Firmendaten führen wird. Sie können den Firmen-Account dann nach Freischaltung 14 Tage lang unverbindlich kostenlos testen, wir unterbreiten Ihnen rechtzeitig vor Ablauf ein Angebot zur weiteren Nutzung.</p>
+                  <p>Haben Sie vorab Fragen zum Firmen-Account? Fordern Sie weitere Informationen hier an: ReclaBox Support</p>
+                  <form class="col s12 firmRegistrarion" action="#">
+                    <div class="row">
+                      <div class="input-field">
+                        <input id="companyName" type="text" class="validate">
+                        <label for="companyName">Company / Institution</label>
+                      </div>
+                      <div class="input-field">
+                        <input id="companyEmail" type="email" class="validate">
+                        <label for="companyEmail">E-Mail-Adresse</label>
+                      </div>
+                    </div>
+                    <p class="warning">Hinweis: wir geben Ihre E-Mail -Adresse nicht an Dritte weiter, bei uns  erhalten Sie keinen unerwünschen Spam. <a href="#">Datenschutz.</a></p>
+                    <div class="input-field">
+                      <input type="checkbox" class="filled-in" id="filled-in-box-firm" />
+                      <label for="filled-in-box-firm">Ja, ich habe die <a href="#">Nutzungsbedinungen</a> gelesen und akzeptiert</label>
+                    </div>
+                    <button class="btn waves-effect waves-light center" type="submit" name="action">registrieren als firma</button>
+                  </form>
+                </div>
+              </div>
+            </div><!-- end forms register and nav -->
+          </div>
+        </div>
+      </div><!-- end users login -->
+
+      <div id="emailSubscribe" class="modal user-form"><!-- email subscribe -->
+        <div class="modal-content">
+          <div class="card-panel no-bg">
+            <div class="card no-bg">
+              <div class="card-image grey lighten-5">
+                <img src="img/icon-svg/email-subscribe.svg" alt="">
+              </div>
+              <div class="card-content">
+                <div class="card-title">
+                  <h6>Newsletter abonnieren</h6>
+                </div>
+                <form class="" action="#">
+                  <div class="row">
+                    <div class="input-field">
+                      <input id="email2" type="email" class="rb-blue-input validate">
+                      <label for="email2">E-Mail-Adresse *</label>
+                    </div>
+                  </div>
+                  <button class="waves-effect full-width waves-light btn btn-theme-pink white-text" type="submit" name="action">ABSCHICKEN</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- end email subscribe -->
+
+      <div id="emailUnsubscribe" class="modal user-form"><!-- email subscribe -->
+        <div class="modal-content">
+          <div class="card-panel no-bg">
+            <div class="card no-bg">
+              <div class="card-image grey lighten-5">
+                <img src="img/icon-svg/email-unsubscribe.svg" alt="">
+              </div>
+              <div class="card-content">
+                <div class="card-title">
+                  <h6>Newsletter abonnieren</h6>
+                </div>
+                <form class="" action="#">
+                  <div class="row">
+                    <div class="input-field">
+                      <input id="email1" type="email" class="rb-blue-input validate">
+                      <label for="email1">E-Mail-Adresse *</label>
+                    </div>
+                  </div>
+                  <button class="waves-effect full-width waves-light btn btn-theme-pink white-text" type="submit" name="action">ABSCHICKEN</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- end email subscribe -->
+    </div><!-- end header modal user forms -->
+  </header>
+
+    <div class="container page-cat post">
+      <div class="section">
+        <div class="row">
+          <div class="col s12">
+            <div class="card-panel">
+              <div class="card no-bg">
+                <div class="card-categories">
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                       <h6 class=""><i class="rbi rbi-handshake small"></i><a href="#">Ämter und Behörden</a></h6>
+                      </li>
+                     <li class="collection-item"><a href="#">Botschaften<span class="count"> (2)</span></a></li>
+                     <li class="collection-item"><a href="#">Bundesbehörden<span class="count"> (35)</span></a></li>
+                     <li class="collection-item"><a href="#">Gemeinden<span class="count"> (2)</span></a></li>
+                     <li class="collection-item"><a href="#">Kommunalbehörden<span class="count"> (45)</span></a></li>
+                     <li class="collection-item"><a href="#">Landesbehörden<span class="count"> (25)</span></a></li>
+                     <li class="collection-item"><a href="#">Landratsämter<span class="count"> (9)</span></a></li>
+                     <li class="collection-item"><a href="#">Polizei<span class="count"> (7)</span></a></li>
+                     <li class="collection-item"><a href="#">Städte<span class="count"> (34)</span></a></li>
+                    </ul>
+                  </div>
+
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                        <h6><i class="rbi rbi-interview small"></i><a href="#">Arbeit</a></h6>
+                      </li>
+                      <li class="collection-item"><a href="#">Arbeitgeber<span class="count"> (2)</span></a></li>
+                      <li class="collection-item"><a href="#">Arbeitsagenturen<span class="count"> (29)</span></a></li>
+                      <li class="collection-item"><a href="#">Gewerkschaften<span class="count"> (3)</span></a></li>
+                      <li class="collection-item"><a href="#">Jobbörsen<span class="count"> (8)</span></a></li>
+                      <li class="collection-item"><a href="#">Jobcenter<span class="count"> (40)</span></a></li>
+                      <li class="collection-item"><a href="#">Zeitarbeit & Personalvermittlung<span class="count"> (22)</span></a></li>
+                      <li class="collection-item"><a href="#">Sonstiges<span class="count"> (4)</span></a></li>
+                    </ul>
+                  </div>
+
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                        <h6><i class="rbi rbi-car small"></i><a href="#">Auto und Motor</a></h6>
+                      </li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (9)</span></a></li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (12)</span></a></li>
+                    </ul>
+                  </div>
+
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                        <h6><i class="rbi rbi-driller small"></i><a href="#">Bauen und Handwerk</a></h6>
+                      </li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (9)</span></a></li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (12)</span></a></li>
+                     </ul>
+                  </div>
+
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                        <h6><i class="rbi small rbi-mortarboard"></i><a href="#">Bildung und Betreuung</a></h6>
+                      </li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (9)</span></a></li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (12)</span></a></li>
+                     </ul>
+                  </div>
+
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                        <h6><a href="#"><i class="rbi small rbi-newspaper"></i> Dienstleistungen</a></h6>
+                      </li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (9)</span></a></li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (12)</span></a></li>
+                     </ul>
+                  </div>
+
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                        <h6><i class="rbi small rbi-groceries"></i><a href="#">Essen und Trinken</a></h6>
+                      </li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (9)</span></a></li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (12)</span></a></li>
+                     </ul>
+                  </div>
+
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                        <h6><i class="rbi small rbi-money"></i><a href="#">Finanzen und Recht</a></h6>
+                      </li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (9)</span></a></li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (12)</span></a></li>
+                     </ul>
+                  </div>
+
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                        <h6><i class="rbi small rbi-bicycle"></i><a href="#">Freizeit und Sport</a></h6>
+                      </li>
+                      <li class="collection-item"><a href="#">Fahrradhandel und -reparatur<span class="count"> (16)</span></a></li>
+                      <li class="collection-item"><a href="#">Fahrradhersteller<span class="count"> (2)</span></a></li>
+                      <li class="collection-item"><a href="#">Fitness Clubs<span class="count"> (75)</span></a></li>
+                      <li class="collection-item"><a href="#">Frei- und Schwimmbäder<span class="count"> (7)</span></a></li>
+                      <li class="collection-item"><a href="#">Freizeitparks<span class="count"> (77)</span></a></li>
+                      <li class="collection-item"><a href="#">Sportartikelhersteller><span class="count"> (83)</span></a></li>
+                      <li class="collection-item"><a href="#">Sportschulen<span class="count"> (3)</span></a></li>
+                      <li class="collection-item"><a href="#">Sportvereine<span class="count"> (4)</span></a></li>
+                     </ul>
+                  </div>
+
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                        <h6><i class="rbi small rbi-shopping-cart"></i><a href="#">Handel</a></h6>
+                      </li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (9)</span></a></li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (12)</span></a></li>
+                     </ul>
+                  </div>
+
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                        <h6><i class="rbi small rbi-house"></i><a href="#">Haus und Wohnen</a></h6>
+                      </li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (9)</span></a></li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (12)</span></a></li>
+                    </ul>
+                  </div>
+
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                        <h6><i class="rbi small rbi-wifi"></i><a href="#">Internet</a></h6>
+                      </li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (9)</span></a></li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (12)</span></a></li>
+                    </ul>
+                  </div>
+
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                        <h6><i class="rbi small rbi-column"></i><a href="#">Kunst und Musik</a></h6>
+                      </li>
+                      <li class="collection-item"><a href="#">Kinos<span class="count"> (18)</span></a></li>
+                      <li class="collection-item"><a href="#">Konzertveranstalter<span class="count"> (7)</span></a></li>
+                      <li class="collection-item"><a href="#">Museen<span class="count"> (2)</span></a></li>
+                      <li class="collection-item"><a href="#">Musikalienhändler<span class="count"> (2)</span></a></li>
+                      <li class="collection-item"><a href="#">Opern und Theater<span class="count"> (1)</span></a></li>
+                      <li class="collection-item"><a href="#">Orchester<span class="count"> (1)</span></a></li>
+                      <li class="collection-item"><a href="#">Tickethändler<span class="count"> (243)</span></a></li>
+                      <li class="collection-item"><a href="#">Sonstiges<span class="count"> (1)</span></a></li>
+                    </ul>
+                  </div>
+
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                        <h6><i class="rbi small rbi-newspaper"></i><a href="#">Medien</a></h6>
+                      </li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (9)</span></a></li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (12)</span></a></li>
+                    </ul>
+                  </div>
+
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                        <h6><i class="rbi small rbi-first-aid-kit"></i><a href="#">Medizin und Wellness</a></h6>
+                      </li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (9)</span></a></li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (12)</span></a></li>
+                    </ul>
+                  </div>
+
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                        <h6><i class="rbi small rbi-compass"></i><a href="#">Mobilitat und Reisen</a></h6>
+                      </li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (9)</span></a></li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (12)</span></a></li>
+                    </ul>
+                  </div>
+
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                        <h6><i class="rbi small rbi-deodorant"></i><a href="#">Mode und Kosmetik</a></h6>
+                      </li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (9)</span></a></li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (12)</span></a></li>
+                    </ul>
+                  </div>
+
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                        <h6><i class="rbi small rbi-faucet"></i><a href="#">Offentliche Dienstleistungen</a></h6>
+                      </li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (9)</span></a></li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (12)</span></a></li>
+                    </ul>
+                  </div>
+
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                        <h6><i class="rbi small rbi-smartphone"></i><a href="#">Online Shops</a></h6>
+                      </li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (9)</span></a></li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (12)</span></a></li>
+                    </ul>
+                  </div>
+
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                        <h6><i class="rbi small rbi-office-worker"></i><a href="#">Politik</a></h6>
+                      </li>
+                      <li class="collection-item"><a href="#">Bundespolitik<span class="count"> (1)</span></a></li>
+                      <li class="collection-item"><a href="#">Nichtregierungsorganisationen<span class="count"> (1)</span></a></li>
+                      <li class="collection-item"><a href="#">Parteien<span class="count"> (4)</span></a></li>
+                      <li class="collection-item"><a href="#">Verbände<span class="count"> (16)</span></a></li>
+                    </ul>
+                  </div>
+
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                        <h6><i class="rbi small rbi-box"></i><a href="#">Post und Telekommunikation</a></h6>
+                      </li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (9)</span></a></li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (12)</span></a></li>
+                    </ul>
+                  </div>
+
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                        <h6><i class="rbi small rbi-repair-tools"></i><a href="#">Technik</a></h6>
+                      </li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (9)</span></a></li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (12)</span></a></li>
+                    </ul>
+                  </div>
+
+                  <div class="categories-item">
+                    <ul class="collection with-header">
+                      <li class="collection-header">
+                        <h6><i class="rbi small rbi-presentation"></i><a href="#">Unternehmensdienstleistungen</a></h6>
+                      </li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (9)</span></a></li>
+                      <li class="collection-item"><a href="#">Subcat<span class="count"> (12)</span></a></li>
+                    </ul>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ </div>
+
+  <!--  Scripts-->
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
