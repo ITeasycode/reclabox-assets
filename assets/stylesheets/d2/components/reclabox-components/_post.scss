@@ -230,12 +230,55 @@
         margin: 0;
 
         & > * {
-
           .rbi {
             vertical-align: middle;
           }
         }
       }
+      .article-info {
+        & > div {
+          height: 45px;
+          vertical-align: middle;
+        }
+        .author {
+          line-height: 3;
+        }
+        .date {
+          & > * {
+            line-height: 2 !important;
+          }
+          i {
+            top: 4px;
+          }
+        }
+        .separator {
+          line-height: 2;
+        }
+      }
+      .edit-comment {
+        display: inline-block;
+        height: 45px;
+        padding: 0;
+        line-height: 2.3;
+
+        & > a {
+          vertical-align: middle;
+          &:hover {
+            i {
+              color: $link-color-hover;
+            }
+          }
+          i {
+            color: $link-color;
+            top: 3px;
+            position: relative;
+          }
+        }
+      }
+      .edit-message {
+        line-height: 3;
+      }
+
     }
 
     &.vertical-union {
@@ -320,6 +363,11 @@
         position: relative;
       }
 
+      &.answered {
+        .text span {
+          color: $primary-color;
+        }
+      }
     }
 
     &.widget-tags {
