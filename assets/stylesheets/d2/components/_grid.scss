@@ -61,6 +61,10 @@
     padding: 0 $gutter-width / 2;
     min-height: 1px;
 
+    &.clearfix {
+      clear: both;
+    }
+
     &[class*="push-"],
     &[class*="pull-"] {
       position: relative;

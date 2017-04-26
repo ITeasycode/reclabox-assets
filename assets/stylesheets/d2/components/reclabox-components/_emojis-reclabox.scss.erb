@@ -1,0 +1,218 @@
+.emoji {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	box-sizing: border-box;
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	opacity: 1;
+	transition: opacity .3s;
+	transform: scale(0.90);
+	margin: -10px;
+
+	&:before,
+	&:after {
+		content: '';
+		box-sizing: border-box;
+		position: absolute;
+		border-radius: 100%;
+	}
+	&:before {
+    background: transparent url("<%= asset_path("d2/img-site/LoLhMY.png")%>") 0 0 no-repeat;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 2;
+	}
+	&:after {
+		width: 0;
+		height: 0;
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+		background-color: #eceff1;
+		transition: .4s;
+	}
+
+	&.emoji-active,
+	&:hover {
+		opacity: 1;
+		&:after {
+			width: 84px;
+			height: 84px;
+			margin: -42px 0 0 -42px;
+		}
+	}
+ 	// emoji large
+	&-large {
+		transform: scale(1);
+		margin: 0px;
+	}
+	// emoji small
+	&-small {
+		transform: scale(0.42);
+		margin: -29px;
+	}
+	// emoji-amused
+	&-amused {
+		&:before {
+			background-position: 0 0px;
+		}
+		&.emoji-animated,
+		&:hover {
+			&:before {
+				animation: play-amused 1.2s steps(42) infinite;
+			}
+		}
+	}
+	// emoji-no-matter
+	&-no-matter {
+		&:before {
+			background-position: 0 -100px;
+		}
+		&.emoji-animated,
+		&:hover {
+			&:before {
+				animation: play-no-matter 1.2s steps(67) infinite;
+			}
+		}
+	}
+	// emoji-frightened
+	&-frightened {
+		&:before {
+			background-position: 0 -200px;
+		}
+		&.emoji-animated,
+		&:hover {
+			&:before {
+				animation: play-frightened 1.2s steps(51) infinite;
+			}
+		}
+	}
+	// emoji-informed
+	&-informed {
+		&:before {
+			background-position: 0 -300px;
+		}
+		&.emoji-animated,
+		&:hover {
+			&:before {
+				animation: play-informed 1.2s steps(74) infinite;
+			}
+		}
+	}
+	// emoji-boring
+	&-boring {
+		&:before {
+			background-position: 0 -400px;
+		}
+		&.emoji-animated,
+		&:hover {
+			&:before {
+				animation: play-boring 1.2s steps(42) infinite;
+			}
+		}
+	}
+	// emoji-shocked
+	&-shocked {
+		&:before {
+			background-position: 0 -500px
+		}
+		&.emoji-animated,
+		&:hover {
+			&:before {
+				animation: play-shocked 1.2s steps(90) infinite;
+			}
+		}
+	}
+	// emoji-sad
+	&-sad {
+		&:before {
+			background-position: 0 -600px;
+		}
+		&.emoji-animated,
+		&:hover {
+			&:before {
+				animation: play-sad 1.2s steps(60) infinite;
+			}
+		}
+	}
+	// emoji-angry
+	&-angry {
+		&:before {
+			background-position: 0 -700px;
+		}
+		&.emoji-animated,
+		&:hover {
+			&:before {
+				animation: play-angry 1.2s steps(60) infinite;
+			}
+		}
+	}
+}
+@keyframes play-amused {
+	from {
+		background-position: 0 0px;
+	}
+	to {
+		background-position: -4200px 0px;
+	}
+}
+@keyframes play-no-matter {
+	from {
+		background-position: 0 -100px
+	}
+	to {
+		background-position: -6700px -100px
+	}
+}
+@keyframes play-frightened {
+	from {
+		background-position: 0 -200px
+	}
+	to {
+		background-position: -5100px -200px
+	}
+}
+@keyframes play-informed {
+	from {
+		background-position: 0 -300px
+	}
+	to {
+		background-position: -7400px -300px
+	}
+}
+@keyframes play-boring {
+	from {
+		background-position: 0 -400px
+	}
+	to {
+		background-position: -4200px -400px
+	}
+}
+@keyframes play-shocked {
+	from {
+		background-position: 0 -500px
+	}
+	to {
+		background-position: -9000px -500px
+	}
+}
+@keyframes play-sad {
+	from {
+		background-position: 0 -600px
+	}
+	to {
+		background-position: -6000px -600px
+	}
+}
+@keyframes play-angry {
+	from {
+		background-position: 0 -700px
+	}
+	to {
+		background-position: -6000px -700px
+	}
+}

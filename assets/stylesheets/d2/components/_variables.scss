@@ -45,7 +45,7 @@ $error-color: color("red", "base") !default;
 $link-color: $secondary-color !default;
 $link-color-hover: rgba(96, 125, 139, .54) !default;
 
-$text-black-theme: rgba(0, 0, 0, .87) !default;
+$text-black-theme: #263238 !default;
 $text-black-light-theme: rgba(0, 0, 0, .54) !default;
 
 
@@ -71,10 +71,10 @@ $button-disabled-background: #DFDFDF !default;
 $button-disabled-color: #9F9F9F !default;
 
 // Raised buttons
-$button-raised-background: #607d8b !default;
+$button-raised-background: #eceff1 !default;
 $button-raised-background-hover: #78909c !default;
 $button-raised-color-hover: #ffffff !default;
-$button-raised-color: #ffffff !default;
+$button-raised-color: #607d8b !default;
 
 // Large buttons
 $button-large-icon-font-size: 1.6rem !default;

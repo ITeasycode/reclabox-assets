@@ -92,22 +92,24 @@ a {
 }
 
 .separator {
-  color: rgba(0, 0, 0, 0.20);
   display: inline-block;
-  height: 20px;
+  min-height: 20px;
+  height: auto;
   margin: 0 15px;
   position: relative;
-  width: 3px;
+  min-width: 1px;
+  width: auto;
   vertical-align: middle;
   &::after {
-    content: "|";
-    display: inline;
+    content: "";
+    border-left: 2px solid $link-color-hover;
+    display: inline-block;
+    height: 18px;
+    width: 1px;
     margin: 0;
-    top: 1px;
+    top: 27%;
     left: 0;
-    font-size: 20px;
     position: relative;
-    font-weight: 500;
   }
 }
 
@@ -126,8 +128,49 @@ a {
     margin-bottom: 25px !important;
   }
 }
+.m-t {
+  &-tiny {
+    margin-top: 5px !important;
+  }
+  &-small {
+    margin-top: 10px !important;
+  }
+  &-medium {
+    margin-top: 15px !important;
+  }
+  &-large {
+    margin-top: 25px !important;
+  }
+}
 
+.f-s {
+  &-tiny {
+    font-size: 12px !important;
+  }
+  &-small {
+    font-size: 14px !important;
+  }
+  &-medium {
+    font-size: 16px !important;
+  }
+  &-large {
+    font-size: 18px !important;
+  }
+}
 
+.f-w {
+  &-bold {
+    font-weight: 500;
+
+    & > * {
+      font-weight: 500;
+    }
+  }
+}
+
+.border-bot-2 {
+  border-bottom: 2px solid #000000;
+}
 
 
 // Text
@@ -158,6 +201,7 @@ a {
 
 .flex-wrapper {
   @include flexbox();
+  clear: left;
 
   & > * {
     @include flex(1 auto);
