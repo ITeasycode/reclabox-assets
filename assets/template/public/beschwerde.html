@@ -32,7 +32,7 @@
           </ul>
           <a id="logo-container" href="javascript:void(0)" class="brand-logo hide"><img src="img/img-site/logo-reclabox.jpg" alt="ReclaBox"></a>
           <div class="nav-header nav-theme hide">
-            <ul id="navHeader" class="nav-menu hide-on-med-and-down flex-wrapper">
+            <ul id="navHeaderFixed" class="nav-menu hide-on-med-and-down flex-wrapper">
               <li><a class="active" href="javascript:void(0)">BESCHWERDE LESEN</a></li>
               <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li>
             </ul>
@@ -73,8 +73,8 @@
             <div class="nav-wrapper">
               <div class="nav-header nav-theme">
                 <ul id="navHeader" class="nav-menu hide-on-med-and-down flex-wrapper">
-                  <li><a class="active" href="javascript:void(0)">BESCHWERDE LESEN</a></li>
-                  <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li>
+                  <li><a class="active" href="beschwerde-lesen.html">BESCHWERDE LESEN</a></li>
+                  <li><a href="schreiben.html">BESCHWERDE SCHREIBEN</a></li>
                   <!-- <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li> -->
                 </ul>
               </div>
@@ -107,6 +107,7 @@
         <li><a href="schreiben.html">Schreiben</a></li>
         <li><a href="search.html">Search</a></li>
         <li><a href="vorschau.html">Vorschau</a></li>
+        <li><a href="wollen-sie-antowrt.html">Wollen Sie Antowrt</a></li>
         <li><a href="404.html">404</a></li>
 
         <li><a href="email-confirm.html">email confirm</a></li>
@@ -413,14 +414,14 @@
               <div class="card no-bg">
                 <div class="card-content">
                   <div class="center">
-                    <i class="emoji emoji-amused emoji-animated tooltipped" data-tooltip="Warte seit"></i>
-                    <i class="emoji emoji-shocked emoji-animated tooltipped" data-tooltip="Warte seit"></i>
-                    <i class="emoji emoji-sad emoji-animated tooltipped" data-tooltip="Warte seit"></i>
-                    <i class="emoji emoji-angry emoji-animated tooltipped" data-tooltip="Warte seit"></i>
-                    <i class="emoji emoji-frightened emoji-animated tooltipped" data-tooltip="Warte seit"></i>
-                    <i class="emoji emoji-informed emoji-animated tooltipped" data-tooltip="Warte seit"></i>
-                    <i class="emoji emoji-boring emoji-animated tooltipped" data-tooltip="Warte seit"></i>
-                    <i class="emoji emoji-no-matter emoji-animated tooltipped" data-tooltip="Warte seit"></i>
+                    <i class="emoji emoji-amused emoji-animated tooltipped" data-html="true" data-name="amusiert"  ></i>
+                    <i class="emoji emoji-shocked emoji-animated tooltipped" data-html="true" data-name="shokiert" data-tooltip="345 </br> Shokiert" ></i>
+                    <i class="emoji emoji-sad emoji-animated tooltipped" data-html="true" data-name="traurig" data-tooltip="45 </br> Traurig" ></i>
+                    <i class="emoji emoji-angry emoji-animated tooltipped" data-html="true" data-name="wutend" data-tooltip="11 </br> Wutend" ></i>
+                    <i class="emoji emoji-frightened emoji-animated tooltipped" data-html="true" data-name="erschreckt" data-tooltip="24 </br> Erschreckt" ></i>
+                    <i class="emoji emoji-informed emoji-animated tooltipped" data-html="true" data-name="informiert" data-tooltip="256 </br> Informiert" ></i>
+                    <i class="emoji emoji-boring emoji-animated tooltipped" data-html="true" data-name="langweilich" data-tooltip="0 </br> Langweilich" ></i>
+                    <i class="emoji emoji-no-matter emoji-animated tooltipped" data-html="true" data-name="egal" data-tooltip="234 </br> Egal" ></i>
                   </div>
                 </div>
               </div>
@@ -483,23 +484,23 @@
               <div class="card no-bg">
                 <div class="card-content center-align">
                   <div class="rating clearfix">
-                    <a href="#5" class="tooltipped" data-tooltip="sehr kundenfreundlich" title="sehr kundenfreundlich">
+                    <a href="#5" class="tooltipped" data-tooltip="sehr kundenfreundlich" title="sehr kundenfreundlich" >
                       <i class="rbi-star-outline rbi large"></i>
                       <i class="rbi-star rbi large"></i>
                     </a>
-                    <a href="#4" class="tooltipped" data-tooltip="kundenfreundlich" title="kundenfreundlich">
+                    <a href="#4" class="tooltipped" data-tooltip="kundenfreundlich" title="kundenfreundlich" >
                       <i class="rbi-star-outline rbi large"></i>
                       <i class="rbi-star rbi large"></i>
                     </a>
-                    <a href="#3" class="tooltipped" data-tooltip="sehr serviceorientiert" title="sehr serviceorientiert">
+                    <a href="#3" class="tooltipped" data-tooltip="sehr serviceorientiert" title="sehr serviceorientiert" >
                       <i class="rbi-star-outline rbi large"></i>
                       <i class="rbi-star rbi large"></i>
                     </a>
-                    <a href="#2" class="tooltipped" data-tooltip="serviceorientiert" title="serviceorientiert">
+                    <a href="#2" class="tooltipped" data-tooltip="serviceorientiert" title="serviceorientiert" >
                       <i class="rbi-star-outline rbi large"></i>
                       <i class="rbi-star rbi large"></i>
                     </a>
-                    <a href="#1" class="tooltipped" data-tooltip="wenig serviceorientiert" title="wenig serviceorientiert">
+                    <a href="#1" class="tooltipped" data-tooltip="wenig serviceorientiert" title="wenig serviceorientiert" >
                       <i class="rbi-star-outline rbi large"></i>
                       <i class="rbi-star rbi large"></i>
                     </a>
@@ -708,7 +709,7 @@
                       Kommentar noch 242 Sekunden editierbar
                     </div>
                     <div class="report-alert right">
-                      <a class="hide btn-floating icon-floating waves-effect waves-ripple" href="javascript:void(0)"><i class="material-icons">warning</i></a>
+                      <a class="hide btn-floating icon-floating waves-effect waves-ripple" href="#reportUserLoggedIn"><i class="material-icons">warning</i></a>
                     </div>
                   </div>
                 </div>
@@ -924,16 +925,16 @@
                     <button class="btn center waves-effect waves-light" type="submit" name="action">OHNE KOMMENTARE</button>
                     <button class="btn center waves-effect waves-light" type="submit" name="action">MIT KOMMENTAREN</button>
                   </div>
-                  <a class="btn-floating icon-floating waves-effect" href="#startReport"><i class="mdi mdi-alert tiny"></i></a>
+                  <a class="btn-floating icon-floating waves-effect" href="#reportUserNoLoggedIn"><i class="mdi mdi-alert tiny"></i></a>
                   <a class="btn-floating icon-floating waves-effect" href="javascript:void(0)"><i class="mdi mdi-bookmark-outline tiny"></i></a>
-                  <a class="btn-floating icon-floating waves-effect" href="javascript:void(0)"><i class="rbi rbi-bookmark-remove tiny"></i></a>
+                  <a class="btn-floating icon-floating waves-effect" href="javascript:void(0)"><i class="mdi mdi-bookmark-remove tiny"></i></a>
+                  <a class="btn-floating icon-floating waves-effect" href="javascript:void(0)"><i class="mdi mdi-email tiny"></i></a>
                 </div>
               </div>
               <div class="card">
                 <div class="card-image">
                   <object data="img/icon-svg/jetzt-anschliessen.svg" type="image/svg+xml" width="100%"
                           height="auto"><img width="100%" src="img/img-site/jetzt-anschliessen.jpg" title=""></object>
-
                   <!--<components src="img/icon-svg/jetzt-anschliessen.svg" title="">-->
                 </div>
                 <div class="card-content">
@@ -978,76 +979,80 @@
           </div><!-- end sidebar -->
         </div>
       </div><!-- End content, sidebar, other components -->
-
     </div>
-    <div class="modal-comtainer">
-      <div id="startReport" class="modal modal-report user-form">
+    <div class="modal-container"><!-- Modals container -->
+      <div id="reportUserLoggedIn" class="modal modal-report user-form report-user-log-in width-size-570">
         <div class="modal-content">
           <div class="card-panel no-bg">
-            <div class="card-header center-align blue-grey white-text">
-              <h6>Melden Sie hier den Regelverstoß</h6>
-            </div>
             <div class="card no-bg">
               <div class="card-content">
                 <form class="" action="#">
                   <div class="row">
-                    <div class="input-field">
-                      <input id="report" type="text" class="rb-blue-input validate">
-                      <label for="report">Start typing report here</label>
+                    <div class="col s12">
+                      <div class="input-field">
+                        <input id="report-user-email" type="email" class="rb-blue-input validate">
+                        <label for="report-user-email" data-error="Ihre Die E-Mail-Adresse ist ungültig.">Ihre e-mail</label>
+                      </div>
+                    </div>
+                    <div class="col s6">
+                      <div class="input-field">
+                        <input id="report-user-vorname" type="text" class="rb-blue-input validate">
+                        <label for="report-user-vorname">Ihr Vorname</label>
+                      </div>
+                    </div>
+                    <div class="col s6">
+                      <div class="input-field">
+                        <input id="report-user-name" type="text" class="rb-blue-input validate">
+                        <label for="report-user-name">Ihr Name</label>
+                      </div>
+                    </div>
+                    <div class="col s12 m-t-large">
+                      <h6>Melden Sie hier den Regelverstoss</h6>
+                      <div class="input-field">
+                        <textarea id="start-typing-here" class="materialize-textarea validate" style="height: 28px;" data-length="50000"></textarea>
+                        <label for="start-typing-here" class="" data-error="Der Beschwerdetext ist zu lang.">Start typing here</label>
+                      </div>
+                    </div>
+                    <div class="col s12">
+                      <div class="input-field">
+                        <input type="checkbox" class="filled-in" id="report-user-checkbox">
+                        <label for="report-user-checkbox">Bitte lesem Sie unsere <a href="#">Nutzungsbedinungen</a> bevor Sie den Regelverstoss abschicken</label>
+                      </div>
+                    </div>
+                    <div class="col s12">
+                      <button class="waves-effect waves-light btn right" type="submit" name="action">Abschicken</button>
+                      <button class="waves-effect waves-light btn right" type="submit" name="action">Zurück</button>
                     </div>
                   </div>
-                  <button class="waves-effect full-width waves-light btn white-text" type="submit" name="action">Abschicken</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      <!--</div>-->
-      <div id="startReport0" class="modal modal-report user-form">
-        <div class="modal-content">
-          <div class="card-panel no-bg">
-            <div class="card-header center-align blue-grey white-text">
-              <h6>Melden Sie hier den Regelverstoß</h6>
-            </div>
-            <div class="card no-bg">
-              <div class="card-content">
-                <form class="" action="#">
-                  <div class="row">
-                    <div class="input-field">
-                      <input id="report" type="text" class="rb-blue-input validate">
-                      <label for="report">Start typing report here</label>
-                    </div>
-                  </div>
-                  <button class="waves-effect full-width waves-light btn white-text" type="submit" name="action">Abschicken</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="startReport" class="modal modal-report user-form">
-        <div class="modal-content">
-          <div class="card-panel no-bg">
-            <div class="card-header center-align blue-grey white-text">
-              <h6>Melden Sie hier den Regelverstoß</h6>
-            </div>
-            <div class="card no-bg">
-              <div class="card-content">
-                <form class="" action="#">
-                  <div class="row">
-                    <div class="input-field">
-                      <input id="report" type="text" class="rb-blue-input validate">
-                      <label for="report">Start typing report here</label>
-                    </div>
-                  </div>
-                  <button class="waves-effect full-width waves-light btn white-text" type="submit" name="action">Abschicken</button>
                 </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div><!-- modals conteiner-->
+      <div id="reportUserNoLoggedIn" class="modal modal-report user-form">
+        <div class="modal-content">
+          <div class="card-panel no-bg">
+            <div class="card-header center-align blue-grey white-text">
+              <h6>Melden Sie hier den Regelverstoß</h6>
+            </div>
+            <div class="card no-bg">
+              <div class="card-content">
+                <form class="" action="#">
+                  <div class="row">
+                    <div class="input-field">
+                      <input id="report" type="text" class="rb-blue-input validate">
+                      <label for="report">Start typing report here</label>
+                    </div>
+                  </div>
+                  <button class="waves-effect full-width waves-light btn" type="submit" name="action">Abschicken</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- modals conteiner -->
 
    </div>
   

@@ -32,7 +32,7 @@
           </ul>
           <a id="logo-container" href="javascript:void(0)" class="brand-logo hide"><img src="img/img-site/logo-reclabox.jpg" alt="ReclaBox"></a>
           <div class="nav-header nav-theme hide">
-            <ul id="navHeader" class="nav-menu hide-on-med-and-down flex-wrapper">
+            <ul id="navHeaderFixed" class="nav-menu hide-on-med-and-down flex-wrapper">
               <li><a class="active" href="javascript:void(0)">BESCHWERDE LESEN</a></li>
               <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li>
             </ul>
@@ -73,8 +73,8 @@
             <div class="nav-wrapper">
               <div class="nav-header nav-theme">
                 <ul id="navHeader" class="nav-menu hide-on-med-and-down flex-wrapper">
-                  <li><a class="active" href="javascript:void(0)">BESCHWERDE LESEN</a></li>
-                  <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li>
+                  <li><a class="active" href="beschwerde-lesen.html">BESCHWERDE LESEN</a></li>
+                  <li><a href="schreiben.html">BESCHWERDE SCHREIBEN</a></li>
                   <!-- <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li> -->
                 </ul>
               </div>
@@ -107,6 +107,7 @@
         <li><a href="schreiben.html">Schreiben</a></li>
         <li><a href="search.html">Search</a></li>
         <li><a href="vorschau.html">Vorschau</a></li>
+        <li><a href="wollen-sie-antowrt.html">Wollen Sie Antowrt</a></li>
         <li><a href="404.html">404</a></li>
 
         <li><a href="email-confirm.html">email confirm</a></li>
@@ -318,12 +319,12 @@
         <div class="row">
           <div class="col s12 m3 l3"><!-- sidebar left -->
             <div class="dropdown-wrapper widget-sidebar widget-navigation-btn">
-              <a  class="waves-effect waves-light btn full-width btn-theme-pink dropdown-button" 
+              <a  class="waves-effect waves-light btn full-width btn-theme-pink dropdown-button"
                   data-activates="btn-company"
                   data-beloworigin="true"
                   data-stoppropagation="true">
-
-                <i class="material-icons left">settings</i> 
+          
+                <i class="material-icons left">settings</i>
                 <span>firmen-mitgliedschaft </span>
                 <i class="material-icons arrow_down right">keyboard_arrow_down</i>
                 <i class="material-icons arrow_up right">keyboard_arrow_up</i>
@@ -357,7 +358,7 @@
                 <li><a href="#!">Settings</a></li>
               </ul>
             </div>
-            
+          
             <div class="card-panel no-bg widget-sidebar widget-company">
               <div class="card">
                 <div class="card-action table-wrapper">
@@ -365,9 +366,9 @@
                     <i class="mdi mdi-domain"></i>
                   </div>
                   <div class="rank-company right">
-                    <span class="rank-5"></span>
+                    <span class="rank-5 right"></span>
                   </div>
-                </div>    
+                </div>
                 <div class="card-content">
                   <div class="card-title">
                     <h6>Deutsche Post AG</h6>
@@ -377,33 +378,40 @@
                 </div>
               </div>
             </div>
-
-            <div class="card-panel widget-sidebar widget-navigation vertical-union">
-              <div class="vertical-union-container">
-                <div class="card no-bg">
-                  <div class="card-content">
-                    <div class="card-title">BESCHWERDEN</div>
-                    <ul>
-                      <li><a href="javascript:void(0)">Online <i class="material-icons right">chevron_right</i></a></li>
-                      <li><a href="javascript:void(0)">On hold 48 h <span>(1)</span> <i class="material-icons right">chevron_right</i></a></li>
-                      <li><a href="javascript:void(0)">Gelöschte <span>(7)</span> <i class="material-icons right">chevron_right</i></a></li>
-                    </ul>
-                  </div>
+          
+            <div class="card-panel widget-sidebar widget-navigation">
+              <div class="card-header blue-grey lighten-5">
+                <i class="rbi rbi-beschwerde small"></i>
+                <span>Beshwerden</span>
+              </div>
+              <div class="card no-bg">
+                <div class="card-content">
+                  <ul>
+                    <li><a href="javascript:void(0)">Online </a></li>
+                    <li><a href="javascript:void(0)">On hold 48 h <span>(1)</span> </a></li>
+                    <li><a href="javascript:void(0)">Gelöschte <span>(7)</span> </a></li>
+                  </ul>
                 </div>
-                <div class="divider"></div>
-                <div class="card no-bg">
-                  <div class="card-content">
-                    <div class="card-title">Firmenatworten</div>
-                    <ul>
-                      <li><a href="javascript:void(0)">Veröffentlich <span>(21)</span><i class="material-icons right">chevron_right</i></a></li>
-                      <li><a href="javascript:void(0)">Entwürfe <i class="material-icons right">chevron_right</i></a></li>
-                      <li><a class="active" href="javascript:void(0)">Automatische <i class="material-icons right">chevron_right</i></a></li>
-                    </ul>
-                  </div>
+              </div>
+            </div>
+          
+            <div class="card-panel widget-sidebar widget-navigation">
+              <div class="card-header blue-grey lighten-5">
+                <i class="mdi mdi-domain small"></i>
+                <span>Firmenatworten</span>
+              </div>
+              <div class="card no-bg">
+                <div class="card-content">
+                  <ul>
+                    <li><a href="javascript:void(0)">Veröffentlich <span>(21)</span></a></li>
+                    <li><a href="javascript:void(0)">Entwürfe </a></li>
+                    <li><a class="active" href="javascript:void(0)">Automatische </a></li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div><!-- end sidebar left -->
+
           <div class="col s12 m6 l6"><!-- content -->
             <section class="section">
               <div class="card-panel">
@@ -591,10 +599,11 @@
             </section>
           </div><!-- end content -->
 
-          <div class="col s12 m3 l3"><!-- sidebar -->
+          <div class="col s12 m3 l3"><!-- sidebar right -->
             <div class="card-panel widget-sidebar widget-links">
               <div class="card-header blue-grey lighten-5">
-                <h6>NACHRICHTEN</h6>
+                <i class="mdi mdi-email-outline small"></i>
+                <span>NACHRICHTEN</span>
               </div>
               <div class="card no-bg">
                 <div class="card-content">
@@ -607,49 +616,58 @@
                 </div>
               </div>
             </div>
-
-            <div class="card-panel widget-sidebar widget-links">
+          
+            <div class="card-panel widget-sidebar widget-navigation">
               <div class="card-header blue-grey lighten-5">
-                <h6>MERKZETTEL</h6>
+                <i class="mdi mdi-bookmark-outline small"></i>
+                <span>MERKZETTEL</span>
               </div>
               <div class="card no-bg">
                 <div class="card-content">
-                  <a href="javascript:void(0)">gemerkte Beschwerden (1) </a>
-                  <a href="javascript:void(0)">verfolgte Beschwerden (0)</a>
+                  <ul>
+                    <li><a href="javascript:void(0)">gemerkte Beschwerden (1) </a></li>
+                    <li><a href="javascript:void(0)">verfolgte Beschwerden (0) </a></li>
+                  </ul>
                 </div>
               </div>
             </div>
-
-            <div class="card-panel widget-sidebar widget-links">
+          
+            <div class="card-panel widget-sidebar widget-navigation">
               <div class="card-header blue-grey lighten-5">
-                <h6>LINKS</h6>
+                <i class="mdi mdi-link small"></i>
+                <span>LINKS</span>
               </div>
               <div class="card no-bg">
                 <div class="card-content">
-                  <a href="javascript:void(0)">gemerkte Beschwerden (1) </a>
-                  <a href="javascript:void(0)">verfolgte Beschwerden (0)</a>
+                  <ul>
+                    <li><a href="javascript:void(0)">gemerkte Beschwerden (1) </a></li>
+                    <li><a href="javascript:void(0)">verfolgte Beschwerden (0) </a></li>
+                  </ul>
                 </div>
               </div>
             </div>
-            
-            <div class="card-panel widget-sidebar widget-links">
+          
+            <div class="card-panel widget-sidebar widget-navigation widget-links">
               <div class="card-header blue-grey lighten-5">
-                <h6>firmenmitgliedschaft</h6>
+                <i class="mdi mdi-domain small"></i>
+                <span>Firmenatworten</span>
               </div>
               <div class="card no-bg">
                 <div class="card-content">
-                  <a href="javascript:void(0)">Profil</a>
-                  <a href="javascript:void(0)">Kontaktdaten</a>
-                  <a href="javascript:void(0)">Firmen hinzufügen</a>
-                  <a href="javascript:void(0)">ReclaRank Siegel</a>
-                  <a href="javascript:void(0)">Rechnungen (0)</a>
-                  <a href="javascript:void(0)">ReclaBox API</a>
-                  <a href="javascript:void(0)">Newsletter abmelden</a>
-                  <a href="javascript:void(0)">Hilfe</a>
+                  <ul>
+                    <li><a href="javascript:void(0)">Profil</a></li>
+                    <li><a href="javascript:void(0)">Kontaktdaten</a></li>
+                    <li><a href="javascript:void(0)">Firmen hinzufügen</a></li>
+                    <li><a href="javascript:void(0)">ReclaRank Siegel</a></li>
+                    <li><a href="javascript:void(0)">Rechnungen (0)</a></li>
+                    <li><a href="javascript:void(0)">ReclaBox API</a></li>
+                    <li><a href="javascript:void(0)">Newsletter abmelden</a></li>
+                    <li><a href="javascript:void(0)">Hilfe</a></li>
+                  </ul>
                 </div>
               </div>
             </div>
-          </div><!-- end sidebar left -->
+          </div><!-- end sidebar right -->
         </div>
       </div><!-- End ontent, sidebar, other components -->
 

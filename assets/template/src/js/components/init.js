@@ -17,7 +17,7 @@
 
         $slideInput.removeClass('hide').slideUp('slow').addClass('hide');
 
-        $pageWrite.find('.btn').click(function(event) {
+        $pageWrite.find('.btn').click(function (event) {
             /* Act on the event */
             var id = $(this).attr('href');
             if (id === '#slide-input') {
@@ -27,7 +27,7 @@
                 if ($(id).hasClass('hide')) {
                     $(id).removeClass('hide').slideDown('slow');
                 } else {
-                    $(id).slideUp('slow', function() {
+                    $(id).slideUp('slow', function () {
                         $(this).addClass('hide');
                     });
                 }

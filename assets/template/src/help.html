@@ -26,7 +26,7 @@
                   <div class="card-content center-align">
                     <p class="m-t-small">Haben Sie weitere Fragen zu Ihrem Firmen Account?</p>
                     <p>Dann fragen Sie uns</p>
-                    <button class="btn center waves-effect waves-light m-b-small" type="submit" name="action">Firmen Support</button>
+                    <a class="btn center waves-effect waves-light" href="#firmenSupport">Firmen Support</a>
                   </div>
                 </div>
               </div>
@@ -665,5 +665,38 @@
       </div>
     </div><!-- end nav-top -->
   </div>
+  <div class="modal-container"><!-- Modals container -->
+    <div id="firmenSupport" class="modal modal-report user-form width-size-570">
+      <div class="modal-content">
+        <div class="card-panel no-bg">
+          <div class="card no-bg">
+            <div class="card-content">
+              <form class="" action="#">
+                <div class="row">
+                  <div class="col s12">
+                    <div class="input-field">
+                      <input id="firmen-support-user-email" type="email" class="rb-blue-input validate">
+                      <label for="firmen-support-user-email" data-error="Ihre Die E-Mail-Adresse ist ungültig.">Ihre E-Mail Adresse</label>
+                    </div>
+                  </div>
+                  <div class="col s12 m-t-large">
+                    <h6>Ihre Nachright:</h6>
+                    <div class="input-field">
+                      <textarea id="start-typing-here" class="materialize-textarea validate" style="height: 28px;" data-length="50000"></textarea>
+                      <label for="start-typing-here" class="" data-error="Der Beschwerdetext ist zu lang.">Start typing here</label>
+                    </div>
+                  </div>
+                  <div class="col s12">
+                    <button class="waves-effect waves-light btn right" type="submit" name="action">Abschicken</button>
+                    <button class="waves-effect waves-light btn right" type="submit" name="action">Zurück</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- modals conteiner -->
 
 //= footer.html

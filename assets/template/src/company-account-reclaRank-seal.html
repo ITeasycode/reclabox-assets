@@ -3,94 +3,8 @@
     <div class="container page-company post">
       <div class="section"><!-- content, sidebar, other components -->
         <div class="row">
-          <div class="col s12 m3 l3"><!-- sidebar left -->
-            <div class="dropdown-wrapper widget-sidebar widget-navigation-btn">
-              <a  class="waves-effect waves-light btn full-width btn-theme-pink dropdown-button" 
-                  data-activates="btn-company"
-                  data-beloworigin="true"
-                  data-stoppropagation="true">
+          //= sidebar-company-left.html
 
-                <i class="material-icons left">settings</i> 
-                <span>firmen-mitgliedschaft </span>
-                <i class="material-icons arrow_down right">keyboard_arrow_down</i>
-                <i class="material-icons arrow_up right">keyboard_arrow_up</i>
-              </a>
-              <!-- Dropdown Structure -->
-              <ul id="btn-company" class="dropdown-content">
-                <li>
-                  <form action="#">
-                    <p>
-                      <input class="with-gap right" name="group1" type="radio" id="company1" />
-                      <label for="company1">Deutsche Post AG <span class="pink-text text-accent-2">(1)</span></label>
-                    </p>
-                  </form>
-                </li>
-                <li>
-                  <form action="#">
-                    <p>
-                      <input class="with-gap right" name="group2" type="radio" id="company2" />
-                      <label for="company2">ReclaBox Suppore <span class="pink-text text-accent-2">(15)</span></label>
-                    </p>
-                  </form>
-                </li>
-                <li>
-                  <form action="#">
-                    <p>
-                      <input class="with-gap right" name="group3" type="radio" id="company3" />
-                      <label for="company3">Alle Beschwerde</label>
-                    </p>
-                  </form>
-                </li>
-                <li><a href="#">Settings</a></li>
-              </ul>
-            </div>
-            
-            <div class="card-panel no-bg widget-sidebar widget-company">
-              <div class="card">
-                <div class="card-action table-wrapper">
-                  <div class="logo-company left">
-                    <i class="mdi mdi-domain"></i>
-                  </div>
-                  <div class="rank-company right">
-                    <span class="rank-5"></span>
-                  </div>
-                </div>    
-                <div class="card-content">
-                  <div class="card-title">
-                    <h6>Deutsche Post AG</h6>
-                  </div>
-                  <a href="javascript:void(0)">Post und Telekommunikationen » </a>
-                  <a href="javascript:void(0)">Bried-und Paketzusteller</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-panel widget-sidebar widget-navigation vertical-union">
-              <div class="vertical-union-container">
-                <div class="card no-bg">
-                  <div class="card-content">
-                    <div class="card-title">BESCHWERDEN</div>
-                    <ul>
-                      <li><a href="javascript:void(0)">Online <i class="material-icons right">chevron_right</i></a></li>
-                      <li><a href="javascript:void(0)">On hold 48 h <span>(1)</span> <i class="material-icons right">chevron_right</i></a></li>
-                      <li><a href="javascript:void(0)">Gelöschte <span>(7)</span> <i class="material-icons right">chevron_right</i></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="divider"></div>
-                <div class="card no-bg">
-                  <div class="card-content">
-                    <div class="card-title">Firmenatworten</div>
-                    <ul>
-                      <li><a href="javascript:void(0)">Veröffentlich <span>(21)</span><i class="material-icons right">chevron_right</i></a></li>
-                      <li><a href="javascript:void(0)">Entwürfe <i class="material-icons right">chevron_right</i></a></li>
-                      <li><a class="active" href="javascript:void(0)">Automatische <i class="material-icons right">chevron_right</i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- end sidebar left -->
           <div class="col s12 m6 l6"><!-- content -->
             <div class="card-panel">
               <div class="card no-bg">
@@ -215,25 +129,37 @@
                                   <p class="input-field-header">2. Wählen Sie Siegel bzw. Box.</p>
                                 </div>
                               </div>
-                              <div class="col s3">
+                              <div class="col s2">
                                 <div class="input-field center radio-rank">
                                   <input class="with-gap" name="group1" type="radio" id="test1">
-                                  <label for="test1" class="img1"><span class="rank-5"></span></label> 
+                                  <label for="test1" class="img1"><span class="rank-0"></span></label>
                                 </div>                               
                               </div>
-                              <div class="col s3">
+                              <div class="col s2">
                                 <div class="input-field center radio-rank">
                                   <input class="with-gap" name="group1" type="radio" id="test2">
-                                  <label for="test2" class="img2"><span class="rank-5"></span></label>
+                                  <label for="test2" class="img2"><span class="rank-1"></span></label>
                                 </div>
                               </div>
-                              <div class="col s3">
+                              <div class="col s2">
                                 <div class="input-field center radio-rank">
                                   <input class="with-gap" name="group1" type="radio" id="test3">
-                                  <label for="test3" class="img3"><span class="rank-5"></span></label>
+                                  <label for="test3" class="img3"><span class="rank-2"></span></label>
                                 </div>
                               </div>
-                              <div class="col s3">
+                              <div class="col s2">
+                                <div class="input-field center radio-rank">
+                                  <input class="with-gap" name="group1" type="radio" id="test4">
+                                  <label for="test4" class="img4"><span class="rank-3"></span></label>
+                                </div>
+                              </div>
+                              <div class="col s2">
+                                <div class="input-field center radio-rank">
+                                  <input class="with-gap" name="group1" type="radio" id="test4">
+                                  <label for="test4" class="img4"><span class="rank-4"></span></label>
+                                </div>
+                              </div>
+                              <div class="col s2">
                                 <div class="input-field center radio-rank">
                                   <input class="with-gap" name="group1" type="radio" id="test4">
                                   <label for="test4" class="img4"><span class="rank-5"></span></label>
@@ -269,65 +195,8 @@
               </div>
             </div>
           </div><!-- end content -->
-          <div class="col s12 m3 l3"><!-- sidebar right -->
-            <div class="card-panel widget-sidebar widget-links">
-              <div class="card-header blue-grey lighten-5">
-                <h6>NACHRICHTEN</h6>
-              </div>
-              <div class="card no-bg">
-                <div class="card-content">
-                  <a href="javascript:void(0)">Posteingang (0)</a>
-                  <a href="javascript:void(0)">gelesen (0)</a>
-                  <a href="javascript:void(0)">ungelesen (0)</a>
-                  <a href="javascript:void(0)">gesendete Nachrichten (0)</a>
-                  <a href="javascript:void(0)">vom Empfänger gelesen (0)</a>
-                  <a href="javascript:void(0)">vom Empfänger ungelesen (0)</a>
-                </div>
-              </div>
-            </div>
 
-            <div class="card-panel widget-sidebar widget-links">
-              <div class="card-header blue-grey lighten-5">
-                <h6>MERKZETTEL</h6>
-              </div>
-              <div class="card no-bg">
-                <div class="card-content">
-                  <a href="javascript:void(0)">gemerkte Beschwerden (1) </a>
-                  <a href="javascript:void(0)">verfolgte Beschwerden (0)</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-panel widget-sidebar widget-links">
-              <div class="card-header blue-grey lighten-5">
-                <h6>LINKS</h6>
-              </div>
-              <div class="card no-bg">
-                <div class="card-content">
-                  <a href="javascript:void(0)">gemerkte Beschwerden (1) </a>
-                  <a href="javascript:void(0)">verfolgte Beschwerden (0)</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-panel widget-sidebar widget-links">
-              <div class="card-header blue-grey lighten-5">
-                <h6>firmenmitgliedschaft</h6>
-              </div>
-              <div class="card no-bg">
-                <div class="card-content">
-                  <a href="javascript:void(0)">Profil</a>
-                  <a href="javascript:void(0)">Kontaktdaten</a>
-                  <a href="javascript:void(0)">Firmen hinzufügen</a>
-                  <a href="javascript:void(0)">ReclaRank Siegel</a>
-                  <a href="javascript:void(0)">Rechnungen (0)</a>
-                  <a href="javascript:void(0)">ReclaBox API</a>
-                  <a href="javascript:void(0)">Newsletter abmelden</a>
-                  <a href="javascript:void(0)">Hilfe</a>
-                </div>
-              </div>
-            </div>
-          </div><!-- end sidebar right -->
+          //= sidebar-company-right.html
         </div>
       </div><!-- End ontent, sidebar, other components -->
     </div>

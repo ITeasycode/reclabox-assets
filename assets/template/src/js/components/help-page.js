@@ -5,7 +5,6 @@
         var offsetHelpMenu = $helpMenu.offset();
         var cloneMenu = $helpMenu.clone();
         var showTrue, windScroll, elOffset = [], arrayElPosition, activeLink, arrayActiveEl, arrayId;
-        // var objId = [ '#complaints', '#companyResponse', '#links', '#nachrichten', '#merkezettel', '#firmenMitgliedschaft' ];
 
         cloneMenu.addClass( 'clone-menu fixid-menu' );
 

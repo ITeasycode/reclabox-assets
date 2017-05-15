@@ -153,6 +153,21 @@ textarea.materialize-textarea {
     text-align: center;
     width: 40px;
   }
+  &:nth-child(1) {
+    .input-field {
+      width: 337px;
+    }
+  }
+  &:nth-child(2) {
+    .input-field {
+      width: 217px;
+    }
+  }
+  &:last-child {
+    .input-field {
+      width: 337px;
+    }
+  }
 }
 
 .input-field {

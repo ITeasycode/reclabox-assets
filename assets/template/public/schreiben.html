@@ -32,7 +32,7 @@
           </ul>
           <a id="logo-container" href="javascript:void(0)" class="brand-logo hide"><img src="img/img-site/logo-reclabox.jpg" alt="ReclaBox"></a>
           <div class="nav-header nav-theme hide">
-            <ul id="navHeader" class="nav-menu hide-on-med-and-down flex-wrapper">
+            <ul id="navHeaderFixed" class="nav-menu hide-on-med-and-down flex-wrapper">
               <li><a class="active" href="javascript:void(0)">BESCHWERDE LESEN</a></li>
               <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li>
             </ul>
@@ -73,8 +73,8 @@
             <div class="nav-wrapper">
               <div class="nav-header nav-theme">
                 <ul id="navHeader" class="nav-menu hide-on-med-and-down flex-wrapper">
-                  <li><a class="active" href="javascript:void(0)">BESCHWERDE LESEN</a></li>
-                  <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li>
+                  <li><a class="active" href="beschwerde-lesen.html">BESCHWERDE LESEN</a></li>
+                  <li><a href="schreiben.html">BESCHWERDE SCHREIBEN</a></li>
                   <!-- <li><a href="javascript:void(0)">BESCHWERDE SCHREIBEN</a></li> -->
                 </ul>
               </div>
@@ -107,6 +107,7 @@
         <li><a href="schreiben.html">Schreiben</a></li>
         <li><a href="search.html">Search</a></li>
         <li><a href="vorschau.html">Vorschau</a></li>
+        <li><a href="wollen-sie-antowrt.html">Wollen Sie Antowrt</a></li>
         <li><a href="404.html">404</a></li>
 
         <li><a href="email-confirm.html">email confirm</a></li>
@@ -325,12 +326,11 @@
               <div class="card-editor-input">
                 <form action="#">
                   <div class="editor">
-
                     <div class="input-field-group table-wrapper">
                       <div class="help"><i class="mdi mdi-help-circle"></i></div>
                       <div class="input-field">
                         <input placeholder="Hermes Germany GmbH" id="firma-marke" type="text" class="validate" data-length="100">
-                        <label class="active left-align" data-error="Der Beschwerde gegen Firma/Marke ist zu lang." for="firma-marke">Beschwerde gegen Firma/Marke *</label>
+                        <label class="active left-align" data-error="Der Beschwerde gegen Firma/Marke ist zu lang." for="firma-marke">Der Firmenname ist zu lang.</label>
                       </div>
                       <div class="input-field">
                         <input placeholder="z.B. Berlin" id="ort" type="text" data-length="50" class="validate">
@@ -408,8 +408,8 @@
                     <div class="input-field-group table-wrapper">
                       <div class="help"><i class="mdi mdi-help-circle"></i></div>
                       <div class="input-field">
-                        <input placeholder="z.B. 4814" id="uberschrift" type="text" data-length="65" class="validate">
-                        <label class="active left-align" for="uberschrift" data-error="Die Überschrift ist zu lang">Überschrift *</label>
+                        <input id="uberschrift" class="validate" type="text" data-length="65" data-min-length="10" placeholder="z.B. 4814">
+                        <label class="active left-align" for="uberschrift" data-error="Die Überschrift ist zu lang" data-error-min="Der Überschrift ist zu kurz, min. 10 zeichen">Überschrift *</label>
                       </div>
                     </div>
 
@@ -451,8 +451,8 @@
                           </div>
                         </nav>
                         <div class="input-field">
-                          <textarea id="textarea1" class="materialize-textarea validate" style="height: 28px;" data-length="50000"></textarea>
-                          <label for="textarea1" class="" data-error="Der Beschwerdetext ist zu lang."></label>
+                          <textarea id="textarea1" class="materialize-textarea validate" style="height: 28px;" data-length="50000" data-min-length="150"></textarea>
+                          <label for="textarea1" class="" data-error="Der Beschwerdetext ist zu lang." data-error-min="Der Beschwerdetext ist zu kurz, min. 150 zeichen"></label>
                         </div>
                       </div>
                     </div>
@@ -504,7 +504,7 @@
                       <div class="help"><i class="mdi mdi-help-circle"></i></div>
                       <div class="input-field">
                         <input placeholder="Wir geben Ihre E-Mail-Adresse nicht an Dritte weiter" id="email" type="email" class="validate" >
-                        <label class="active left-align" for="email" data-error="Ihre Die E-Mail-Adresse ist ungültig.">Ihre E-Mail Adresse *</label>
+                        <label class="active left-align" for="email" data-error="Die E-Mail-Adresse ist ungültig.">Ihre E-Mail Adresse *</label>
                       </div>
                     </div>
 
@@ -515,8 +515,8 @@
                         <label class="active left-align" for="vorname" data-error="Der Vorname ist zu lang.">Ihr Vorname</label>
                       </div>
                       <div class="input-field">
-                        <input placeholder="Mustermann" id="name" type="text" >
-                        <label class="active left-align" for="name">Ihr Name</label>
+                        <input placeholder="Mustermann" id="name" type="text" data-length="50" class="validate">
+                        <label class="active left-align" for="name" data-error="Der Nachname ist zu lang.">Ihr Name</label>
                       </div>
                     </div>
 

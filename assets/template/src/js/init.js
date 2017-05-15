@@ -1,7 +1,8 @@
 //= ../../node_modules/jquery/dist/jquery.min.js
-//= vendor/materialize.min.js
 //= vendor/slick.js
+//= vendor/materialize.min.js
 
+//= components/forms.js
 //= components/secondary-functions.js
 //= components/nav-theme.js
 //= components/slide-nav.js
