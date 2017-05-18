@@ -12,6 +12,8 @@ body {
   scrollbar-highlight-color: #F0F0EE;
   scrollbar-shadow-color: #F0F0EE;
   scrollbar-track-color: #F5F5F5;
+  overflow: hidden;
+  padding-top: 5px;
 }
 
 td, th {

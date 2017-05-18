@@ -1,0 +1,84 @@
+
+
+.text-editor .mce-tinymce {
+  border: 0;
+}
+
+#textarea1_ifr{
+  border-bottom: 1px solid rgb(169, 169, 169);
+  height: 60px !important;
+}
+.mce-stack-layout-item{
+  border: 0;
+  background: none;
+}
+.mce-container-body.mce-stack-layout{
+  background: #fff;
+  border: 0;
+}
+.mce-container-body.mce-flow-layout{
+  border: 0;
+  background: none;
+}
+.mce-btn-group{
+  background: none;
+}
+.mce-btn-group .mce-btn{
+  background: none;
+  border: 0;
+}
+
+.mce-btn i{
+  line-height: 25px !important;
+  height: 25px !important;
+  vertical-align: top;
+
+    font-family: tinymce,Arial;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    font-size: 18px;
+    speak: none;
+    vertical-align: text-top;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    width: 15px;
+    color: #607d8b;
+}
+
+button.mce-open{
+  height: 35px;
+}
+
+.mce-splitbtn{
+  height: 35px;
+}
+.mce-widget{
+  border: none;
+  background: none;
+}
+.mce-ico:before{
+  font: normal normal normal 24px/1 "Material Design Icons";
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+
+i.mce-ico.mce-i-italic:before {
+  content: "\F277";
+}
+
+i.mce-ico.mce-i-bullist:before {
+  content: "\F279";
+}
+
+i.mce-ico.mce-i-numlist:before {
+  content: "\F27B";
+}
+
+i.mce-ico.mce-i-spellchecker:before {
+  content: "\F4C6";
+}
