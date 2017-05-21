@@ -319,7 +319,7 @@ function close_and_reset_box(box_id, form_id, error_messages_id) {
 
 function conditionally_add_attachment_input_row() {
   if (can_add_attachment_input_row()) {
-    add_attachment_input_row();  
+    add_attachment_input_row();
   }
 }
 
@@ -340,7 +340,7 @@ function can_add_attachment_input_row() {
 
 function conditionally_add_video_attachment_input_row() {
   if (can_add_video_attachment_input_row()) {
-    add_video_attachment_input_row();  
+    add_video_attachment_input_row();
   }
 }
 
@@ -578,8 +578,8 @@ function change_reclarank_seal_images(firm_id) {
 }
 
 function generate_reclarank_seal_code() {
-  var chosen_type_element = jQuery('input[name="type"]:checked').first();
-  var code_element = jQuery('#code');
+  var chosen_type_element = jQuery('input[name="group1"]:checked').first();
+  var code_element = jQuery('#code_filed');
   var user_url = jQuery.trim(jQuery('#url').val());
   var user_host;
   var img_url_element;
@@ -594,10 +594,9 @@ function generate_reclarank_seal_code() {
   } else {
     user_host = user_url.substring(0, slash_pos)
   }
-  if (user_host.length < 1) {
-    return;
-  }
-
+    // if (user_host.length < 1) {
+    //   return;
+    // }
   /*
    * The JavaScript in following is minified (by Uglifier) version of this:
    * (function() {
