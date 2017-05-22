@@ -178,7 +178,9 @@ i.mce-caret:before {
   font-style: normal;
 }
 i.mce-i-selected:before{
-  content: "\e007";
+  content: "\F140";
   color: #607d8b;
+  font-size: 24px;
+  margin-left: -5px;
 }
 
