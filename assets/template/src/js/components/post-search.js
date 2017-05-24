@@ -2,7 +2,7 @@
 // -----------------------------------------
 ( function ( $ ) {
     $( function () {
-        var $btnArray = $( '.post-search' ).find( '.btn' );
+        var $btnArray = $( '.post-search' ).find( '.btn-res' );
         var resContent;
 
         $btnArray.on('click', function ( event ) {

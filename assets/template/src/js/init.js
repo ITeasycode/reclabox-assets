@@ -13,4 +13,5 @@
 //= components/search.js
 //= components/slideshow.js
 //= components/help-page.js
+//= components/limitation-output-characters.js
 //= components/init.js

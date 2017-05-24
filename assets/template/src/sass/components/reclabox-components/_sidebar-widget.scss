@@ -117,6 +117,24 @@
     }
   }
 
+  .user {
+    margin-bottom: 15px;
+    img {
+      border-radius: 50%;
+      height: 60px;
+      width: 60px;
+    }
+    .name {
+      font-size: 18px;
+      font-weight: 500;
+      color: $text-black-theme;
+    }
+    p {
+      color: $text-black-light-theme;
+      font-size: 12px;
+    }
+  }
+
 }
 
 .widget-links {
@@ -126,7 +144,7 @@
     }
   }
   .card-content {
-    padding: 10px 15px;
+    padding: 10px 25px;
   }
   .card-title {
     padding: 12px 15px;
@@ -140,6 +158,9 @@
     & > * {
       vertical-align: middle;
     }
+  }
+  .divider {
+    margin-bottom: 15px;
   }
 }
 

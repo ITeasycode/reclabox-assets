@@ -13,6 +13,37 @@
 
 </head>
 <body>
+<!-- HelloPreload http://hello-site.ru/preloader/ -->
+<style type="text/css">
+  #hellopreloader_preload {
+    display: block;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 1000px;
+    background: #607d8b url(http://hello-site.ru//main/images/preloads/bars.svg) center center no-repeat;
+    background-size:92px;
+  }
+</style>
+<div id="hellopreloader"><div id="hellopreloader_preload"></div></div>
+<script type="text/javascript">
+    var hellopreloader = document.getElementById("hellopreloader_preload");
+    function fadeOutnojquery(el) {
+        el.style.opacity = 1;
+        var interhellopreloader = setInterval(function() {
+            el.style.opacity = el.style.opacity - 0.05;
+            if (el.style.opacity <=0.05) {
+                clearInterval(interhellopreloader);
+                hellopreloader.style.display = "none";
+            }
+        },16);
+    }
+    window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1000);};
+</script>
+<!-- HelloPreload http://hello-site.ru/preloader/ -->
 <div class="wrapper grey lighten-5">
 
   <header class="site-header blue-grey">
@@ -21,13 +52,13 @@
         <div class="nav-wrapper">
           <ul>
             <li>
-              <a href="#" data-activates="slide-out" class="button-collapse waves-effect">
-                <div class="arrow-hamburger">
-                  <div class="line arrow_top"></div>
-                  <div class="line arrow_line"></div>
-                  <div class="line arrow_bottom"></div>
-                </div>
-              </a>
+              <!--<a href="#" data-activates="slide-out" class="button-collapse waves-effect">-->
+                <!--<div class="arrow-hamburger">-->
+                  <!--<div class="line arrow_top"></div>-->
+                  <!--<div class="line arrow_line"></div>-->
+                  <!--<div class="line arrow_bottom"></div>-->
+                <!--</div>-->
+              <!--</a>-->
             </li>
           </ul>
           <a id="logo-container" href="javascript:void(0)" class="brand-logo hide"><img src="img/img-site/logo-reclabox.jpg" alt="ReclaBox"></a>
@@ -85,8 +116,46 @@
     </div><!-- logo and nav-menu -->
 
     <!-- components dropdown -->
+    <div class="slide-nav-button">
+      <a href="#" data-activates="slide-out" class="button-collapse waves-effect">
+        <div class="arrow-hamburger">
+          <div class="line arrow_top"></div>
+          <div class="line arrow_line"></div>
+          <div class="line arrow_bottom"></div>
+        </div>
+      </a>
+      <a href="#" class="right waves-effect"><i class="mdi mdi-logout-variant small"></i></a>
+      <a href="#" class="right waves-effect"><i class="mdi mdi-settings small"></i></a>
+    </div>
     <div class="slide-nav-wrapper"><!-- heade left nav -->
       <ul id="slide-out" class="side-nav slide-nav">
+        <li class="side-nav-top"></li>
+        <li><div class="divider"></div></li>
+        <li>
+          <div class="userView">
+            <div class="table-wrapper">
+              <div class="item-table">
+                <a href="#!user" class="left">
+                  <img class="circle" src="http://materializecss.com/images/yuna.jpg">
+                </a>
+              </div>
+              <div class="item-table">
+                <a href="#!name" class="left">
+                  <span class="name">John Doe </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="search">
+          <div class="search-wrapper m-b-medium">
+            <div class="input-field">
+              <i class="material-icons prefix">search</i>
+              <input id="slide-nav-search" type="text" class="validate" placeholder="Start typing to search">
+              <label for="slide-nav-search"></label>
+            </div>
+          </div>
+        </li>
         <li><a href="beschwerde.html">Beschwerde</a></li>
         <li><a href="beschwerde-lesen.html">Beschwerde Lesen</a></li>
         <li><a href="categories.html">Categories</a></li>
@@ -106,6 +175,7 @@
         <li><a href="request-firm-management.html">Request Firm Management</a></li>
         <li><a href="schreiben.html">Schreiben</a></li>
         <li><a href="search.html">Search</a></li>
+        <li><a href="user-profile.html">User Profile</a></li>
         <li><a href="vorschau.html">Vorschau</a></li>
         <li><a href="wollen-sie-antowrt.html">Wollen Sie Antowrt</a></li>
         <li><a href="404.html">404</a></li>
@@ -517,7 +587,7 @@
                 <li class="waves-effect"><a href="#">5</a></li>
                 <li class="waves-effect"><a href="#"><i class="material-icons">chevron_right</i></a></li>
               </ul>
-              <button class="btn waves-effect waves-light z-theme-depth-4 center" data-res="compl" type="submit" name="action">WEITERE SUCHERGEBNISSE</button>
+              <button class="btn btn-res waves-effect waves-light center" data-res="compl" type="submit" name="action">WEITERE SUCHERGEBNISSE</button>
             </section>
 
             <section id="res_defences" class="section">
@@ -667,7 +737,7 @@
                 <li class="waves-effect"><a href="#">5</a></li>
                 <li class="waves-effect"><a href="#"><i class="material-icons">chevron_right</i></a></li>
               </ul>
-              <button class="btn waves-effect waves-light z-theme-depth-4 center" data-res="defen" type="submit" name="action">WEITERE SUCHERGEBNISSE</button>
+              <button class="btn btn-res waves-effect waves-light center" data-res="defen" type="submit" name="action">WEITERE SUCHERGEBNISSE</button>
             </section>
             
             <section id="res_comments" class="section comments-wrapp">
@@ -894,7 +964,7 @@
                 <li class="waves-effect"><a href="#">5</a></li>
                 <li class="waves-effect"><a href="#"><i class="material-icons">chevron_right</i></a></li>
               </ul>
-              <button class="btn waves-effect waves-light z-theme-depth-4 center" data-res="comm" type="submit" name="action">WEITERE SUCHERGEBNISSE</button>
+              <button class="btn btn-res waves-effect waves-light center" data-res="comm" type="submit" name="action">WEITERE SUCHERGEBNISSE</button>
             </section>
             
           </div><!-- end content -->

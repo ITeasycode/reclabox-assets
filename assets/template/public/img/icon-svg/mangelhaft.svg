@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>mangelhaft</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="RB-Signs" transform="translate(-760.000000, -227.000000)">
+            <g id="mangelhaft" transform="translate(760.000000, 227.000000)">
+                <rect id="Rectangle-28" fill="#EEEEEE" x="0" y="0" width="100" height="100" rx="5"></rect>
+                <text id="Mangelhaft" font-family="GothamPro-Bold, Gotham Pro" font-size="14" font-weight="bold" fill="#555555">
+                    <tspan x="8" y="19">Mangelhaft</tspan>
+                </text>
+                <text id="RECLABOX.COM" font-family="GothamPro-Bold, Gotham Pro" font-size="7" font-weight="bold" fill="#AAAAAA">
+                    <tspan x="20.334" y="93">RECLABOX.COM</tspan>
+                </text>
+                <text id="61-Beschwerden" font-family="GothamPro-Medium, Gotham Pro" font-size="7" font-weight="400" fill="#555555">
+                    <tspan x="10" y="37">61 Beschwerden</tspan>
+                </text>
+                <text id="2%-Lösungsquote" font-family="GothamPro-Medium, Gotham Pro" font-size="7" font-weight="400" fill="#555555">
+                    <tspan x="10" y="50">2% Lösungsquote</tspan>
+                </text>
+                <rect id="Rectangle-29-Copy-10" fill="#26A69A" x="0" y="60" width="2" height="19"></rect>
+                <rect id="Rectangle-29-Copy-11" fill="#B71C1C" x="2" y="60" width="98" height="19"></rect>
+                <text id="98%" font-family="GothamPro-Bold, Gotham Pro" font-size="7" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="42.2722306" y="72">98%</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

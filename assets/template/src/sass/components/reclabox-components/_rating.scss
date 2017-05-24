@@ -94,8 +94,8 @@
 
 span[class|="rank"],
 i[class|="rank"] {
-  width: 70px;
-  height: 70px;
+  width: 118px;
+  height: 119px;
   display: inline-block;
   background-image: url("../img/icon-svg/all-rating.svg");
   background-repeat: no-repeat;
@@ -103,27 +103,70 @@ i[class|="rank"] {
 }
 
 .rank-0 {
-  background-position: -32px -34px;
+  background-position: -56px -59px;
 }
 
 .rank-1 {
-  background-position: -127px -34px;
+  background-position: -214px -59px;
 }
 
 .rank-2 {
-  background-position: -222px -34px;
+  background-position: -374px -59px;
 }
 
 .rank-3 {
-  background-position: -317px -34px;
+  background-position: -534px -59px;
 }
 
 .rank-4 {
-  background-position: -412px -34px;
+  background-position: -694px -59px;
 }
 
 .rank-5 {
-  background-position: -507px -34px;
+  background-position: -853px -59px;
+}
+
+.rank-company {
+  & > span {
+    width: 70px;
+    height: 70px;
+  }
+  .rank-0 {
+    background-position: -32px -34px;
+  }
+
+  .rank-1 {
+    background-position: -127px -34px;
+  }
+
+  .rank-2 {
+    background-position: -222px -34px;
+  }
+
+  .rank-3 {
+    background-position: -317px -34px;
+  }
+
+  .rank-4 {
+    background-position: -412px -34px;
+  }
+
+  .rank-5 {
+    background-position: -507px -34px;
+  }
+}
+
+span.rank-place {
+  background-image: url("../img/icon-svg/10-place.svg");
+  background-size: 100%;
+}
+span.rank-befriedigend {
+  background-image: url("../img/icon-svg/befriedigend.svg");
+  background-size: 100%;
+}
+span.rank-mangelhaft {
+  background-image: url("../img/icon-svg/mangelhaft.svg");
+  background-size: 100%;
 }
 
 .histo {

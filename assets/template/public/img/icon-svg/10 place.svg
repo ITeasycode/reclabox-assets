@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>10 place</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="RB-Signs" transform="translate(-200.000000, -75.000000)">
+            <g id="10-place" transform="translate(200.000000, 75.000000)">
+                <rect id="Rectangle-28" fill="#607D8B" x="0" y="0" width="120" height="120" rx="5"></rect>
+                <text id="10.-Platz" font-family="GothamPro-Bold, Gotham Pro" font-size="17" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="12" y="25">10. Platz</tspan>
+                </text>
+                <text id="RECLABOX.COM" font-family="GothamPro-Bold, Gotham Pro" font-size="7" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="51" y="101">RECLABOX.COM</tspan>
+                </text>
+                <text id="IN-DER-KATEGORIE" font-family="GothamPro-Medium, Gotham Pro" font-size="5" font-weight="400" fill="#FFFFFF">
+                    <tspan x="12" y="42">IN DER KATEGORIE</tspan>
+                </text>
+                <text id="EMPFEHLUNGSPORTALE" font-family="GothamPro-Bold, Gotham Pro" font-size="7" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="12" y="53">EMPFEHLUNGSPORTALE</tspan>
+                </text>
+                <image id="Germany" x="11" y="88" width="30" height="20" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAYAAABe1bwWAAAABGdBTUEAA1teXP8meAAAAXFJREFUaAXt27EuhEEUBeD5N1sQlUTwKDQKko0oUIhtaPFIu9EqZFWqXXQ0XkVCS6FY54wdsXdyXmD/c5Pzzz9XdT+XarfZOzhJ/2of75fIFrKBNMgi1xTDvSGvyBCZILk6s3MJ5y0yRo6RTWTRUTBinpGzcmbOToNlJHX5QF0j/fzW7gcNvpFzbkwPOUNcvwK06BGG/1Nc8wJXhNmZ7/kGgW3CrJmiElgnjKsW6BimRskdwxhGCIi2N8YwQkC0vTGGEQKi7Y0RMN3Ryqr4Ubvb3hjx+zeMYYSAaHtjDCMERNsbYxghINreGMMIAdH2xhhGCIi2N8YwQkC0vTGGEQKi3Xw+7fIzIq4g4D+lAFKuhikS4TRMAClXwxSJcBomgJSrYYpEOA0TQMrVMEUinIR5Dz1fU/ogzIslKoFnwgyqthtDwjwiN7b4E6DFA2FYF8gov7X7cTezSAXmCw1+jv4QuUf4jYy2FGflzEfIKUKL9AMnrCLJ+C8P8AAAAABJRU5ErkJggg=="></image>
+            </g>
+        </g>
+    </g>
+</svg>

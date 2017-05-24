@@ -33,6 +33,19 @@ body {
         position: fixed;
       }
     }
+    .slide-nav-button {
+      background-color: white;
+      position: fixed;
+      transition-duration: 2s;
+      transition-timing-function: ease-in-out;
+      transition-property: background-color;
+      a.right {
+        transition-duration: 3s;
+        transition-timing-function: ease-in-out;
+        transition-property: display;
+        display: block;
+      }
+    }
   }
   .container, 
   .container-medium.post {
@@ -193,7 +206,8 @@ a {
   display: table;
   margin: 0 auto;
 
-  & > * {
+  & > *,
+  & > .item-table {
     display: table-cell;
     vertical-align: middle;
   }
@@ -475,6 +489,12 @@ video.responsive-video {
 
   &-wrapper {
     position: relative;
+    overflow: hidden;
+
+    & > div {
+      white-space: nowrap;
+    }
+
     & > span:first-child {
       font-weight: 500;
       padding-left: 0;
