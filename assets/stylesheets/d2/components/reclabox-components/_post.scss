@@ -17,14 +17,14 @@
     margin-top: 15px;
 
     .title {
-      color: rgba(0, 0, 0, .87);
+      color: $text-black-theme;
       font-size: 24px;
-      font-weight: 400;
-      line-height: 24px;
+      font-weight: 500;
+      line-height: 30px;
       margin: 9px 0px;
 
       &-sub {
-        color: rgba(0, 0, 0, .54);
+        color: $text-black-light-theme;
         font-size: 16px;
         font-weight: 500;
         margin: 15px 0 0;
@@ -55,6 +55,51 @@
     .card {
       padding: 0;
       margin: 0;
+
+      &.hot-story {
+        height: 263px;
+        @-moz-document url-prefix() {
+          height: 266px;
+        }
+        overflow: hidden;
+
+        .hot-story-text {
+          background-color: #f4911a;
+          border-radius: 0 0px 3px 3px;
+          font-weight: 300;
+          font-size: 13px;
+          display: block;
+          color: #fff;
+          position: absolute;
+          padding: 2px 15px 1px;
+          top: 0px;
+          text-transform: uppercase;
+          z-index: 2;
+        }
+        .breadcrumb-wrapper {
+          margin: 20px 0 10px;
+        }
+        .card-title {
+          h2 a {
+            font-size: 34px;
+            font-weight: 500;
+            line-height: 1.236;
+          }
+          .tooltipped {
+
+          }
+          .rbi {
+            left: -6px;
+            top: 0;
+          }
+        }
+        .card-action {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          padding-top: 15px;
+        }
+      }
     }
 
     .card-content {
@@ -121,12 +166,14 @@
         line-height: 1.12;
         position: relative;
       }
+      p {
+        color: $text-black-light-theme;
+        margin-bottom: 10px;
+        margin-top: 15px;
+      }
     }
 
     &.widget-sidebar {
-      .card-content {
-        padding: 15px;
-      }
       &.widget-similar {
         .card-content {
           padding: 0 0 1px;
@@ -451,7 +498,7 @@
       &.author {
         * {
           vertical-align: middle;
-          line-height: 2;
+          line-height: 3.24;
         }
       }
       &.company-response {

@@ -4,6 +4,11 @@
   @extend .transition-theme-w;
   width: 370px;
 
+  form {
+    .btn.right {
+      margin-left: 15px;
+    }
+  }
   .card-panel, .card {
     padding: 0;
     margin: 0;
@@ -67,7 +72,7 @@
       margin: 0;
       top: 13px;
       left: 5px;
-      z-index: 999; 
+      z-index: 999;
       i {
         color: $secondary-color;
         font-size: 20px;
@@ -156,11 +161,11 @@
   .register-forms {
     .card-image {
       background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #EFF2F3),
-        color-stop(1, #FFFFFF)
+                      linear,
+                      left top,
+                      left bottom,
+                      color-stop(0, #EFF2F3),
+                      color-stop(1, #FFFFFF)
       );
       background-image: -o-linear-gradient(bottom, #EFF2F3 0%, #FFFFFF 100%);
       background-image: -moz-linear-gradient(bottom, #EFF2F3 0%, #FFFFFF 100%);
@@ -171,6 +176,21 @@
   }
 
   .card-content form {
-      padding: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+.user-form.report-user-log-in {
+  form {
+    .btn {
+      margin-left: 15px;
+    }
+  }
+}
+
+.user-form.width-size-570 {
+  width: 570px;
+  form {
+    padding: 0 !important;
   }
 }

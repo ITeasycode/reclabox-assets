@@ -1,10 +1,10 @@
 //Default styles
 
 html {
- box-sizing: border-box;
+  box-sizing: border-box;
 }
 *, *:before, *:after {
- box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
@@ -13,10 +13,10 @@ body {
   // flex-direction: column;
   position: relative;
 
-  
+
   &.onSlideNav {
     overflow-x: hidden;
-    .container, 
+    .container,
     .container-medium.post {
       position: relative;
       transition-duration: .3s;
@@ -33,8 +33,21 @@ body {
         position: fixed;
       }
     }
+    .slide-nav-button {
+      background-color: white;
+      position: fixed;
+      transition-duration: 2s;
+      transition-timing-function: ease-in-out;
+      transition-property: background-color;
+      a.right {
+        transition-duration: 3s;
+        transition-timing-function: ease-in-out;
+        transition-property: display;
+        display: block;
+      }
+    }
   }
-  .container, 
+  .container,
   .container-medium.post {
     position: relative;
     transition-duration: .3s;
@@ -67,8 +80,8 @@ ul {
 }
 
 a {
-	color: $link-color;
-	text-decoration: none;
+  color: $link-color;
+  text-decoration: none;
 
   // Gets rid of tap active state
   -webkit-tap-highlight-color: transparent;
@@ -107,7 +120,7 @@ a {
     height: 18px;
     width: 1px;
     margin: 0;
-    top: 27%;
+    top: 29%;
     left: 0;
     position: relative;
   }
@@ -174,7 +187,7 @@ a {
 
 
 // Text
-// 
+//
 .text-uppercase {
   text-transform: uppercase !important;
 }
@@ -193,7 +206,8 @@ a {
   display: table;
   margin: 0 auto;
 
-  & > * {
+  & > *,
+  & > .item-table {
     display: table-cell;
     vertical-align: middle;
   }
@@ -216,32 +230,32 @@ a {
 
 // Gradient
 .g-theme-1 {
-  /* IE10+ */ 
+  /* IE10+ */
   // background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjAlIj48c3RvcCBzdG9wLWNvbG9yPSIjZTkxZTYzIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNjMjE4NWIiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwLjUiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
   // background-image: -ms-linear-gradient(left, $g-theme-start 0%, $g-theme-end 100%);
 
-  // /* Mozilla Firefox */ 
+  // /* Mozilla Firefox */
   // background-image: -moz-linear-gradient(left, $g-theme-start 0%, $g-theme-end 100%);
 
-  // /* Opera */ 
+  // /* Opera */
   // background-image: -o-linear-gradient(left, $g-theme-start 0%, $g-theme-end 100%);
 
-  // /* Webkit (Safari/Chrome 10) */ 
+  // /* Webkit (Safari/Chrome 10) */
   // background-image: -webkit-gradient(linear, left top, right top, color-stop(0, $g-theme-start), color-stop(100, $g-theme-end));
 
-  // /* Webkit (Chrome 11+) */ 
+  // /* Webkit (Chrome 11+) */
   // background-image: -webkit-linear-gradient(left, $g-theme-start 0%, $g-theme-end 100%);
 
-  // /* W3C Markup */ 
+  // /* W3C Markup */
   // background-image: linear-gradient(to right, $g-theme-start 0%, $g-theme-end 100%);
 
 
   background-image: -webkit-gradient(
-    linear,
-    right bottom,
-    left bottom,
-    color-stop(0, #E91E62),
-    color-stop(0.74, #C2185C)
+                  linear,
+                  right bottom,
+                  left bottom,
+                  color-stop(0, #E91E62),
+                  color-stop(0.74, #C2185C)
   );
   background-image: -o-linear-gradient(right, $g-theme-start 0%, $g-theme-end 74%);
   background-image: -moz-linear-gradient(right, $g-theme-start 0%, $g-theme-end 74%);
@@ -251,9 +265,9 @@ a {
 }
 /* IE8- CSS hack */
 @media \0screen\,screen\9 {
-    .g-theme-1 {
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffe91e63",endColorstr="#ffc2185b",GradientType=1);
-    }
+  .g-theme-1 {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffe91e63",endColorstr="#ffc2185b",GradientType=1);
+  }
 }
 
 // Z-levels
@@ -475,6 +489,12 @@ video.responsive-video {
 
   &-wrapper {
     position: relative;
+    overflow: hidden;
+
+    & > div {
+      white-space: nowrap;
+    }
+
     & > span:first-child {
       font-weight: 500;
       padding-left: 0;
@@ -506,7 +526,7 @@ video.responsive-video {
     min-width: 100%;
     min-height: 100%;
     -webkit-transform: translate3d(0,0,0);
-            transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
     transform: translateX(-50%);
   }
 }
@@ -622,7 +642,7 @@ footer.page-footer {
 
 // Tables
 table, th, td {
-   border: none;
+  border: none;
 }
 
 table {
@@ -894,30 +914,30 @@ nav ul a span.badge {
 
 // Responsive Videos
 .video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
 
-    iframe, object, embed {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
+  iframe, object, embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 // Progress Bar
 .progress {
-    position: relative;
-    height: 4px;
-    display: block;
-    width: 100%;
-    background-color: #eceff1;
-    border-radius: 2px;
-    margin: $element-top-margin 0 $element-bottom-margin 0;
-    overflow: hidden;
+  position: relative;
+  height: 4px;
+  display: block;
+  width: 100%;
+  background-color: #eceff1;
+  border-radius: 2px;
+  margin: $element-top-margin 0 $element-bottom-margin 0;
+  overflow: hidden;
   .determinate {
     position: absolute;
     top: 0;
@@ -955,33 +975,33 @@ nav ul a span.badge {
   }
 }
 @keyframes indeterminate {
-    0% {
-      left: -35%;
-      right:100%;
-    }
-    60% {
-      left: 100%;
-      right: -90%;
-    }
-    100% {
-      left: 100%;
-      right: -90%;
-    }
+  0% {
+    left: -35%;
+    right:100%;
+  }
+  60% {
+    left: 100%;
+    right: -90%;
+  }
+  100% {
+    left: 100%;
+    right: -90%;
+  }
 }
 
 @keyframes indeterminate-short {
-    0% {
-      left: -200%;
-      right: 100%;
-    }
-    60% {
-      left: 107%;
-      right: -8%;
-    }
-    100% {
-      left: 107%;
-      right: -8%;
-    }
+  0% {
+    left: -200%;
+    right: 100%;
+  }
+  60% {
+    left: 107%;
+    right: -8%;
+  }
+  100% {
+    left: 107%;
+    right: -8%;
+  }
 }
 
 

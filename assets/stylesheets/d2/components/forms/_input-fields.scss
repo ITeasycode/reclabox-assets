@@ -117,7 +117,7 @@ textarea.materialize-textarea {
     display: block;
     content: "";
     position: absolute;
-    top: 60px;
+    top: 50px;
     opacity: 0;
     transition: .2s opacity ease-out, .2s color ease-out;
   }
@@ -153,6 +153,21 @@ textarea.materialize-textarea {
     text-align: center;
     width: 40px;
   }
+  &:nth-child(1) {
+    .input-field {
+      width: 337px;
+    }
+  }
+  &:nth-child(2) {
+    .input-field {
+      width: 217px;
+    }
+  }
+  &:last-child {
+    .input-field {
+      width: 337px;
+    }
+  }
 }
 
 .input-field {
@@ -161,7 +176,7 @@ textarea.materialize-textarea {
 
   &.input-field-table {
     display: table;
-    & > .select-wrapper, 
+    & > .select-wrapper,
     & > input {
       display: table-cell;
       vertical-align: middle;
@@ -204,6 +219,7 @@ textarea.materialize-textarea {
     font-size: $label-font-size;
     transform: translateY(-140%);
     line-height: 40px;
+    width: 100%;
   }
 
   // Prefix Icons
