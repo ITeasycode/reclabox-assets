@@ -149,7 +149,7 @@ textarea.materialize-textarea {
     width: auto;
   }
   .help {
-    padding: 0 15px;
+    padding: 0 5px 0 0;
     text-align: center;
     width: 40px;
   }
@@ -318,7 +318,6 @@ textarea {
     line-height: 2 !important;
 
     & ~ label {
-      top: 0.4rem;
       &.active {
         top: 0.7rem;
       }
