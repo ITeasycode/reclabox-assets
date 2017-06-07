@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" style="enable-background:new 0 0 24 24;" xml:space="preserve">
     <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
-    <title>Combined Shape</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="error" transform="translate(-553.000000, -240.000000)" fill="#607D8B">
             <path d="M553,242.990752 C553,241.339005 554.344109,240 555.990752,240 L575.009248,240 C576.660995,240 578,241.344109 578,242.990752 L578,262.009248 C578,263.660995 576.655891,265 575.009248,265 L555.990752,265 C554.339005,265 553,263.655891 553,262.009248 L553,242.990752 Z M561.746631,247.375593 C560.781993,246.827949 560,247.281307 560,248.380955 L560,257.441876 C560,258.544766 560.795058,259.01337 561.772159,258.490486 L570.065114,254.05261 C571.043851,253.528851 571.060597,252.663325 570.090643,252.112662 L561.746631,247.375593 Z" id="Combined-Shape"></path>
