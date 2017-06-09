@@ -45,7 +45,7 @@ $error-color: color("red", "base") !default;
 $link-color: $secondary-color !default;
 $link-color-hover: rgba(96, 125, 139, .54) !default;
 
-$text-black-theme: #263238 !default;
+$text-black-theme: #455A64 !default;
 $text-black-light-theme: rgba(0, 0, 0, .54) !default;
 
 
@@ -238,9 +238,9 @@ $navbar-brand-font-size: 2.1rem !default;
    ========================================================================== */
 
 $sidenav-font-size: 14px !default;
-$sidenav-font-color: #fff !default;
-$sidenav-bg-color: $secondary-color !default;
-$sidenav-padding: 16px !default;
+$sidenav-font-color: $text-black-theme !default;
+$sidenav-bg-color: white !default;
+$sidenav-padding: 14px !default;
 $sidenav-item-height: 48px !default;
 
 
@@ -284,7 +284,7 @@ $toast-text-color: #fff !default;
 /* 20. Typography
    ========================================================================== */
 
-$off-black: rgba(0, 0, 0, 0.87) !default;
+$off-black: #455A64 !default;
 
 // Header Styles
 $h1-fontsize: 32px !default;

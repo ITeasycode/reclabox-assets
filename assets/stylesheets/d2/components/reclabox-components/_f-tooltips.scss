@@ -1,12 +1,17 @@
 .functional-tooltips {
   @extend .z-theme-depth-1;
   background-color: white;
+  border-radius: 3px;
   position: absolute;
-  padding: 0 25px 15px;
+  padding: 25px 25px 25px;
   min-width: 200px;
   left: -13%;
   bottom: 55px;
   z-index: 998;
+
+  p {
+    margin-top: 0;
+  }
 
   &:before {
     content: '';

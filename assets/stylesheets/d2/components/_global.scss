@@ -128,6 +128,12 @@ a {
 
 // Indent
 .m-b {
+  margin-bottom: 0 !important;
+  &-p {
+    & > p {
+      margin-bottom: 15px !important;
+    }
+  }
   &-tiny {
     margin-bottom: 5px !important;
   }
@@ -142,6 +148,7 @@ a {
   }
 }
 .m-t {
+  margin-top: 0 !important;
   &-tiny {
     margin-top: 5px !important;
   }
