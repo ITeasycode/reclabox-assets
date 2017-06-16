@@ -1,6 +1,6 @@
 .dropdown-wrapper {
   &.widget-navigation-btn {
-    margin: 15px 0 25px;
+    margin: 0px 0 25px;
 
     .dropdown-content {
       border-radius: 0 0 3px 3px;
@@ -24,6 +24,7 @@
   background-color: $dropdown-bg-color;
   border-radius: 3px;
   margin-top: 15px;
+  max-width: 274px;
   display: none;
   min-width: 150px;
   max-height: 650px;
