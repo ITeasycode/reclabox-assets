@@ -23,7 +23,7 @@
   @extend .z-theme-depth-1;
   background-color: $dropdown-bg-color;
   border-radius: 3px;
-  margin: 0;
+  margin-top: 15px;
   display: none;
   min-width: 150px;
   max-height: 650px;
@@ -86,7 +86,7 @@
     }
   }
 }
-.dropdown-button {
+.dropdown-toggle {
   i.arrow_up {
     display: none;
   }

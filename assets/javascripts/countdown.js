@@ -29,29 +29,29 @@ var defenceCounter = {
     }
   },
 
-  refresh: function() {
-    var showOthers = false;
-    var clockString = '';
+    refresh: function() {
+        var showOthers = false;
+        var clockString = '';
 
-    if (this.time['y'] > 0) {
-      clockString += '<span class="fletter">' + this.time['y'] + '</span>';
-      clockString += '<span style="font-weight:normal">'+ ' ' + (this.time['y'] == 1 ? this.dateStr['year_sg'] : this.dateStr['year_pl']) + ', '+'</span>';
-      showOthers = true;
-    }
-    if (this.time['d'] > 0 || showOthers) {
-      clockString += '<span class="fletter">' + this.time['d'] + '</span>';
-      clockString += '<span style="font-weight:normal">'+ ' ' + (this.time['d'] == 1 ? this.dateStr['day_sg'] : this.dateStr['day_pl']) +'</span>';
-      showOthers = true;
-    }
-    if (this.time['h'] > 0 || showOthers) {
-      clockString += '<span style="font-weight:normal">' +' '+ this.dateStr['and']+' '+'</span>';
-      clockString += '<span class="fletter">' + this.time['h'] + '</span>';
-      clockString += '<span style="font-weight:normal">'+' ' + (this.time['h'] == 1 ? this.dateStr['hour_sg'] : this.dateStr['hour_pl']) + '. '+'</span>';
-      showOthers = true;
-    }
-    else {
-        clockString += '<span style="font-weight:normal">' + '.' + '</span>';
-    }
+        if (this.time['y'] > 0) {
+            clockString += '<span>' + this.time['y'] + '</span>';
+            clockString += '<span style="font-weight:normal; color:#455A64">'+ ' ' + (this.time['y'] == 1 ? this.dateStr['year_sg'] : this.dateStr['year_pl']) + ', '+'</span>';
+            showOthers = true;
+        }
+        if (this.time['d'] > 0 || showOthers) {
+            clockString += '<span>' + this.time['d'] + '</span>';
+            clockString += '<span style="font-weight:normal; color:#455A64">'+ ' ' + (this.time['d'] == 1 ? this.dateStr['day_sg'] : this.dateStr['day_pl']) +'</span>';
+            showOthers = true;
+        }
+        if (this.time['h'] > 0 || showOthers) {
+            clockString += '<span style="font-weight:normal; color:#455A64">' +' '+ this.dateStr['and']+' '+'</span>';
+            clockString += '<span>' + this.time['h'] + '</span>';
+            clockString += '<span style="font-weight:normal; color:#455A64">'+' ' + (this.time['h'] == 1 ? this.dateStr['hour_sg'] : this.dateStr['hour_pl']) + '. '+'</span>';
+            showOthers = true;
+        }
+        else {
+            clockString += '<span style="font-weight:normal; color:#455A64">' + '.' + '</span>';
+        }
 /*    if (this.time['m'] > 0 || showOthers) {
       clockString += '<span class="fletter">' + this.time['m'] + '</span>';
       clockString += ' ' + (this.time['m'] == 1 ? this.dateStr['min_sg'] : this.dateStr['min_pl']) + ' ' + this.dateStr['and']+ ' ';
