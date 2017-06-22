@@ -564,9 +564,9 @@ $t-timing-function: 0,1.15,0,.98;
 $property-w: all;
 $property-h: height;
 
-.transition-theme-w{
-  @include transition(width 1s cubic-bezier($t-timing-function));
-}
+//.transition-theme-w{
+//  @include transition(width 1s cubic-bezier($t-timing-function));
+//}
 
 
 /*********************

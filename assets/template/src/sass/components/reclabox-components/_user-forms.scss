@@ -1,7 +1,7 @@
 /* user login */
 .user-form {
   will-change: width;
-  @extend .transition-theme-w;
+  //@extend .transition-theme-w;
   width: 370px;
 
   form {
@@ -118,13 +118,13 @@
 
 /* ----- user register ----- */
 .user-form.register-form {
-  will-change: transition;
-  @extend .transition-theme-w;
+  //will-change: transition;
+  //@extend .transition-theme-w;
   max-width: 570px;
   width: 100%;
 
   & > * {
-    @include transition(all 2s cubic-bezier(0,1.15,0,.98));
+    //@include transition(all 2s cubic-bezier(0,1.15,0,.98));
   }
 
   .register-nav {

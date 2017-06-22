@@ -161,8 +161,6 @@
 
     .card-title {
       .rbi {
-        left: -3px;
-        top: 1px;
         line-height: 1.12;
         position: relative;
       }
@@ -874,7 +872,7 @@
         &-icon {
           color: $text-black-light-theme;
           padding: 0 15px;
-          width: 10%;
+          width: 55px;
         }
       }
     }
