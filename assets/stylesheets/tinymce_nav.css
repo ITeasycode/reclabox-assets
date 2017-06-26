@@ -27,6 +27,10 @@
 #textarea1_ifr{
   border-bottom: 1px solid #9e9e9e;
 }
+#defencetext_ifr{
+  border-bottom: 1px solid #9e9e9e;
+}
+
 .mce-stack-layout-item{
   border: 0;
   background: none;

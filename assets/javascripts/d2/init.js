@@ -4441,7 +4441,7 @@ function removeEventDefault(e) {
         // Slick
         // ----------------------------------------
         $( "#topBeschwerden" ).slick( {
-            infinite: true,
+            infinite: false,
             slidesToShow: 3,
             slidesToScroll: 3,
             responsive: [
@@ -4462,7 +4462,7 @@ function removeEventDefault(e) {
             ]
         } );
         $( "#neuesteBeschwerden" ).slick( {
-            infinite: true,
+            infinite: false,
             slidesToShow: 2,
             slidesToScroll: 2,
             responsive: [
