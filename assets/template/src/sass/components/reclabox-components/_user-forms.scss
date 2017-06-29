@@ -4,7 +4,7 @@
   //@extend .transition-theme-w;
   width: 370px;
 
-  input:not([type]), input[type=text], input[type=password], input[type=email] {
+  input:not([type]), input[type=text], input[type=password], input[type=email], input:-webkit-autofill {
     background-color: #ffffff !important;
   }
 
