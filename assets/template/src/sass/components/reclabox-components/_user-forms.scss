@@ -4,6 +4,10 @@
   //@extend .transition-theme-w;
   width: 370px;
 
+  input:not([type]), input[type=text], input[type=password], input[type=email] {
+    background-color: #ffffff !important;
+  }
+
   form {
     .btn.right {
       margin-left: 15px;
