@@ -259,22 +259,4 @@ $large-and-up-slick: "only screen and (max-width : #{$large-screen-slick})" !def
       }
     }
   }
-
-  /* disabled */
-  &-disabled.btn {
-    background-color: #eceff1 !important;
-    box-shadow: none !important;
-    cursor: default;
-    &:hover {
-      background-color: #eceff1 !important;
-      box-shadow: none !important;
-      color: rgba(96, 125, 139, 0.5) !important;
-    }
-  }
-  &-disabled.btn > i {
-    color: rgba(96, 125, 139, 0.5) !important;
-    &:hover {
-      color: rgba(96, 125, 139, 0.5) !important;
-    }
-  }
 }

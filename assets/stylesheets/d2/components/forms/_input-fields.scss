@@ -176,7 +176,7 @@ textarea.materialize-textarea {
 
   &.input-field-table {
     display: table;
-    & > .select-wrapper,
+    & > .select-wrapper, 
     & > input {
       display: table-cell;
       vertical-align: middle;
@@ -311,14 +311,13 @@ textarea {
     overflow-y: hidden; /* prevents scroll bar flash */
     //padding: .8rem 0 1.6rem 0; /* prevents text jump on Enter keypress */
     resize: none;
-    padding: 0;
+    padding: .8rem 0 1.6rem 0;
     margin: 0 0 5px 0 !important;
     min-height: 2.2rem !important;
     color: #000000;
     line-height: 2 !important;
 
     & ~ label {
-      top: 0.4rem;
       &.active {
         top: 0.7rem;
       }

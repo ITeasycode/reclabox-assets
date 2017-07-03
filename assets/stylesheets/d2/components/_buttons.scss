@@ -31,6 +31,7 @@
 
   * {
     pointer-events: none;
+    color: $button-disabled-color !important;
   }
 
   &:hover {
@@ -70,9 +71,9 @@
   }
 
   i.mdi {
-    font-size: 24px;
-    position: relative;
-    top: 1px;
+      font-size: 24px;
+      position: relative;
+      top: 1px;
   }
 }
 
@@ -137,7 +138,7 @@ button.btn-floating {
 .fixed-action-btn {
   &.active {
     ul {
-      visibility: visible;
+     visibility: visible;
     }
   }
 
@@ -251,7 +252,7 @@ button.btn-floating {
   padding: 0;
   vertical-align: middle;
 
-  &_top,
+  &_top, 
   &_line,
   &_bottom {
     transition: 200ms ease-in-out;
@@ -270,35 +271,35 @@ button.btn-floating {
 }
 
 .button-collapse {
+  
+    &:hover, 
+    &.active {
+      .arrow_top {
+        width: 10px;
+        transform: rotate(40deg);
+        margin-left: 5px;
+        top: 1px;
+        z-index: 1 !important;
+      }
+      
+      .arrow_bottom {
+        width: 10px;
+        transform: rotate(-40deg);
+        margin-left: 5px;
+        margin-top: 0px;
+        z-index: 1 !important;
+      }
 
-  &:hover,
-  &.active {
-    .arrow_top {
-      width: 10px;
-      transform: rotate(40deg);
-      margin-left: 5px;
-      top: 1px;
-      z-index: 1 !important;
-    }
+      .arrow_line {
+        width: 15px;
+      }
 
-    .arrow_bottom {
-      width: 10px;
-      transform: rotate(-40deg);
-      margin-left: 5px;
-      margin-top: 0px;
-      z-index: 1 !important;
     }
-
-    .arrow_line {
-      width: 15px;
+    &.active {
+      .arrow-hamburger {
+        transform: rotate(180deg);
+      }
     }
-
-  }
-  &.active {
-    .arrow-hamburger {
-      transform: rotate(180deg);
-    }
-  }
 
 }
 

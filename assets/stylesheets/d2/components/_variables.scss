@@ -40,7 +40,7 @@ $primary-color-light: lighten($primary-color, 10%) !default;
 $primary-color-dark: darken($primary-color, 5%) !default;
 
 $secondary-color: color("blue-grey", "base") !default;
-$success-color: color("green", "base") !default;
+$success-color: $secondary-color !default;
 $error-color: color("red", "base") !default;
 $link-color: $secondary-color !default;
 $link-color-hover: rgba(96, 125, 139, .54) !default;
@@ -67,8 +67,8 @@ $button-padding: 0 15px !default;
 $button-radius: 3px !default;
 
 // Disabled styles
-$button-disabled-background: #DFDFDF !default;
-$button-disabled-color: #9F9F9F !default;
+$button-disabled-background: #eceff1 !default;
+$button-disabled-color: rgba(96, 125, 139, 0.50) !default;
 
 // Raised buttons
 $button-raised-background: #eceff1 !default;
@@ -331,7 +331,7 @@ $progress-bar-color: $primary-color !default;
    $g-theme-start: #e91e63;
    $g-theme-end: #c2185b;
 
-/* 25. Gradient
+/* 26. Gradient
    ========================================================================== */
 
    $br-theme: 3px !default;

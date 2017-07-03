@@ -1,6 +1,6 @@
 .dropdown-wrapper {
   &.widget-navigation-btn {
-    margin: 0px 0 25px;
+    margin: 15px 0 25px;
 
     .dropdown-content {
       border-radius: 0 0 3px 3px;
@@ -23,8 +23,7 @@
   @extend .z-theme-depth-1;
   background-color: $dropdown-bg-color;
   border-radius: 3px;
-  margin-top: 15px;
-  max-width: 274px;
+  margin: 0;
   display: none;
   min-width: 150px;
   max-height: 650px;
@@ -87,7 +86,7 @@
     }
   }
 }
-.dropdown-toggle {
+.dropdown-button {
   i.arrow_up {
     display: none;
   }

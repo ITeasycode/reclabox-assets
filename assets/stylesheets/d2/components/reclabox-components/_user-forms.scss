@@ -1,8 +1,12 @@
 /* user login */
 .user-form {
   will-change: width;
-  @extend .transition-theme-w;
+  //@extend .transition-theme-w;
   width: 370px;
+
+  input:not([type]), input[type=text], input[type=password], input[type=email], input:-webkit-autofill {
+    background-color: #ffffff !important;
+  }
 
   form {
     .btn.right {
@@ -72,7 +76,7 @@
       margin: 0;
       top: 13px;
       left: 5px;
-      z-index: 999;
+      z-index: 999; 
       i {
         color: $secondary-color;
         font-size: 20px;
@@ -118,13 +122,13 @@
 
 /* ----- user register ----- */
 .user-form.register-form {
-  will-change: transition;
-  @extend .transition-theme-w;
+  //will-change: transition;
+  //@extend .transition-theme-w;
   max-width: 570px;
   width: 100%;
 
   & > * {
-    @include transition(all 2s cubic-bezier(0,1.15,0,.98));
+    //@include transition(all 2s cubic-bezier(0,1.15,0,.98));
   }
 
   .register-nav {
@@ -161,11 +165,11 @@
   .register-forms {
     .card-image {
       background-image: -webkit-gradient(
-                      linear,
-                      left top,
-                      left bottom,
-                      color-stop(0, #EFF2F3),
-                      color-stop(1, #FFFFFF)
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #EFF2F3),
+        color-stop(1, #FFFFFF)
       );
       background-image: -o-linear-gradient(bottom, #EFF2F3 0%, #FFFFFF 100%);
       background-image: -moz-linear-gradient(bottom, #EFF2F3 0%, #FFFFFF 100%);
@@ -176,7 +180,7 @@
   }
 
   .card-content form {
-    padding: 0 !important;
+      padding: 0 !important;
   }
 }
 
