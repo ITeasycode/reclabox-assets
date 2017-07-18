@@ -139,7 +139,7 @@ Suggest.Local.prototype = {
       value.toLowerCase().indexOf(pattern.toLowerCase())
       : value.indexOf(pattern);
 
-    if ((pos == -1) || (this.prefix && pos != 0)) return null;
+     if (pos != 0) return null;
 
     if (this.highlight) {
       return (this._escapeHTML(value.substr(0, pos)) + '<strong>' 
