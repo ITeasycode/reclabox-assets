@@ -1,0 +1,25 @@
+.suggest {
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.19);
+
+  div {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: left;
+    line-height: 1.2;
+    padding: 5px;
+
+    &.over {
+      background-color: #607d8b;
+      color: white;
+    }
+  }
+
+  .input-field-group & {
+    right: 30px;
+  }
+}
