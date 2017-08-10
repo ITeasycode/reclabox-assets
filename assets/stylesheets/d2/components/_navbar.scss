@@ -295,6 +295,9 @@ nav {
     align-content: center;
     flex-flow: row wrap;
     justify-content: space-between;
+    opacity: 0;
+    transition: opacity 80ms;
+
     li {
       display: inherit;
       text-align: center;

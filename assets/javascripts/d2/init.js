@@ -2946,7 +2946,7 @@ function removeEventDefault(e) {
                 // which tab is active and its associated content
                 var $this = $( this );
 
-                $this.width( '100%' );
+                $this.width( '100%' ).css({ opacity: 1 });
 
                 var $active, $content, $links = $this.find( 'li a' ),
                     $links_length = $links.length,
