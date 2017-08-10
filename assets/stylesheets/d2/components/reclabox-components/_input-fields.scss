@@ -13,17 +13,36 @@ input[type=search],
 textarea.materialize-textarea {
   // Invalid Input Style
   &.invalid-min,
-  &:focus.invalid-min {
+  &:focus.invalid-min,
+  &.invalid-required,
+  &:focus.invalid-required {
     border-bottom: $input-invalid-border;
     box-shadow: 0 1px 0 0 $input-error-color;
   }
 
   // Custom Error message
-  &.invalid-min + label:after,
-  &:focus.invalid-min + label:after {
-    content: attr(data-error-min);
-    color: $input-error-color;
-    opacity: 1;
+  &.invalid-min,
+  &:focus.invalid-min,
+  &.invalid-required,
+  &:focus.invalid-required {
+    + label:after {
+      color: $input-error-color;
+      opacity: 1;
+    }
+  }
+
+  &.invalid-min,
+  &:focus.invalid-min {
+    + label:after {
+      content: attr(data-error-min);
+    }
+  }
+
+  &.invalid-required,
+  &:focus.invalid-required {
+    + label:after {
+      content: attr(data-error-required);
+    }
   }
 }
 //input:not([type]).valid, input:not([type]):focus.valid, input[type=text].valid, input[type=text]:focus.valid, input[type=password].valid, input[type=password]:focus.valid, input[type=email].valid, input[type=email]:focus.valid, input[type=url].valid, input[type=url]:focus.valid, input[type=time].valid, input[type=time]:focus.valid, input[type=date].valid, input[type=date]:focus.valid, input[type=datetime].valid, input[type=datetime]:focus.valid, input[type=datetime-local].valid, input[type=datetime-local]:focus.valid, input[type=tel].valid, input[type=tel]:focus.valid, input[type=number].valid, input[type=number]:focus.valid, input[type=search].valid, input[type=search]:focus.valid, textarea.materialize-textarea.valid, textarea.materialize-textarea:focus.valid {

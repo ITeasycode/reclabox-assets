@@ -12,11 +12,13 @@
   margin-top: 5px;
 }
 .text-area-castom-validation .numbers{ float: right;}
-.text-area-castom-validation .text{
+.text-area-castom-validation .text,
+.text-area-castom-validation .text-error {
   opacity: 0;
-  float: left;
   font-size: 11px;
   color: #F44336;
+  position: absolute;
+  left: 0;
 }
 
 .text-editor .mce-tinymce.mce-panel{
