@@ -99,21 +99,21 @@ textarea.materialize-textarea {
   }
 
   // Custom Error message
-  &.invalid + label:after,
-  &:focus.invalid + label:after {
+  &.invalid ~ label:after,
+  &:focus.invalid ~ label:after {
     content: attr(data-error);
     color: $input-error-color;
     opacity: 1;
   }
 
   // Full width label when using validate for error messages
-  &.validate + label {
+  &.validate ~ label {
     width: 100%;
     pointer-events: none;
   }
 
   // Form Message Shared Styles
-  & + label:after {
+  & ~ label:after {
     display: block;
     content: "";
     position: absolute;
