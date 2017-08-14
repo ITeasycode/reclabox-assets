@@ -44,13 +44,14 @@
   background: none;
 }
 
-
 .mce-tooltip{
   display: none !important;
 }
 
 .mce-btn-group{
   background: none;
+  position: relative;
+  left: -5px;
 }
 
 .mce-btn-group .mce-btn{
