@@ -31,7 +31,7 @@
 		}
 
 		.mdi-format-italic::before {
-		    line-height: 31px;
+				line-height: 31px;
 		}
 	}
 	nav, 
@@ -115,6 +115,48 @@
 			&:hover {
 				border: 0 none;
 			}
+		}
+	}
+}
+
+// Text editor notification 
+body .mce-notification {
+	background-color: white;
+	border-color: transparent;
+	border-radius: 2px;
+	box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+
+	&,
+	&.mce-has-close {
+		padding: 30px 35px;
+	}
+
+	.mce-notification-inner {
+		font-size: 16px;
+		line-height: 1.2;
+		color: $text-black-theme;
+		display: block;
+		margin: 0;
+	}
+
+	.mce-close {
+		@extend .waves-light;
+		@extend .btn;
+
+		display: block;
+		position: relative;
+		left: auto;
+		right: auto;
+		font-size: 14px;
+		text-indent: -200%;
+		margin: 10px 0 7px;
+		width: 100%;
+		min-width: 190px;
+
+		&:before {
+			content: 'ok';
+			text-indent: 0;
+			display: block;
 		}
 	}
 }
