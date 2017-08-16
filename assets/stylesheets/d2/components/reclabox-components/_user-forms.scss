@@ -177,6 +177,10 @@
       background-image: -ms-linear-gradient(bottom, #EFF2F3 0%, #FFFFFF 100%);
       background-image: linear-gradient(to bottom, #EFF2F3 0%, #FFFFFF 100%);
     }
+
+    .input-field:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 
   .card-content form {
