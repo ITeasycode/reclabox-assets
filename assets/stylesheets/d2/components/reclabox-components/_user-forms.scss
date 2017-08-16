@@ -178,8 +178,12 @@
       background-image: linear-gradient(to bottom, #EFF2F3 0%, #FFFFFF 100%);
     }
 
-    .input-field:not(:last-child) {
+    .input-field {
       margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 18px;
+      }
     }
   }
 
