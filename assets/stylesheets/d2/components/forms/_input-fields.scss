@@ -19,6 +19,13 @@
   color: $placeholder-text-color;
 }
 
+/* Autofill */
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: $text-black-theme !important;
+}
+
 /* Text inputs */
 
 input:not([type]),
