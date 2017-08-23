@@ -119,19 +119,14 @@
 	}
 }
 
-// Text editor notification 
-body .mce-notification {
+// Text editor window 
+body .mce-window {
 	background-color: white;
 	border-color: transparent;
-	border-radius: 2px;
+	border-radius: 3px;
 	box-shadow: 0 4px 18px rgba(0,0,0,0.08);
 
-	&,
-	&.mce-has-close {
-		padding: 30px 35px;
-	}
-
-	.mce-notification-inner {
+	.mce-abs-layout {
 		font-size: 16px;
 		line-height: 1.2;
 		color: $text-black-theme;
@@ -139,24 +134,23 @@ body .mce-notification {
 		margin: 0;
 	}
 
-	.mce-close {
-		@extend .waves-light;
+	.mce-foot {
+		border: 0;
+		border-radius: 0;
+		background: white;
+	}
+
+	.mce-btn {
 		@extend .btn;
-
+		@extend .waves-effect;
+		background-image: none;
+		position: static;
+		margin: auto;
 		display: block;
-		position: relative;
-		left: auto;
-		right: auto;
-		font-size: 14px;
-		text-indent: -200%;
-		margin: 10px 0 7px;
-		width: 100%;
-		min-width: 190px;
 
-		&:before {
-			content: 'ok';
-			text-indent: 0;
-			display: block;
+		button {
+			text-shadow: none;
+			color: inherit;
 		}
 	}
 }
