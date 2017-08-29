@@ -100,6 +100,7 @@
   .questions {
     margin-top: 15px;
   }
+
   .form-login {
     display: block;
     &.logged {
@@ -111,8 +112,9 @@
       }
     }
   }
-  .form-newpassword {
-    // display: none;
+
+  .form-newpassword form {
+    padding: 0 !important;
   }
 
   #userLoginTabContent {
