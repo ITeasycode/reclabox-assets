@@ -141,16 +141,45 @@ body .mce-window {
 	}
 
 	.mce-btn {
-		@extend .btn;
-		@extend .waves-effect;
-		background-image: none;
+		border: none;
+		border-radius: 3px;
+		display: block;
+		height: 36px;
+		line-height: 36px;
+		outline: 0;
+		padding: 0 15px;
+		text-transform: uppercase;
+		vertical-align: middle;
+		-webkit-tap-highlight-color: transparent;
+		text-decoration: none;
+		color: $button-raised-color;
+		background-color: $button-raised-background;
+		background-image: none !important;
+		text-align: center;
+		letter-spacing: .5px;
+		cursor: pointer;
+		font-weight: 500;
+		overflow: hidden;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		z-index: 1;
+		will-change: opacity, transform;
+		transition: all .2s ease-out;
 		position: static;
 		margin: auto;
-		display: block;
 
 		button {
 			text-shadow: none;
 			color: inherit;
 		}
-	}
+
+		&:hover,
+		&:active {
+			background-color: $button-raised-background-hover;
+			color: $button-raised-color-hover;
+			@extend .z-theme-depth-1-half;
+		}
+  }
 }
