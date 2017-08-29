@@ -95,7 +95,6 @@ nav {
     }
   }
 
-
   // Navbar Links
   ul {
     margin: 0;
@@ -161,6 +160,76 @@ nav {
           .search-button {
             left: -60px;
           }
+      }
+    }
+
+    // Navbar dropdown list
+    &.nav-dropdown-content {
+      background-color: $dropdown-bg-color;
+      border-radius: 0 0 3px 3px;
+      margin: 0 0 0 10px;
+      padding: 0;
+      display: none;
+      min-width: 150px;
+      max-height: 650px;
+      overflow-y: auto;
+      opacity: 0;
+      z-index: 999;
+      position: absolute;
+      will-change: width, height;
+
+      a {
+        display: block;
+        color: $off-black;
+        line-height: 1.5rem;
+        padding: (($dropdown-item-height - 22) / 2) 15px;
+
+        &:hover {
+          background: #eee;
+        }
+      }
+
+      li {
+        float: none;
+
+        &.divider {
+          min-height: 0;
+          height: 1px;
+        }
+      }
+    }
+  }
+
+  // Navbar dropdown button
+  .nav-dropdown-button.btn {
+    @include transition(.2s);
+    text-transform: none;
+
+    i.material-icons {
+      font-size: 14px;
+      width: 15px;
+      height: auto !important;
+      line-height: 1 !important;
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: -1px;
+      @include transition(.2s);
+    }
+
+    &.active {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+
+      i.material-icons {
+        margin-left: 1px;
+        margin-right: -1px;
+        transform: rotate(180deg);
+      }
+
+      &,
+      &:hover {
+        color: $off-black;
+        background-color: $dropdown-bg-color;
       }
     }
   }
@@ -364,5 +433,4 @@ nav {
       }
     }
   }
-
 }
