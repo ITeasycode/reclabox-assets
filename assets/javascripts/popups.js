@@ -55,9 +55,11 @@ function ShowWin(name, val) {
   if (name === "kommentbox") { document.getElementById("comment_body").focus(); }
   if (name === "empfbox") { document.getElementById("empfmail").focus(); }
   if (name === "weiterbox") { document.getElementById("weitermail").focus(); }
+  document.getElementById(name).parentElement.classList.add('active')
   dd.elements[name].maximizeZ();
 }
 
 function HideWin(name) {
+  document.getElementById(name).parentElement.classList.remove('active')
   dd.elements[name].hide(true);  
 }
