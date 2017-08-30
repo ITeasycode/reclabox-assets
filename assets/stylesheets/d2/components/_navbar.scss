@@ -182,6 +182,7 @@ nav {
         display: block;
         color: $off-black;
         line-height: 1.5rem;
+        font-size: 14px;
         padding: (($dropdown-item-height - 22) / 2) 15px;
 
         &:hover {
@@ -204,15 +205,16 @@ nav {
   .nav-dropdown-button.btn {
     @include transition(.2s);
     text-transform: none;
+    min-width: 170px;
+    text-align: left;
 
     i.material-icons {
+      float: right;
+      margin-top: 11px;
       font-size: 14px;
       width: 15px;
       height: auto !important;
       line-height: 1 !important;
-      display: inline-block;
-      vertical-align: middle;
-      margin-top: -1px;
       @include transition(.2s);
     }
 
