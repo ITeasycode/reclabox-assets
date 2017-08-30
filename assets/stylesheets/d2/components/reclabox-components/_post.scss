@@ -231,7 +231,6 @@
     }
 
     &.card-comment-form {
-
       .card-header {
         span.badge {
           position: relative;
@@ -249,6 +248,21 @@
         &-content {
           padding: 15px 0;
         }
+      }
+
+      textarea + label {
+        position: relative;
+        top: 0;
+        margin: 0;
+        height: auto;
+        width: auto;
+        line-height: 1.2;
+        display: block;
+        white-space: nowrap;
+
+        &:after {
+          top: 0;
+        }        
       }
 
       button.btn {
