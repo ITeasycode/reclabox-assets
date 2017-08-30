@@ -4556,14 +4556,16 @@ function removeEventDefault(e) {
         // Rating methods
         // ------------------------------------
         var $rating = $( '.rating' ),
-            $ratingText = $( '.rating-text' );
+            $ratingText = $( '.rating-text' ),
+            $ratingPanel = $( '.rating-panel' ),
+            $ratingPanelResult = $( '.rating-panel-result' );
 
-        $rating.find( 'a' ).hover( function () {
-            $ratingText.empty();
-            $ratingText.html( $( this ).attr( 'title' ) );
-        }, function () {
-            $ratingText.html( $( this ).attr( 'title' ) );
-        } );
+        // $rating.find( 'a' ).hover( function () {
+        //     $ratingText.empty();
+        //     $ratingText.html( $( this ).attr( 'title' ) );
+        // }, function () {
+        //     $ratingText.html( $( this ).attr( 'title' ) );
+        // } );
 
         $rating.find( 'a' ).on( 'click', function ( event ) {
             removeEventDefault( event );
@@ -4571,6 +4573,9 @@ function removeEventDefault(e) {
             $this.addClass( 'star-scale' );
             setTimeout( function () {
                 $this.removeClass( 'star-scale' );
+                $ratingPanel.fadeOut( function () {
+                  $ratingPanelResult.fadeIn();
+                } );
             }, 400 );
         } );
 

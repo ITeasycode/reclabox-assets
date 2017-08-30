@@ -1,3 +1,22 @@
+.rating-panel {
+  &,
+  &-result {
+    min-height: 181px;
+  }
+
+  &-result {
+    display: none;
+  }
+
+  .card .rating {
+    margin-top: 30px;
+  }
+
+  .card-header + .card .rating {
+    margin-top: 0;
+  }
+}
+
 .rating {
   color: #607d8b;
   direction: rtl;
@@ -64,12 +83,13 @@
   &-result {
     display: inline-block;
     width: 100%;
+    padding-top: 8px;
   }
 
   &-current {
     float: left;
     width: 24%;
-    padding-top: 27px;
+    padding-top: 45px;
     margin-right: 1%;
     text-align: center;
   }
@@ -87,6 +107,10 @@
     font-size: 20px;
     color: #607d8b;
     margin-bottom: .5em;
+
+    .active {
+      color: #737373;
+    }
   }
 }
 
@@ -175,27 +199,32 @@ span.rank-mangelhaft {
 
   &-star {
     float: left;
-    padding: 0;
-    color: $text-black-theme;
+    padding: 6px 0 0;
+    color: rgba(96, 125, 139, .54);
     font-family: Roboto;
     font-size: 12px;
     font-weight: 400;
-    line-height: 19px;
+    line-height: 16px;
     text-align: right;
-    width: 35%;
+    width: 33%;
   }
+
   &-rate {
     width: 100%;
     display: block;
     clear: both;
   }
+
+  .mdi-star {
+    margin: 0 5px 0 10px;
+  }
 }
 
 .bar {
-  color: #546e7a;
-  padding: 5px 0 4px 8px;
+  color: #fff;
+  padding: 6px 0 6px 10px;
   display: block;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 500;
 
   &-block {
@@ -207,35 +236,12 @@ span.rank-mangelhaft {
     position: relative;
     text-align: left;
   }
-}
 
-#bar-five {
-  width: 100%;
-  background-color: #ec407a;
-}
-
-#bar-four {
-  width: 55%;
-  background-color: #f06292;
-}
-
-#bar-three {
-  width: 75%;
-  background-color: #f48fb1;
-}
-
-#bar-two {
-  width: 30%;
-  background-color: #f8bbd0;
-}
-
-#bar-one {
-  width: 40%;
-  background-color: #fce4ec;
-}
-
-.rating-stars .active {
-  color: #737373;
+  &-five  { background-color: #e7427a; }
+  &-four  { background-color: #f06292; }
+  &-three { background-color: #f48fb1; }
+  &-two   { background-color: #f8afc8; }
+  &-one   { background-color: #f5c7d7; }
 }
 
 @keyframes star-scale {
