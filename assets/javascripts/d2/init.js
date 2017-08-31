@@ -3612,64 +3612,51 @@ function removeEventDefault(e) {
     // Methods intercept the request and send an ajax request
     // - event click to button
     // - ajax request and processing request
-    var $formLogin = $( '.form-login' );
-    var userEmail, userPassword, btnSubmit, ajaxRequest, dataAjaxRequest, userGreeting;
+    var $formLogin = $( '.form-login' ),
+        $userLogin = $( '#user_login' ),
+        $userPassword = $( '#user_password' ),
+        $loginError = $( '#login_error' );
+    var ajaxValidationRequest, dataAjaxRequest;
 
     //---------- event click to button -----------
-    $formLogin.find( 'button' ).click( function ( event ) {
+    $formLogin.find( '[type="submit"]' ).click( function ( event ) {
         /* Act on the event */
         removeEventDefault( event );
 
-        userEmail = $( '#emailLogin' ).val();
-        userPassword = $( '#passwordLogin' ).val();
+        var errors = [];
 
-        if ( userEmail && userPassword ) {
-            btnSubmit = true;
-        } else {
-            btnSubmit = false;
-        }
+        $.each( [$userLogin, $userPassword], function (index, $field) {
+            errors.push( $field.val() == '' || $field.hasClass( 'invalid' ) || $field.hasClass( 'invalid-min' ) || $field.hasClass( 'invalid-required' ) );
+        } );
 
-        // ajax request
-        if ( btnSubmit === true ) {
-            dataAjaxRequest = { login: userEmail, password: userPassword };
-            ajaxRequest( dataAjaxRequest );
+        // ajax validation request
+        if ( !errors.includes(true) ) {
+            dataAjaxRequest = {
+                user_login: $userLogin.val(),
+                user_password: $userPassword.val(),
+                authenticity_token: $( '[name="authenticity_token"]' ).val()
+            };
+
+            ajaxValidationRequest( dataAjaxRequest );
         }
     } );
 
-    //---------- ajax request and processing request -----------
-    ajaxRequest = function ( argument ) {
-        $.get( "login.txt", argument, processingRequest, "json" );
-    }
-    processingRequest = function ( data ) {
-        if ( data.login === dataAjaxRequest.login && data.password === dataAjaxRequest.password ) {
-            console.log( 'Есть такие данные' );
-            userGreeting( data );
-        } else {
-            console.log( 'Нет таких данных' );
-        }
-    }
+    //---------- clear login error -----------
+    $formLogin.find( 'input' ).keydown( function () {
+        $loginError.text('');
+    } );
 
-    //----------- user greeting --------------
-    userGreeting = function ( argument ) {
-        // body...
-        var $formLogin = $( '.form-login' )
-        var h_f_l = $formLogin.height();
-        var dataArgument = argument;
-        var content;
-        var $loader = $( '<i class="loader">Loading...</i>' );
-
-        $formLogin.height( h_f_l );
-        $formLogin.find( ' > *' ).addClass( 'hide' );
-
-        content = '<p><img components=" ' + dataArgument.img + ' " alt="" /></p>';
-        content += '<h4>' + dataArgument.name + '</h4>';
-        content += '<p>' + dataArgument.login + '</p>';
-        content += '<a class="sign-out" href="#!">Sign out</a>'
-
-        $formLogin.addClass( 'center logged' );
-        // $formLogin.html($loader);
-        $formLogin.html( content );
-
+    //---------- ajax validation request and processing request -----------
+    ajaxValidationRequest = function ( argument ) {
+        $.post( '/users/login_validation', argument, function ( data ) {
+            if ( data.error ) {
+                $loginError.text(data.error);
+            } else {
+                $formLogin
+                  .find('form').submit()
+                  .closest('.modal').modal('close');
+            }
+        } );
     }
 
 })( jQuery );

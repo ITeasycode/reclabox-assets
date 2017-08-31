@@ -103,12 +103,30 @@
 
   .form-login {
     display: block;
+
     &.logged {
       a {
         position: absolute;
         bottom: 25px;
         display: block;
         left: 44%;
+      }
+    }
+
+    &-error {
+      font-size: 0.8rem;
+      text-align: center;
+      margin: 13px 0 -10px;
+      visibility: visible;
+      opacity: 1;
+      transition: .2s;
+      height: 18px;
+
+      &:empty {
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        margin: 0;
       }
     }
   }
