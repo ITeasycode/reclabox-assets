@@ -6,7 +6,7 @@ nav {
   line-height: $navbar-height-mobile;
 
   a { 
-    color: white; 
+    &,
     &:hover {
       color: white;
     }
@@ -23,13 +23,6 @@ nav {
   .nav-wrapper {
     position: relative;
     height: 100%;
-  }
-
-  // search widget 
-  .search-widget {
-    .search-button {
-      color: white;
-    }
   }
 
   // Collapse button
@@ -68,6 +61,8 @@ nav {
     }
 
     @media #{$medium-and-down} {
+      left: 50%;
+      transform: translateX(-50%);
 
       &.left, &.right {
         padding: 0;
@@ -84,6 +79,11 @@ nav {
     &.right {
       right: 0.5rem;
       padding: 0;
+    }
+
+    img {
+      width: 190px;
+      vertical-align: sub;
     }
 
     i,
@@ -138,16 +138,16 @@ nav {
       float: left;
     }
 
-    &.currently-logged {
-      a {
-        padding: 0 10px;
+    &.currently-logged > li {
+      > a {
+        padding: 0;
         position: relative;
+        cursor: pointer;
+        vertical-align: middle;
+        display: inline-block;
 
         // Navbar dropdown button
         &.nav-dropdown-button {
-          line-height: 51px;
-          cursor: pointer;
-
           > * {
             display: inline-block;
             vertical-align: middle;
@@ -161,14 +161,6 @@ nav {
             @extend .z-theme-depth-4;
           }
         }
-      }      
-
-      .search-widget {
-          top: 0px;
-
-          .search-button {
-            left: -60px;
-          }
       }
     }
 
@@ -261,29 +253,6 @@ nav {
     }
   }
 
-  // nav header
-  .nav-header.nav-theme {
-    display: inline-block;
-    left: -22px;
-    margin: 0;
-    position: relative;
-    width: auto;
-
-    a {
-      font-size: 15px;
-      height: 74px;
-      line-height: 74px;
-
-      &:hover {
-        color: white;
-        border-bottom: 2px solid white;
-      }
-    }
-    .indicator {
-      background-color: white;
-    }
-  }
-
   &.nav-page.nav-theme {
     @extend .z-depth-0;
     background-color: color("blue-grey", "lighten-5");
@@ -308,6 +277,7 @@ nav {
 
   nav {
     position: fixed;
+    @extend .g-theme-1;
   }
 }
 
@@ -316,6 +286,7 @@ nav {
     height: $navbar-height;
     line-height: $navbar-height;
   }
+
   .navbar-fixed {
     height: $navbar-height;
   }
@@ -340,12 +311,11 @@ nav {
       border-bottom: 2px solid $navbar-font-color-light;
     }
   }
+
   ul {
     align-content: center;
     flex-flow: row wrap;
     justify-content: space-between;
-    opacity: 0;
-    transition: opacity 80ms;
 
     li {
       display: inherit;
@@ -353,6 +323,7 @@ nav {
       padding: 0;
     }
   }
+
   .indicator {
     position: absolute;
     bottom: 0;
@@ -365,6 +336,7 @@ nav {
   &.nav-page {
     a {
       color: $secondary-color;
+
       &:hover {
         color: $secondary-color;
       }

@@ -252,11 +252,14 @@
   &-button {
     display: block;
     height: 50px;
-    width: 300px;
     position: absolute;
-    top: 0;
+    top: 25px;
     left: 0;
     z-index: 9999;
+
+    .onSlideNav & {
+      width: 300px;
+    }
 
     & > a {
       display: inline-block;

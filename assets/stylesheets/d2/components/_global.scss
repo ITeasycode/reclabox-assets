@@ -12,10 +12,10 @@ body {
   // min-height: 100vh;
   // flex-direction: column;
   position: relative;
-
   
   &.onSlideNav {
     overflow-x: hidden;
+
     .container, 
     .container-medium.post {
       position: relative;
@@ -23,6 +23,7 @@ body {
       transition-timing-function: ease-in-out;
       transform:translateX(300px)
     }
+
     .navbar {
       position: relative;
       height: $navbar-height-mobile;
@@ -33,12 +34,15 @@ body {
         position: fixed;
       }
     }
+
     .slide-nav-button {
       background-color: white;
       position: fixed;
+      top: 0;
       transition-duration: 2s;
       transition-timing-function: ease-in-out;
       transition-property: background-color;
+
       a.right {
         transition-duration: 3s;
         transition-timing-function: ease-in-out;
@@ -47,6 +51,7 @@ body {
       }
     }
   }
+
   .container, 
   .container-medium.post {
     position: relative;
@@ -54,7 +59,6 @@ body {
     transition-timing-function: ease-in-out;
     transform:translateX(0);
   }
-
 }
 
 .full-width {
