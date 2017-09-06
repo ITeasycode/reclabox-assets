@@ -3505,15 +3505,14 @@ function removeEventDefault(e) {
     // - login
     var $obj_register = $( '#usersLogin' );
     var $uFBtn = $( '.u-f-btn-prev' );
-    var isInitLoginTabs = false;
     var this_href;
 
     new MutationObserver(function(mutations) {
       mutations.forEach(function(mutation) {
-        if (!isInitLoginTabs && mutation.attributeName === "class" && mutation.target.classList.contains('open')) {
-          $obj_register.find('ul.tabs').tabs();
-          console.log(isInitLoginTabs);
-          isInitLoginTabs = true;
+        if (mutation.target.classList.contains('open')) {
+          setTimeout(function() {
+            $obj_register.find('ul.tabs').tabs();
+          }, 100);
         }
       });
     }).observe($obj_register[0], {
