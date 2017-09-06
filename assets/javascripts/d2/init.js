@@ -3505,30 +3505,38 @@ function removeEventDefault(e) {
     // - login
     var $obj_register = $( '#usersLogin' );
     var $uFBtn = $( '.u-f-btn-prev' );
+    var isInitLoginTabs = false;
     var this_href;
 
-    function width_tab_register( argument ) {
-        var argument = argument;
+    new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (!isInitLoginTabs && mutation.attributeName === "class" && mutation.target.classList.contains('open')) {
+          $obj_register.find('ul.tabs').tabs();
+          console.log(isInitLoginTabs);
+          isInitLoginTabs = true;
+        }
+      });
+    }).observe($obj_register[0], {
+      attributes: true
+    });
 
-        $obj_register.find( '.tab' ).click( function ( event ) {
-            /* Act on the event */
+    $obj_register.find( '.tab a' ).click( function ( event ) {
+        /* Act on the event */
 
-            var this_href = $( this ).find( 'a' ).attr( 'href' )
+        var this_href = $( this ).attr( 'href' );
 
-            if ( this_href == argument ) {
-                // statement
-                $obj_register.addClass( 'register-form' );
-                setTimeout( function () {
-                    $obj_register.find( '.register-nav' ).removeClass( 'invisible' );
-                }, 400 );
+        if ( this_href == '#userRegisterTabContent' ) {
+            // statement
+            $obj_register.addClass( 'register-form' );
+            setTimeout( function () {
+                $obj_register.find( '.register-nav' ).removeClass( 'invisible' );
+            }, 400 );
 
-            } else {
-                $obj_register.removeClass( 'register-form' );
-                $obj_register.find( '.register-nav' ).addClass( 'invisible' );
-            }
-        } );
-    };
-    width_tab_register( '#userRegisterTabContent' );
+        } else {
+            $obj_register.removeClass( 'register-form' );
+            $obj_register.find( '.register-nav' ).addClass( 'invisible' );
+        }
+    } );
 
     $obj_register.find( '.btn-register-nav' ).click( function ( event ) {
         /* Act on the event */

@@ -255,10 +255,10 @@
     position: absolute;
     top: 25px;
     left: 0;
-    z-index: 9999;
 
     .onSlideNav & {
       width: 300px;
+      z-index: 9999;
     }
 
     & > a {
