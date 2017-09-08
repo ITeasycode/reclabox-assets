@@ -25,7 +25,7 @@ function SuggestCustom(candidates_list, data_hash) {
     if (value != null) {
       var element = document.getElementById(element_id);
       element.value = value;
-      element.style.color = '#000';
+      element.style.color = '#455A64';
     }
   };
 
