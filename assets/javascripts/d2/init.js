@@ -3633,6 +3633,7 @@ function removeEventDefault(e) {
         var errors = [];
 
         $.each( [$userLogin, $userPassword], function (index, $field) {
+            $field.trigger( 'blur' );
             errors.push( $field.val() == '' || $field.hasClass( 'invalid' ) || $field.hasClass( 'invalid-min' ) || $field.hasClass( 'invalid-required' ) );
         } );
 
@@ -4588,10 +4589,28 @@ function removeEventDefault(e) {
 
         // Nav Button dropdown
         // -------------------------------------
-        $('.nav-dropdown-button').dropdown({
-          // hover: true, // Activate on hover
-          belowOrigin: true, // Displays dropdown below the button
-          alignment: 'right' // Displays dropdown with edge aligned to the left of button
+        $(document).delegate('.nav-dropdown-button', 'click', function() {
+          if (!$(this).data('hasDropdown')) {
+            $(this).dropdown({
+              belowOrigin: true, // Displays dropdown below the button
+              alignment: 'right' // Displays dropdown with edge aligned to the left of button
+            });
+
+            $(this).data('hasDropdown', true).click();
+          }
+        });
+
+        // Login by ajax before send new complaint
+        // -------------------------------------
+        $('#button-weiter').on('click', function(e) {
+          /* Act on the event */
+          removeEventDefault(e);
+
+          $('#formLogin form').on('submit', function(e) {
+            /* Act on the event */
+            removeEventDefault(e);
+            $.post( this.action + '.js', $(this).serialize() );
+          });
         });
 
     } ); // end of document ready
