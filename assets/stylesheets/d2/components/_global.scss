@@ -13,6 +13,10 @@ body {
   // flex-direction: column;
   position: relative;
   
+  > .wrapper {
+    min-height: 100vh;
+  }
+
   &.onSlideNav {
     overflow-x: hidden;
 
@@ -59,7 +63,6 @@ body {
     transition-timing-function: ease-in-out;
     transform:translateX(0);
   }
-
 }
 
 .full-width {
@@ -849,6 +852,7 @@ td, th{
       }
     }
   }
+
   a.collection-item{
     display: block;
     transition: .25s;
@@ -873,8 +877,8 @@ td, th{
       padding-left: 72px;
     }
   }
-
 }
+
 // Made less specific to allow easier overriding
 .secondary-content {
   float: right;
@@ -884,7 +888,6 @@ td, th{
   margin: 0;
   border: none;
 }
-
 
 
 // Badges
