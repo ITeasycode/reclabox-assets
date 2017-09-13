@@ -163,7 +163,11 @@
       .rbi {
         line-height: 1.12;
         position: relative;
+        vertical-align: middle;
+        display: inline-block;
+        margin-top: -2px;
       }
+
       p {
         color: $text-black-light-theme;
         margin-bottom: 10px;
