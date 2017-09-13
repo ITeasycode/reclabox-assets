@@ -709,23 +709,28 @@
 
       td {
         font-weight: 400;
+
+        &:first-child {
+          font-weight: 400;
+          padding-left: 25px;
+          width: 390px;
+        }
+
+        &:not(:first-child) {
+          width: 17%;
+        }
+
+        &:last-child a {
+          color: #e91e63;
+        }
+
         a {
           vertical-align: middle;
         }
+
         .rbi {
           position: relative;
           top: 1px;
-        }
-      }
-
-      td:first-child {
-        font-weight: 400;
-        padding-left: 25px;
-        width: 390px;
-      }
-      td:last-child {
-        a {
-          color: #e91e63;
         }
       }
     }
