@@ -21,6 +21,10 @@ td, th {
   font-size: 11px;
 }
 
+.mce-content-body p {
+  margin: 5px 0;
+}
+
 .mce-object {
   border: 1px dotted #3A3A3A;
   background: #d5d5d5 url(img/object.gif) no-repeat center;

@@ -190,6 +190,13 @@ body .mce-window {
   }
 }
 
+.mce-edit-area > label {
+	font-family: 'Roboto';
+	font-size: $input-font-size !important;
+	color: $placeholder-text-color !important;
+	padding: 1% 0 !important;
+}
+
 .mce-menu .mce-container-body .mce-menu-item.mce-menu-item-sep {
 	padding: 0;
 }

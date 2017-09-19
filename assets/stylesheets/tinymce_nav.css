@@ -28,6 +28,7 @@
 
 #textarea1_ifr{
   border-bottom: 1px solid #9e9e9e;
+  min-height: 73px;
 }
 #defencetext_ifr{
   border-bottom: 1px solid #9e9e9e;
