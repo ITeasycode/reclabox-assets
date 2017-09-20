@@ -3548,6 +3548,24 @@ function removeEventDefault(e) {
     } );
 
 
+    // ------- register --------
+    var $registerFroms = $('#userMitgliedschaft, #firmaMitgliedschaft').find('form');
+
+    $registerFroms.submit(function(e) {
+        e.preventDefault();
+
+        var $form = $(this),
+            isChecked = $form.find('.js-terms-of-use').is(':checked');
+
+        $form.find('.terms-of-use-tooltip').toggleClass('show-tooltip', !isChecked);
+        if (isChecked) $form[0].submit();
+    });
+
+    $registerFroms.find('.js-terms-of-use').on('change', function () {
+      $(this).siblings('.terms-of-use-tooltip').toggleClass('show-tooltip', !this.checked);
+    });
+
+
     // ------- password --------
     // - password display method, and hide it.
     // - Methods to display the password entering and form recovery

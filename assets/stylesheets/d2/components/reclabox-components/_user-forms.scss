@@ -200,7 +200,37 @@
   }
 
   .card-content form {
-      padding: 0 !important;
+    padding: 0 !important;
+  }
+
+  .terms-of-use-tooltip {
+    background: #e91e63;
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    padding: 10px 13px;
+    border-radius: 10px;
+    color: white;
+    font-size: 13px;
+    line-height: 1.3;
+    width: 250px;
+    transition: .2s;
+    visibility: hidden;
+    opacity: 0;
+
+    &:before {
+      content: '';
+      border: 10px solid transparent;
+      border-top-color: #e91e63;
+      position: absolute;
+      top: 100%;
+      left: calc(50% - 5px);
+    }
+
+    &.show-tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 }
 
