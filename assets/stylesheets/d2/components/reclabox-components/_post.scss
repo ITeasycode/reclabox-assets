@@ -90,7 +90,8 @@
           }
           .rbi {
             left: -6px;
-            top: 0;
+            top: 1px;
+            margin-left: 0;
           }
         }
         .card-action {
@@ -166,6 +167,10 @@
         vertical-align: middle;
         display: inline-block;
         margin-top: -2px;
+
+        &.tiny {
+          margin-left: -2px;
+        }
       }
 
       p {
@@ -209,11 +214,11 @@
     &.carousel-container {
       margin-bottom: 0;
       .card-header {
-        padding: 0 15px;
+        padding: 0 12px;
       }
       .card.card-carousel,
       .card-carousel {
-        margin: 15px 12px 25px;
+        margin: 15px 13px 25px;
       }
       .card-title {
         a {
@@ -367,16 +372,13 @@
       .vertical-union-container {
         background-color: white;
         padding: 0;
+        border-radius: 3px;
         @extend .z-theme-depth-1;
 
         .horizontal {
           .card-image {
             padding-right: 10px;
             width: 100%;
-
-            & > img {
-              @extend .z-depth-0;
-            }
           }
         }
       }
@@ -388,11 +390,14 @@
 
       .card-title {
         font-weight: 400;
+
         i {
           position: relative;
           margin-right: 5px;
+
           &.mdi {
             top: 2px;
+            margin-left: -2px;
           }
         }
       }
@@ -408,7 +413,7 @@
 
     &.vertical-union.carousel-container {
       .card-header {
-        padding: 0 15px 0;
+        padding: 0 12px 0;
       }
       .vertical-union-container.card-carousel {
         margin-top: 15px;
