@@ -318,6 +318,10 @@
         }
         .author {
           line-height: 3;
+
+          .avatar-wrapper {
+            margin-right: 20px;
+          }
         }
         .date {
           & > * {
@@ -360,7 +364,6 @@
           padding: 20px 0;
         }
       }
-
     }
 
     &.vertical-union {
@@ -538,10 +541,8 @@
       &.article-data {
         color: rgba(0, 0, 0, .54);
       }
-
-
-
     }
+
     .date {
       & > * {
         line-height: 1.5;
@@ -750,7 +751,6 @@
   //
   &-list-email {
     .card-collection {
-
       .nav-menu {
         display: none;
         position: absolute;
@@ -758,6 +758,7 @@
         top: 10px;
         z-index: 9;
       }
+
       .collection {
         margin: 0 -0.9rem;
         padding: 0 0.9rem;
@@ -864,7 +865,6 @@
           }
         }
       }
-
     }
   }
 
@@ -932,27 +932,4 @@
       font-weight: 500;
     }
   }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
