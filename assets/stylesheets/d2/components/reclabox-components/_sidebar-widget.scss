@@ -27,7 +27,8 @@
 
   .widget-header-btn {
     margin-top: 4px;
-    margin-bottom: 10px;
+    margin-bottom: -5px;
+
     &.card-header {
       padding: 0;
 
@@ -103,13 +104,17 @@
   .links {
     padding: 0;
     position: relative;
-    left: -15px;
+    left: -10px;
 
     & > a {
       margin-right: 5px;
 
       span, i {
         color: #607d8b;
+      }
+
+      .mdi-file-pdf {
+        margin-left: -3px;
       }
     }
   }
