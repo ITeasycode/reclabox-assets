@@ -1,0 +1,26 @@
+footer.footer {
+  text-align: center;
+  padding: 20px 0 40px;
+
+  ul {
+    margin: 0 0 10px;
+  }
+  
+  li {
+    display: inline-block;
+
+    &:not(:first-child):before {
+      content: '|';
+      margin: 0 4px 0 2px;
+      display: inline-block;
+    }
+  }
+
+  span {
+    color: rgba(0, 0, 0, 0.55);
+
+    &:first-child {
+      margin-right: 5px;
+    }
+  }
+}
