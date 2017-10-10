@@ -3,7 +3,11 @@ footer.footer {
   padding: 20px 0 40px;
 
   ul {
-    margin: 0 0 10px;
+    margin: 0 0 25px;
+
+    + div {
+      margin-top: -10px;
+    }
   }
   
   li {
