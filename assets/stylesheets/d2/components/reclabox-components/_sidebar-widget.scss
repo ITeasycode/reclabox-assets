@@ -186,6 +186,7 @@
   .card-title {
     background-color: #fafafa;
     padding: 9px 15px;
+
     span {
       background-color: #607d8b;
       border-radius: 3px;
@@ -202,9 +203,16 @@
       vertical-align: middle;
       width: 20px;
     }
+
     a {
       display: inline-block;
       vertical-align: middle;
+    }
+
+    &.top-in-category-more {
+      line-height: 1;
+      padding: 8px 25px 16px;
+      color: rgba(0,0,0,0.54);
     }
   }
 
