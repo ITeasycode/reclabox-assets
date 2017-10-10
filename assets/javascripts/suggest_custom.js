@@ -76,5 +76,26 @@ function startSuggest2() {
   );
 }
 
-window.addEventListener ? window.addEventListener('load', startSuggest, false) : window.attachEvent('onload', startSuggest);
-window.addEventListener ? window.addEventListener('load', startSuggest2, false) : window.attachEvent('onload', startSuggest2);
+function startSuggestSearch() {
+  new Suggest.Local(
+    "search-input",  // input element id.
+    "search-suggest",  // suggestion area id.
+    suggest_search,  // suggest candidates list  
+    {  // options
+      dispMax: 10
+    }
+  );
+}
+
+function loadSuggestes() {
+  if (window.suggest_custom) {
+    startSuggest();
+    startSuggest2();
+  }
+
+  if (window.suggest_search) {
+    startSuggestSearch();
+  }
+}
+
+window.addEventListener ? window.addEventListener('load', loadSuggestes, false) : window.attachEvent('onload', loadSuggestes);

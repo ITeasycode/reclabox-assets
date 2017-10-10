@@ -19,7 +19,26 @@
     }
   }
 
+
+  // Widgets
+
   .input-field-group & {
     right: 30px;
+  }
+
+  .search-widget & {
+    left: -20px;
+    right: 0;
+    top: 42px;
+
+    div {
+      color: $text-black-theme;
+      padding: 6px 10px 7px;
+
+      &.over {
+        color: white;
+        cursor: pointer;
+      }
+    }
   }
 }
