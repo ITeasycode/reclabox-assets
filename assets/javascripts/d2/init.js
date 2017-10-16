@@ -3555,10 +3555,19 @@ function removeEventDefault(e) {
         e.preventDefault();
 
         var $form = $(this),
+            errors = [],
             isChecked = $form.find('.js-terms-of-use').is(':checked');
 
+        $.each( $form[0], function (index, field) {
+            var $field = $(field)
+            $field.trigger( 'blur' );
+            errors.push( $field.hasClass( 'invalid' ) || $field.hasClass( 'invalid-min' ) || $field.hasClass( 'invalid-required' ) );
+        } );
+
         $form.find('.terms-of-use-tooltip').toggleClass('show-tooltip', !isChecked);
-        if (isChecked) $form[0].submit();
+
+        console.log(!errors.includes(true), errors);
+        if ( !errors.includes(true) && isChecked) $form[0].submit();
     });
 
     $registerFroms.find('.js-terms-of-use').on('change', function () {
