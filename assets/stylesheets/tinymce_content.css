@@ -21,8 +21,14 @@ td, th {
   font-size: 11px;
 }
 
-.mce-content-body p {
-  margin: 0 0 12px;
+.mce-content-body {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  color: #455A64;
+
+  p {
+    margin: 0 0 12px;
+  }
 }
 
 .mce-object {
