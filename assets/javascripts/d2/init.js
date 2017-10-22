@@ -2909,8 +2909,7 @@ e.highlight&&d.disabled(e.highlight)&&d.set("highlight",e.highlight,c)),d)},c.pr
     $( function () {
         var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], textarea';
 
-        // Add active if form auto complete
-        $( document ).on( 'change blur input', input_selector, function () {
+        window.validationFields = function () {
             // Min length
             var thisDataMinLength = $( this ).data( 'min-length' ) !== undefined && $( this ).data( 'min-length' );
             if ( thisDataMinLength && $( this ).val().length < thisDataMinLength && $( this ).val().length !== 0 ) {
@@ -2925,8 +2924,11 @@ e.highlight&&d.disabled(e.highlight)&&d.set("highlight",e.highlight,c)),d)},c.pr
                 $( this ).removeClass( 'valid' ).addClass( 'invalid-required' ).find('~ label').addClass('active');
             } else {
                 $( this ).removeClass( 'invalid-required' );
-            }            
-        } );
+            }
+        }
+
+        // Add active if form auto complete
+        $( document ).on( 'change input', input_selector, validationFields );
     } );
 })( jQuery );
 // function remove event default
@@ -3539,6 +3541,7 @@ function removeEventDefault(e) {
 
     $obj_register.find( '.btn-register-nav' ).click( function ( event ) {
         /* Act on the event */
+        event.preventDefault();
         this_href = $( this ).attr( 'href' );
         $obj_register.find( '.tabs' ).addClass( 'hide' );
         $obj_register.find( '.register-nav' ).addClass( 'hide' );
@@ -3560,13 +3563,12 @@ function removeEventDefault(e) {
 
         $.each( $form[0], function (index, field) {
             var $field = $(field)
-            $field.trigger( 'blur' );
+            validationFields.apply(field)
             errors.push( $field.hasClass( 'invalid' ) || $field.hasClass( 'invalid-min' ) || $field.hasClass( 'invalid-required' ) );
         } );
 
         $form.find('.terms-of-use-tooltip').toggleClass('show-tooltip', !isChecked);
 
-        console.log(!errors.includes(true), errors);
         if ( !errors.includes(true) && isChecked) $form[0].submit();
     });
 
@@ -3660,7 +3662,7 @@ function removeEventDefault(e) {
         var errors = [];
 
         $.each( [$userLogin, $userPassword], function (index, $field) {
-            $field.trigger( 'blur' );
+            validationFields.apply($field)
             errors.push( $field.val() == '' || $field.hasClass( 'invalid' ) || $field.hasClass( 'invalid-min' ) || $field.hasClass( 'invalid-required' ) );
         } );
 

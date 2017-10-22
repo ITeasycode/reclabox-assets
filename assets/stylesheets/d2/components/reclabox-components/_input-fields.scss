@@ -30,7 +30,7 @@ textarea.materialize-textarea {
   &:focus.invalid-min,
   &.invalid-required,
   &:focus.invalid-required {
-    ~ label:after {
+    ~ label.active:after {
       color: $input-error-color;
       opacity: 1;
     }
@@ -38,14 +38,14 @@ textarea.materialize-textarea {
 
   &.invalid-min,
   &:focus.invalid-min {
-    ~ label:after {
+    ~ label.active:after {
       content: attr(data-error-min);
     }
   }
 
   &.invalid-required,
   &:focus.invalid-required {
-    ~ label:after {
+    ~ label.active:after {
       content: attr(data-error-required);
     }
   }
