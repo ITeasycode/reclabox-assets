@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'fontello';
+  src: font-url('d2/fontello/fontello.eot?72446603');
+  src: font-url('d2/fontello/fontello.eot?72446603#iefix') format('embedded-opentype'),
+       font-url('d2/fontello/fontello.woff2?72446603') format('woff2'),
+       font-url('d2/fontello/fontello.woff?72446603') format('woff'),
+       font-url('d2/fontello/fontello.ttf?72446603') format('truetype'),
+       font-url('d2/fontello/fontello.svg?72446603#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="rbi-"],
+[class*=" rbi-"] {
+  &:before {
+    font: normal normal normal 24px/1 'fontello';
+    font-size: inherit;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    text-rendering: auto;
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  }
+}
+
+$icons-list:
+  ('hielfreicher-commentar', '\e813'),
+  ('noch-nicht-geloste', '\e801'),
+  ('star-outline', '\e820'),
+  ('star', '\e821'),
+  ('box', '\e824'),
+  ('reclarank', '\e823'),
+  ('wifi', '\e825'),
+  ('money', '\e828'),
+  ('interview', '\e829'),
+  ('smartphone', '\e82a'),
+  ('house', '\e82c'),
+  ('beantwortete', '\e82d'),
+  ('beschwerde', '\e82e'),
+  ('bicycle', '\e82f'),
+  ('bookmark-remove', '\e830'),
+  ('car', '\e831'),
+  ('column', '\e832'),
+  ('compass', '\e833'),
+  ('courthouse', '\e834'),
+  ('deodorant', '\e835'),
+  ('driller', '\e836'),
+  ('endgiltig-nicht', '\e837'),
+  ('faucet', '\e838'),
+  ('first-aid-kit', '\e839'),
+  ('geloste', '\e83a'),
+  ('groceries', '\e83b'),
+  ('handshake', '\e83c'),
+  ('mortarboard', '\e83e'),
+  ('newspaper', '\e83f'),
+  ('office-worker', '\e840'),
+  ('presentation', '\e841'),
+  ('repair-tools', '\e842'),
+  ('shopping-cart', '\e843'),
+  ('shape', '\e845'),
+  ('image', '\e846'),
+  ('video', '\e847');
+
+.rbi {
+  @each $name, $code in $icons-list {
+    &-#{$name}:before { content: $code; }
+  }
+}

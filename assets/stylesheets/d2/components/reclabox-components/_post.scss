@@ -166,7 +166,6 @@
         position: relative;
         vertical-align: middle;
         display: inline-block;
-        margin-top: -2px;
 
         &.tiny {
           margin-left: -2px;
@@ -667,6 +666,12 @@
       border-bottom: 2px solid #e1e1e1;
       padding: 0 0 7px;
       margin-bottom: 0;
+    }
+    .card-title {
+      .rbi {
+        margin-top: -1px;
+        margin-left: -3px;
+      }
     }
     .card-content {
       .key-word {
