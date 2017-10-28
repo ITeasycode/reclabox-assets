@@ -503,16 +503,6 @@
         overflow: hidden;
         padding: 3px 15px 1px;
       }
-
-      .card-title {
-        white-space: nowrap;
-
-        .text-overflow:first-child:not(:last-child) {
-          float: left;
-          max-width: 49%;
-          margin-right: 5px;
-        }
-      }
     }
   }
   // article info
