@@ -4512,7 +4512,20 @@ function removeEventDefault(e) {
         // Modal
         // -----------------------------------
         $( '.modal' ).modal( {
-            ending_top: '3%'
+            ending_top: '3%',
+            ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+              $(this)
+                .closest('.modal-container')
+                .addClass('modal-open')
+                .one('click', function(e) {
+                  if ($(e.target).hasClass('modal-container')) {
+                    $('.modal-overlay').click();
+                  }
+                });
+            },
+            complete: function() {
+              $(this).closest('.modal-container').removeClass('modal-open');
+            }
         } );
         $( '.modal.modal-report' ).modal( {
             ending_top: '35%'
