@@ -80,3 +80,11 @@ small { font-size: 75%; }
     font-size: 1.2rem;
   }
 }
+
+.text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: block;
+}

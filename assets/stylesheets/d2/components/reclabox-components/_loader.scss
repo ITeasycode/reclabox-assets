@@ -1,66 +1,63 @@
 .loader {
-  border-radius: 50%;
-  color: #ffffff;
-  font-size: 11px;
-  text-indent: -99999em;
-  margin: 55px auto;
+  color: $secondary-color;
+  font-size: 10px;
+  margin: 20px auto;
   position: relative;
-  width: 10em;
-  height: 10em;
-  box-shadow: inset 0 0 0 1em;
+  text-indent: -9999em;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
 
+  &,
   &:before,
   &:after {
     border-radius: 50%;
-    position: absolute;
-    content: '';
+    width: 1.5em;
+    height: 1.5em;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation: loader 1.8s infinite ease-in-out;
+    animation: loader 1.8s infinite ease-in-out;
   }
-  &:before {
-    width: 5.2em;
-    height: 10.2em;
-    background: #0dc5c1;
-    border-radius: 10.2em 0 0 10.2em;
-    top: -0.1em;
-    left: -0.1em;
-    -webkit-transform-origin: 5.2em 5.1em;
-    transform-origin: 5.2em 5.1em;
-    -webkit-animation: load2 2s infinite ease 1.5s;
-    animation: load2 2s infinite ease 1.5s;
-  }
+
+  &:before,
   &:after {
-    width: 5.2em;
-    height: 10.2em;
-    background: #0dc5c1;
-    border-radius: 0 10.2em 10.2em 0;
-    top: -0.1em;
-    left: 5.1em;
-    -webkit-transform-origin: 0px 5.1em;
-    transform-origin: 0px 5.1em;
-    -webkit-animation: load2 2s infinite ease;
-    animation: load2 2s infinite ease;
+    content: '';
+    position: absolute;
+    top: 0;
+  }
+
+  &:before {
+    left: -2.5em;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+
+  &:after {
+    left: 2.5em;
   }
 }
 
-@-webkit-keyframes load2 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
+@-webkit-keyframes loader {
+  0%,
+  80%,
   100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+    box-shadow: 0 1.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 1.5em 0 0;
   }
 }
-@keyframes load2 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
+
+@keyframes loader {
+  0%,
+  80%,
   100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+    box-shadow: 0 1.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 1.5em 0 0;
   }
 }
