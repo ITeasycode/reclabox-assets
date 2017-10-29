@@ -114,6 +114,22 @@
   }
 }
 
+.modal-rating-ok {
+  max-width: 250px;
+  text-align: center;
+
+  p {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $text-black-theme;
+  }
+
+  button {
+    width: 110px;
+  }
+}
+
 // icons rating
 
 span[class|="rank"],
@@ -121,7 +137,7 @@ i[class|="rank"] {
   width: 118px;
   height: 119px;
   display: inline-block;
-  background-image: url("<%= asset_path("d2/icon-svg/all-rating.svg")%>");
+  background-image: image-url("d2/icon-svg/all-rating.svg");
   background-repeat: no-repeat;
   background-size: 870%;
 }
@@ -181,15 +197,15 @@ i[class|="rank"] {
 }
 
 span.rank-place {
-  background-image: url("<%= asset_path("d2/icon-svg/10-place.svg")%>");
+  background-image: image-url("d2/icon-svg/10-place.svg");
   background-size: 100%;
 }
 span.rank-befriedigend {
-  background-image: url("<%= asset_path("d2/icon-svg/befriedigend.svg")%>");
+  background-image: image-url("d2/icon-svg/befriedigend.svg");
   background-size: 100%;
 }
 span.rank-mangelhaft {
-  background-image: url("<%= asset_path("d2/icon-svg/mangelhaft.svg")%>");
+  background-image: image-url("d2/icon-svg/mangelhaft.svg");
   background-size: 100%;
 }
 

@@ -4607,7 +4607,11 @@ function removeEventDefault(e) {
         $rating.find( 'a' ).on( 'click', function ( event ) {
             removeEventDefault( event );
             var $this = $( this );
+            
             $this.addClass( 'star-scale' );
+
+            $('#ratingModal').modal('open');
+
             setTimeout( function () {
                 $this.removeClass( 'star-scale' );
                 $ratingPanel.fadeOut( function () {
