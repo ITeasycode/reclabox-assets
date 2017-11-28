@@ -4614,9 +4614,10 @@ function removeEventDefault(e) {
 
             setTimeout( function () {
                 $this.removeClass( 'star-scale' );
-                $ratingPanel.fadeOut( function () {
-                  $ratingPanelResult.fadeIn();
-                } );
+                // TODO: need integrate
+                // $ratingPanel.fadeOut( function () {
+                //   $ratingPanelResult.fadeIn();
+                // } );
             }, 400 );
         } );
 
