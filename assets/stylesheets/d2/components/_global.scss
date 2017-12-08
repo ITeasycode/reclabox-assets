@@ -457,7 +457,9 @@ video.responsive-video {
   font-family: Roboto;
   font-size: 12px;
   font-weight: 400;
-  padding-left: 11px;
+  padding-left: 15px;
+  margin-right: 3px;
+
 
   &:first-child {
     padding-left: 0;
@@ -488,6 +490,7 @@ video.responsive-video {
     top: 0;
     vertical-align: top;
     width: auto;
+    pointer-events: none;
   }
 
   &-last-child {

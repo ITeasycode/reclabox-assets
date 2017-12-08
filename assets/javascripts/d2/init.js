@@ -3338,10 +3338,16 @@ function removeEventDefault(e) {
             removeEventDefault( event );
 
             var $funcTooltips = $( this ).next( '.functional-tooltips' );
+
+            $links.not(this).each(function(){
+                $( this ).next( '.functional-tooltips' ). addClass( 'hide' )
+            });
+
             var thisPosition = $( this ).position().left;
             console.log('position tooltips', thisPosition);
 
             if ( $funcTooltips.hasClass( 'hide' ) ) {
+//                $funcTooltips.siblings().hide();
                 if ( thisPosition !== 0 ) {
                     $funcTooltips
                         .removeClass( 'hide' )
@@ -4442,23 +4448,23 @@ function removeEventDefault(e) {
         var $pageWrite = $( '.page-write' );
         var $slideInput = $pageWrite.find( '#slide-input' );
 
-        $slideInput.removeClass( 'hide' ).slideUp( 'slow' ).addClass( 'hide' );
+//        $slideInput.removeClass( 'hide' ).slideUp( 'slow' ).addClass( 'hide' );
 
-        $pageWrite.find( '.btn' ).click( function ( event ) {
-            var id = $( this ).attr( 'href' );
-            if ( id === '#slide-input' ) {
+//        $pageWrite.find( '.btn' ).click( function ( event ) {
+//            var id = $( this ).attr( 'href' );
+//            if ( id === '#slide-input' ) {
                 // statement
-                removeEventDefault( event );
+//                removeEventDefault( event );
 
-                if ( $( id ).hasClass( 'hide' ) ) {
-                    $( id ).removeClass( 'hide' ).slideDown( 'slow' );
-                } else {
-                    $( id ).slideUp( 'slow', function () {
-                        $( this ).addClass( 'hide' );
-                    } );
-                }
-            }
-        } );
+//                if ( $( id ).hasClass( 'hide' ) ) {
+//                    $( id ).removeClass( 'hide' ).slideDown( 'slow' );
+//                } else {
+//                    $( id ).slideUp( 'slow', function () {
+//                        $( this ).addClass( 'hide' );
+//                    } );
+//                }
+//            }
+//        } );
 
         // Slide Nav
         // ----------------------------------------
