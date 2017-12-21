@@ -801,7 +801,7 @@
         display: none;
         position: absolute;
         right: 25px;
-        top: 10px;
+        top: 13px;
         z-index: 9;
       }
 
@@ -819,9 +819,11 @@
           &:first-child {
             margin-top: 15px;
           }
+
           &:last-child {
             margin-bottom: 25px;
           }
+
           &.active {
             background-color: #fff;
             color: $text-black-theme;
@@ -834,34 +836,54 @@
               margin-bottom: 25px;
             }
 
+            &:hover .nav-menu {
+              display: block;
+            }
+
             .collection {
               &-header {
                 border-bottom: 1px solid #e0e0e0;
                 .date {
                   display: none;
                 }
-
-                &:hover {
-                  .nav-menu {
-                    display: block;
-                  }
-                }
               }
               &-content {
                 display: block;
-
               }
             }
+
             .autor {
               display: none;
             }
+
             .article-info {
               .autor {
                 display: block;
               }
             }
+
             .text-editor {
               display: block;
+            }
+
+            .text-preview > * {
+              &:first-child {
+                display: none;
+              }
+
+              &:last-child {
+                display: inline-block;
+              }
+            }
+          }
+
+          .text-preview > * {
+            &:last-child {
+              display: none;
+            }
+
+            &:first-child {
+              display: inline-block;
             }
           }
         }

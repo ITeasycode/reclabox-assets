@@ -3478,11 +3478,13 @@ function removeEventDefault(e) {
 } )( jQuery );
 // ---------- list emails method -----------
 // -----------------------------------------
-;(function ($) {
+$(function(){
     /* body... */
     var $list_email = $('.post-list-email');
 
     $list_email.find('.collection-header').click(function (event) {
+        if (event.target.nodeName == 'A') return;
+
         /* Act on the event */
         removeEventDefault(event);
 
@@ -3497,7 +3499,7 @@ function removeEventDefault(e) {
             }
         }
     });
-})(jQuery);
+});
 // ----------- Users form method -----------
 // -----------------------------------------
 ;(function ( $ ) {
