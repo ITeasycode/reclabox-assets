@@ -36,9 +36,6 @@
 a:hover {
   position: relative;
 }
-span:hover {
-  position: relative;
-}
 a[aria-label]:hover:after {
   content: attr(aria-label);
   padding: 10px 8px;
@@ -66,23 +63,6 @@ a[aria-label1]:hover:after {
   line-height: 120%;
   position: absolute;
   left: -300px;
-  top: -50px;
-  text-align: center;
-  white-space: nowrap;
-  font-weight: 400;
-  background: #333;
-  color: white;
-}
-span[aria-label]:hover:after {
-  content: attr(aria-label);
-  padding: 10px 8px;
-  font-size: 1rem;
-  z-index: 2000;
-  border-radius: 2px;
-  min-height: 36px;
-  line-height: 120%;
-  position: absolute;
-  left: -50px;
   top: -50px;
   text-align: center;
   white-space: nowrap;

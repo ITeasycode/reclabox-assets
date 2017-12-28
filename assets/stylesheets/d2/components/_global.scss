@@ -501,9 +501,15 @@ video.responsive-video {
     padding-left: 11px;
     cursor: text;
 
-    &:active {
-      pointer-events: none;
+    &-sp {
+      &:active {
+        pointer-events: none;
+      }
+      &:hover {
+        color: $text-black-theme;
+      }
     }
+
   }
 
   &-wrapper {
