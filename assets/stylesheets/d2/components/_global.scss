@@ -493,21 +493,20 @@ video.responsive-video {
     pointer-events: none;
   }*/
 
-  &-last-child, &-last-child-sp{
+  &-last-child{
     color: $text-black-theme;
     font-family: Roboto;
     font-size: 12px;
     font-weight: 400;
     padding-left: 11px;
     cursor: text;
-  }
-
-  &-last-child-sp {
-    &:active {
-      pointer-events: none;
-    }
-    &:hover {
-      color: $text-black-theme;
+    &.sp{
+      &:active {
+        pointer-events: none;
+      }
+      &:hover {
+        color: $text-black-theme;
+      }
     }
   }
 
