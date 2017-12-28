@@ -4366,11 +4366,11 @@ $(function(){
                 activeMenuItem( arrayElPosition );
             } );
 
-            $( document ).on('click', 'a[href^="#"]', function( event ) {
+/*            $( document ).on('click', 'a[href^="#"]', function( event ) {
                 removeEventDefault( event );
                 var linkHrefId = $( this ).attr( 'href' );
                 $( 'html, body' ).animate( { scrollTop: $( linkHrefId ).offset().top - 20 } );
-            } );
+            } );*/
         }
     } );
 } )( jQuery );

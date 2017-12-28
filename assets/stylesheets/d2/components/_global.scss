@@ -457,7 +457,7 @@ video.responsive-video {
   font-family: Roboto;
   font-size: 12px;
   font-weight: 400;
-  padding-left: 15px;
+  padding-left: 10px;
   margin-right: 3px;
 
 
@@ -477,7 +477,7 @@ video.responsive-video {
     font-size: 24px;
   }
 
-  &::after {
+/*  &::after {
     content: '\00BB';
     color: $secondary-color;
     display: inline-block;
@@ -491,7 +491,7 @@ video.responsive-video {
     vertical-align: top;
     width: auto;
     pointer-events: none;
-  }
+  }*/
 
   &-last-child {
     color: $text-black-theme;
@@ -499,15 +499,16 @@ video.responsive-video {
     font-size: 12px;
     font-weight: 400;
     padding-left: 11px;
+    cursor: text;
 
-    &::after {
-      display: none;
+    &:active {
+      pointer-events: none;
     }
   }
 
   &-wrapper {
     position: relative;
-    overflow: hidden;
+//    overflow: hidden;
 
     & > div {
       white-space: nowrap;
