@@ -3537,12 +3537,17 @@ $(function(){
         if ( this_href == '#userRegisterTabContent' ) {
             // statement
             $obj_register.addClass( 'register-form' );
+            $('#userLoginTabContent').css('display','none');
+            $('#logtab').removeClass('active');
+            $('#regnav').removeClass('hide');
+            $('.indicator').show();
             setTimeout( function () {
                 $obj_register.find( '.register-nav' ).removeClass( 'invisible' );
             }, 400 );
 
         } else {
             $obj_register.removeClass( 'register-form' );
+            $('#userLoginTabContent').css('display','block');
             $obj_register.find( '.register-nav' ).addClass( 'invisible' );
         }
     } );
@@ -3560,7 +3565,7 @@ $(function(){
 
 
     // ------- register --------
-    var $registerFroms = $('#userMitgliedschaft, #firmaMitgliedschaft').find('form');
+    var $registerFroms = $('#userMitgliedschaft, #firmaMitgliedschaft, #newPassword').find('form');
 
     $registerFroms.submit(function(e) {
         e.preventDefault();

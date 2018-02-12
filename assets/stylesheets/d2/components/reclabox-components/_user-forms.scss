@@ -116,11 +116,11 @@
     &-error {
       font-size: 0.8rem;
       text-align: center;
-      margin: 13px 0 -10px;
+      margin: 13px 0 10px;
       visibility: visible;
       opacity: 1;
       transition: .2s;
-      height: 18px;
+      height: 36px;
 
       &:empty {
         visibility: hidden;
