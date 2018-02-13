@@ -36,6 +36,8 @@
 a:hover {
   position: relative;
 }
+
+// NOTE: wtf this?
 a[aria-label]:hover:after {
   content: attr(aria-label);
   padding: 10px 8px;
