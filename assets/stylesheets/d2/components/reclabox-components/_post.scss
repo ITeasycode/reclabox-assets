@@ -314,28 +314,30 @@
 
       .report-alert {
         position: relative;
+
         .btn-floating {
           position: absolute;
           top: 2px;
           right: -2px;
         }
       }
+
       .card-action {
         border-radius: 0 0 3px 3px;
         margin: 0;
 
-        & > * {
-          .rbi {
-            vertical-align: middle;
-          }
+        & > * .rbi {
+          vertical-align: middle;
         }
       }
+
       .article-info {
         & > div {
           height: 45px;
           line-height: 43px;
           vertical-align: middle;
         }
+
         .author {
           line-height: 3;
 
@@ -343,19 +345,23 @@
             margin-right: 20px;
           }
         }
+
         .date {
           & > * {
             line-height: 2.2 !important;
             color: $text-black-light-theme;
           }
+
           i {
             top: 4px;
           }
         }
+
         .separator {
           line-height: 2;
         }
       }
+
       .edit-comment {
         display: inline-block;
         height: 45px;
@@ -364,11 +370,11 @@
 
         & > a {
           vertical-align: middle;
-          &:hover {
-            i {
-              color: $link-color-hover;
-            }
+
+          &:hover i {
+            color: $link-color-hover;
           }
+
           i {
             color: $link-color;
             top: 3px;
@@ -376,13 +382,17 @@
           }
         }
       }
+
       .edit-message {
         line-height: 3.3 !important;
       }
-      .card-content {
-        &.remote-comment {
-          padding: 20px 0;
-        }
+
+      .card-content.remote-comment {
+        padding: 20px 0;
+      }
+
+      .card-footer a {
+        cursor: default;
       }
     }
 
