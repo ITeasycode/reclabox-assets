@@ -3,6 +3,7 @@
 html {
  box-sizing: border-box;
 }
+
 *, *:before, *:after {
  box-sizing: inherit;
 }
@@ -1032,10 +1033,10 @@ nav ul a span.badge {
   display: none !important;
 }
 .invisible {
-  opacity: 0;
+  visibility: hidden;
 }
 .visible {
-  opacity: 1;
+  visibility: visible;
 }
 
 // Text Align
