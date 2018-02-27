@@ -101,9 +101,13 @@ $( function () {
   $( '.modal' ).modal( {
     ending_top: '3%',
     ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
-      var $modalContainer = modal.closest('.modal-container');
+      var $modalContainer = modal.closest('.modal-container')
 
-      $modalContainer.addClass('modal-open').one('click', function(e) {
+      $modalContainer
+        .addClass('modal-open')
+        .css('z-index', modal.css('z-index'));
+
+      $modalContainer.one('click', function(e) {
         if ( $(e.target).hasClass('modal-container') ) {
           $('.modal-overlay').click();
         }
@@ -211,4 +215,11 @@ $( function () {
       $( this ).removeClass( 'active' );
     }
   } );
+
+  // Newsletter emails modals
+  // -------------------------------------
+  $('.js-toggle-subscribe-tab').on('click', function(e) {
+    removeEventDefault(e);
+    $('#userUnsubscribeTabContent, #userSubscribeTabContent').toggleClass('hide');
+  });
 } ); // end of document ready
