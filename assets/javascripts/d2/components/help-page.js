@@ -1,87 +1,84 @@
-( function ($) {
-    $( function () {
-        var $helpMenu = $( '#helpMenu' );
-        var $helpContainerItems = $( '#helpContainerItems > div' ).get();
-        var offsetHelpMenu = $helpMenu.offset();
-        var cloneMenu = $helpMenu.clone();
-        var showTrue, windScroll, elOffset = [], arrayElPosition, activeLink, arrayActiveEl, arrayId;
-        // var objId = [ '#complaints', '#companyResponse', '#links', '#nachrichten', '#merkezettel', '#firmenMitgliedschaft' ];
+$( function () {
+  var $helpMenu = $( '#helpMenu' );
+  var $helpContainerItems = $( '#helpContainerItems > div' ).get();
+  var offsetHelpMenu = $helpMenu.offset();
+  var cloneMenu = $helpMenu.clone();
+  var showTrue, windScroll, elOffset = [], arrayElPosition, activeLink, arrayActiveEl, arrayId;
 
-        cloneMenu.addClass( 'clone-menu fixid-menu' );
+  cloneMenu.addClass( 'clone-menu fixid-menu' );
 
-        arrayId = $helpContainerItems.map( function(element, idx ) {
-            var id = '#' + $( element ).attr( 'id' );
-            return id;
-        } );
+  arrayId = $helpContainerItems.map( function(element, idx ) {
+    var id = '#' + $( element ).attr( 'id' );
+    return id;
+  } );
 
-        arrayElPosition = arrayId.map( function(element, idx) {
-            elOffset = {
-                id: idx,
-                el: element,
-                elPosition: $( element ).offset()
-            };
+  arrayElPosition = arrayId.map( function(element, idx) {
+    elOffset = {
+      id: idx,
+      el: element,
+      elPosition: $( element ).offset()
+    };
 
-            return elOffset;
-        } );
+    return elOffset;
+  } );
 
-        function activeMenuItem( arg ) {
-            if ( arg ) {
-                arg.map(function( element, idx ) {
-                    if ( element.elPosition.top < ( windScroll + 100 ) ) {
-                        arrayActiveEl = element.el;
-                    }
-                } );
-
-                activeLink = $( 'a[href= "' + arrayActiveEl + '"]' ).parent( 'li' );
-                $helpMenu.find( 'li.active' ).removeClass( 'active' );
-                cloneMenu.find( 'li.active' ).removeClass( 'active' );
-                activeLink.addClass( 'active' );
-            }
+  function activeMenuItem( arg ) {
+    if ( arg ) {
+      arg.map(function( element, idx ) {
+        if ( element.elPosition.top < ( windScroll + 100 ) ) {
+          arrayActiveEl = element.el;
         }
+      } );
 
-        function helpMenuScroll( arg ) {
-            if ( arg > offsetHelpMenu.top ) {
-                return true;
-            } else {
-                return false;
-            }
-        }
+      activeLink = $( 'a[href= "' + arrayActiveEl + '"]' ).parent( 'li' );
+      $helpMenu.find( 'li.active' ).removeClass( 'active' );
+      cloneMenu.find( 'li.active' ).removeClass( 'active' );
+      activeLink.addClass( 'active' );
+    }
+  }
 
-        function showCloneMenu( arg ) {
-            if ( arg ) {
-                $helpMenu.addClass( 'hide' );
-                $( 'body' ).append( cloneMenu );
-                cloneMenu.css( {
-                    'left': offsetHelpMenu.left
-                } );
-            } else {
-                $helpMenu.removeClass( 'hide' );
-                $( '.clone-menu' ).remove();
-            }
-            return false;
-        }
+  function helpMenuScroll( arg ) {
+    if ( arg > offsetHelpMenu.top ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
-        if ( $( 'div' ).is( '#helpMenu' ) ) {
-            windScroll = $( window ).scrollTop();
-            showTrue = helpMenuScroll( windScroll );
+  function showCloneMenu( arg ) {
+    if ( arg ) {
+      $helpMenu.addClass( 'hide' );
+      $( 'body' ).append( cloneMenu );
+      cloneMenu.css( {
+        'left': offsetHelpMenu.left
+      } );
+    } else {
+      $helpMenu.removeClass( 'hide' );
+      $( '.clone-menu' ).remove();
+    }
+    return false;
+  }
 
-            if ( showTrue ) {
-                showCloneMenu( showTrue );
-                activeMenuItem( arrayElPosition );
-            }
+  if ( $( 'div' ).is( '#helpMenu' ) ) {
+    windScroll = $( window ).scrollTop();
+    showTrue = helpMenuScroll( windScroll );
 
-            $( window ).scroll(function () {
-                windScroll = $( window ).scrollTop();
-                showTrue = helpMenuScroll( windScroll );
-                showCloneMenu( showTrue );
-                activeMenuItem( arrayElPosition );
-            } );
+    if ( showTrue ) {
+      showCloneMenu( showTrue );
+      activeMenuItem( arrayElPosition );
+    }
 
-            $( document ).on('click', 'a[href^="#"]', function( event ) {
-                removeEventDefault( event );
-                var linkHrefId = $( this ).attr( 'href' );
-                $( 'html, body' ).animate( { scrollTop: $( linkHrefId ).offset().top - 20 } );
-            } );
-        }
+    $( window ).scroll(function () {
+      windScroll = $( window ).scrollTop();
+      showTrue = helpMenuScroll( windScroll );
+      showCloneMenu( showTrue );
+      activeMenuItem( arrayElPosition );
     } );
-} )( jQuery );
+
+    $( document ).on('click', 'a[href^="#"]', function( event ) {
+      removeEventDefault( event );
+      var linkHrefId = $( this ).attr( 'href' );
+      $( 'html, body' ).animate( { scrollTop: $( linkHrefId ).offset().top - 20 } );
+    } );
+  }
+} );

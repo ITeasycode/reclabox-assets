@@ -3,19 +3,19 @@
 
   display: none;
   position: fixed;
-  top: 200px;
   left: 0;
   right: 0;
   background-color: white;
   padding: 0;
   width: 55%;
   margin: auto;
+  overflow-y: auto;
 
   border-radius: 2px;
   will-change: top, opacity;
 
   @media #{$medium-and-down} {
-   width: 80%;
+    width: 80%;
   }
 
   h1,h2,h3,h4 {
@@ -24,10 +24,9 @@
 
   &.modal-report {
     background-color: inherit;
-    .modal-content {
-      .card-header {
-        padding: 10px 15px;
-      }
+
+    .modal-content .card-header {
+      padding: 10px 15px;
     }
   }
 
@@ -38,6 +37,7 @@
       padding: 0;
     }
   }
+
   .modal-close {
     cursor: pointer;
 
@@ -75,7 +75,7 @@
 
     .modal {
       position: relative;
-      margin-bottom: 5%;
+      margin-bottom: 3%;
     }
   }
 }
@@ -84,12 +84,10 @@
   cursor: pointer;
   position: fixed;
   z-index: 999;
-  top: -100px;
+  top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  height: 125%;
-  width: 100%;
   background: #000;
   display: none;
   will-change: opacity;
@@ -127,11 +125,8 @@
 }
 
 // Modal users forms
-.modal.user-form {
-  max-height: 95%;
-  .modal-content {
-    padding: 0;
-  }
+.modal.user-form .modal-content {
+  padding: 0;
 }
 
 // Modal Slide Img

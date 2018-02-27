@@ -1,190 +1,214 @@
 // ------------ init components ------------
 // -----------------------------------------
-(function ($) {
+$( function () {
 
-    $(function () {
+  // ------------ init components ----------
+  $( '.hot-story' ).limitationOutputChareacters( { limitSignsForTitle: 86, limitSignsForContent: 327 } );
+  $( '#topBeschwerden' ).limitationOutputChareacters( { limitSignsForTitle: 94, limitSignsForContent: 135 } );
+  $( '#neuesteBeschwerden' ).limitationOutputChareacters( { limitSignsForTitle: 154, limitSignsForContent: 225 } );
+  // Forms
+  // ---------------------------------------
+  $( 'select' ).material_select();
+  $( '#textarea1' ).trigger( 'autoresize' );
 
-        // ------------ init components ----------
-        // Forms
-        // ---------------------------------------
-        $('select').material_select();
-        $('#textarea1').trigger('autoresize');
+  $( 'input[type = "text"]' ).characterCounter();
 
-        $('input[type = "text"]').characterCounter();
+  var $pageWrite = $( '.page-write' );
+  var $slideInput = $pageWrite.find( '#slide-input' );
 
-        var $pageWrite = $('.page-write');
-        var $slideInput = $pageWrite.find('#slide-input');
+  $slideInput.removeClass( 'hide' ).slideUp( 'slow' ).addClass( 'hide' );
 
-        $slideInput.removeClass('hide').slideUp('slow').addClass('hide');
+  $pageWrite.find( '.btn' ).click( function ( event ) {
+    var id = $( this ).attr( 'href' );
+    if ( id === '#slide-input' ) {
+      // statement
+      removeEventDefault( event );
 
-        $pageWrite.find('.btn').click(function(event) {
-            /* Act on the event */
-            var id = $(this).attr('href');
-            if (id === '#slide-input') {
-                // statement
-                removeEventDefault(event);
+      if ( $( id ).hasClass( 'hide' ) ) {
+        $( id ).removeClass( 'hide' ).slideDown( 'slow' );
+      } else {
+        $( id ).slideUp( 'slow', function () {
+          $( this ).addClass( 'hide' );
+        } );
+      }
+    }
+  } );
 
-                if ($(id).hasClass('hide')) {
-                    $(id).removeClass('hide').slideDown('slow');
-                } else {
-                    $(id).slideUp('slow', function() {
-                        $(this).addClass('hide');
-                    });
-                }
-            }
-        });
+  // Nav Button dropdown
+  // -------------------------------------
+  $(document).delegate('.nav-dropdown-button', 'click', function() {
+    if (!$(this).data('hasDropdown')) {
+      $(this).dropdown({
+        belowOrigin: true, // Displays dropdown below the button
+        alignment: 'right' // Displays dropdown with edge aligned to the left of button
+      });
 
-        // Slide Nav
-        // ----------------------------------------
-        $('.button-collapse').slideNav({
-            closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-            draggable: true // Choose whether you can drag to open on touch screens
-        });
+      $(this).data('hasDropdown', true).click();
+    }
+  });
 
-        // Slider
-        // ----------------------------------------
-        $('.slider-post').slider({height: 400, autoScroll: false});
+  // Slide Nav
+  // ----------------------------------------
+  $( '.button-collapse' ).slideNav( {
+    closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    draggable: true // Choose whether you can drag to open on touch screens
+  } );
 
-        // Slick
-        // ----------------------------------------
-        $("#topBeschwerden").slick({
-            infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            responsive: [
-                {
-                    breakpoint: 1199,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                },
-                {
-                    breakpoint: 800,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
-        $("#neuesteBeschwerden").slick({
-            infinite: true,
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            responsive: [
-                {
-                    breakpoint: 800,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
+  // Slider
+  // ----------------------------------------
+  $( '.slider-post' ).slider( { height: 400, autoScroll: false } );
 
-        // Modal
-        // -----------------------------------
-        $('.modal').modal({
-            ending_top: '3%'
-        });
-        $('.modal.modal-report').modal({
-            ending_top: '35%'
-        });
+  // Slick
+  // ----------------------------------------
+  $( "#topBeschwerden" ).slick( {
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  } );
+  $( "#neuesteBeschwerden" ).slick( {
+    infinite: false,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  } );
 
-        // Nav Theme
-        // -----------------------------------
-        $(window).resize(function (event) {
-            /* Act on the event */
-            $('ul#navHeader').navTheme({fixedItems: true, indentItem: 50});
-            $('ul#navTop').navTheme();
-            $('ul#navContent').navTheme({fixedItems: true});
-        });
+  // Modal
+  // -----------------------------------
+  $( '.modal' ).modal( {
+    ending_top: '3%',
+    ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+      var $modalContainer = modal.closest('.modal-container');
 
-        $('ul#navHeader').navTheme({fixedItems: true, indentItem: 50});
-        $('ul#navTop').navTheme();
-        $('ul#navContent').navTheme({fixedItems: true});
+      $modalContainer.addClass('modal-open').one('click', function(e) {
+        if ( $(e.target).hasClass('modal-container') ) {
+          $('.modal-overlay').click();
+        }
+      });
 
-        // Tooltip
-        // -----------------------------------
-        $('.tooltipped').tooltip({delay: 50, position: 'top'});
+      $(document).resize(); // Trigger elements
+    },
+    complete: function(modal) {
+      modal.closest('.modal-container').removeClass('modal-open');
+    }
+  } );
+  $( '.modal.modal-report' ).modal( {
+    ending_top: '35%'
+  } );
 
-        // Methods
-        // - Image adjustment
-        // - Card comment hover
-        // - Rating
-        // - Button collapse
-        // -----------------------------------
+  // Nav Theme
+  // -----------------------------------
+  $( window ).resize( function ( event ) {
+    /* Act on the event */
+    $( 'ul#navHeader' ).navTheme( { fixedItems: true, indentItem: 50 } );
+    $( 'ul#navTop' ).navTheme();
+    $( 'ul#navContent' ).navTheme( { fixedItems: true } );
+  } );
 
-        // Variables
-        // -----------------------------------
-        var $uploaded_items = $('.uploaded-item'),
-            $card_comment = $('.card-comment');
+  $( 'ul#navHeader' ).navTheme( { fixedItems: true, indentItem: 50 } );
+  $( 'ul#navTop' ).navTheme();
+  $( 'ul#navContent' ).navTheme( { fixedItems: true } );
 
-        // Image adjustment method
-        // -----------------------------------
-        $uploaded_items.find('img').each(function () {
-            var placeholderBase64 = 'data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
-            if ($(this).attr('src') !== placeholderBase64) {
-                $(this).css({
-                    'background-image': 'url(' + $(this).attr('src') + ')',
-                    'background-size': 'cover'
-                });
-                $(this).attr('src', placeholderBase64);
-            }
-        });
+  // Tooltip
+  // -----------------------------------
+  $( '.tooltipped' ).tooltip( { delay: 50, position: 'top' } );
 
-        // Card comment hover
-        // ------------------------------------
-        $card_comment.hover(function () {
-            $(this).find('.report-alert a.hide').removeClass('hide');
-        }, function () {
-            $(this).find('.report-alert a').addClass('hide');
-        });
+  // Methods
+  // - Image adjustment
+  // - Card comment hover
+  // - Rating
+  // - Button collapse
+  // -----------------------------------
 
-        $('a[href="#USER-MITGLIEDSCHAFT"]').click(function () {
-            $('.user').removeClass('hide');
-            $('.firm').addClass('hide');
-        })
-        $('a[href="#FIRMA-MITGLIEDSCHAFT"]').click(function () {
-            $('.firm').removeClass('hide');
-            $('.user').addClass('hide');
-        })
+  // Variables
+  // -----------------------------------
+  var $uploaded_items = $( '.uploaded-item' ),
+    $card_comment = $( '.card-comment' );
 
-        // Rating methods
-        // ------------------------------------
-        var $rating = $('.rating'),
-            $ratingText = $('.rating-text');
+  // Image adjustment method
+  // -----------------------------------
+  $uploaded_items.find( 'img' ).each( function () {
+    var placeholderBase64 = 'data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+    if ( $( this ).attr( 'src' ) !== placeholderBase64 ) {
+      $( this ).css( {
+        'background-image': 'url(' + $( this ).attr( 'src' ) + ')',
+        'background-size': 'cover'
+      } );
+      $( this ).attr( 'src', placeholderBase64 );
+    }
+  } );
 
-        $rating.find('a').hover(function () {
-            $ratingText.empty();
-            $ratingText.html($(this).attr('title'));
-        }, function () {
-            $ratingText.html($(this).attr('title'));
-        });
+  // Card comment hover
+  // ------------------------------------
+  $card_comment.hover( function () {
+    $( this ).find( '.report-alert a.hide' ).removeClass( 'hide' );
+  }, function () {
+    $( this ).find( '.report-alert a' ).addClass( 'hide' );
+  } );
 
-        $rating.find('a').on('click', function (event) {
-            removeEventDefault(event);
-            var $this = $(this);
-            $this.addClass('star-scale');
-            setTimeout(function () {
-                $this.removeClass('star-scale');
-            }, 400);
-        });
+  $( 'a[href="#USER-MITGLIEDSCHAFT"]' ).click( function () {
+    $( '.user' ).removeClass( 'hide' );
+    $( '.firm' ).addClass( 'hide' );
+  } )
+  $( 'a[href="#FIRMA-MITGLIEDSCHAFT"]' ).click( function () {
+    $( '.firm' ).removeClass( 'hide' );
+    $( '.user' ).addClass( 'hide' );
+  } )
 
-        // Button collapse
-        // -------------------------------------
-        $('.button-collapse').click(function (event) {
-            /* Act on the event */
-            removeEventDefault(event);
-            if (!$(this).hasClass('active')) {
-                // statement
-                $(this).addClass('active');
-            } else {
-                $(this).removeClass('active');
-            }
-        });
-    }); // end of document ready
-})(jQuery); // end of jQuery name space
+  // Rating methods
+  // ------------------------------------
+  var $rating = $( '.rating' ),
+    $ratingText = $( '.rating-text' );
 
+  $rating.find( 'a' ).hover( function () {
+    $ratingText.empty();
+    $ratingText.html( $( this ).attr( 'title' ) );
+  }, function () {
+    $ratingText.html( $( this ).attr( 'title' ) );
+  } );
 
+  $rating.find( 'a' ).on( 'click', function ( event ) {
+    removeEventDefault( event );
+    var $this = $( this );
+    $this.addClass( 'star-scale' );
+    setTimeout( function () {
+      $this.removeClass( 'star-scale' );
+    }, 400 );
+  } );
+
+  // Button collapse
+  // -------------------------------------
+  $( '.button-collapse' ).click( function ( event ) {
+    /* Act on the event */
+    removeEventDefault( event );
+    if ( !$( this ).hasClass( 'active' ) ) {
+      // statement
+      $( this ).addClass( 'active' );
+    } else {
+      $( this ).removeClass( 'active' );
+    }
+  } );
+} ); // end of document ready
