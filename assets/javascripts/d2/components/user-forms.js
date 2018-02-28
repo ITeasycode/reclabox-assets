@@ -87,7 +87,8 @@ $(function () {
     //   errors.push( $field.hasClass( 'invalid' ) || $field.hasClass( 'invalid-min' ) || $field.hasClass( 'invalid-required' ) );
     // } );
 
-    $form.find('.terms-of-use-tooltip').toggleClass('show-tooltip', !isChecked);
+    // TODO
+    // $form.find('.terms-of-use-tooltip').toggleClass('show-tooltip', !isChecked);
 
     // if ( !errors.includes(true) && isChecked) $form[0].submit();
   });

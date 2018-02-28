@@ -136,10 +136,8 @@ a {
 // Indent
 .m-b {
   margin-bottom: 0 !important;
-  &-p {
-    & > p {
-      margin-bottom: 15px !important;
-    }
+  &-p > p {
+    margin-bottom: 15px !important;
   }
   &-tiny {
     margin-bottom: 5px !important;
