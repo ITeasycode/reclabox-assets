@@ -1,28 +1,31 @@
 // ---------- functional tooltips method ---
 // -----------------------------------------
 $( function () {
+  var FUNC_TOOLTIPS = '.functional-tooltips';
   var $links = $( '.links > .btn-floating, .help > .btn-floating' );
 
+  // show tooltip
   $links.on( 'click', function ( event ) {
     removeEventDefault( event );
 
-    var $funcTooltips = $( this ).next( '.functional-tooltips' );
-    var thisPosition = $( this ).position().left;
-    console.log('position tooltips', thisPosition);
+    // current tooltip
+    var $funcTooltips = $( this ).next( FUNC_TOOLTIPS );
 
-    if ( $funcTooltips.hasClass( 'hide' ) ) {
-      if ( thisPosition !== 0 ) {
-        $funcTooltips
-          .removeClass( 'hide' )
-          .css( 'left', -( thisPosition + 2 ) );
-      } else {
-        $funcTooltips
-          .removeClass( 'hide' );
-      }
-    } else {
-      $funcTooltips.addClass( 'hide' );
-    }
+    // close all other tooltips
+    $( FUNC_TOOLTIPS )
+      .filter(function () { return this != $funcTooltips[0] })
+      .addClass( 'hide' ); 
+
+    // toggle current tooltip
+    $funcTooltips.toggleClass( 'hide', !$funcTooltips.hasClass( 'hide' ) )
   } );
+
+  // close tooltip
+  $( FUNC_TOOLTIPS + ' .close' ).on( 'click', function( event ) {
+    removeEventDefault( event );
+
+    $( this ).closest( FUNC_TOOLTIPS ).addClass( 'hide' );
+  });
 } );
 
 // ---------- emoji method to tooltips  ----

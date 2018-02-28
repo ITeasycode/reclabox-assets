@@ -1,4 +1,4 @@
-//Default styles
+// Default styles
 
 html {
  box-sizing: border-box;
@@ -86,8 +86,8 @@ ul {
 }
 
 a {
-	color: $link-color;
-	text-decoration: none;
+  color: $link-color;
+  text-decoration: none;
 
   // Gets rid of tap active state
   -webkit-tap-highlight-color: transparent;
@@ -101,6 +101,7 @@ a {
 .no-bg {
   background-color: rgba(0, 0, 0, 0) !important;
   @extend .z-depth-0;
+
   &-header {
     padding: 0 !important;
   }
@@ -120,7 +121,7 @@ a {
   width: auto;
   vertical-align: middle;
 
-  &::after {
+  &:after {
     content: "";
     border-left: 2px solid $link-color-hover;
     display: inline-block;
