@@ -106,7 +106,6 @@ $( function () {
   // var MODAL_CONTAINER = '.modal-container'
 
   $( '.modal' ).modal( {
-    ending_top: '3%',
     ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
       // TODO
       // var $modalContainer = modal.closest( MODAL_CONTAINER );
@@ -122,6 +121,21 @@ $( function () {
       // modal.closest( MODAL_CONTAINER ).removeClass('modal-open');
     }
   } );
+
+  $( '#regelbox.modal' ).modal( {
+    ready: function(modal, trigger) {
+      var articleId = trigger.data('articleId'),
+          articleType = trigger.data('articleType');
+      
+      if (!!articleId && !!articleType) {
+        $('#regelbox_article_id').val(articleId)
+        $('#regelbox_article_type').val(articleType)
+      } else {
+        console.error('Missing article id or type')
+      }
+    }
+  } );
+
 
   // TODO
   // clsoe modal by container
