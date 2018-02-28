@@ -64,6 +64,8 @@ $( function () {
     infinite: false,
     slidesToShow: 3,
     slidesToScroll: 3,
+    prevArrow: '<button type="button" data-role="none" class="slick-prev btn-floating btn-large waves-effect waves-light  blue-grey lighten-5" aria-label="Previous" tabindex="0" role="button"><i class="material-icons">arrow_back</i></button>',
+    nextArrow: '<button type="button" data-role="none" class="slick-next btn-floating btn-large waves-effect waves-light  blue-grey lighten-5" aria-label="Next" tabindex="0" role="button"><i class="material-icons">arrow_forward</i></button>',
     responsive: [
       {
         breakpoint: 1199,
@@ -85,6 +87,8 @@ $( function () {
     infinite: false,
     slidesToShow: 2,
     slidesToScroll: 2,
+    prevArrow: '<button type="button" data-role="none" class="slick-prev btn-floating btn-large waves-effect waves-light  blue-grey lighten-5" aria-label="Previous" tabindex="0" role="button"><i class="material-icons">arrow_back</i></button>',
+    nextArrow: '<button type="button" data-role="none" class="slick-next btn-floating btn-large waves-effect waves-light  blue-grey lighten-5" aria-label="Next" tabindex="0" role="button"><i class="material-icons">arrow_forward</i></button>',
     responsive: [
       {
         breakpoint: 800,
@@ -122,19 +126,6 @@ $( function () {
   $( '.modal.modal-report' ).modal( {
     ending_top: '35%'
   } );
-
-  // Nav Theme
-  // -----------------------------------
-  $( window ).resize( function ( event ) {
-    /* Act on the event */
-    $( 'ul#navHeader' ).navTheme( { fixedItems: true, indentItem: 50 } );
-    $( 'ul#navTop' ).navTheme();
-    $( 'ul#navContent' ).navTheme( { fixedItems: true } );
-  } );
-
-  $( 'ul#navHeader' ).navTheme( { fixedItems: true, indentItem: 50 } );
-  $( 'ul#navTop' ).navTheme();
-  $( 'ul#navContent' ).navTheme( { fixedItems: true } );
 
   // Tooltip
   // -----------------------------------

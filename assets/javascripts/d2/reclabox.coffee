@@ -2,7 +2,6 @@
 #= require ./components/tinymce-plugins
 #= require ./components/secondary-functions
 #= require ./components/forms
-#= require ./components/nav-theme
 #= require ./components/slide-nav
 #= require ./components/tooltips
 #= require ./components/post-search

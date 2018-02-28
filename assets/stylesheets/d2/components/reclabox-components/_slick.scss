@@ -70,7 +70,7 @@ $large-and-up-slick: "only screen and (max-width : #{$large-screen-slick})" !def
   /* Loading */
   &-loading {
     .slick-list {
-        background: #fff url("<%= asset_path('d2/slick/ajax-loader.gif') %>") center center no-repeat;
+        background: #fff image-url('d2/slick/ajax-loader.gif') center center no-repeat;
     }
     .slick-track {
       visibility: hidden;
