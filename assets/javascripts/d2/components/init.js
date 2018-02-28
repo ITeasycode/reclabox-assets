@@ -102,30 +102,34 @@ $( function () {
 
   // Modal
   // -----------------------------------
+  // TODO
+  // var MODAL_CONTAINER = '.modal-container'
+
   $( '.modal' ).modal( {
     ending_top: '3%',
     ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
-      var $modalContainer = modal.closest('.modal-container')
+      // TODO
+      // var $modalContainer = modal.closest( MODAL_CONTAINER );
 
-      $modalContainer
-        .addClass('modal-open')
-        .css('z-index', modal.css('z-index'));
-
-      $modalContainer.one('click', function(e) {
-        if ( $(e.target).hasClass('modal-container') ) {
-          $('.modal-overlay').click();
-        }
-      });
+      // $modalContainer
+      //   .addClass('modal-open')
+      //   .css('z-index', modal.css('z-index'));
 
       $(document).resize(); // Trigger elements
     },
     complete: function(modal) {
-      modal.closest('.modal-container').removeClass('modal-open');
+      // TODO
+      // modal.closest( MODAL_CONTAINER ).removeClass('modal-open');
     }
   } );
-  $( '.modal.modal-report' ).modal( {
-    ending_top: '35%'
-  } );
+
+  // TODO
+  // clsoe modal by container
+  // $( MODAL_CONTAINER ).on( 'click', function(e) {
+  //   if ( $(e.target).hasClass( MODAL_CONTAINER.substr(1) ) ) {
+  //     $('.modal-overlay').click();
+  //   }
+  // });
 
   // Tooltip
   // -----------------------------------

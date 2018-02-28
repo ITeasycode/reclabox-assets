@@ -93,9 +93,10 @@ $(function () {
     // if ( !errors.includes(true) && isChecked) $form[0].submit();
   });
 
-  $registerFroms.find('.js-terms-of-use').on('change', function () {
-    $(this).siblings('.terms-of-use-tooltip').toggleClass('show-tooltip', !this.checked);
-  });
+  // TODO
+  // $registerFroms.find('.js-terms-of-use').on('change', function () {
+  //   $(this).siblings('.terms-of-use-tooltip').toggleClass('show-tooltip', !this.checked);
+  // });
 
 
   // ------- password --------
@@ -148,7 +149,7 @@ $(function () {
     }
   } );
 
-  $uFBtn.click( function ( event ) {
+  $uFBtn.on( 'click', function ( event ) {
     /* Act on the event */
     removeEventDefault( event );
 
@@ -165,6 +166,9 @@ $(function () {
       $( this_href ).addClass( 'hide' );
       $uFBtn.addClass( 'hide' ).removeClass( 'prev-regisrer-nav' );
     }
+
+    // trgger for init tabs
+    $obj_register.resize();
   } );
 
   // Methods intercept the request and send an ajax request
