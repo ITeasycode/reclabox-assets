@@ -11,4 +11,5 @@
 #= require ./components/slideshow
 #= require ./components/help-page
 #= require ./components/limitation-output-characters
+#= require ./components/toggle
 #= require ./components/init

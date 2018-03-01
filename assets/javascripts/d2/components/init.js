@@ -6,33 +6,12 @@ $( function () {
   $( '.hot-story' ).limitationOutputChareacters( { limitSignsForTitle: 86, limitSignsForContent: 327 } );
   $( '#topBeschwerden' ).limitationOutputChareacters( { limitSignsForTitle: 94, limitSignsForContent: 135 } );
   $( '#neuesteBeschwerden' ).limitationOutputChareacters( { limitSignsForTitle: 154, limitSignsForContent: 225 } );
+
   // Forms
   // ---------------------------------------
   $( 'select' ).material_select();
   $( '#textarea1' ).trigger( 'autoresize' );
-
-  $( 'input[type = "text"]' ).characterCounter();
-
-  var $pageWrite = $( '.page-write' );
-  var $slideInput = $pageWrite.find( '#slide-input' );
-
-  $slideInput.removeClass( 'hide' ).slideUp( 'slow' ).addClass( 'hide' );
-
-  $pageWrite.find( '.btn' ).click( function ( event ) {
-    var id = $( this ).attr( 'href' );
-    if ( id === '#slide-input' ) {
-      // statement
-      removeEventDefault( event );
-
-      if ( $( id ).hasClass( 'hide' ) ) {
-        $( id ).removeClass( 'hide' ).slideDown( 'slow' );
-      } else {
-        $( id ).slideUp( 'slow', function () {
-          $( this ).addClass( 'hide' );
-        } );
-      }
-    }
-  } );
+  $( 'input[type="text"]' ).characterCounter();
 
   // Nav Button dropdown
   // -------------------------------------
@@ -135,7 +114,6 @@ $( function () {
       }
     }
   } );
-
 
   // TODO
   // clsoe modal by container
