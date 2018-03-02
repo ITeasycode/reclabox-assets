@@ -169,6 +169,37 @@ a {
   }
 }
 
+.p-b {
+  padding-bottom: 0 !important;
+  &-tiny {
+    padding-bottom: 5px !important;
+  }
+  &-small {
+    padding-bottom: 10px !important;
+  }
+  &-medium {
+    padding-bottom: 15px !important;
+  }
+  &-large {
+    padding-bottom: 25px !important;
+  }
+}
+.p-t {
+  padding-top: 0 !important;
+  &-tiny {
+    padding-top: 5px !important;
+  }
+  &-small {
+    padding-top: 10px !important;
+  }
+  &-medium {
+    padding-top: 15px !important;
+  }
+  &-large {
+    padding-top: 25px !important;
+  }
+}
+
 .f-s {
   &-tiny {
     font-size: 12px !important;
