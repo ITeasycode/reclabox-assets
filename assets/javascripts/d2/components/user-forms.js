@@ -17,6 +17,7 @@ $(function () {
 
   $obj_register.find( '.tab a' ).click( function ( event ) {
     /* Act on the event */
+    removeEventDefault( event );
 
     var this_href = $( this ).attr( 'href' )
 
@@ -35,6 +36,8 @@ $(function () {
 
   $obj_register.find( '.btn-register-nav' ).click( function ( event ) {
     /* Act on the event */
+    removeEventDefault( event );
+
     this_href = $( this ).attr( 'href' );
     $obj_register.find( '.tabs' ).addClass( 'hide' );
     $obj_register.find( '.register-nav' ).addClass( 'hide' );
@@ -119,8 +122,9 @@ $(function () {
   } );
 
   inputArrayPassword.next( 'i.password-eye' ).on( 'click', function ( event ) {
-    event.preventDefault();
     /* Act on the event */
+    removeEventDefault( event );
+
     if ( $( this ).prev( 'input' ).attr( 'type' ) == "password" ) {
       $( this ).prev( 'input' ).attr( 'type', 'text' );
       $( this ).removeClass( 'mdi-eye' ).addClass( 'mdi-eye-off' );

@@ -81,23 +81,22 @@ $( function () {
 
   // Modal
   // -----------------------------------
-  // TODO
-  // var MODAL_CONTAINER = '.modal-container'
+  var MODAL_CONTAINER = '.modal-container'
 
   $( '.modal' ).modal( {
     ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
-      // TODO
-      // var $modalContainer = modal.closest( MODAL_CONTAINER );
+      var $modalContainer = modal.closest( MODAL_CONTAINER );
 
-      // $modalContainer
-      //   .addClass('modal-open')
-      //   .css('z-index', modal.css('z-index'));
+      $modalContainer
+        .addClass('modal-open')
+        .css('z-index', modal.css('z-index'));
+
+      $modalContainer[0].scrollTop = 0 // reset scroll
 
       $(document).resize(); // Trigger elements
     },
     complete: function(modal) {
-      // TODO
-      // modal.closest( MODAL_CONTAINER ).removeClass('modal-open');
+      modal.closest( MODAL_CONTAINER ).removeClass('modal-open');
     }
   } );
 
@@ -115,13 +114,12 @@ $( function () {
     }
   } );
 
-  // TODO
-  // clsoe modal by container
-  // $( MODAL_CONTAINER ).on( 'click', function(e) {
-  //   if ( $(e.target).hasClass( MODAL_CONTAINER.substr(1) ) ) {
-  //     $('.modal-overlay').click();
-  //   }
-  // });
+  // close modal by container
+  $( MODAL_CONTAINER ).on( 'click', function(e) {
+    if ( $(e.target).hasClass( MODAL_CONTAINER.substr(1) ) ) {
+      $('.modal-overlay').click();
+    }
+  });
 
   // Tooltip
   // -----------------------------------

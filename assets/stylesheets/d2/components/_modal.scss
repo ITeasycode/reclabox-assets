@@ -68,12 +68,13 @@
     left: 0;
     z-index: 1005;
     overflow: auto;
+    cursor: pointer;
 
-    // TODO
-    // .modal {
-    //   position: relative;
-    //   margin-bottom: 3%;
-    // }
+    .modal {
+      position: relative;
+      margin-bottom: 5%;
+      cursor: default;
+    }
   }
 }
 
