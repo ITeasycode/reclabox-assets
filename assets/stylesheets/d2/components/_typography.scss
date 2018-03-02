@@ -22,10 +22,11 @@ html{
   font-weight: normal;
   color: $off-black;
 }
+
 h1, h2, h3, h4, h5, h6 {
   color: $text-black-theme;
-	font-weight: 400;
-	line-height: 1.1;
+  font-weight: 400;
+  line-height: 1.1;
 }
 
 // Header Styles
@@ -64,9 +65,9 @@ small { font-size: 75%; }
 .light { font-weight: 300; }
 .thin { font-weight: 200; }
 
-
-.flow-text{
+.flow-text {
   font-weight: 300;
+
   $i: 0;
   @while $i <= $intervals {
     @media only screen and (min-width : 360 + ($i * $interval-size)) {
