@@ -1,5 +1,6 @@
 $( function () {
-  var $helpMenu = $( '#helpMenu' );
+  var HELP_MENU = '#helpMenu'
+  var $helpMenu = $( HELP_MENU );
   var $helpContainerItems = $( '#helpContainerItems > div' ).get();
   var offsetHelpMenu = $helpMenu.offset();
   var cloneMenu = $helpMenu.clone();
@@ -38,11 +39,7 @@ $( function () {
   }
 
   function helpMenuScroll( arg ) {
-    if ( arg > offsetHelpMenu.top ) {
-      return true;
-    } else {
-      return false;
-    }
+    return arg > offsetHelpMenu.top;
   }
 
   function showCloneMenu( arg ) {
@@ -59,7 +56,7 @@ $( function () {
     return false;
   }
 
-  if ( $( 'div' ).is( '#helpMenu' ) ) {
+  if ( $helpMenu.length > 0 ) {
     windScroll = $( window ).scrollTop();
     showTrue = helpMenuScroll( windScroll );
 
@@ -75,7 +72,7 @@ $( function () {
       activeMenuItem( arrayElPosition );
     } );
 
-    $( document ).on('click', 'a[href^="#"]', function( event ) {
+    $( document ).on('click', HELP_MENU + ' a[href^="#"]', function( event ) {
       removeEventDefault( event );
       var linkHrefId = $( this ).attr( 'href' );
       $( 'html, body' ).animate( { scrollTop: $( linkHrefId ).offset().top - 20 } );
