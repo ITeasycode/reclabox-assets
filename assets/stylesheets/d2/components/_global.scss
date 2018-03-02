@@ -530,8 +530,8 @@ video.responsive-video {
     }
 
     &:not(a) {
-      cursor: text;
-      pointer-events: none;
+      cursor: default;
+      // pointer-events: none;
     }
   }
 
