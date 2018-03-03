@@ -207,4 +207,11 @@ $( function () {
     removeEventDefault(e);
     $('#userUnsubscribeTabContent, #userSubscribeTabContent').toggleClass('hide');
   });
+
+  // Phone fields
+  // -------------------------------------
+  $('input[type=tel]').on('keypress', function(e) {
+    var value = this.value.slice(0, this.selectionStart) + e.key + this.value.slice(this.selectionStart);
+    return /^(\+{1})?([\d][\ ]?)*$/.test(value)
+  });  
 } ); // end of document ready
