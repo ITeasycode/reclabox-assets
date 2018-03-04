@@ -349,10 +349,9 @@ textarea {
 
 /* Autocomplete */
 .autocomplete-content {
-  margin-top: -15px;
   display: block;
   opacity: 1;
-  position: static;
+  position: absolute;
 
   li {
     .highlight { color: #444; }
@@ -361,6 +360,25 @@ textarea {
       height: $dropdown-item-height - 10;
       width: $dropdown-item-height - 10;
       margin: 5px 15px;
+    }
+  }
+
+  // autoComplete
+  &.autocomplete-suggestions {
+    padding: 0;
+  }
+
+  .autocomplete-suggestion {
+    padding: 3px 10px;
+    cursor: pointer;
+    @extend .text-overflow;
+
+    b {
+      color: #444;
+    }
+
+    &.selected {
+      background: $dropdown-hover-bg-color;
     }
   }
 }

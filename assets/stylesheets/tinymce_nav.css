@@ -15,7 +15,7 @@
 .text-area-castom-validation .text,
 .text-area-castom-validation .text-error {
   opacity: 0;
-  font-size: 11px;
+  font-size: 12px;
   color: #F44336;
   position: absolute;
   left: 0;
