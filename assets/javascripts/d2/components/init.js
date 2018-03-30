@@ -1,5 +1,14 @@
 // ------------ init components ------------
 // -----------------------------------------
+
+// Page preloader
+// ---------------------------------------
+window.addEventListener('load', function() {
+  $('#page_preloader').fadeOut('fast', function() {
+    $(this).remove();
+  });
+});
+
 $( function () {
 
   // ------------ init components ----------
