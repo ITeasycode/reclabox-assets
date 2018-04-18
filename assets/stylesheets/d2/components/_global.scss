@@ -493,6 +493,7 @@ video.responsive-video {
   font-size: 12px;
   font-weight: 400;
   padding-left: 3px;
+  margin-right: 6px;
 
   &:first-child {
     padding-left: 0;
@@ -512,16 +513,19 @@ video.responsive-video {
 
   &:after {
     content: '\00BB';
-    color: $secondary-color;
+    color: map-get($blue-grey, 'darken-2');
     display: inline-block;
     font-size: 14px;
     font-style: normal;
     font-weight: normal;
     height: auto;
-    margin: 0 0 0 6px;
+    margin: 0;
     vertical-align: top;
     width: auto;
     pointer-events: none;
+    cursor: default;
+    position: relative;
+    right: -6px;
   }
 
   &-last-child {
