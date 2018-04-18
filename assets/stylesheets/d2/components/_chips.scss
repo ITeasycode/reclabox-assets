@@ -12,11 +12,9 @@
   margin-right: $chip-margin;
   border-radius: 3px;
 
-  &:nth-child(odd) {
-    clear: left;
-    @media #{$medium-and-down} {
-      clear: none;
-      float: left;
+  @media #{$large-and-up} {
+    &:nth-child(odd) {
+      clear: left;
     }
   }
 
