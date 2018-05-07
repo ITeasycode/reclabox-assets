@@ -26,6 +26,10 @@
 
 		label.active {
 		  line-height: 25px;
+
+		  &:after {
+		  	line-height: 40px;
+		  }
 		}
 	}
 	
