@@ -132,6 +132,27 @@
     margin: 0 auto;
   }
 
+  // Button submit toggle (sending)
+  .sending[type=submit] {
+    opacity: .8;
+    cursor: default;
+    pointer-events: none;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      transition: background .2s;
+      background: $text-black-theme image-url('d2/page-preloader.svg') no-repeat 50% 50%;
+      background-size: auto 80%;
+    }
+  }
+
   // User form erros
   &-error {
     font-size: 0.8rem;

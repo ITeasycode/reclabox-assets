@@ -237,4 +237,15 @@ $(function () {
   //   $formLogin.html( content );
 
   // }
+
+  //----------- toggle button submit (rails-ujs) --------------
+  buttonSubmitToggle = function ( event ) {
+    $(this)
+      .find( '[type=submit]' )
+      .toggleClass( 'sending', event.type == 'ajax:beforeSend' );
+  }
+
+  $obj_register.find( 'form' )
+    .on( 'ajax:beforeSend', buttonSubmitToggle )
+    .on( 'ajax:complete', buttonSubmitToggle );
 });
