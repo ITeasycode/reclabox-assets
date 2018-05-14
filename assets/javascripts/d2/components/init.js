@@ -103,23 +103,22 @@ $( function () {
       $modalContainer[0].scrollTop = 0 // reset scroll
 
       $(document).resize(); // Trigger elements
+
+      // regelbox modal
+      if ( this.id == 'regelbox' ) {
+        var articleId = trigger.data('articleId'),
+            articleType = trigger.data('articleType');
+      
+        if (!!articleId && !!articleType) {
+          $('#regelbox_article_id').val(articleId)
+          $('#regelbox_article_type').val(articleType)
+        } else {
+          console.error('Missing article id or type')
+        }
+      }
     },
     complete: function(modal) {
       modal.closest( MODAL_CONTAINER ).removeClass('modal-open');
-    }
-  } );
-
-  $( '#regelbox.modal' ).modal( {
-    ready: function(modal, trigger) {
-      var articleId = trigger.data('articleId'),
-          articleType = trigger.data('articleType');
-      
-      if (!!articleId && !!articleType) {
-        $('#regelbox_article_id').val(articleId)
-        $('#regelbox_article_type').val(articleType)
-      } else {
-        console.error('Missing article id or type')
-      }
     }
   } );
 
