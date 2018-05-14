@@ -107,21 +107,22 @@ $(function () {
   // - Methods to display the password entering and form recovery
 
   // password display method, and hide it.
-  var inputArrayPassword = $( 'input[type^="password"]' ),
+  var inputArrayPassword = 'input[type^="password"]',
       iconEye = $( '<i class="mdi mdi-eye password-eye small hide"></i>' );
 
-  inputArrayPassword.after( iconEye );
+  $( inputArrayPassword ).after( iconEye );
 
-  inputArrayPassword.on( 'input', function ( event ) {
+  $(document).on( 'input', inputArrayPassword, function ( event ) {
     var inputEventThis = $( this );
-    if ( inputEventThis.val().length > 0 ) {
-      inputEventThis.next( 'i.password-eye' ).removeClass( 'hide' );
-    } else {
-      inputEventThis.next( 'i.password-eye' ).addClass( 'hide' );
+
+    if ( inputEventThis.next( 'i.password-eye' ).length == 0 ) {
+      inputEventThis.after( iconEye );
     }
+
+    inputEventThis.next( 'i.password-eye' ).toggleClass( 'hide', inputEventThis.val().length == 0 );
   } );
 
-  inputArrayPassword.next( 'i.password-eye' ).on( 'click', function ( event ) {
+  $(document).on( 'click', 'i.password-eye', function ( event ) {
     /* Act on the event */
     removeEventDefault( event );
 
