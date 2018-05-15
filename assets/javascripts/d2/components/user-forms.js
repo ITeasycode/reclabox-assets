@@ -27,10 +27,11 @@ $(function () {
       setTimeout( function () {
         $obj_register.find( '.register-nav' ).removeClass( 'invisible' );
       }, 400 );
-
     } else {
-      $obj_register.removeClass( 'register-form' );
+      $obj_register.find( '.form-login' ).removeClass( 'hide' );
+      $obj_register.find( '.form-newpassword' ).addClass( 'hide' );
       $obj_register.find( '.register-nav' ).addClass( 'invisible' );
+      $obj_register.removeClass( 'register-form' );
     }
   } );
 
@@ -43,7 +44,7 @@ $(function () {
     $obj_register.find( '.register-nav' ).addClass( 'hide' );
     $obj_register.find( '.register-forms > .card-image.hide' ).removeClass( 'hide' );
     $( this_href ).removeClass( 'hide' );
-    $uFBtn.removeClass( 'hide' ).addClass( 'prev-regisrer-nav' );
+    $uFBtn.removeClass( 'hide' ).removeClass( 'prev-login' ).addClass( 'prev-regisrer-nav' );
   } );
 
 
@@ -161,9 +162,7 @@ $(function () {
     if ( $( this ).hasClass( 'prev-login' ) ) {
       $( id ).addClass( 'hide' );
       $siblingsCardContent.removeClass( 'hide' )
-      setTimeout( function () {
-        $uFBtn.addClass( 'hide' ).removeClass( 'prev-login' );
-      }, 500 );
+      $uFBtn.addClass( 'hide' ).removeClass( 'prev-login' );
     } else {
       $obj_register.find( '.tabs' ).removeClass( 'hide' );
       $obj_register.find( '.register-nav' ).removeClass( 'hide' );
