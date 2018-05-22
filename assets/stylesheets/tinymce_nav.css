@@ -20,6 +20,9 @@
   position: absolute;
   left: 0;
 }
+.text-area-castom-validation .text-error.error-system {
+  position: relative;
+}
 
 .text-editor .mce-tinymce.mce-panel{
   border: 0;
