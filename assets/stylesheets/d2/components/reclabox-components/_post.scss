@@ -30,6 +30,36 @@
         margin: 15px 0 0;
       }
     }
+
+    .addthis_sharing_toolbox {
+      margin-top: 20px;
+
+      a.at-share-btn {
+        background: $button-raised-color !important;
+        border-radius: 2px !important;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+
+        &.at-svc {
+          &-whatsapp:hover { background-color: #1DE663 !important; }
+          &-facebook:hover { background-color: #3351A2 !important; }
+          &-xing:hover     { background-color: #0E6A69 !important; }
+          &-linkedin:hover { background-color: #0C62A6 !important; }
+
+          &-compact {
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+            background-color: darken(#eceff1, 5%) !important;
+
+            svg {
+              fill: $button-raised-color !important;
+            }
+
+            &:hover {
+              background-color: darken(#eceff1, 15%) !important;
+            }
+          }
+        } 
+      }
+    }
   }
 
   // card panel
