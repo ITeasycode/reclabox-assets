@@ -239,6 +239,18 @@ $(function () {
   // }
 
   //----------- toggle button submit (rails-ujs) --------------
+  window.clearUserFormAndBackToLogin = function( form, time ) {
+    time = time || 0;
+
+    setTimeout( function() {
+      $( form )[0].reset();
+      $( form + ' input' ).each( function() { $(this).blur(); } );
+      $( '.u-f-btn-prev' ).click();
+      $( 'a[href="#userLoginTabContent"]' ).delay(10).click();
+    }, time );
+  }
+
+  //----------- toggle button submit (rails-ujs) --------------
   buttonSubmitToggle = function ( event ) {
     $(this)
       .find( '[type=submit]' )
