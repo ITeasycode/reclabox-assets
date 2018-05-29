@@ -119,6 +119,13 @@ $( function () {
     },
     complete: function(modal) {
       modal.closest( MODAL_CONTAINER ).removeClass('modal-open');
+
+      // solvebox modal
+      if ( this.id == 'solvebox' ) {
+        $('#solve_form')[0].reset();
+        $('#error_messages_solve').empty();
+        $('#start_typing_solve').height('1.8rem').blur();
+      }
     }
   } );
 
