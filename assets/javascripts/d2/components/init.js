@@ -12,9 +12,9 @@ window.addEventListener('load', function() {
 $( function () {
 
   // ------------ init components ----------
-  $( '.hot-story' ).limitationOutputChareacters( { limitSignsForTitle: 86, limitSignsForContent: 327 } );
-  $( '#topBeschwerden' ).limitationOutputChareacters( { limitSignsForTitle: 94, limitSignsForContent: 135 } );
-  $( '#neuesteBeschwerden' ).limitationOutputChareacters( { limitSignsForTitle: 154, limitSignsForContent: 225 } );
+  $( '.hot-story' ).limitationOutputChareacters( { limitSignsForTitle: 80, limitSignsForContent: 327 } );
+  $( '#topBeschwerden' ).limitationOutputChareacters( { limitSignsForTitle: 70, limitSignsForContent: 135 } );
+  $( '#neuesteBeschwerden' ).limitationOutputChareacters( { limitSignsForTitle: 154, limitSignsForContent: 240 } );
 
   // Forms
   // ---------------------------------------
