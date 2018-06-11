@@ -355,6 +355,10 @@
           position: absolute;
           top: 2px;
           right: -2px;
+
+          @media #{$large-and-down} {
+            display: block !important;
+          }
         }
       }
 
