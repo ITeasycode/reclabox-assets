@@ -12,6 +12,27 @@
   vertical-align: middle;
   // Gets rid of tap active state
   -webkit-tap-highlight-color: transparent;
+
+  // Button submit toggle (sending)
+  &.sending[type=submit] {
+    opacity: .8;
+    cursor: default;
+    pointer-events: none;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      transition: background .2s;
+      background: $text-black-theme image-url('d2/page-preloader.svg') no-repeat 50% 50%;
+      background-size: auto 80%;
+    }
+  }
 }
 
 // Disabled shared style
@@ -314,5 +335,3 @@ button.btn-floating {
     margin-bottom: 15px;
   }
 }
-
-

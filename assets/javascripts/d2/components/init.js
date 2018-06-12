@@ -150,7 +150,7 @@ $( function () {
   // Variables
   // -----------------------------------
   var $uploaded_items = $( '.uploaded-item' ),
-    $card_comment = $( '.card-comment' );
+      $card_comment = $( '.card-comment' );
 
   // Image adjustment method
   // -----------------------------------
