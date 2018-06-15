@@ -12,5 +12,7 @@
 #= require ./components/help-page
 #= require ./components/limitation-output-characters
 #= require ./components/autocomplete
+#= require ./components/attachments
+#= require ./components/comments
 #= require ./components/toggle
 #= require ./components/init
