@@ -130,7 +130,7 @@ class @Attachments
     @$previews.append """
       <div class="uploaded-item">
         <span class="file-preview" style="background-image: url(#{src})"></span>
-        <span class="file-name">#{file.name}</span>
-        <a data-remove-attachment="#{file.uid}"><i class="material-icons highlight_off">highlight_off</i></a>
+        <span class="file-name"><i class="rbi-#{type}"></i>#{file.name}</span>
+        <a data-remove-attachment="#{file.uid}"><i class="material-icons">close</i></a>
       </div>
     """

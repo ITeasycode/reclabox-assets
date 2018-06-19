@@ -14,6 +14,7 @@
 
   &-input {
     border: 1px dashed #607d8b;
+    cursor: pointer;
 
     .input-wrapper {
       border-radius: 3px;
@@ -43,7 +44,7 @@
       }
 
       .icon i.material-icons {
-          display: block;
+        display: block;
       }
     }
   }
@@ -51,14 +52,13 @@
 
 // Uploaded
 .uploaded {
+  margin-left: -15px;
+
   &-item {
-    @extend .z-theme-depth-2;
-    display: inline-block;
-    border-radius: 4px;
-    width: 72px;
-    height: 72px;
-    margin: 15px 5px 0;
-    overflow: hidden;
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin: 15px 0 0 15px;
     position: relative;
 
     .file {
@@ -67,9 +67,11 @@
         top: 0;
         left: 0;
         right: 0;
-        height: calc(100% - 16px);
+        height: calc(100% - 30px);
         background-size: cover;
+        background-color: #cfd8dc;
         background-position: 50% 50%;
+        border-radius: 4px 4px 0 0;
       }
 
       &-name {
@@ -77,14 +79,30 @@
         left: 0;
         right: 0;
         bottom: 0;
-        padding: 5px 5px 3px;
+        padding: 5px 10px;
+        color: #000;
         background: white;
-        font-size: 8px;
+        font-size: 10px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        line-height: 1;
-        height: 16px;
+        line-height: 22px;
+        height: 30px;
+        border-radius: 0 0 4px 4px;
+        box-shadow: 2px 3.464px 18px 0px rgba(0, 0, 0, 0.08);
+
+        i {
+          margin-right: 7px;
+          font-size: 12px;
+          color: #607d8b;
+          vertical-align: middle;
+
+          &.rbi-image {
+            font-size: 14px;
+            position: relative;
+            top: -1px;
+          }
+        }
       }
     }
 
@@ -97,14 +115,15 @@
       z-index: 1;
     }
 
-    i.highlight_off {
+    a i.material-icons {
       color: #fff;
       cursor: pointer;
       font-size: 18px;
-      right: 4px;
       position: absolute;
-      top: 4px;
+      top: 8px;
+      right: 8px;
       z-index: 2;
+      text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
     }
 
     .progress-wrapper {
