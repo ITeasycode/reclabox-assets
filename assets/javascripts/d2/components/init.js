@@ -12,9 +12,10 @@ window.addEventListener('load', function() {
 $( function () {
 
   // ------------ init components ----------
-  $( '.hot-story' ).limitationOutputChareacters( { limitSignsForTitle: 80, limitSignsForContent: 327 } );
-  $( '#topBeschwerden' ).limitationOutputChareacters( { limitSignsForTitle: 70, limitSignsForContent: 135 } );
-  $( '#neuesteBeschwerden' ).limitationOutputChareacters( { limitSignsForTitle: 154, limitSignsForContent: 240 } );
+
+  $('.hot-story').clamp();
+  $('#topBeschwerden').clamp();
+  $('#neuesteBeschwerden').clamp();
 
   // Forms
   // ---------------------------------------
