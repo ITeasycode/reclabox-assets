@@ -139,7 +139,11 @@ $( function () {
 
   // Tooltip
   // -----------------------------------
-  $( '.tooltipped' ).tooltip( { delay: 50, position: 'top' } );
+  window.initTooltips = function () {
+    $( '.tooltipped' ).tooltip( { delay: 50, position: 'top' } );
+  }
+
+  initTooltips();
 
   // Methods
   // - Image adjustment
