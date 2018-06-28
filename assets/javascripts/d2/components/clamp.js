@@ -1,29 +1,33 @@
 $( function () {
   var methods = {
     init: function () {
-      function autoClamp () {
-        var breadcrumbHeight = $(this).find('.breadcrumb-wrapper').outerHeight(true),
+      var SEPARATOR = ' ...';
 
+      function autoClamp () {
+        var breadcrumbHeight = $(this).find('.breadcrumb-wrapper').outerHeight(true) || 0,
             $title           = $(this).find('.card-title'),
             $titleLink       = $title.find('.title-link'),
-            titleHeight      = $title.outerHeight(true),
-            titleWords       = $titleLink.text().split(' '),
+            titleHeight      = $title.outerHeight(true) || 0,
+            $desc            = $(this).find('> p, > a'),
+            contentHeight    = this.offsetHeight - (breadcrumbHeight + titleHeight);
 
-            $desc            = $(this).find('> p'),
-            descHeight       = $desc.height(),
-            descWords        = $desc.text().split(' '),
+        $titleLink.each(function(index, el) {
+          var titleWords = el.innerHTML.split(' ');
 
-            outputHeight     = this.offsetHeight - (breadcrumbHeight + titleHeight);
+          while( el.offsetHeight > titleHeight ) {
+            titleWords.pop();
+            el.innerHTML = titleWords.join(' ') + SEPARATOR;
+          }
+        });
 
-        while( $titleLink[0].offsetHeight > titleHeight ) {
-          titleWords.pop();
-          $titleLink.text(titleWords.join(' ') + ' ...');
-        }
+        $desc.each(function(index, el) {
+          var descWords = el.innerHTML.split(' ');
 
-        while( $desc[0].scrollHeight > outputHeight ) {
-          descWords.pop();
-          $desc.text(descWords.join(' ') + ' ...');
-        }
+          while( el.scrollHeight > contentHeight ) {
+            descWords.pop();
+            el.innerHTML = descWords.join(' ') + SEPARATOR;
+          }
+        });
       }
 
       $( this ).find('.card-content').each( function (index, el) {

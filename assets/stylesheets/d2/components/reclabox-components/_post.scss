@@ -540,19 +540,6 @@
         margin: 0;
       }
     }
-
-    &-recent-defences {
-      .avatar-wrapper {
-        border-radius: 10%;
-        float: left;
-      }
-
-      .card-content {
-        width: calc(100% - 45px);
-        overflow: hidden;
-        padding: 3px 15px 1px;
-      }
-    }
   }
 
   // article info

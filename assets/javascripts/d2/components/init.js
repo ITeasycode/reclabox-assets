@@ -13,9 +13,7 @@ $( function () {
 
   // ------------ init components ----------
 
-  $('.hot-story').clamp();
-  $('#topBeschwerden').clamp();
-  $('#neuesteBeschwerden').clamp();
+  $('.js-clamp').clamp();
 
   // Forms
   // ---------------------------------------
