@@ -23,10 +23,6 @@ $( function () {
   $( '#textarea1' ).trigger( 'autoresize' );
   $( 'input[type="text"]' ).characterCounter();
 
-  $( '.page-write .input-field-group .materialize-textarea' ).on( 'keydown', function (e) {
-    if ( e.keyCode == 13 ) e.preventDefault();
-  } );
-
   // Nav Button dropdown
   // -------------------------------------
   $(document).delegate('.nav-dropdown-button', 'click', function() {
