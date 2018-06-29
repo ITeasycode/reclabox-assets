@@ -9,8 +9,28 @@ window.addEventListener('load', function() {
   });
 });
 
-$( function () {
+// Set mask only letters and numbers
+// ---------------------------------------
+window.maskOnlyLettersAndNumbers = function(selector) {
+  if (!selector) return console.error('maskOnlyLettersAndNumbers: No selector specified');
 
+  var url = 'https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.14/jquery.mask.min.js';
+
+  function _mask() {
+    $(selector).mask('Z', {
+      translation: {
+        'Z': {
+          pattern: /[a-zA-Z0-9]/,
+          recursive: true
+        }
+      }
+    });
+  }
+
+  $.fn.mask ? _mask() : $.getScript(url).done(_mask)
+}
+
+$( function () {
   // ------------ init components ----------
 
   $('.js-clamp').clamp();
