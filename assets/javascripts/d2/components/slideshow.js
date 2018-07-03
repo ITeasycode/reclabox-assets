@@ -208,7 +208,9 @@ $(function () {
 
           clearInterval($interval);
 
-          var $imgActive = $slider.find('.active').find('img').clone();
+          var $imgActive = $slider.find('.active').find('img, video').clone();
+
+          if ($imgActive.is('video')) $imgActive.attr('controls', true);
 
           $modal.find('.modal-content').append($imgActive);
           $DOM_body.append($modal);
