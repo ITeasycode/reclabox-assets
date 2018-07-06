@@ -155,6 +155,15 @@ $(function () {
     }
   } );
 
+  window.showForgotPasswordForm = function() {
+    $('#usersLogin')
+      .modal('open')
+      .find('a[href="#newPassword"]')
+      .trigger('click');
+
+    return false;
+  }
+
   $uFBtn.on( 'click', function ( event ) {
     /* Act on the event */
     removeEventDefault( event );

@@ -164,7 +164,6 @@ $( function () {
   initTooltips();
 
   // Methods
-  // - Image adjustment
   // - Card comment hover
   // - Rating
   // - Button collapse
@@ -172,21 +171,7 @@ $( function () {
 
   // Variables
   // -----------------------------------
-  var $uploaded_items = $( '.uploaded-item' ),
-      $card_comment = $( '.card-comment' );
-
-  // Image adjustment method
-  // -----------------------------------
-  $uploaded_items.find( 'img' ).each( function () {
-    var placeholderBase64 = 'data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
-    if ( $( this ).attr( 'src' ) !== placeholderBase64 ) {
-      $( this ).css( {
-        'background-image': 'url(' + $( this ).attr( 'src' ) + ')',
-        'background-size': 'cover'
-      } );
-      $( this ).attr( 'src', placeholderBase64 );
-    }
-  } );
+  var $card_comment = $( '.card-comment' );
 
   // Card comment hover
   // ------------------------------------
