@@ -3,11 +3,20 @@ $( function () {
 
   // Add active if form auto complete
   $( document ).on( 'change input', input_selector, function () {
-    var thisDataMinLength = $( this ).data( 'min-length' ) !== undefined ? $( this ).data( 'min-length' ) : false;
-    if ( $( this ).val().length < thisDataMinLength && $( this ).val().length !== 0 ) {
+    // Min length
+    var thisDataMinLength = $( this ).data( 'min-length' ) !== undefined && $( this ).data( 'min-length' );
+    if ( thisDataMinLength && $( this ).val().length < thisDataMinLength && $( this ).val().length !== 0 ) {
       $( this ).removeClass( 'valid' ).addClass( 'invalid-min' );
     } else {
       $( this ).removeClass( 'invalid-min' );
+    }
+
+    // Required
+    var thisDataRequired = $( this ).data( 'required' ) !== undefined && $( this ).data( 'required' );
+    if ( thisDataRequired && $( this ).val() === '' ) {
+      $( this ).removeClass( 'valid' ).addClass( 'invalid-required' ).find('~ label').addClass('active');
+    } else {
+      $( this ).removeClass( 'invalid-required' );
     }
   } );
 } );
