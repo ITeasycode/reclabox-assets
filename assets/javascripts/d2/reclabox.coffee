@@ -1,6 +1,7 @@
 #= require tinymce
 #= require ./components/tinymce-plugins
 #= require ./components/secondary-functions
+#= require ./components/validate-email
 #= require ./components/forms
 #= require ./components/slide-nav
 #= require ./components/tooltips
@@ -15,4 +16,5 @@
 #= require ./components/attachments
 #= require ./components/comments
 #= require ./components/toggle
+#= require ./components/delay
 #= require ./components/init
