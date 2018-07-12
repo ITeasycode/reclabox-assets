@@ -2,12 +2,13 @@ class @Autocomplete
   constructor: (@link, @selector) ->
     @xhr = null
   
-  init: =>
+  init: (onSelect = ->) =>
     new autoComplete
       source: @source
       selector: @selector
       minChars: 1
       menuClass: 'autocomplete-content dropdown-content'
+      onSelect: onSelect
 
   source: (term, response) =>
     try
