@@ -296,14 +296,19 @@ $(function () {
 
           $slides.each(function (index) {
             var $indicator = $('<li class="indicator-item"></li>'),
-              $indicatorImgBg;
+                $indicatorBg;
 
-            if ($(this).find('img')) {
-              $indicatorImgBg = $(this).find('img').clone();
-              imgCssBackground($indicatorImgBg);
+            if ($(this).find('img').length > 0) {
+              $indicatorBg = $(this).find('img').clone();
+              imgCssBackground($indicatorBg);
             }
 
-            $indicator.append($indicatorImgBg);
+            if ($(this).find('video').length > 0) {
+              $indicatorBg = $(this).find('video').clone();
+              $indicator.addClass('video');
+            }
+
+            $indicator.append($indicatorBg);
 
             // Handle clicks on indicators
             $indicator.click(function () {
@@ -316,11 +321,11 @@ $(function () {
                 // statement
                 intervalFunction();
               }
-
             });
 
             $indicators.append($indicator);
           });
+
           $this.append($indicators);
           $indicators = $this.find('ul.indicators').find('li.indicator-item');
         }
