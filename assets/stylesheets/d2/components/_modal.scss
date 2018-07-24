@@ -136,12 +136,22 @@
   max-width: -webkit-fit-content;
   max-width: fit-content;
   padding: 15px;
+  width: auto;
 
   .modal-content {
     padding: 0;
+
     img {
       display: block;
       margin: 0 auto;
+    }
+
+    video,
+    iframe {
+      height: 400px !important;
+      width: 750px !important;
+      max-width: 100%;
+      display: block;
     }
   }
 } 

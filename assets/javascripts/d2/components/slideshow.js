@@ -208,9 +208,11 @@ $(function () {
 
           clearInterval($interval);
 
-          var $imgActive = $slider.find('.active').find('img, video').clone();
+          var $imgActive = $slider.find('.active').find('img, video, iframe').clone();
 
           if ($imgActive.is('video')) $imgActive.attr('controls', true);
+
+          if ($imgActive.is('iframe')) $imgActive.attr('src', $imgActive.attr('src').replace('autoplay=0', 'autoplay=1'))
 
           $modal.find('.modal-content').append($imgActive);
           $DOM_body.append($modal);
@@ -303,8 +305,8 @@ $(function () {
               imgCssBackground($indicatorBg);
             }
 
-            if ($(this).find('video').length > 0) {
-              $indicatorBg = $(this).find('video').clone();
+            if ($(this).find('video, iframe').length > 0) {
+              $indicatorBg = $(this).find('video, iframe').clone();
               $indicator.addClass('video');
             }
 
