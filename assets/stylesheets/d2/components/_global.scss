@@ -12,7 +12,8 @@ body {
   position: relative;
   
   > .wrapper {
-    min-height: 100vh;
+    padding-bottom: 25px;
+    min-height: calc(100vh - 105px); // 105px - footer height
   }
 
   &.onSlideNav {

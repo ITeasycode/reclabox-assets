@@ -1,30 +1,37 @@
-footer.footer {
+.footer {
+  padding: 20px 0;
   text-align: center;
-  padding: 20px 0 40px;
 
   ul {
-    margin: 0 0 25px;
-
-    + div {
-      margin-top: -10px;
-    }
+    margin-top: 0;
   }
-  
-  li {
-    display: inline-block;
 
-    &:not(:first-child):before {
+  li, a {
+    color: white;
+    font-size: 16px;
+    display: inline-block;
+  }
+
+  &-links {
+    margin-bottom: 11px;
+
+    li:not(:first-child):before {
       content: '|';
       margin: 0 4px 0 2px;
       display: inline-block;
     }
   }
 
-  span {
-    color: rgba(0, 0, 0, 0.55);
+  &-socials {
+    margin-bottom: 0;
 
-    &:first-child {
-      margin-right: 5px;
+    a {
+      width: 30px;
+      height: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      padding-top: 3px;
+      margin: 0 3px;
     }
   }
 }
