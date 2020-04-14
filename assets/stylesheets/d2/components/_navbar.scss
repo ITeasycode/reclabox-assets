@@ -280,6 +280,8 @@ nav {
     position: fixed;
     @extend .g-theme-1;
   }
+
+
 }
 
 @media #{$medium-and-up} {
@@ -290,6 +292,9 @@ nav {
 
   .navbar-fixed {
     height: $navbar-height;
+  }
+  a.button-collapse {
+    display: none;
   }
 }
 
@@ -412,4 +417,14 @@ ul.ui-autocomplete {
 
 .ui-helper-hidden-accessible {
   display: none;
+}
+a.button-collapse {
+  padding: 0;
+}
+
+i.material-icons.main {
+  vertical-align: sub;
+  display: inline-block!important;
+  font-size: 40px;
+  line-height: 1px!important;
 }
